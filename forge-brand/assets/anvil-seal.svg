@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-labelledby="anvil-title">
+  <title id="anvil-title">Forge Anvil Seal</title>
+  <!-- Base (bottom) -->
+  <path d="M6 24h20v3H6z" fill="currentColor"/>
+  <!-- Body (main mass) -->
+  <path d="M8 16h16v8H8z" fill="currentColor"/>
+  <!-- Horn (left projection) -->
+  <path d="M8 12h4v4H8z" fill="currentColor"/>
+  <!-- Face (top working surface) -->
+  <path d="M10 8h12l2 4H8z" fill="currentColor"/>
+  <!-- Heel (right projection) -->
+  <path d="M20 12h4v4h-4z" fill="currentColor"/>
+</svg>

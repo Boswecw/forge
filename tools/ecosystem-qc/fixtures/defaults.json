@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "docSystemBuild": null,
+    "docSystemDiffClean": false,
+    "stateforge": null,
+    "cargoCheck": null,
+    "cargoTest": null,
+    "nodeTest": null
+  },
+  "timeoutsMs": {
+    "docSystemBuild": 60000,
+    "docSystemDiffClean": 30000,
+    "stateforge": 60000,
+    "cargoCheck": 300000,
+    "cargoTest": 900000,
+    "nodeTest": 600000
+  },
+  "phases": {
+    "enableFast": true,
+    "enableDeep": true
+  },
+  "enforceCleanWorkingTree": false
+}

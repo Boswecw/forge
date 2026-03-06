@@ -1,0 +1,63 @@
+name: Ecosystem QC
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'QC mode'
+        required: false
+        default: 'both'
+        type: choice
+        options:
+          - fast
+          - deep
+          - both
+
+jobs:
+  ecosystem-qc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout ecosystem
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Cargo
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            **/target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: ${{ runner.os }}-cargo-
+
+      - name: Install QC dependencies
+        working-directory: tools/ecosystem-qc
+        run: bun install --frozen-lockfile
+
+      - name: Run Ecosystem QC
+        working-directory: tools/ecosystem-qc
+        run: bun run qc -- --mode=${{ github.event.inputs.mode || 'both' }} --concurrency=2
+
+      - name: Upload QC Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ecosystem-qc-report
+          path: tools/ecosystem-qc/out/ecosystem-qc.report.json
+          retention-days: 30

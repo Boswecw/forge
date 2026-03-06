@@ -1,0 +1,60 @@
+{
+  "_schema": "VerificationReport.v1",
+  "report_id": "vr-001",
+  "generated_at": "2026-01-20T05:30:00Z",
+  "source_plan_id": "vp-001",
+  "source_intent_id": "intent-001",
+  "execution_context": {
+    "environment": "staging",
+    "operator": "sherlock",
+    "repos": [
+      {
+        "name": "forge-smith",
+        "path": "/home/charlie/Forge/ecosystem/forge-smith",
+        "commit": "abcde12345"
+      }
+    ]
+  },
+  "results": [
+    {
+      "req_id": "VP-001",
+      "status": "pass",
+      "notes": "Executor unit tests pass with schema pin.",
+      "evidence": [
+        {
+          "type": "log",
+          "path": "evidence/exec-unit.log",
+          "hash": "sha256:log123"
+        }
+      ]
+    },
+    {
+      "req_id": "VP-002",
+      "status": "pass",
+      "notes": "Doctrine run reports only WARN findings.",
+      "evidence": [
+        {
+          "type": "report",
+          "path": "evidence/doctrine.json",
+          "hash": "sha256:doctrine456"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "pass": 2,
+    "fail": 0,
+    "skipped": 0,
+    "waived": 0,
+    "overall": "pass"
+  },
+  "waivers": [],
+  "constraints": {
+    "no_execution_performed": true,
+    "no_repo_mutation_by_phase_d": true
+  },
+  "provenance": {
+    "plan_hash": "sha256:vp123",
+    "intent_hash": "sha256:def456"
+  }
+}

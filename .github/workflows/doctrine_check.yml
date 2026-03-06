@@ -1,0 +1,168 @@
+name: Doctrine Validation
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  doctrine-validation:
+    name: Run Doctrine Controls
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history for commit analysis
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: tools/doctrine-validator/package-lock.json
+
+      - name: Install doctrine-validator dependencies
+        working-directory: tools/doctrine-validator
+        run: npm ci
+
+      - name: Build doctrine-validator
+        working-directory: tools/doctrine-validator
+        run: npm run build
+
+      - name: Run doctrine validation on HEAD commit
+        id: validate
+        working-directory: tools/doctrine-validator
+        continue-on-error: true  # Don't fail workflow yet, handle in next step
+        run: |
+          echo "Running doctrine validation on commit ${{ github.sha }}"
+          node dist/index.js validate \
+            --commit HEAD \
+            --out ../../evidence/doctrine \
+            --verbose
+
+      - name: Upload evidence report
+        if: always()  # Upload even if validation failed
+        uses: actions/upload-artifact@v4
+        with:
+          name: doctrine-evidence-${{ github.sha }}
+          path: evidence/doctrine/**/*.json
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Check validation result
+        if: steps.validate.outcome == 'failure'
+        run: |
+          echo "::error::Doctrine validation failed with blocking violations"
+          echo "Review the uploaded evidence artifact for details"
+          exit 1
+
+      - name: Comment PR with results (on pull request)
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const glob = require('@actions/glob');
+
+            // Find the most recent evidence file
+            const globber = await glob.create('evidence/doctrine/**/*_doctrine_report.json');
+            const files = await globber.glob();
+
+            if (files.length === 0) {
+              console.log('No evidence file found');
+              return;
+            }
+
+            // Sort by filename (timestamp) and get the latest
+            const latestFile = files.sort().reverse()[0];
+            const evidence = JSON.parse(fs.readFileSync(latestFile, 'utf8'));
+
+            // Build comment body
+            let body = `## 📋 Doctrine Validation Results\n\n`;
+            body += `**Commit:** \`${evidence.metadata.commitSHA?.substring(0, 7) || 'unknown'}\`\n`;
+            body += `**Branch:** \`${evidence.metadata.branch || 'unknown'}\`\n`;
+            body += `**Result:** ${evidence.summary.result === 'pass' ? '✅ **PASS**' : '❌ **FAIL**'}\n\n`;
+
+            // Summary table
+            body += `### Summary\n\n`;
+            body += `| Metric | Count |\n`;
+            body += `|--------|-------|\n`;
+            body += `| Controls Evaluated | ${evidence.summary.totalControls} |\n`;
+            body += `| Total Violations | ${evidence.summary.totalViolations} |\n`;
+            body += `| 🚫 Blocking | ${evidence.summary.blockingViolations} |\n`;
+            body += `| ⚠️ Warnings | ${evidence.summary.warningViolations} |\n`;
+            body += `| ℹ️ Info | ${evidence.summary.infoViolations} |\n`;
+            body += `| Duration | ${evidence.summary.durationMs}ms |\n\n`;
+
+            // Violations detail
+            if (evidence.violations.length > 0) {
+              body += `### Violations\n\n`;
+
+              const blocking = evidence.violations.filter(v => v.severity === 'block');
+              const warnings = evidence.violations.filter(v => v.severity === 'warn');
+              const info = evidence.violations.filter(v => v.severity === 'info');
+
+              if (blocking.length > 0) {
+                body += `#### 🚫 Blocking (${blocking.length})\n\n`;
+                for (const v of blocking.slice(0, 10)) {  // Limit to 10
+                  body += `- **[${v.controlId}]** ${v.message}\n`;
+                  body += `  \`${v.location.file}${v.location.line ? ':' + v.location.line : ''}\`\n`;
+                  if (v.fixHint) {
+                    body += `  💡 *${v.fixHint}*\n`;
+                  }
+                  body += `\n`;
+                }
+                if (blocking.length > 10) {
+                  body += `*... and ${blocking.length - 10} more blocking violations*\n\n`;
+                }
+              }
+
+              if (warnings.length > 0) {
+                body += `<details>\n<summary>⚠️ Warnings (${warnings.length})</summary>\n\n`;
+                for (const v of warnings.slice(0, 10)) {
+                  body += `- **[${v.controlId}]** ${v.message}\n`;
+                  body += `  \`${v.location.file}${v.location.line ? ':' + v.location.line : ''}\`\n\n`;
+                }
+                if (warnings.length > 10) {
+                  body += `*... and ${warnings.length - 10} more warnings*\n\n`;
+                }
+                body += `</details>\n\n`;
+              }
+            } else {
+              body += `✅ No violations found!\n\n`;
+            }
+
+            body += `---\n`;
+            body += `📁 [Download full evidence report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\n`;
+
+            // Post comment
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body
+            });
+
+      - name: Set commit status
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const state = '${{ steps.validate.outcome }}' === 'success' ? 'success' : 'failure';
+            const description = state === 'success'
+              ? 'Doctrine validation passed'
+              : 'Doctrine validation failed - blocking violations found';
+
+            github.rest.repos.createCommitStatus({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              sha: context.sha,
+              state: state,
+              target_url: `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
+              description: description,
+              context: 'Doctrine Validation'
+            });

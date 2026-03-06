@@ -1,0 +1,26 @@
+{
+  "_schema": "ReleaseAffidavit.v1",
+  "affidavit_id": "affidavit-001",
+  "repo": "forge-smith",
+  "commit": "abcde12345",
+  "human_intent": "Authorize schema pin release to stabilize parser.",
+  "harm_acknowledgment": "Aware of performance impact; benefits outweigh risks.",
+  "doctrine_summary": {
+    "status": "pass",
+    "findings_hash": "sha256:doctrine456"
+  },
+  "evidence": {
+    "bundle_id": "evidence-001",
+    "manifest_hash": "sha256:manifest123",
+    "verified": true
+  },
+  "ai_disclosure": {
+    "ai_used": false,
+    "details": []
+  },
+  "signer": "sherlock",
+  "authority_level": "Standard",
+  "signature_method": "ed25519",
+  "signature": "sig-abc",
+  "affidavit_hash": "sha256:affidavit789"
+}

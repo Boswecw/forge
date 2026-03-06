@@ -1,0 +1,150 @@
+name: Checkly Monitoring
+
+on:
+  # Run on every push to main
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'checkly/**'
+      - 'checkly.config.ts'
+      - '.github/workflows/checkly.yml'
+
+  # Run on pull requests
+  pull_request:
+    branches:
+      - main
+      - master
+    paths:
+      - 'checkly/**'
+      - 'checkly.config.ts'
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+  # Run daily to ensure checks are healthy
+  schedule:
+    - cron: '0 0 * * *' # Daily at midnight UTC
+
+jobs:
+  # Test checks on PRs
+  test:
+    name: Test Checkly Checks
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Checkly tests
+        run: npm run checkly:test
+        env:
+          CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+          CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
+          # Test environment variables
+          RAKE_BASE_URL: ${{ secrets.RAKE_BASE_URL }}
+          DATAFORGE_BASE_URL: ${{ secrets.DATAFORGE_BASE_URL }}
+          NEUROFORGE_BASE_URL: ${{ secrets.NEUROFORGE_BASE_URL }}
+          VIBEFORGE_BASE_URL: ${{ secrets.VIBEFORGE_BASE_URL }}
+          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+          TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: checkly-test-results
+          path: |
+            checkly-test-results/
+            *.png
+          retention-days: 7
+
+  # Deploy checks to Checkly on main branch
+  deploy:
+    name: Deploy to Checkly
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Deploy to Checkly
+        run: npm run checkly:deploy
+        env:
+          CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+          CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
+          # Environment variables (will be synced to Checkly)
+          RAKE_BASE_URL: ${{ secrets.RAKE_BASE_URL }}
+          DATAFORGE_BASE_URL: ${{ secrets.DATAFORGE_BASE_URL }}
+          NEUROFORGE_BASE_URL: ${{ secrets.NEUROFORGE_BASE_URL }}
+          VIBEFORGE_BASE_URL: ${{ secrets.VIBEFORGE_BASE_URL }}
+          TEST_EMAIL: ${{ secrets.TEST_EMAIL }}
+          TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
+
+      - name: Comment PR on failure
+        if: failure() && github.event_name == 'push'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ Checkly deployment failed. Please check the workflow logs.'
+            })
+
+  # Daily health check
+  health-check:
+    name: Daily Health Check
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run health check
+        run: npm run checkly:test
+        env:
+          CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+          CHECKLY_ACCOUNT_ID: ${{ secrets.CHECKLY_ACCOUNT_ID }}
+
+      - name: Notify on failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            console.log('Daily health check failed - alerts should be sent via Checkly')

@@ -1,0 +1,26 @@
+{
+  "_schema": "GapReport.v1",
+  "gap_id": "gap-0001",
+  "tier": 2,
+  "signal": 0.72,
+  "impact": 0.46,
+  "detectors": {
+    "failure_spike": 0.81,
+    "ttf_drop": 0.33,
+    "concentration": 0.64,
+    "novelty": 0.18
+  },
+  "window": {
+    "baseline_days": 14,
+    "detection_minutes": 60
+  },
+  "sources": [
+    {
+      "repo": "forge-smith",
+      "node": "executor",
+      "count": 5
+    }
+  ],
+  "cooldown_state": "eligible",
+  "notes": "Example only; Tier-2 report ready for Node B."
+}

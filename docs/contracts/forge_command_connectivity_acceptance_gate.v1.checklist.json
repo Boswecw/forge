@@ -1,0 +1,180 @@
+{
+  "service_id": "forge_command",
+  "gate_version": "1.0",
+  "generated_at": "2026-02-06T00:00:00Z",
+  "sources": {
+    "spec": "docs/contracts/service_connectivity_contract_spec.v1.md",
+    "ccr_inventory": "docs/contracts/forge_command_connectivity_ccr.v1.json",
+    "gate_doc": "docs/contracts/forge_command_connectivity_acceptance_gate.v1.md"
+  },
+  "release_policy": {
+    "mode": "governed",
+    "block_on_any_critical_fail": true
+  },
+  "gates": [
+    {
+      "id": "G1",
+      "title": "Connection declaration coverage",
+      "critical": true,
+      "status": "pass",
+      "requirement": "100% runtime cross-service connections have CCR records",
+      "evidence_required": [
+        "CCR inventory",
+        "Command registry",
+        "Client call graph"
+      ],
+      "evidence_present": [
+        "docs/contracts/forge_command_connectivity_ccr.v1.json"
+      ],
+      "notes": "CCR inventory present for known Forge_Command runtime boundaries"
+    },
+    {
+      "id": "G2",
+      "title": "Governed fail-closed control paths",
+      "critical": true,
+      "status": "fail",
+      "requirement": "All governed control-plane write paths are fail_closed",
+      "evidence_required": [
+        "Code path proof for reject-on-failure",
+        "Status-semantic consistency tests"
+      ],
+      "evidence_present": [],
+      "notes": "Intent status semantic split (`pending` vs `accepted`) breaks single fail-closed contract"
+    },
+    {
+      "id": "G3",
+      "title": "Divergence surfacing",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Divergence between control/execution/evidence is explicitly surfaced to consumers",
+      "evidence_required": [
+        "Divergence event emission proof",
+        "UI/API visibility proof"
+      ],
+      "evidence_present": [],
+      "notes": "Backend divergence heuristics exist, but event channel mismatch can hide divergence from UI"
+    },
+    {
+      "id": "G4",
+      "title": "Staleness enforcement",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Each connection enforces max_staleness behavior",
+      "evidence_required": [
+        "Timeout and stale-state transition tests"
+      ],
+      "evidence_present": [],
+      "notes": "Staleness is declared but not uniformly enforced as authoritative state downgrade"
+    },
+    {
+      "id": "G5",
+      "title": "Restart correctness",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Restart recovery restores full authoritative active state deterministically",
+      "evidence_required": [
+        "Rehydrate tests for runs",
+        "Rehydrate tests for tokens",
+        "Rehydrate tests for sessions"
+      ],
+      "evidence_present": [],
+      "notes": "Partial rehydration behavior and state normalization gaps remain"
+    },
+    {
+      "id": "G6",
+      "title": "Health vs readiness separation",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Reachability checks are not treated as authority readiness",
+      "evidence_required": [
+        "Distinct readiness contract",
+        "Readiness-path authority tests"
+      ],
+      "evidence_present": [],
+      "notes": "Current health checks are reachability-centric"
+    },
+    {
+      "id": "G7",
+      "title": "Stream correctness under fault",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Disconnect/reorder/omission transitions to unknown/diverged, not silent continuation",
+      "evidence_required": [
+        "SSE reorder tests",
+        "Reconnect tests",
+        "UI event contract tests"
+      ],
+      "evidence_present": [],
+      "notes": "Event-name mismatch and ordering assumptions permit silent omission"
+    },
+    {
+      "id": "G8",
+      "title": "Explicit partition mode",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Critical paths have explicit partition-mode behavior (`fail_closed` or `degraded_readonly`)",
+      "evidence_required": [
+        "Per-connection partition policy map",
+        "Partition behavior tests"
+      ],
+      "evidence_present": [],
+      "notes": "Policies declared in docs/CCR but not uniformly enforced at runtime"
+    },
+    {
+      "id": "G9",
+      "title": "Credential authorization binding",
+      "critical": true,
+      "status": "pass",
+      "requirement": "Credential connectivity does not imply secret resolution authorization",
+      "evidence_required": [
+        "Caller-bound credential policy tests"
+      ],
+      "evidence_present": [
+        "orchestrator /api/keys/vault/resolve caller+localhost checks"
+      ],
+      "notes": "Policy guards exist at orchestrator vault resolve boundary"
+    },
+    {
+      "id": "G10",
+      "title": "Emergency halt authority path",
+      "critical": true,
+      "status": "fail",
+      "requirement": "Emergency halt is invokable and contract-bound end-to-end",
+      "evidence_required": [
+        "Invoke handler wiring",
+        "Halt acknowledgment contract tests"
+      ],
+      "evidence_present": [],
+      "notes": "Emergency brake command declared but not currently wired into invoke handler"
+    }
+  ],
+  "connection_traceability": [
+    {"connection_id": "forge_command.tauri->orchestrator.intent_register", "gates": ["G1", "G2", "G8"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->orchestrator.intent_get", "gates": ["G1", "G2", "G6"], "status": "implemented_with_semantic_drift"},
+    {"connection_id": "forge_command.tauri->orchestrator.intent_accept", "gates": ["G1", "G2", "G5"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->orchestrator.pipeline_update_state", "gates": ["G1", "G5"], "status": "implemented_with_persistence_gap"},
+    {"connection_id": "forge_command.tauri->forgeagents.run_start", "gates": ["G1", "G2", "G8"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->forgeagents.run_cancel", "gates": ["G1", "G2", "G3"], "status": "implemented_with_weak_confirmation"},
+    {"connection_id": "forge_command.tauri->forgeagents.run_status_verify", "gates": ["G1", "G3", "G4"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->forgeagents.sse_events", "gates": ["G1", "G3", "G4", "G7"], "status": "implemented_with_event_contract_drift"},
+    {"connection_id": "forge_command.tauri->dataforge.run_history", "gates": ["G1", "G4", "G8"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->dataforge.run_detail", "gates": ["G1", "G4", "G8"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->dataforge.run_evidence", "gates": ["G1", "G3", "G4"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->dataforge.artifact_manifest", "gates": ["G1", "G3", "G4"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->ecosystem.health_checks", "gates": ["G1", "G6"], "status": "implemented_with_authority_gap"},
+    {"connection_id": "forge_command.tauri->orchestrator.process_management", "gates": ["G1", "G5", "G8"], "status": "implemented"},
+    {"connection_id": "orchestrator.api_keys->vault_keyring", "gates": ["G1", "G9"], "status": "implemented"},
+    {"connection_id": "orchestrator.api_keys->dataforge.secrets_sync", "gates": ["G1", "G8", "G9"], "status": "implemented"},
+    {"connection_id": "forge_command.tauri->localdb.api_keys", "gates": ["G1", "G9"], "status": "implemented_with_crypto_compatibility_risk"},
+    {"connection_id": "forge_command.tauri->frontend.run_events", "gates": ["G1", "G3", "G7"], "status": "implemented_with_subscription_mismatch"},
+    {"connection_id": "forge_command.tauri->ecosystem.emergency_brake", "gates": ["G1", "G2", "G8", "G10"], "status": "declared_not_wired"}
+  ],
+  "summary": {
+    "total_gates": 10,
+    "pass": 2,
+    "fail": 8,
+    "blocked": 0,
+    "critical_fail_count": 8,
+    "release_decision": "block"
+  }
+}

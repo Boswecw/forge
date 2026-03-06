@@ -1,0 +1,85 @@
+name: SMITH Governance CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - 'smith/wip-*'
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  contents: read
+
+jobs:
+  smithy-governance:
+    name: SMITHY Tests + Governance
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Rust (stable)
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          profile: minimal
+          override: true
+
+      - name: Cache cargo registry
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/registry
+            ~/.cargo/git
+            target
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: Run SMITHY tests
+        working-directory: smithy
+        run: cargo test --all --locked
+
+      # ------------------------------------------------------------
+      # BuildGuard governance enforcement
+      # ------------------------------------------------------------
+      # Replace this step with the real BuildGuard invocation
+      # when the runner is available.
+      - name: BuildGuard (governance stub)
+        run: |
+          mkdir -p buildguard
+          cat > buildguard/buildguard_report.json <<'EOF'
+          {
+            "meta": {
+              "tool": "buildguard",
+              "mode": "stub",
+              "generatedAt": "REPLACE_AT_RUNTIME"
+            },
+            "summary": {
+              "status": "pass",
+              "findings": 0
+            },
+            "findings": []
+          }
+          EOF
+          # Replace placeholder timestamp deterministically at runtime (UTC ISO8601)
+          python - <<'PY'
+          import json, datetime
+          p = 'buildguard/buildguard_report.json'
+          data = json.load(open(p))
+          data['meta']['generatedAt'] = datetime.datetime.utcnow().replace(microsecond=0).isoformat() + 'Z'
+          json.dump(data, open(p,'w'), indent=2, sort_keys=True)
+          PY
+
+      - name: Upload BuildGuard report
+        uses: actions/upload-artifact@v4
+        with:
+          name: buildguard-report
+          path: buildguard/buildguard_report.json

@@ -1,0 +1,55 @@
+{
+  "_schema": "VerificationPlan.v1",
+  "plan_id": "vp-001",
+  "created_at": "2026-01-20T05:00:00Z",
+  "source_intent_id": "intent-001",
+  "intent_hash": "sha256:def456",
+  "verification_scope": {
+    "repos": [
+      "forge-smith"
+    ],
+    "targets": [
+      "unit_tests",
+      "integration_tests",
+      "doctrine"
+    ],
+    "environment": "staging"
+  },
+  "requirements": [
+    {
+      "req_id": "VP-001",
+      "category": "tests",
+      "description": "Unit tests must pass after applying schema pin.",
+      "mandatory": true,
+      "pass_criteria": "pnpm test --filter executor",
+      "evidence_artifact": {
+        "type": "log",
+        "format": "text",
+        "expected_hash_alg": "sha256"
+      }
+    },
+    {
+      "req_id": "VP-002",
+      "category": "doctrine",
+      "description": "Doctrine validation must emit zero BLOCK findings.",
+      "mandatory": true,
+      "pass_criteria": "Doctrine run shows no BLOCK severity.",
+      "evidence_artifact": {
+        "type": "report",
+        "format": "json",
+        "expected_hash_alg": "sha256"
+      }
+    }
+  ],
+  "gates": {
+    "no_waivers_by_default": true,
+    "waiver_requires_reason": true,
+    "waiver_requires_authority": "Standard",
+    "human_acceptance_required": true
+  },
+  "provenance": {
+    "bundle_hash": "sha256:abc123",
+    "gap_hash": "sha256:ghi789",
+    "phase_d_version": "1.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "forge-ecosystem-monitoring",
+  "version": "1.0.0",
+  "description": "Checkly monitoring for Forge Ecosystem services",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "checkly:test": "checkly test",
+    "checkly:deploy": "checkly deploy",
+    "checkly:trigger": "checkly trigger",
+    "brand:export": "bash forge-brand/scripts/export-pngs.sh",
+    "brand:verify": "node forge-brand/tools/verify-anvil-geometry.mjs",
+    "contracts:test": "tsc -p tsconfig.contracts.json && node dist/contracts/tests/run-tests.js",
+    "gate:connectivity": "node scripts/validate-connectivity-checklist.mjs docs/contracts/forge_command_connectivity_acceptance_gate.v1.checklist.json"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^25.0.3",
+    "checkly": "^6.9.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

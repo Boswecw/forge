@@ -1,0 +1,87 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-store/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+.env.local
+.env.checkly
+.env.*.local
+
+# Checkly test artifacts
+checkly-test-results/
+*.png
+playwright-report/
+test-results/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+htmlcov/
+out/
+.ruff_cache/
+.venv_verify/
+.coverage
+
+# Nested implementation repos
+/DataForge/
+/ForgeAgents/
+/ForgeImages/
+/Forge_Command/
+/NeuroForge/
+/canebrake_press/
+/cortex_bds/
+/forge-eval/
+/forge-smithy/
+/rake/
+/smithy/
+/tarcie/
+/zfss/
+
+# Non-governance or unresolved root surfaces
+/Forge_Command_Reference/
+/src-tauri/
+/supabase/
+/system/
+/bun.lock
+/context_slices
+/e2e_deployment_test.py
+/install-forge-command-deps.sh
+/occupancy_snapshot
+/pnpm-lock.yaml
+/quick_deploy_check.sh
+/rake-health.check.ts
+/render-consolidated.yaml
+/render-dataforge-only.yaml
+/render-testing-phase.yaml
+/review_findings
+/risk_heatmap
+/telemetry_matrix
+/test-checkly-webhook.sh
+/verify_consolidation.sh
+/vibeforge-login.check.ts
+
+# Generated support artifacts
+/forge-brand/assets/exports/
+/tools/ecosystem-qc/node_modules/
+/tools/ecosystem-qc/out/

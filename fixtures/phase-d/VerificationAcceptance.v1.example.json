@@ -1,0 +1,9 @@
+{
+  "_schema": "VerificationAcceptance.v1",
+  "report_id": "vr-001",
+  "decision": "accept",
+  "rationale": "Evidence meets doctrine and test requirements.",
+  "accepted_by": "sherlock",
+  "authority_level": "Standard",
+  "accepted_at": "2026-01-20T05:45:00Z"
+}

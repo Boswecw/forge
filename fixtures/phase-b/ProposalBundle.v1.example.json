@@ -1,0 +1,46 @@
+{
+  "_schema": "ProposalBundle.v1",
+  "bundle_id": "bundle-001",
+  "generated_at": "2026-01-20T03:00:00Z",
+  "source_gap_id": "gap-0001",
+  "classification": {
+    "primary_cause": "regression",
+    "confidence": 0.73
+  },
+  "proposal_set": [
+    {
+      "proposal_id": "proposal-01",
+      "title": "Pin schema validation to v2.1",
+      "change_type": "code",
+      "risk_level": "medium",
+      "expected_benefit": "Avoids parse regressions caused by loose schema.",
+      "reversibility": "moderate"
+    },
+    {
+      "proposal_id": "proposal-02",
+      "title": "Add runtime lint guard",
+      "change_type": "config",
+      "risk_level": "low",
+      "expected_benefit": "Provides early warning without changing code.",
+      "reversibility": "easy"
+    }
+  ],
+  "topology": {
+    "affected_nodes": [
+      "executor",
+      "verifier"
+    ],
+    "blast_radius_estimate": 0.38,
+    "topology_diff_dot": "digraph impact { executor -> verifier [label=\"failure propagation\"]; }"
+  },
+  "constraints": {
+    "no_auto_apply": true,
+    "human_review_required": true,
+    "requires_patch_node": true
+  },
+  "provenance": {
+    "input_gap_hash": "sha256:abc123",
+    "node_b_version": "1.0.0",
+    "generated_by": "forge:node-b"
+  }
+}

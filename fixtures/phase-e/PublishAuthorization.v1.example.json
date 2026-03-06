@@ -1,0 +1,10 @@
+{
+  "_schema": "PublishAuthorization.v1",
+  "decision_id": "rgd-001",
+  "decision": "authorize",
+  "type_to_confirm": "PUBLISH forge-smith abcde12345",
+  "rationale": "Verification evidence is complete and doctrine is clean.",
+  "authority_level": "Standard",
+  "authorized_by": "sherlock",
+  "authorized_at": "2026-01-20T06:05:00Z"
+}

@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://forge.internal/schemas/contracts/service_contract.v1.schema.json",
+  "title": "ServiceContract.v1",
+  "description": "Forge ecosystem service connectivity contract. Declares dependencies, health endpoints, auth requirements, and degraded mode behaviors.",
+  "type": "object",
+  "required": ["service_id", "version", "contract_version", "dependencies", "endpoints_exposed", "degraded_modes"],
+  "properties": {
+    "service_id": {
+      "type": "string",
+      "description": "Unique service identifier (lowercase, no spaces)",
+      "pattern": "^[a-z][a-z0-9_-]*$"
+    },
+    "version": {
+      "type": "string",
+      "description": "Service version (semver)",
+      "pattern": "^\\d+\\.\\d+\\.\\d+.*$"
+    },
+    "contract_version": {
+      "type": "string",
+      "const": "1.0",
+      "description": "Contract schema version"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human-readable service description"
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Services this service depends on",
+      "items": {
+        "$ref": "#/$defs/dependency"
+      }
+    },
+    "endpoints_exposed": {
+      "type": "array",
+      "description": "API endpoints this service exposes",
+      "items": {
+        "$ref": "#/$defs/endpoint"
+      }
+    },
+    "auth_requirements": {
+      "$ref": "#/$defs/auth_config",
+      "description": "Authentication/authorization configuration"
+    },
+    "degraded_modes": {
+      "type": "array",
+      "description": "Named degraded operational modes",
+      "items": {
+        "$ref": "#/$defs/degraded_mode"
+      }
+    },
+    "health": {
+      "$ref": "#/$defs/health_config",
+      "description": "Health and readiness endpoint configuration"
+    }
+  },
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "required": ["service_id", "critical", "health_endpoint", "timeout_ms"],
+      "properties": {
+        "service_id": {
+          "type": "string",
+          "description": "Dependent service identifier"
+        },
+        "critical": {
+          "type": "boolean",
+          "description": "If true, this dependency being down prevents the service from being 'ready'"
+        },
+        "health_endpoint": {
+          "type": "string",
+          "description": "HTTP endpoint to check dependency health",
+          "format": "uri-reference"
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 60000,
+          "description": "Max time to wait for health response"
+        },
+        "fallback_behavior": {
+          "type": "string",
+          "enum": ["fail_closed", "degrade", "cache_fallback", "skip"],
+          "description": "What happens when this dependency is unavailable"
+        }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "required": ["path", "methods"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Endpoint path pattern"
+        },
+        "methods": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+          }
+        },
+        "auth_required": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether authentication is required"
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "auth_config": {
+      "type": "object",
+      "properties": {
+        "default_policy": {
+          "type": "string",
+          "enum": ["deny", "allow"],
+          "default": "deny",
+          "description": "Default auth policy for unlisted endpoints"
+        },
+        "token_types": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["run_token", "user_token", "api_key", "service_token"]
+          },
+          "description": "Accepted token types"
+        },
+        "public_endpoints": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Endpoints that do not require authentication"
+        }
+      }
+    },
+    "degraded_mode": {
+      "type": "object",
+      "required": ["name", "trigger", "affected_capabilities"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Named degraded mode (e.g., CACHE_ONLY, MODEL_ONLY)"
+        },
+        "trigger": {
+          "type": "string",
+          "description": "What triggers this degraded mode"
+        },
+        "affected_capabilities": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Capabilities reduced or lost in this mode"
+        },
+        "severity": {
+          "type": "string",
+          "enum": ["info", "warning", "critical"],
+          "default": "warning"
+        }
+      }
+    },
+    "health_config": {
+      "type": "object",
+      "properties": {
+        "health_endpoint": {
+          "type": "string",
+          "default": "/health"
+        },
+        "ready_endpoint": {
+          "type": "string",
+          "default": "/ready"
+        },
+        "degraded_endpoint": {
+          "type": "string",
+          "default": "/degraded"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ecosystem-qc",
+  "version": "0.3.0",
+  "description": "Ecosystem-wide quality control runner for Forge repos — fast, deep, or both.",
+  "type": "module",
+  "scripts": {
+    "qc": "bun run src/index.ts",
+    "qc:fast": "bun run src/index.ts --mode=fast",
+    "qc:deep": "bun run src/index.ts --mode=deep",
+    "qc:both": "bun run src/index.ts --mode=both"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.4.0"
+  }
+}
