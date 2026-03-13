@@ -12,7 +12,8 @@ Directory names, subsystem boundaries, and ownership lines in this chapter are c
 ├── ForgeAgents/             # Agent execution runtime (port 8010)
 ├── Forge_Command/           # Desktop orchestration (port 8003)
 ├── forge-smithy/            # Desktop governance workbench (Tauri + Svelte 5)
-├── forge-eval/              # Standalone deterministic evaluation subsystem (Packs A-J)
+├── forge-eval/              # Standalone deterministic evaluation subsystem (Packs A-M)
+├── eval-cal-node/           # Post-implementation calibration node for Forge Eval
 ├── Author-Forge/            # Literary AI application
 ├── cortex_bds/              # Multi-AI orchestration desktop app (Tauri 2.0 + SvelteKit)
 ├── zfss/                    # Zero-trust file storage service (internal tooling)
@@ -263,6 +264,33 @@ Forge Eval is a first-class subsystem, not a child module of NeuroForge, DataFor
 ```text
 risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate
 ```
+
+---
+
+## Eval Cal Node — `eval-cal-node/`
+
+**Root:** `/home/charlie/Forge/ecosystem/eval-cal-node/`
+
+```
+eval-cal-node/
+├── src/eval_cal_node/
+│   ├── cli.py                     # `eval-cal-node record|status|review`
+│   ├── config.py                  # Config loader + parameter validation
+│   ├── errors.py                  # CalNodeError hierarchy
+│   ├── schemas/                   # 7 JSON schemas (record, config, 5 output artifacts)
+│   ├── services/                  # Pattern extraction, calibration math, gates,
+│   │                              #   artifact writers, status reporting
+│   └── validation/                # Schema loader + record validation
+├── config/
+│   └── cal_node_config.json       # Per-parameter policy bounds (13 allowed targets)
+├── records/                       # Runtime: ingested calibration records (gitignored)
+├── proposals/                     # Runtime: emitted proposal artifacts (gitignored)
+├── reports/                       # Summary reports
+├── tests/                         # 51 tests across 6 test files
+└── README.md
+```
+
+Eval Cal Node is a standalone post-implementation calibration node. It studies the gap between Forge Eval outputs, SYSTEM.md declarations, and reconciliation findings. It produces bounded, reviewable calibration proposals for 13 Eval parameters but never directly alters the approved parameter revision.
 
 ---
 

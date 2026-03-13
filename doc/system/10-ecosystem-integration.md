@@ -54,7 +54,14 @@ The map above is the live service integration mesh. Forge Eval is deliberately s
 - **SMITH owns authority.** Governance decisions, approvals, and final human-authoritative calls remain outside Forge Eval.
 - **DataForge owns durable persistence.** Forge Eval does not currently act as the ecosystem truth store.
 - **Target repositories remain subjects.** Forge Eval evaluates them; it does not become part of their runtime ownership boundary.
-- **Current implemented path runs through Pack J.** `risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate`
+- **Current implemented path runs through Pack M.** `risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate -> hazard map -> merge decision -> evidence bundle`
+
+### Eval Cal Node Boundary in the Ecosystem
+
+- **Eval Cal Node is post-implementation and post-reconciliation.** It never operates on in-flight implementation state.
+- **Eval Cal Node does not alter Forge Eval.** It does not change stage order, artifact contracts, fail-closed doctrine, or approved parameter revisions directly.
+- **Eval Cal Node only emits proposals.** Candidate calibration proposals require explicit human approval at the Gate 3 math-effect boundary before any approved Eval parameter revision changes.
+- **Eval Cal Node uses local structured JSON.** No DataForge write contract required for v0. Persistence is append-only for records; proposals are immutable once written.
 
 ---
 
@@ -72,7 +79,8 @@ The map above is the live service integration mesh. Forge Eval is deliberately s
 | **SMITH** | Planning sessions, portfolio, evaluation snapshots, governance events | API key |
 | **ForgeAgents** | Agent registry, execution records, evidence | admin token / API key |
 | **Sentinel** | Sweep results, healing events (via ForgeAgents) | API key |
-| **Forge Eval** | None in current Pack J runtime; emits local schema-locked artifacts | — |
+| **Forge Eval** | None in current Pack M runtime; emits local schema-locked artifacts | — |
+| **Eval Cal Node** | None; emits local calibration proposals and evidence artifacts | — |
 
 **Violations are security events.** Unauthorized write attempts are rejected, logged as security events, and the caller receives no helpful error message.
 

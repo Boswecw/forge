@@ -105,6 +105,22 @@ The ecosystem reference uses human-readable narrative stage names for Pack J. Co
 - Forge Eval does not make governance decisions. SMITH remains the authority layer for human-governed decisions.
 - Forge Eval does not own durable persistence. DataForge remains the durable truth store when evaluation artifacts need to be retained beyond local execution.
 
+### Eval Cal Node — Post-Implementation Calibration
+
+Eval Cal Node is a separate standalone repository (`eval-cal-node/`) that operates downstream of both Forge Eval and reconciliation. It ingests three surfaces per implementation slice:
+
+1. **Forge Eval A-M artifact chain** — what Eval said
+2. **SYSTEM.md declared state** — what was documented
+3. **Reconciliation findings** — what actually drifted or aligned
+
+From these surfaces it computes bounded calibration proposals for 13 Eval parameters (hazard weights, merge thresholds, occupancy priors). The node uses a three-gate autonomy model:
+
+- **Gate 1 (Sufficiency):** Autonomous — rejects weak or noisy signals
+- **Gate 2 (Control Envelope):** Autonomous — rejects policy-violating proposals
+- **Gate 3 (Math-Effect Boundary):** Human approval required
+
+Eval Cal Node does not alter Forge Eval stage order, artifact contracts, fail-closed doctrine, or the current approved Eval parameter revision directly. It only emits candidate proposals.
+
 ---
 
 ## NeuroForge — 5-Stage Inference Pipeline

@@ -251,6 +251,7 @@ Submodules:
 
 | Surface | Type | Canonical README | `doc/system/` | Status | Notes |
 |---|---|---:|---:|---|---|
+| eval-cal-node | standalone CLI subsystem | yes | no | partial | Post-implementation calibration node; README contract present; no `doc/system/` tree yet (deferred to later revision). |
 | checkly | workspace monitoring surface | yes | no | partial | README contract added; no repo-local system manual exists. |
 | contracts | workspace support surface | no | no | deferred | Useful support surface; no protocol header or `doc/system/` tree yet. |
 | doctrine | workspace support surface | no | no | deferred | References canonical docs but does not yet carry a protocol contract. |

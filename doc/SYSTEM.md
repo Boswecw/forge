@@ -359,6 +359,22 @@ The ecosystem reference uses human-readable narrative stage names for Pack J. Co
 - Forge Eval does not make governance decisions. SMITH remains the authority layer for human-governed decisions.
 - Forge Eval does not own durable persistence. DataForge remains the durable truth store when evaluation artifacts need to be retained beyond local execution.
 
+### Eval Cal Node — Post-Implementation Calibration
+
+Eval Cal Node is a separate standalone repository (`eval-cal-node/`) that operates downstream of both Forge Eval and reconciliation. It ingests three surfaces per implementation slice:
+
+1. **Forge Eval A-M artifact chain** — what Eval said
+2. **SYSTEM.md declared state** — what was documented
+3. **Reconciliation findings** — what actually drifted or aligned
+
+From these surfaces it computes bounded calibration proposals for 13 Eval parameters (hazard weights, merge thresholds, occupancy priors). The node uses a three-gate autonomy model:
+
+- **Gate 1 (Sufficiency):** Autonomous — rejects weak or noisy signals
+- **Gate 2 (Control Envelope):** Autonomous — rejects policy-violating proposals
+- **Gate 3 (Math-Effect Boundary):** Human approval required
+
+Eval Cal Node does not alter Forge Eval stage order, artifact contracts, fail-closed doctrine, or the current approved Eval parameter revision directly. It only emits candidate proposals.
+
 ---
 
 ## NeuroForge — 5-Stage Inference Pipeline
@@ -857,7 +873,8 @@ Directory names, subsystem boundaries, and ownership lines in this chapter are c
 ├── ForgeAgents/             # Agent execution runtime (port 8010)
 ├── Forge_Command/           # Desktop orchestration (port 8003)
 ├── forge-smithy/            # Desktop governance workbench (Tauri + Svelte 5)
-├── forge-eval/              # Standalone deterministic evaluation subsystem (Packs A-J)
+├── forge-eval/              # Standalone deterministic evaluation subsystem (Packs A-M)
+├── eval-cal-node/           # Post-implementation calibration node for Forge Eval
 ├── Author-Forge/            # Literary AI application
 ├── cortex_bds/              # Multi-AI orchestration desktop app (Tauri 2.0 + SvelteKit)
 ├── zfss/                    # Zero-trust file storage service (internal tooling)
@@ -1108,6 +1125,33 @@ Forge Eval is a first-class subsystem, not a child module of NeuroForge, DataFor
 ```text
 risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate
 ```
+
+---
+
+## Eval Cal Node — `eval-cal-node/`
+
+**Root:** `/home/charlie/Forge/ecosystem/eval-cal-node/`
+
+```
+eval-cal-node/
+├── src/eval_cal_node/
+│   ├── cli.py                     # `eval-cal-node record|status|review`
+│   ├── config.py                  # Config loader + parameter validation
+│   ├── errors.py                  # CalNodeError hierarchy
+│   ├── schemas/                   # 7 JSON schemas (record, config, 5 output artifacts)
+│   ├── services/                  # Pattern extraction, calibration math, gates,
+│   │                              #   artifact writers, status reporting
+│   └── validation/                # Schema loader + record validation
+├── config/
+│   └── cal_node_config.json       # Per-parameter policy bounds (13 allowed targets)
+├── records/                       # Runtime: ingested calibration records (gitignored)
+├── proposals/                     # Runtime: emitted proposal artifacts (gitignored)
+├── reports/                       # Summary reports
+├── tests/                         # 51 tests across 6 test files
+└── README.md
+```
+
+Eval Cal Node is a standalone post-implementation calibration node. It studies the gap between Forge Eval outputs, SYSTEM.md declarations, and reconciliation findings. It produces bounded, reviewable calibration proposals for 13 Eval parameters but never directly alters the approved parameter revision.
 
 ---
 
@@ -2677,7 +2721,14 @@ The map above is the live service integration mesh. Forge Eval is deliberately s
 - **SMITH owns authority.** Governance decisions, approvals, and final human-authoritative calls remain outside Forge Eval.
 - **DataForge owns durable persistence.** Forge Eval does not currently act as the ecosystem truth store.
 - **Target repositories remain subjects.** Forge Eval evaluates them; it does not become part of their runtime ownership boundary.
-- **Current implemented path runs through Pack J.** `risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate`
+- **Current implemented path runs through Pack M.** `risk -> context slices -> reviewer findings -> telemetry matrix -> occupancy snapshot -> capture estimate -> hazard map -> merge decision -> evidence bundle`
+
+### Eval Cal Node Boundary in the Ecosystem
+
+- **Eval Cal Node is post-implementation and post-reconciliation.** It never operates on in-flight implementation state.
+- **Eval Cal Node does not alter Forge Eval.** It does not change stage order, artifact contracts, fail-closed doctrine, or approved parameter revisions directly.
+- **Eval Cal Node only emits proposals.** Candidate calibration proposals require explicit human approval at the Gate 3 math-effect boundary before any approved Eval parameter revision changes.
+- **Eval Cal Node uses local structured JSON.** No DataForge write contract required for v0. Persistence is append-only for records; proposals are immutable once written.
 
 ---
 
@@ -2695,7 +2746,8 @@ The map above is the live service integration mesh. Forge Eval is deliberately s
 | **SMITH** | Planning sessions, portfolio, evaluation snapshots, governance events | API key |
 | **ForgeAgents** | Agent registry, execution records, evidence | admin token / API key |
 | **Sentinel** | Sweep results, healing events (via ForgeAgents) | API key |
-| **Forge Eval** | None in current Pack J runtime; emits local schema-locked artifacts | — |
+| **Forge Eval** | None in current Pack M runtime; emits local schema-locked artifacts | — |
+| **Eval Cal Node** | None; emits local calibration proposals and evidence artifacts | — |
 
 **Violations are security events.** Unauthorized write attempts are rejected, logged as security events, and the caller receives no helpful error message.
 

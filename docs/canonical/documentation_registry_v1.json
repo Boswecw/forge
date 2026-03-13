@@ -284,6 +284,22 @@
       "notes": "Authoritative storage/runtime surface governed as a mature full-system-doc repo."
     },
     {
+      "repo_id": "eval-cal-node",
+      "display_name": "Eval Cal Node",
+      "path": "eval-cal-node",
+      "surface_type": "cli_subsystem",
+      "maturity_class": "partial",
+      "doc_class": "readme_only",
+      "policy_class": "standalone_governed_cli",
+      "requires_readme_contract": true,
+      "requires_doc_system": false,
+      "system_prefix": null,
+      "assembled_system_path": null,
+      "status": "partial",
+      "report_labels": ["eval-cal-node", "Eval Cal Node"],
+      "notes": "Post-implementation calibration node. README-only for v0; BDS doc/system deferred to later revision."
+    },
+    {
       "repo_id": "checkly",
       "display_name": "checkly",
       "path": "checkly",
