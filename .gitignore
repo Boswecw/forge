@@ -29,6 +29,7 @@ test-results/
 *.swp
 *.swo
 .claude/
+/.codex
 
 # OS
 .DS_Store
@@ -45,6 +46,7 @@ out/
 
 # Nested implementation repos
 /DataForge/
+/ForgeMath/
 /ForgeAgents/
 /ForgeImages/
 /Forge_Command/
@@ -52,7 +54,10 @@ out/
 /canebrake_press/
 /cortex/
 /cortex_bds/
+/dataforge-Local/
+/fa-local/
 /forge-eval/
+/forgeHQ/
 /forge-smithy/
 /rake/
 /smithy/
@@ -86,3 +91,5 @@ out/
 /forge-brand/assets/exports/
 /tools/ecosystem-qc/node_modules/
 /tools/ecosystem-qc/out/
+
+context-bundle.md
