@@ -45,6 +45,7 @@ out/
 .coverage
 
 # Nested implementation repos
+/# Nested implementation repos
 /DataForge/
 /ForgeMath/
 /ForgeAgents/
@@ -52,17 +53,24 @@ out/
 /Forge_Command/
 /NeuroForge/
 /canebrake_press/
+/checkly/
 /cortex/
 /cortex_bds/
 /dataforge-Local/
+/df-local-foundation/
+/eval-cal-node/
 /fa-local/
 /forge-eval/
+/forge-local-runtime/
 /forgeHQ/
 /forge-smithy/
+/neuronforge/
 /rake/
 /smithy/
 /tarcie/
 /zfss/
+
+/*-local-operator/
 
 # Non-governance or unresolved root surfaces
 /Forge_Command_Reference/
