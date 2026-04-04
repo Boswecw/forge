@@ -278,6 +278,33 @@ Temporary waivers may be issued for legitimate blockers. They must be:
 
 Waivers must never become permanent compatibility workarounds.
 
+## Participating repos and CI gate scripts
+
+Each proving-slice participating repo carries a `ci_gate.sh` at its root. These
+scripts resolve the contract-core path relative to the ecosystem root and invoke
+the canonical gate runner.
+
+| Repo | Script | Path resolution |
+|------|--------|-----------------|
+| `contracts/forge-contract-core` | `ci_gate.sh` | Self |
+| `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` |
+| `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` |
+
+All scripts use the contract-core `.venv/bin/python` if present, falling back to the
+local venv or system Python.
+
+## Scenario and adversarial test suite
+
+`tests/scenario/` contains two test files that validate the full proving-slice
+contract path without a live database:
+
+| File | Coverage |
+|------|---------|
+| `test_proving_slice_scenarios.py` | 7 named scenarios: happy path, family gate, invalid payload rejection, idempotency boundary, receipt structure, lineage chain, and admission evidence |
+| `test_adversarial.py` | 8 adversarial cases: tampered idempotency key, cross-family key smuggling, forbidden family injection, unadmitted family variants (incl. SQL injection), version forgery (v0 + v999), unadmitted producers, empty payload bypass, null required field |
+
+These tests are included in the default `pytest tests/` run and must stay green.
+
 ## Adding a new gate
 
 1. Create a new gate module in `forge_contract_core/gates/`.
