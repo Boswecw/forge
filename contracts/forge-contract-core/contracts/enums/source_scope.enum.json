@@ -1,0 +1,1 @@
+{"name": "source_scope", "description": "Scope at which an artifact was originally observed or produced.", "values": ["local", "shared", "restricted"]}

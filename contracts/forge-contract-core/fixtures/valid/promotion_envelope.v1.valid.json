@@ -1,0 +1,29 @@
+{
+  "_fixture": {"family": "promotion_envelope", "version": 1, "class": "valid", "description": "Canonical valid promotion_envelope wrapping a source_drift_finding for promotion."},
+  "artifact_id": "b2c3d4e5-0002-0002-0002-000000000002",
+  "artifact_family": "promotion_envelope",
+  "artifact_version": 1,
+  "produced_by_system": "dataforge-Local",
+  "produced_by_component": "promotion_queue_service",
+  "source_scope": "local",
+  "lineage_root_id": "a1b2c3d4-0001-0001-0001-000000000001",
+  "parent_artifact_id": "a1b2c3d4-0001-0001-0001-000000000001",
+  "trace_id": "trace-00000000-0002",
+  "idempotency_key": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b856",
+  "created_at": "2026-04-04T10:01:00Z",
+  "recorded_at": "2026-04-04T10:01:01Z",
+  "sensitivity_class": "internal",
+  "visibility_class": "internal",
+  "promotion_class": "local_only",
+  "validation_status": "valid",
+  "signer_identity": "dataforge-Local/promotion_queue_service@proving-slice-v1",
+  "signature": "sha256:fixture-signature-placeholder-0000000000000000000000000000000000000000000000000000000000000002",
+  "payload": {
+    "promoted_artifact_ref": "source_drift_finding:a1b2c3d4-0001-0001-0001-000000000001:v1",
+    "promotion_reason": "Drift finding meets promotion admission criteria: family admitted, envelope valid, sensitivity allows promotion.",
+    "redaction_class": "none",
+    "policy_check_result": "passed",
+    "promotion_batch_id": "a1b2c3d4-0001-0001-0001-000000000001",
+    "policy_check_detail": "All admission checks passed: family admitted, version admitted, sensitivity_class internal permits promotion."
+  }
+}

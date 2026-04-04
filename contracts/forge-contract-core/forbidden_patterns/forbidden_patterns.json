@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "description": "Machine-readable forbidden patterns for the Forge proving slice. Gate runners must check these.",
+  "patterns": [
+    {
+      "id": "FP001",
+      "name": "nested_shared_envelope_in_payload",
+      "severity": "blocking",
+      "description": "A shared envelope must not be nested inside another shared envelope's payload field.",
+      "detection_hint": "payload object contains keys: artifact_id, artifact_family, artifact_version, produced_by_system",
+      "why": "Envelope nesting creates ambiguous lineage and validation bypass risks."
+    },
+    {
+      "id": "FP002",
+      "name": "enum_redefinition_by_consuming_repo",
+      "severity": "blocking",
+      "description": "A consuming repo must not redefine or extend admitted enum values locally.",
+      "detection_hint": "Local code defines string literals that conflict with or extend enum values from forge-contract-core enums.",
+      "why": "Enum drift causes semantic incompatibility and silent validation failures."
+    },
+    {
+      "id": "FP003",
+      "name": "undeclared_additional_proving_slice_wire_fields",
+      "severity": "blocking",
+      "description": "Admitted proving-slice envelope and payloads use additionalProperties:false. Undeclared fields must not be added.",
+      "detection_hint": "Schema validation reports additionalProperties errors.",
+      "why": "Undeclared fields signal schema drift and may carry unreviewed semantics."
+    },
+    {
+      "id": "FP004",
+      "name": "local_only_truth_promoted_by_convenience",
+      "severity": "blocking",
+      "description": "local_only promotion_class artifacts must not enter the promotion staging queue.",
+      "detection_hint": "staging queue contains rows with promotion_class = 'local_only'.",
+      "why": "Promoting local-only truth to shared truth violates the authority boundary."
+    },
+    {
+      "id": "FP005",
+      "name": "derived_read_model_as_canonical_lifecycle_truth",
+      "severity": "blocking",
+      "description": "Derived read models must never replace canonical lifecycle truth. A read model is never the source of truth.",
+      "detection_hint": "Lifecycle state is written from a derived view model rather than from canonical artifact records.",
+      "why": "Read models are derived. Treating them as truth causes stale and misleading operator state."
+    },
+    {
+      "id": "FP006",
+      "name": "family_emitted_by_unauthorized_repo",
+      "severity": "blocking",
+      "description": "A family must only be emitted by repos listed in its admitted_producers in the artifact_family_registry.",
+      "detection_hint": "produced_by_system does not match an admitted producer for the artifact_family.",
+      "why": "Unauthorized producers break the authority boundary and traceability guarantees."
+    },
+    {
+      "id": "FP007",
+      "name": "acceptance_and_duplicate_reconciliation_blurred",
+      "severity": "blocking",
+      "description": "A fresh acceptance and a duplicate-reconciled outcome must never produce the same intake_outcome value.",
+      "detection_hint": "intake_outcome = 'accepted' used for both new records and duplicate-reconciled sends.",
+      "why": "Blurring these outcomes makes idempotency auditing impossible."
+    },
+    {
+      "id": "FP008",
+      "name": "claimed_for_send_without_durable_lease",
+      "severity": "blocking",
+      "description": "A staging queue item must not be moved to claimed_for_send state without a durable lease record.",
+      "detection_hint": "claim_lease_owner is null or claim_lease_expires_at is null when queue_status = 'claimed_for_send'.",
+      "why": "In-memory-only ownership creates ghost claims and permanent limbo states."
+    },
+    {
+      "id": "FP009",
+      "name": "accepted_without_receipt",
+      "severity": "blocking",
+      "description": "A shared artifact must not be marked accepted on the local side without a durable promotion_receipt artifact.",
+      "detection_hint": "queue_status = 'accepted' but remote_receipt_ref is null and no promotion_receipt artifact is linked.",
+      "why": "Accepting without a receipt makes shared truth non-auditable."
+    },
+    {
+      "id": "FP010",
+      "name": "restricted_payload_exposed_in_broad_review_surface",
+      "severity": "blocking",
+      "description": "Artifacts with visibility_class = 'restricted' must not be rendered in operator review queue summaries or detail surfaces.",
+      "detection_hint": "Queue row or detail render includes payload data from visibility_class = 'restricted' artifacts.",
+      "why": "Restricted payload exposure violates the visibility boundary."
+    }
+  ]
+}

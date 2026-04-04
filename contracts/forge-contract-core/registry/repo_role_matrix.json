@@ -1,0 +1,106 @@
+{
+  "registry_version": "1.0.0",
+  "description": "Repo role matrix defining what each ecosystem repo may emit, consume, and operate on for the proving slice.",
+  "repos": [
+    {
+      "repo": "forge-contract-core",
+      "role_classes": ["contract_core"],
+      "allowed_emit_families": [],
+      "allowed_consume_families": [],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["all_runtime_artifacts"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": ["schema_verification", "fixture_corpus", "validator_correctness", "role_matrix_integrity", "gate_runner_self_test"]
+    },
+    {
+      "repo": "dataforge-Local",
+      "role_classes": ["producer_promoter"],
+      "allowed_emit_families": ["source_drift_finding", "promotion_envelope"],
+      "allowed_consume_families": ["promotion_receipt"],
+      "promotion_enabled": true,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["execution_request", "approval_artifact"],
+      "local_only_truth_classes": ["local_canonical_artifacts", "staging_queue_state", "dead_letter_truth"],
+      "required_gate_profiles": ["producer_validation", "promotion_admission", "queue_lease_behavior", "retry_reconciliation", "dead_letter", "duplicate_idempotency", "read_model_truthfulness"]
+    },
+    {
+      "repo": "DataForge",
+      "role_classes": ["shared_truth_consumer", "shared_truth_owner"],
+      "allowed_emit_families": ["promotion_receipt"],
+      "allowed_consume_families": ["source_drift_finding", "promotion_envelope"],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["execution_request", "approval_artifact", "local_only_truth"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": ["intake_validation", "signature_identity", "acceptance_rejection", "duplicate_reconciliation", "restricted_visibility", "unsupported_version"]
+    },
+    {
+      "repo": "Forge_Command",
+      "role_classes": ["review_surface"],
+      "allowed_emit_families": [],
+      "allowed_consume_families": ["source_drift_finding", "promotion_receipt"],
+      "promotion_enabled": false,
+      "review_surface": true,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["execution_request", "approval_artifact"],
+      "local_only_truth_classes": ["changed_since_last_view_state"],
+      "required_gate_profiles": ["supported_read_model", "stale_incomplete_truthfulness", "restricted_visibility_rendering", "queue_detail_lifecycle_honesty", "changed_since_last_view"]
+    },
+    {
+      "repo": "fa-local",
+      "role_classes": ["execution_consumer"],
+      "allowed_emit_families": [],
+      "allowed_consume_families": [],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["all_proving_slice_families"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": [],
+      "notes": "Excluded from proving slice 01. Future execution consumer only."
+    },
+    {
+      "repo": "forge-eval",
+      "role_classes": ["evaluation_producer"],
+      "allowed_emit_families": ["source_drift_finding"],
+      "allowed_consume_families": [],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["execution_request", "approval_artifact"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": [],
+      "notes": "Indirect first-wave participant. Not in initial proving slice gate suite."
+    },
+    {
+      "repo": "ForgeMath",
+      "role_classes": ["evaluation_producer"],
+      "allowed_emit_families": ["source_drift_finding"],
+      "allowed_consume_families": [],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["execution_request", "approval_artifact"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": [],
+      "notes": "Indirect first-wave participant. Not in initial proving slice gate suite."
+    },
+    {
+      "repo": "forgeHQ",
+      "role_classes": ["producer_only"],
+      "allowed_emit_families": [],
+      "allowed_consume_families": [],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": ["all_proving_slice_families"],
+      "local_only_truth_classes": [],
+      "required_gate_profiles": [],
+      "notes": "Bounded proposal shaping. Not a truth owner. Excluded from proving slice 01."
+    }
+  ]
+}

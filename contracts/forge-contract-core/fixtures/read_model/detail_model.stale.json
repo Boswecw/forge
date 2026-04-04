@@ -1,0 +1,31 @@
+{
+  "_fixture": {"class": "read_model", "type": "detail_model", "description": "Stale detail model. staleness_posture must not be masked as resolved. Tests that stale items do not appear accepted."},
+  "summary_header": {
+    "issue_title": "Schema drift in dataforge-Local",
+    "target_system": "dataforge-Local",
+    "confidence_posture": "low",
+    "staleness_posture": "stale",
+    "promotion_lifecycle_state": "awaiting_receipt_reconciliation",
+    "concise_explanation": "Send may have succeeded but no receipt has been confirmed. Reconciliation pending."
+  },
+  "evidence_summary": {
+    "evidence_refs": ["run_evidence:00000000-0000-0000-0000-000000000001:v1"],
+    "evidence_freshness": "stale",
+    "stale_warning": "Evidence last updated more than 15 minutes ago. State may be outdated."
+  },
+  "promotion_lifecycle_block": {
+    "state": "awaiting_receipt_reconciliation",
+    "plain_language": "This item was sent for promotion but its receipt has not been confirmed. The operator should check again later or investigate transport health.",
+    "retry_allowed": true,
+    "attempt_count": 2
+  },
+  "rejection_dead_letter_block": null,
+  "audit_summary": [
+    {"timestamp": "2026-04-04T10:01:00Z", "event": "staged"},
+    {"timestamp": "2026-04-04T10:01:30Z", "event": "queued"},
+    {"timestamp": "2026-04-04T10:02:00Z", "event": "claimed_for_send"},
+    {"timestamp": "2026-04-04T10:02:10Z", "event": "awaiting_receipt_reconciliation"}
+  ],
+  "_derived_from": "source_drift_finding:a1b2c3d4-0001-0001-0001-000000000001:v1",
+  "_derivation_note": "Derived read model. State is stale. Must not render as resolved."
+}

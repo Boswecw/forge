@@ -1,0 +1,1 @@
+{"name": "sensitivity_class", "description": "Sensitivity classification governing visibility and promotion eligibility.", "values": ["public", "internal", "restricted", "confidential"]}

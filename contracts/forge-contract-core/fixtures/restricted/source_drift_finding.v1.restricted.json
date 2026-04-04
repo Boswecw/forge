@@ -1,0 +1,30 @@
+{
+  "_fixture": {"family": "source_drift_finding", "version": 1, "class": "restricted", "description": "Restricted visibility artifact. Must not be exposed in broad operator queue summaries or ordinary detail surfaces."},
+  "artifact_id": "a1b2c3d4-0001-0001-0001-000000000050",
+  "artifact_family": "source_drift_finding",
+  "artifact_version": 1,
+  "produced_by_system": "dataforge-Local",
+  "produced_by_component": "security_checker",
+  "source_scope": "restricted",
+  "lineage_root_id": "a1b2c3d4-0001-0001-0001-000000000050",
+  "parent_artifact_id": null,
+  "trace_id": "trace-00000000-restricted-001",
+  "idempotency_key": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b858",
+  "created_at": "2026-04-04T10:00:00Z",
+  "recorded_at": "2026-04-04T10:00:01Z",
+  "sensitivity_class": "restricted",
+  "visibility_class": "restricted",
+  "promotion_class": "blocked",
+  "validation_status": "valid",
+  "signer_identity": "dataforge-Local/security_checker@proving-slice-v1",
+  "signature": "sha256:fixture-signature-restricted-001",
+  "payload": {
+    "system_id": "dataforge-Local",
+    "drift_class": "contract_drift",
+    "declared_truth_ref": "source_drift_finding:restricted-ref:v1",
+    "observed_truth_ref": "runtime_state:restricted:2026-04-04T10:00:00Z",
+    "impact_scope": "local",
+    "confidence": "high",
+    "operator_summary": "[RESTRICTED] This summary must not appear in broad review surfaces."
+  }
+}

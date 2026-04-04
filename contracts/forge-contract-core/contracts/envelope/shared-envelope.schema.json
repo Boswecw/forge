@@ -1,0 +1,133 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/envelope/shared-envelope.v1",
+  "title": "SharedEnvelope",
+  "description": "Canonical shared envelope for all admitted Forge proving-slice artifact families.",
+  "type": "object",
+  "required": [
+    "artifact_id",
+    "artifact_family",
+    "artifact_version",
+    "produced_by_system",
+    "produced_by_component",
+    "source_scope",
+    "lineage_root_id",
+    "trace_id",
+    "idempotency_key",
+    "created_at",
+    "recorded_at",
+    "sensitivity_class",
+    "visibility_class",
+    "promotion_class",
+    "validation_status",
+    "signer_identity",
+    "signature",
+    "payload"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "artifact_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Stable UUID for this artifact instance."
+    },
+    "artifact_family": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "description": "Admitted artifact family name (snake_case)."
+    },
+    "artifact_version": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Monotonic integer version of the family schema."
+    },
+    "produced_by_system": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "description": "Repo or system identity of the producer."
+    },
+    "produced_by_component": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "description": "Component or module within the producing system."
+    },
+    "source_scope": {
+      "type": "string",
+      "enum": ["local", "shared", "restricted"],
+      "description": "Scope at which this artifact was originally observed."
+    },
+    "lineage_root_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the root artifact in this lineage chain. Equal to artifact_id for root artifacts."
+    },
+    "parent_artifact_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "UUID of the direct parent artifact. Null for root artifacts."
+    },
+    "trace_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "description": "Distributed trace identifier spanning the producing operation."
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 idempotency key: sha256(family|artifact_id|version|lineage_root_id)."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the artifact was created by the producer."
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the artifact was durably recorded."
+    },
+    "sensitivity_class": {
+      "type": "string",
+      "enum": ["public", "internal", "restricted", "confidential"],
+      "description": "Sensitivity classification governing visibility and promotion eligibility."
+    },
+    "visibility_class": {
+      "type": "string",
+      "enum": ["public", "operator", "internal", "restricted"],
+      "description": "Visibility constraint for review surfaces."
+    },
+    "promotion_class": {
+      "type": "string",
+      "enum": ["promotable", "local_only", "blocked"],
+      "description": "Whether this artifact may be promoted to shared truth."
+    },
+    "validation_status": {
+      "type": "string",
+      "enum": ["valid", "invalid", "pending", "unknown"],
+      "description": "Validation outcome at time of recording."
+    },
+    "signer_identity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "description": "Identity string of the signing party."
+    },
+    "signature": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "description": "Opaque signature over the canonical payload body."
+    },
+    "payload": {
+      "type": "object",
+      "description": "Family-specific payload. Validated against the admitted family schema."
+    }
+  }
+}

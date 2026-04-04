@@ -1,0 +1,15 @@
+{
+  "_fixture": {"class": "read_model", "type": "queue_row", "description": "Valid queue row read model for ForgeCommand. Derived from source_drift_finding canonical artifact and staging state."},
+  "system_id": "dataforge-Local",
+  "issue_summary": "Schema drift detected in dataforge-Local: observed contract version differs from declared.",
+  "artifact_family": "source_drift_finding",
+  "drift_class": "schema_drift",
+  "promotion_state": "queued",
+  "confidence_posture": "high",
+  "created_at": "2026-04-04T10:00:00Z",
+  "last_state_change_at": "2026-04-04T10:01:00Z",
+  "staleness_posture": "fresh",
+  "changed_since_last_view": false,
+  "_derived_from": "source_drift_finding:a1b2c3d4-0001-0001-0001-000000000001:v1",
+  "_derivation_note": "This is a derived read model. It is NOT canonical lifecycle truth."
+}

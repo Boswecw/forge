@@ -1,0 +1,1 @@
+{"name": "impact_scope", "description": "Scope of impact for a source_drift_finding.", "values": ["local", "service", "cross_service", "ecosystem"]}

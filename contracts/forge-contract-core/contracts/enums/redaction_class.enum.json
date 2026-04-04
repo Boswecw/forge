@@ -1,0 +1,1 @@
+{"name": "redaction_class", "description": "Whether payload content has been redacted before promotion.", "values": ["none", "partial", "full"]}

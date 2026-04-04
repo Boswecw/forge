@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/promotion_receipt/v1",
+  "title": "PromotionReceiptPayload",
+  "description": "Payload for promotion_receipt family v1. Durable receipt of a shared intake outcome (accepted, rejected, or duplicate-reconciled).",
+  "type": "object",
+  "required": [
+    "receipt_id",
+    "related_artifact_ref",
+    "intake_outcome",
+    "received_at",
+    "idempotency_key",
+    "outcome_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "receipt_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Stable UUID for this receipt."
+    },
+    "related_artifact_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "description": "Canonical reference to the artifact this receipt covers."
+    },
+    "intake_outcome": {
+      "type": "string",
+      "enum": ["accepted", "rejected", "duplicate_reconciled"],
+      "description": "Explicit outcome of the shared intake attempt. Must never be ambiguous."
+    },
+    "shared_record_ref": {
+      "type": ["string", "null"],
+      "maxLength": 512,
+      "description": "Reference to the shared canonical record if accepted or duplicate_reconciled. Null for rejected."
+    },
+    "received_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the intake outcome was determined."
+    },
+    "idempotency_key": {
+      "type": "string",
+      "minLength": 64,
+      "maxLength": 64,
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Idempotency key of the artifact this receipt covers."
+    },
+    "outcome_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "description": "Plain-language explanation of the intake outcome."
+    },
+    "rejection_class": {
+      "type": ["string", "null"],
+      "enum": [
+        "invalid_schema",
+        "invalid_signature",
+        "unsupported_version",
+        "unsupported_producer",
+        "blocked_policy",
+        "restricted_payload",
+        "oversize_payload",
+        "blocked_family",
+        "blocked_sensitivity_class",
+        null
+      ],
+      "description": "Classification of the rejection reason. Must be non-null when intake_outcome is 'rejected'."
+    },
+    "retry_allowed": {
+      "type": "boolean",
+      "description": "Whether the local side may retry after a rejection."
+    },
+    "producer_identity": {
+      "type": "string",
+      "maxLength": 256,
+      "description": "Identity of the producer as seen by the intake side."
+    }
+  }
+}

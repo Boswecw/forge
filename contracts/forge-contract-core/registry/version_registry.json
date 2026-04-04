@@ -1,0 +1,36 @@
+{
+  "registry_version": "1.0.0",
+  "description": "Version registry for admitted artifact families.",
+  "entries": [
+    {
+      "family": "source_drift_finding",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/source_drift_finding/source_drift_finding.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Initial proving-slice version."
+    },
+    {
+      "family": "promotion_envelope",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/promotion_envelope/promotion_envelope.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Initial proving-slice version."
+    },
+    {
+      "family": "promotion_receipt",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/promotion_receipt/promotion_receipt.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Initial proving-slice version."
+    }
+  ]
+}

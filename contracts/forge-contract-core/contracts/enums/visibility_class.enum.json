@@ -1,0 +1,1 @@
+{"name": "visibility_class", "description": "Visibility constraint controlling which review surfaces may render this artifact.", "values": ["public", "operator", "internal", "restricted"]}

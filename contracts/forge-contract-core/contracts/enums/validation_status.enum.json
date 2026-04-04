@@ -1,0 +1,1 @@
+{"name": "validation_status", "description": "Outcome of contract validation at time of recording.", "values": ["valid", "invalid", "pending", "unknown"]}

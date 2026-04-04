@@ -1,0 +1,33 @@
+{
+  "_fixture": {"family": "source_drift_finding", "version": 1, "class": "duplicate", "description": "Duplicate send: same artifact_id and idempotency_key as valid fixture. Must result in duplicate_reconciled, not a second accepted record."},
+  "artifact_id": "a1b2c3d4-0001-0001-0001-000000000001",
+  "artifact_family": "source_drift_finding",
+  "artifact_version": 1,
+  "produced_by_system": "dataforge-Local",
+  "produced_by_component": "drift_detector.schema_checker",
+  "source_scope": "local",
+  "lineage_root_id": "a1b2c3d4-0001-0001-0001-000000000001",
+  "parent_artifact_id": null,
+  "trace_id": "trace-00000000-0001",
+  "idempotency_key": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "created_at": "2026-04-04T10:00:00Z",
+  "recorded_at": "2026-04-04T10:05:00Z",
+  "sensitivity_class": "internal",
+  "visibility_class": "operator",
+  "promotion_class": "promotable",
+  "validation_status": "valid",
+  "signer_identity": "dataforge-Local/drift_detector@proving-slice-v1",
+  "signature": "sha256:fixture-signature-placeholder-0000000000000000000000000000000000000000000000000000000000000001",
+  "payload": {
+    "system_id": "dataforge-Local",
+    "drift_class": "schema_drift",
+    "declared_truth_ref": "source_drift_finding:a1b2c3d4-0001-0001-0001-000000000001:v1",
+    "observed_truth_ref": "runtime_state:dataforge-Local:2026-04-04T10:00:00Z",
+    "impact_scope": "service",
+    "confidence": "high",
+    "operator_summary": "Schema drift detected in dataforge-Local: observed contract version differs from declared contract version.",
+    "evidence_refs": ["run_evidence:00000000-0000-0000-0000-000000000001:v1"],
+    "affected_components": ["schema_registry", "migration_runner"],
+    "detection_source": "schema_checker_v1"
+  }
+}

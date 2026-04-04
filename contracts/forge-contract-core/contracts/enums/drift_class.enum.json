@@ -1,0 +1,1 @@
+{"name": "drift_class", "description": "Classification of the type of drift detected by a source_drift_finding.", "values": ["schema_drift", "version_drift", "contract_drift", "config_drift", "runtime_drift", "dependency_drift", "behavioral_drift"]}

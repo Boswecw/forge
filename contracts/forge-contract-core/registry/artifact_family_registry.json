@@ -1,0 +1,49 @@
+{
+  "registry_version": "1.0.0",
+  "description": "Canonical registry of admitted artifact families for the Forge proving slice.",
+  "families": [
+    {
+      "family": "source_drift_finding",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": true,
+      "schema_path": "contracts/families/source_drift_finding/source_drift_finding.v1.schema.json",
+      "description": "Describes a detected drift between declared and observed truth for a system.",
+      "admitted_producers": ["dataforge-Local", "forge-eval", "ForgeMath"],
+      "admitted_consumers": ["DataForge", "Forge_Command"]
+    },
+    {
+      "family": "promotion_envelope",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/promotion_envelope/promotion_envelope.v1.schema.json",
+      "description": "Wraps a local artifact for promotion to shared truth. Not itself promoted.",
+      "admitted_producers": ["dataforge-Local"],
+      "admitted_consumers": ["DataForge"]
+    },
+    {
+      "family": "promotion_receipt",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/promotion_receipt/promotion_receipt.v1.schema.json",
+      "description": "Durable receipt of a shared intake outcome (accepted, rejected, or duplicate-reconciled).",
+      "admitted_producers": ["DataForge"],
+      "admitted_consumers": ["dataforge-Local", "Forge_Command"]
+    }
+  ],
+  "excluded_families": [
+    "approval_artifact",
+    "execution_request",
+    "execution_status_event",
+    "verification_result",
+    "rollback_result",
+    "recommendation_artifact",
+    "contradiction_artifact",
+    "calibration_artifact"
+  ]
+}

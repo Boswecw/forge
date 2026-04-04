@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/source_drift_finding/v1",
+  "title": "SourceDriftFindingPayload",
+  "description": "Payload for source_drift_finding family v1. Describes a detected drift between declared and observed truth for a system.",
+  "type": "object",
+  "required": [
+    "system_id",
+    "drift_class",
+    "declared_truth_ref",
+    "observed_truth_ref",
+    "impact_scope",
+    "confidence",
+    "operator_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "system_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "description": "Identifier of the system where drift was observed."
+    },
+    "drift_class": {
+      "type": "string",
+      "enum": [
+        "schema_drift",
+        "version_drift",
+        "contract_drift",
+        "config_drift",
+        "runtime_drift",
+        "dependency_drift",
+        "behavioral_drift"
+      ],
+      "description": "Classification of the drift type."
+    },
+    "declared_truth_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "description": "Reference to the declared or expected truth (canonical ref or URI)."
+    },
+    "observed_truth_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "description": "Reference to the observed actual state (canonical ref or URI)."
+    },
+    "impact_scope": {
+      "type": "string",
+      "enum": ["local", "service", "cross_service", "ecosystem"],
+      "description": "Scope of impact for this drift finding."
+    },
+    "confidence": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence level of the drift detection."
+    },
+    "operator_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "description": "Plain-language summary for the operator review surface."
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {"type": "string", "maxLength": 512},
+      "maxItems": 20,
+      "description": "Optional references to supporting evidence artifacts."
+    },
+    "affected_components": {
+      "type": "array",
+      "items": {"type": "string", "maxLength": 256},
+      "maxItems": 50,
+      "description": "Optional list of affected component identifiers."
+    },
+    "detection_source": {
+      "type": "string",
+      "maxLength": 256,
+      "description": "Optional identifier of the detection mechanism or check that produced this finding."
+    }
+  }
+}

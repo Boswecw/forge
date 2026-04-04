@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/promotion_envelope/v1",
+  "title": "PromotionEnvelopePayload",
+  "description": "Payload for promotion_envelope family v1. Wraps a local artifact for promotion to shared truth.",
+  "type": "object",
+  "required": [
+    "promoted_artifact_ref",
+    "promotion_reason",
+    "redaction_class",
+    "policy_check_result",
+    "promotion_batch_id"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "promoted_artifact_ref": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512,
+      "description": "Canonical reference to the artifact being promoted. Format: <family>:<artifact_id>:v<version>."
+    },
+    "promotion_reason": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "description": "Plain-language reason for initiating this promotion."
+    },
+    "redaction_class": {
+      "type": "string",
+      "enum": ["none", "partial", "full"],
+      "description": "Whether any payload content has been redacted before promotion."
+    },
+    "policy_check_result": {
+      "type": "string",
+      "enum": ["passed", "failed", "blocked", "waived"],
+      "description": "Outcome of local promotion policy checks."
+    },
+    "promotion_batch_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID grouping this promotion with others in the same batch, or equal to promoted_artifact_ref artifact_id for single-item promotions."
+    },
+    "policy_check_detail": {
+      "type": "string",
+      "maxLength": 512,
+      "description": "Optional detail about the policy check outcome."
+    },
+    "waiver_ref": {
+      "type": ["string", "null"],
+      "maxLength": 256,
+      "description": "Reference to an approved waiver when policy_check_result is 'waived'. Must be null otherwise."
+    }
+  }
+}
