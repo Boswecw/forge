@@ -19,6 +19,8 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONTRACT_CORE_PATH="${CONTRACT_CORE_PATH:-$SCRIPT_DIR}"
+REPORT_DIR="$SCRIPT_DIR/reports"
+REPORT_FILE="$REPORT_DIR/proving_slice_gate_$(date +%Y%m%d_%H%M%S).json"
 
 echo "forge-contract-core CI gate"
 echo "  contract core path: $CONTRACT_CORE_PATH"
@@ -33,8 +35,13 @@ fi
 echo "  python: $PYTHON"
 echo ""
 
-# Run the canonical gate suite
-PYTHONPATH="$CONTRACT_CORE_PATH" "$PYTHON" -m forge_contract_core.gates.run_all
+mkdir -p "$REPORT_DIR"
+
+# Run the canonical gate suite and emit a JSON evidence report
+PYTHONPATH="$CONTRACT_CORE_PATH" "$PYTHON" -m forge_contract_core.gates.run_all \
+    --repo "forge-contract-core" \
+    --report-out "$REPORT_FILE"
 
 echo ""
 echo "CI gate: PASSED"
+echo "  evidence: $REPORT_FILE"

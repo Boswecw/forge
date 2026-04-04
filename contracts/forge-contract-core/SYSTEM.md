@@ -278,20 +278,41 @@ Temporary waivers may be issued for legitimate blockers. They must be:
 
 Waivers must never become permanent compatibility workarounds.
 
+## Evidence reports
+
+All `ci_gate.sh` scripts emit a JSON evidence report via `--report-out`. Each report
+records:
+
+| Field | Value |
+|-------|-------|
+| `repo` | Repo identifier |
+| `gate_set` | `"proving_slice_v1"` |
+| `commit_sha` | From `GIT_COMMIT` / `GITHUB_SHA` env var, or `git rev-parse HEAD` |
+| `run_at` | UTC ISO 8601 timestamp |
+| `elapsed_seconds` | Wall-clock gate duration |
+| `overall` | `"PASS"` or `"FAIL"` |
+| `gates` | Per-gate `name`, `passed`, `failures` list |
+
+Reports are written to `reports/` (gitignored, preserved during CI runs). Python repos
+also emit a JUnit XML local-test report (`reports/local_tests_*.xml`). ForgeCommand
+emits a Vitest JSON report (`reports/vitest_proving_slice_*.json`).
+
 ## Participating repos and CI gate scripts
 
 Each proving-slice participating repo carries a `ci_gate.sh` at its root. These
-scripts resolve the contract-core path relative to the ecosystem root and invoke
-the canonical gate runner.
+scripts resolve the contract-core path relative to the ecosystem root, invoke
+the canonical gate runner (Gate 1), and run the repo-local proving-slice test
+suite (Gate 2). Both gates must pass.
 
-| Repo | Script | Path resolution |
-|------|--------|-----------------|
-| `contracts/forge-contract-core` | `ci_gate.sh` | Self |
-| `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` |
-| `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` |
+| Repo | Script | Gate 1 | Gate 2 |
+|------|--------|--------|--------|
+| `contracts/forge-contract-core` | `ci_gate.sh` | Self (gate runner) | — |
+| `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/proving_slice/` |
+| `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/test_proving_slice_intake.py` |
+| `Forge_Command` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `npm run test -- tests/utils/provingSlice.test.ts tests/stores/provingSlice.test.ts` |
 
-All scripts use the contract-core `.venv/bin/python` if present, falling back to the
-local venv or system Python.
+All Gate 1 invocations use the contract-core `.venv/bin/python` if present.
+Gate 2 Python invocations use the repo-local venv. Gate 2 for ForgeCommand uses `npm`.
 
 ## Scenario and adversarial test suite
 
