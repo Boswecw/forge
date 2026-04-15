@@ -1,0 +1,31 @@
+{
+  "_fixture": {"family": "approval_artifact", "version": 1, "class": "valid", "description": "Canonical valid approval_artifact envelope capturing an operator approval decision for a pending execution request."},
+  "artifact_id": "a1b2c3d4-0004-0004-0004-000000000004",
+  "artifact_family": "approval_artifact",
+  "artifact_version": 1,
+  "produced_by_system": "Forge_Command",
+  "produced_by_component": "execution_review.approval_recorder",
+  "source_scope": "shared",
+  "lineage_root_id": "a1b2c3d4-0002-0002-0002-000000000002",
+  "parent_artifact_id": "a1b2c3d4-0002-0002-0002-000000000002",
+  "trace_id": "trace-00000000-0004",
+  "idempotency_key": "0000000000000000000000000000000000000000000000000000000000000004",
+  "created_at": "2026-04-04T10:01:45Z",
+  "recorded_at": "2026-04-04T10:01:46Z",
+  "sensitivity_class": "internal",
+  "visibility_class": "operator",
+  "promotion_class": "local_only",
+  "validation_status": "valid",
+  "signer_identity": "Forge_Command/execution_review@execution-bridge-v1",
+  "signature": "sha256:fixture-signature-placeholder-0000000000000000000000000000000000000000000000000000000000000004",
+  "payload": {
+    "request_id": "b2c3d4e5-0002-0002-0002-000000000002",
+    "correlation_id": "c3d4e5f6-0002-0002-0002-000000000002",
+    "approval_decision": "approved",
+    "decided_by": "operator/charlie@forge-command",
+    "decided_at": "2026-04-04T10:01:45Z",
+    "decision_summary": "Approved: bounded patch scope reviewed. Config path confirmed. Risk acceptable.",
+    "operator_notes": "Reviewed the execution plan. Patch is bounded to staging config directory only. No network side effects declared.",
+    "reviewed_execution_plan_id": null
+  }
+}

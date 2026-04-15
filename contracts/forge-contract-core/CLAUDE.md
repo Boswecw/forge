@@ -6,13 +6,19 @@ This is the canonical contract center for the Forge ecosystem proving slice.
 
 It is a Python library and schema corpus. It is NOT a runtime service, UI, or persistence layer.
 
-## Admitted families (proving slice 01 only)
+## Admitted families
 
+### Proving slice 01
 1. `source_drift_finding`
 2. `promotion_envelope`
 3. `promotion_receipt`
 
-Do NOT add approval, execution, recommendation, contradiction, rollback, or calibration families until proving slice 01 is green.
+### Execution bridge v1 (admitted after proving slice 01 green)
+4. `execution_request`
+5. `execution_status_event`
+6. `approval_artifact`
+
+Do NOT add verification_result, rollback_result, recommendation, contradiction, or calibration families until execution bridge v1 is proven.
 
 ## Where things live
 

@@ -1,15 +1,15 @@
 {
   "compatibility_set": "proving_slice_v1",
-  "description": "Compatibility notes and constraints for the first proving slice implementation wave.",
+  "description": "Compatibility notes and constraints for the Forge proving slice. Includes proving slice 01 families (drift/promotion) and execution bridge v1 families (execution_request, execution_status_event, approval_artifact).",
   "admitted_families": [
     {"family": "source_drift_finding", "version": 1, "status": "admitted"},
     {"family": "promotion_envelope", "version": 1, "status": "admitted"},
-    {"family": "promotion_receipt", "version": 1, "status": "admitted"}
+    {"family": "promotion_receipt", "version": 1, "status": "admitted"},
+    {"family": "execution_request", "version": 1, "status": "admitted"},
+    {"family": "execution_status_event", "version": 1, "status": "admitted"},
+    {"family": "approval_artifact", "version": 1, "status": "admitted"}
   ],
   "excluded_families": [
-    "approval_artifact",
-    "execution_request",
-    "execution_status_event",
     "verification_result",
     "rollback_result",
     "recommendation_artifact",
@@ -20,8 +20,10 @@
   "additional_fields_policy": "Additional undeclared fields in envelope or admitted payloads are rejected in strict proving-slice mode.",
   "dual_read_posture": "Dual-read for version transitions is not active in proving slice v1. Unsupported versions are rejected.",
   "notes": [
-    "This compatibility set governs proving slice 01 only.",
-    "Future phases will add new families after proving slice 01 is green.",
-    "FA Local execution families are excluded until proving slice 01 succeeds."
+    "Proving slice 01 families (source_drift_finding, promotion_envelope, promotion_receipt) were admitted first.",
+    "Execution bridge v1 families (execution_request, execution_status_event, approval_artifact) admitted after proving slice 01 green.",
+    "FA Local is the canonical execution consumer for execution_request and execution_status_event.",
+    "Forge_Command is the canonical approval authority for approval_artifact.",
+    "Remaining families (verification_result, rollback_result, etc.) excluded until execution bridge v1 is proven."
   ]
 }

@@ -1,0 +1,1 @@
+{"name": "authorization_class", "description": "Authorization class vocabulary for execution requests. Determines the approval path required before execution proceeds.", "values": ["low_risk_automated", "medium_risk_review", "high_risk_approval", "denied_class"]}

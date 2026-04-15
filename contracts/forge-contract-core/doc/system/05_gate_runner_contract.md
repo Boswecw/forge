@@ -68,6 +68,7 @@ suite (Gate 2). Both gates must pass.
 | `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/proving_slice/` |
 | `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/test_proving_slice_intake.py` |
 | `Forge_Command` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `npm run test -- tests/utils/provingSlice.test.ts tests/stores/provingSlice.test.ts` |
+| `Local systems/fa-local-operator` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `cargo test` |
 
 All Gate 1 invocations use the contract-core `.venv/bin/python` if present.
 Gate 2 Python invocations use the repo-local venv. Gate 2 for ForgeCommand uses `npm`.

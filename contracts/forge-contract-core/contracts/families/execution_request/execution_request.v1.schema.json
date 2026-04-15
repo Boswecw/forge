@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/execution_request/v1",
+  "title": "ExecutionRequestPayload",
+  "description": "Payload for execution_request family v1. Transport artifact carrying a bounded execution request from FA Local through the proving-slice pipeline for operator review and approval.",
+  "type": "object",
+  "required": [
+    "request_id",
+    "correlation_id",
+    "requester_identity",
+    "environment_mode",
+    "requested_capability_id",
+    "requested_side_effect_class",
+    "authorization_class",
+    "intent_summary",
+    "requested_at",
+    "operator_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the original FA Local execution request."
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Lineage correlation UUID spanning the full execution chain."
+    },
+    "requester_identity": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "description": "Identity string of the requesting agent or service."
+    },
+    "environment_mode": {
+      "type": "string",
+      "enum": ["dev", "test", "staging", "prod", "airgapped", "test_harness"],
+      "description": "Target environment mode for execution."
+    },
+    "requested_capability_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the specific capability being requested."
+    },
+    "requested_side_effect_class": {
+      "type": "string",
+      "enum": [
+        "none",
+        "local_file_write",
+        "local_db_mutation",
+        "local_process_spawn",
+        "external_network_denied_by_default",
+        "other_governed"
+      ],
+      "description": "Class of side effect this execution request will produce."
+    },
+    "authorization_class": {
+      "type": "string",
+      "enum": ["low_risk_automated", "medium_risk_review", "high_risk_approval", "denied_class"],
+      "description": "Authorization class determining the required approval path."
+    },
+    "intent_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240,
+      "description": "Concise machine-readable statement of execution intent."
+    },
+    "requested_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the execution request was originated."
+    },
+    "operator_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "description": "Plain-language summary for the operator review surface."
+    },
+    "execution_plan_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Optional UUID of the bounded execution plan if one was pre-computed."
+    },
+    "capability_context": {
+      "type": "string",
+      "maxLength": 512,
+      "description": "Optional human-readable context about the requested capability."
+    }
+  }
+}

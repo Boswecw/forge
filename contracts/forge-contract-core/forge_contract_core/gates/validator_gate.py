@@ -48,9 +48,9 @@ def run() -> list[str]:
     except InvalidRefError:
         pass  # Expected
 
-    # Unsupported family must fail
+    # Unsupported family must fail (recommendation_artifact remains excluded)
     try:
-        validate_family_payload("approval_artifact", 1, {})
+        validate_family_payload("recommendation_artifact", 1, {})
         failures.append("UNSUPPORTED_FAMILY: should have raised UnsupportedFamilyError")
     except UnsupportedFamilyError:
         pass  # Expected

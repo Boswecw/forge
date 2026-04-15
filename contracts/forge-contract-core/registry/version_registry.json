@@ -31,6 +31,36 @@
       "deprecated_at": null,
       "sunset_at": null,
       "notes": "Initial proving-slice version."
+    },
+    {
+      "family": "execution_request",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/execution_request/execution_request.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Execution bridge v1. Admitted after proving slice 01 green. FA Local execution consumer path."
+    },
+    {
+      "family": "execution_status_event",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/execution_status_event/execution_status_event.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Execution bridge v1. Admitted after proving slice 01 green. FA Local truthful status transport."
+    },
+    {
+      "family": "approval_artifact",
+      "version": 1,
+      "status": "active",
+      "schema_path": "contracts/families/approval_artifact/approval_artifact.v1.schema.json",
+      "introduced": "2026-04-04",
+      "deprecated_at": null,
+      "sunset_at": null,
+      "notes": "Execution bridge v1. Admitted after proving slice 01 green. Forge_Command explicit operator approval."
     }
   ]
 }

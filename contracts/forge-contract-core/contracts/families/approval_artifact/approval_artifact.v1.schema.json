@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/approval_artifact/v1",
+  "title": "ApprovalArtifactPayload",
+  "description": "Payload for approval_artifact family v1. Captures the explicit operator approval or rejection decision for a pending execution request that required explicit_operator_approval posture.",
+  "type": "object",
+  "required": [
+    "request_id",
+    "correlation_id",
+    "approval_decision",
+    "decided_by",
+    "decided_at",
+    "decision_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the original execution request this decision covers."
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Lineage correlation UUID spanning the full execution chain."
+    },
+    "approval_decision": {
+      "type": "string",
+      "enum": ["approved", "rejected"],
+      "description": "Explicit operator decision. Must be unambiguous — no pending or ambiguous states allowed in this artifact."
+    },
+    "decided_by": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256,
+      "description": "Identity of the operator who made the decision."
+    },
+    "decided_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the decision was made."
+    },
+    "decision_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Plain-language summary of the approval decision for audit and review surfaces."
+    },
+    "operator_notes": {
+      "type": ["string", "null"],
+      "maxLength": 1024,
+      "description": "Optional detailed operator notes accompanying the decision."
+    },
+    "reviewed_execution_plan_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "Optional UUID of the specific execution plan reviewed before deciding."
+    }
+  }
+}

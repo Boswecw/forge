@@ -1,0 +1,1 @@
+{"name": "approval_posture", "description": "Resolved approval posture from FA Local policy/capability admission. Remains distinct from execution state.", "values": ["denied", "review_required", "explicit_operator_approval", "policy_preapproved", "execute_allowed"]}

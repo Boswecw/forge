@@ -35,11 +35,42 @@
       "admitted_producers": ["DataForge"],
       "admitted_consumers": ["dataforge-Local", "Forge_Command"]
     }
+  ,
+    {
+      "family": "execution_request",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": true,
+      "schema_path": "contracts/families/execution_request/execution_request.v1.schema.json",
+      "description": "Transport artifact carrying a bounded execution request from FA Local through the proving-slice pipeline for operator review and approval.",
+      "admitted_producers": ["fa-local-operator"],
+      "admitted_consumers": ["dataforge-Local", "DataForge", "Forge_Command"]
+    },
+    {
+      "family": "execution_status_event",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": true,
+      "schema_path": "contracts/families/execution_status_event/execution_status_event.v1.schema.json",
+      "description": "Truthful execution status snapshot emitted by FA Local, transported through the proving-slice pipeline for operator visibility.",
+      "admitted_producers": ["fa-local-operator"],
+      "admitted_consumers": ["dataforge-Local", "DataForge", "Forge_Command"]
+    },
+    {
+      "family": "approval_artifact",
+      "current_version": 1,
+      "admitted_versions": [1],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/approval_artifact/approval_artifact.v1.schema.json",
+      "description": "Explicit operator approval or rejection decision for a pending execution request that required explicit_operator_approval posture.",
+      "admitted_producers": ["Forge_Command"],
+      "admitted_consumers": ["fa-local-operator", "dataforge-Local", "DataForge"]
+    }
   ],
   "excluded_families": [
-    "approval_artifact",
-    "execution_request",
-    "execution_status_event",
     "verification_result",
     "rollback_result",
     "recommendation_artifact",

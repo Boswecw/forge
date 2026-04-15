@@ -1,0 +1,1 @@
+{"name": "execution_state", "description": "Truthful execution state from FA Local. All 11 states map to the FA Local ExecutionState domain type.", "values": ["denied", "review_required", "waiting_explicit_approval", "admitted_not_started", "in_progress", "degraded", "partial_success", "completed_with_constraints", "completed", "failed", "canceled"]}

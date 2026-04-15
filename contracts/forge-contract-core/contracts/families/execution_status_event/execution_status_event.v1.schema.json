@@ -1,0 +1,127 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/execution_status_event/v1",
+  "title": "ExecutionStatusEventPayload",
+  "description": "Payload for execution_status_event family v1. Truthful execution status snapshot emitted by FA Local, transported through the proving-slice pipeline for operator visibility.",
+  "type": "object",
+  "required": [
+    "request_id",
+    "correlation_id",
+    "state",
+    "current_posture",
+    "execution_plan_id",
+    "stable_plan_hash",
+    "degraded_subtype",
+    "updated_at_utc",
+    "started_at_utc",
+    "completed_at_utc",
+    "current_step",
+    "completion_summary",
+    "failure_summary",
+    "truthful_operator_summary"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "UUID of the original FA Local execution request."
+    },
+    "correlation_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Lineage correlation UUID spanning the full execution chain."
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "denied",
+        "review_required",
+        "waiting_explicit_approval",
+        "admitted_not_started",
+        "in_progress",
+        "degraded",
+        "partial_success",
+        "completed_with_constraints",
+        "completed",
+        "failed",
+        "canceled"
+      ],
+      "description": "Truthful FA Local execution state."
+    },
+    "current_posture": {
+      "type": "string",
+      "enum": [
+        "denied",
+        "review_required",
+        "explicit_operator_approval",
+        "policy_preapproved",
+        "execute_allowed"
+      ],
+      "description": "Resolved FA Local approval posture. Remains distinct from execution state."
+    },
+    "execution_plan_id": {
+      "type": ["string", "null"],
+      "format": "uuid",
+      "description": "UUID of the bounded execution plan. Null before plan is admitted."
+    },
+    "stable_plan_hash": {
+      "type": ["string", "null"],
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 hash of the stable execution plan. Null before plan is admitted.",
+      "maxLength": 64
+    },
+    "degraded_subtype": {
+      "type": ["string", "null"],
+      "enum": [
+        "degraded_pre_start",
+        "degraded_in_flight",
+        "degraded_fallback_equivalent",
+        "degraded_fallback_limited",
+        "degraded_partial",
+        "unavailable_dependency_block",
+        null
+      ],
+      "description": "Degraded subtype when state is degraded, partial_success, or completed_with_constraints. Null otherwise."
+    },
+    "updated_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp of this status event."
+    },
+    "started_at_utc": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when execution started. Null before execution begins."
+    },
+    "completed_at_utc": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when execution completed. Null while in progress."
+    },
+    "current_step": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 48,
+      "description": "Current declared step ID while in_progress. Null at all other states."
+    },
+    "completion_summary": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Plain-language completion summary. Present on completed or completed_with_constraints."
+    },
+    "failure_summary": {
+      "type": ["string", "null"],
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Plain-language failure summary. Present on failed state."
+    },
+    "truthful_operator_summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "description": "Always-present truthful plain-language summary for the operator review surface."
+    }
+  }
+}
