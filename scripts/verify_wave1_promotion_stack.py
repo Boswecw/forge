@@ -6,7 +6,7 @@ Walks the canonical evidence emitted by:
   * PACT (source repo): the wave-1 promotion envelope
   * neuronforge_local_operator: seam_report.json + promotion_runs.jsonl
   * NeuroForge (cloud): cloud_summary.json + intake_runs.jsonl
-  * ForgeCommand: read-only consumer (artifacts validated above)
+  * ForgeCommand: operator-surface verification report
 
 and proves the cross-repo replay invariant — every consumer carries the
 same wave_manifest_hash that PACT admitted, every consumer agrees on
@@ -55,8 +55,9 @@ NF_CLOUD_RUNS_REL = (
     "cloud-systems/NeuroForge/evidence/promotion_intake/intake_runs.jsonl"
 )
 
-# ForgeCommand has no on-disk evidence — it consumes the same files above.
-# Its proof lives in the cargo integration test invoked separately.
+FC_OPERATOR_REPORT_REL = (
+    "Forge_Command/evidence/promotion_operator_surface/operator_surface_report.json"
+)
 
 DEFAULT_REPORT_REL = "evidence/wave1_promotion_stack_report.json"
 ROLLBACK_FIXTURE_REL = "evidence/wave1_rollback_case"
@@ -302,6 +303,71 @@ def gate_2_neuroforge_cloud(
     )
 
 
+def gate_3_forgecommand_operator(root: Path, manifest_hash: str) -> GateResult:
+    """Gate 3 — ForgeCommand operator visibility gate."""
+    report_path = root / FC_OPERATOR_REPORT_REL
+    if not report_path.exists():
+        return GateResult(
+            "gate_3_forgecommand_operator",
+            False,
+            f"ForgeCommand operator-surface report missing at {report_path}",
+            {
+                "expected_report_path": FC_OPERATOR_REPORT_REL,
+                "verify_command": "python3 Forge_Command/scripts/verify_promotion_operator_surface.py",
+            },
+        )
+
+    report = read_json(report_path)
+    proof_cases = report.get("proof_cases") or []
+    proof_case_ids = {str(case.get("id")) for case in proof_cases}
+    required_case_ids = {
+        "blocked_states_visible",
+        "missing_fields_not_healthy",
+        "strict_non_strict_distinct",
+        "approvals_do_not_mutate_truth",
+    }
+    missing_cases = sorted(required_case_ids - proof_case_ids)
+    facts = {
+        "operator_report_path": str(report_path.relative_to(root)),
+        "all_pass": report.get("all_pass"),
+        "manifest_hash": report.get("manifest_hash"),
+        "frontend_dist_present": report.get("frontend_dist_present"),
+        "test_returncode": report.get("test_returncode"),
+        "proof_case_ids": sorted(proof_case_ids),
+        "log_path": report.get("log_path"),
+    }
+
+    if report.get("manifest_hash") != manifest_hash:
+        return GateResult(
+            "gate_3_forgecommand_operator",
+            False,
+            f"ForgeCommand report manifest_hash {report.get('manifest_hash')!r} does not match PACT envelope {manifest_hash!r}",
+            facts,
+        )
+    if not report.get("all_pass"):
+        return GateResult(
+            "gate_3_forgecommand_operator",
+            False,
+            "ForgeCommand operator-surface verification did not pass",
+            facts,
+        )
+    if missing_cases:
+        facts["missing_proof_cases"] = missing_cases
+        return GateResult(
+            "gate_3_forgecommand_operator",
+            False,
+            "ForgeCommand operator-surface report is missing required proof cases",
+            facts,
+        )
+
+    return GateResult(
+        "gate_3_forgecommand_operator",
+        True,
+        "ForgeCommand operator surface proves visibility, mismatch, approval, and rollback-facing invariants",
+        facts,
+    )
+
+
 def gate_4_cross_repo_replay(root: Path) -> GateResult:
     """Gate 4 — cross-repo replay gate.
 
@@ -537,12 +603,14 @@ def run(root: Path, report_path: Path) -> StackReport:
     if gate0.passed and manifest_hash:
         gates.append(gate_1_neuronforge_local(root, manifest_hash))
         gates.append(gate_2_neuroforge_cloud(root, manifest_hash))
+        gates.append(gate_3_forgecommand_operator(root, manifest_hash))
         gates.append(gate_4_cross_repo_replay(root))
         gates.append(gate_5_rollback_case(root, manifest_hash))
     else:
         for name in (
             "gate_1_neuronforge_local",
             "gate_2_neuroforge_cloud",
+            "gate_3_forgecommand_operator",
             "gate_4_cross_repo_replay",
             "gate_5_rollback_case",
         ):

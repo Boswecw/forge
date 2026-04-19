@@ -10,7 +10,7 @@
     "task_intent_id": "ti-rollback-1"
   },
   "observed_wave_manifest_hash": "sha256:wave0-stale-manifest-hash-do-not-promote",
-  "occurred_at": "2026-04-19T23:36:57+00:00",
+  "occurred_at": "2026-04-19T23:56:18+00:00",
   "packet_class": "search_assist_packet",
   "run_id": "rollback-case-1",
   "runtime": {

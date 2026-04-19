@@ -16,7 +16,7 @@ This document records where the PACT TOON wave-1 promotion stack sits in the Can
 | Stage 0 — passive visibility | Manifest can be loaded by consumers; no runtime behavior change | Reached | `pact/docs/evidence/wave1_promotion_envelope.json` |
 | Stage 1 — local carriage admitted | neuronforge_local_operator records admitted envelopes; operator can approve local use | Reached | `local-systems/neuronforge-local-operator/evidence/promotion_seam/seam_report.json`, `…/promotion_runs.jsonl` |
 | Stage 2 — cloud intake admitted | NeuroForge accepts only compatible promotion envelopes; operator can separately approve cloud use | Reached | `cloud-systems/NeuroForge/evidence/promotion_intake/cloud_summary.json`, `…/intake_runs.jsonl` |
-| Stage 3 — control-plane governed | ForgeCommand becomes the working approval and mismatch surface; rollback state visible across repos | Reached | ForgeCommand `/promotion` route, `Forge_Command/src-tauri/tests/promotion_verification.rs` (FC-04), rollback fixture under `evidence/wave1_rollback_case/` |
+| Stage 3 — control-plane governed | ForgeCommand becomes the working approval and mismatch surface; rollback state visible across repos | Reached | ForgeCommand `/promotion` route, `Forge_Command/evidence/promotion_operator_surface/operator_surface_report.json`, rollback fixture under `evidence/wave1_rollback_case/` |
 | Stage 4 — active runtime dependence | Runtime decisions may depend on admitted promotion state | **Deferred (intentional)** | Out of scope for this wave (Canvas 05 line 32; Canvas 06 wave-1 boundary) |
 
 ---
@@ -28,6 +28,7 @@ All items below must be true for Stage 3 to remain reached. The cross-repo orche
 - [x] PACT envelope present with required fields (`gate_0_source_truth`)
 - [x] neuronforge_local seam report passes; promotion_runs.jsonl carries strict and non-strict cases (`gate_1_neuronforge_local`)
 - [x] NeuroForge cloud summary reports `compatibility_state = compatible`; intake_runs.jsonl carries strict cases (`gate_2_neuroforge_cloud`)
+- [x] ForgeCommand operator-surface report passes; blocked states, missing evidence, strict/non-strict buckets, and approval immutability are proved (`gate_3_forgecommand_operator`)
 - [x] All consumer repos carry the same `wave_manifest_hash`; same lineage produces the same admission class across repos (`gate_4_cross_repo_replay`)
 - [x] Rollback fixture written; stale-hash carriage surfaces as `not_admitted` with `manifest_hash_mismatch` and a recommended rollback target (`gate_5_rollback_case`)
 - [x] ForgeCommand FC-04 invariant test passes:
@@ -45,10 +46,10 @@ python3 scripts/verify_wave1_promotion_stack.py
 Run command for the ForgeCommand invariant test:
 
 ```bash
-cd Forge_Command/src-tauri && cargo test --test promotion_verification
+python3 Forge_Command/scripts/verify_promotion_operator_surface.py
 ```
 
-Both commands must exit zero. The stack report is written to `evidence/wave1_promotion_stack_report.json` on every run.
+Both commands must exit zero. The stack report is written to `evidence/wave1_promotion_stack_report.json` on every run. The ForgeCommand wrapper writes `Forge_Command/evidence/promotion_operator_surface/operator_surface_report.json`.
 
 ---
 

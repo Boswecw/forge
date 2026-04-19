@@ -54,6 +54,25 @@
       "passed": true
     },
     {
+      "detail": "ForgeCommand operator surface proves visibility, mismatch, approval, and rollback-facing invariants",
+      "facts": {
+        "all_pass": true,
+        "frontend_dist_present": true,
+        "log_path": "evidence/promotion_operator_surface/promotion_operator_surface_test.log",
+        "manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+        "operator_report_path": "Forge_Command/evidence/promotion_operator_surface/operator_surface_report.json",
+        "proof_case_ids": [
+          "approvals_do_not_mutate_truth",
+          "blocked_states_visible",
+          "missing_fields_not_healthy",
+          "strict_non_strict_distinct"
+        ],
+        "test_returncode": 0
+      },
+      "name": "gate_3_forgecommand_operator",
+      "passed": true
+    },
+    {
       "detail": "all consumer repos carry the same wave_manifest_hash and agree on admission per lineage",
       "facts": {
         "cloud_run_count": 2,
@@ -85,7 +104,7 @@
       "passed": true
     }
   ],
-  "generated_at": "2026-04-19T23:36:57+00:00",
+  "generated_at": "2026-04-19T23:56:18+00:00",
   "manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
   "manifest_version": "1.0.0",
   "source_commit": "5af333f81f865fb593952a60a3e7551f3abc4688"

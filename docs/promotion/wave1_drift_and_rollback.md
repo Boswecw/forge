@@ -96,5 +96,5 @@ The fixture is regenerated on every orchestrator run and is therefore always pai
 | Two-stage approval doctrine | Canvas 03 §Initial approval doctrine; `wave1_rollout_status.md` |
 | Approval state combination | `Forge_Command/src-tauri/src/services/promotion_service.rs::combine_scope_states` |
 | Rollback target text per reason | `Forge_Command/src-tauri/src/services/promotion_service.rs::rollback_target_for_reason` |
-| FC-04 invariant proofs | `Forge_Command/src-tauri/tests/promotion_verification.rs` |
+| FC-04 invariant proofs | `Forge_Command/scripts/verify_promotion_operator_surface.py`, latest run in `Forge_Command/evidence/promotion_operator_surface/operator_surface_report.json` |
 | Cross-repo gate proofs | `scripts/verify_wave1_promotion_stack.py`, latest run in `evidence/wave1_promotion_stack_report.json` |
