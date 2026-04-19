@@ -1,0 +1,92 @@
+{
+  "all_pass": true,
+  "ecosystem_root": "/home/charlie/Forge/ecosystem",
+  "gates": [
+    {
+      "detail": "PACT envelope present with required fields",
+      "facts": {
+        "admission_stage": "wave1_internal",
+        "envelope_path": "pact/docs/evidence/wave1_promotion_envelope.json",
+        "promotion_packet_version": "1.0.0",
+        "source_commit": "5af333f81f865fb593952a60a3e7551f3abc4688",
+        "wave_manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8"
+      },
+      "name": "gate_0_source_truth",
+      "passed": true
+    },
+    {
+      "detail": "neuronforge_local carries PACT envelope intact and seam_report passes",
+      "facts": {
+        "admission_class_counts": {
+          "non_strict_admitted": 1,
+          "not_admitted": 3,
+          "strict_admitted": 2
+        },
+        "all_pass": true,
+        "case_count": 7,
+        "run_count": 6,
+        "seam_report_path": "local-systems/neuronforge-local-operator/evidence/promotion_seam/seam_report.json",
+        "wave_manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8"
+      },
+      "name": "gate_1_neuronforge_local",
+      "passed": true
+    },
+    {
+      "detail": "NeuroForge cloud intake honors PACT envelope and reports compatible",
+      "facts": {
+        "admission_class_counts": {
+          "non_strict_admitted": 1,
+          "not_admitted": 0,
+          "not_promoted": 0,
+          "strict_admitted": 1
+        },
+        "cloud_summary_path": "cloud-systems/NeuroForge/evidence/promotion_intake/cloud_summary.json",
+        "compatibility_state": "compatible",
+        "intake_admission_class_counts": {
+          "non_strict_admitted": 1,
+          "strict_admitted": 1
+        },
+        "intake_run_count": 2,
+        "manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+        "mismatch_reason_codes": []
+      },
+      "name": "gate_2_neuroforge_cloud",
+      "passed": true
+    },
+    {
+      "detail": "all consumer repos carry the same wave_manifest_hash and agree on admission per lineage",
+      "facts": {
+        "cloud_run_count": 2,
+        "cross_repo_lineage_disagreements": [],
+        "cross_repo_lineage_overlap_count": 0,
+        "local_run_count": 6,
+        "observed_wave_manifest_hashes": [
+          "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8"
+        ],
+        "strict_success_hashes": [
+          "sha256:e11c303a2d61950cef8502d41e6337cf53c2dae94456bdff79d12cde8304568c"
+        ]
+      },
+      "name": "gate_4_cross_repo_replay",
+      "passed": true
+    },
+    {
+      "detail": "rollback fixture written; stale-hash carriage would surface as not_admitted with rollback target advised",
+      "facts": {
+        "expected_admission_class": "not_admitted",
+        "expected_blocked_reason_codes": [
+          "manifest_hash_mismatch"
+        ],
+        "live_manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+        "rollback_fixture_dir": "evidence/wave1_rollback_case",
+        "stale_manifest_hash": "sha256:wave0-stale-manifest-hash-do-not-promote"
+      },
+      "name": "gate_5_rollback_case",
+      "passed": true
+    }
+  ],
+  "generated_at": "2026-04-19T23:36:57+00:00",
+  "manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+  "manifest_version": "1.0.0",
+  "source_commit": "5af333f81f865fb593952a60a3e7551f3abc4688"
+}

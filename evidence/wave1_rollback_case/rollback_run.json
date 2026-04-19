@@ -1,0 +1,23 @@
+{
+  "admission_class": "not_admitted",
+  "blocked_reason_codes": [
+    "manifest_hash_mismatch"
+  ],
+  "expected_wave_manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+  "lineage": {
+    "context_bundle_hash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "context_bundle_id": "cb-rollback-1",
+    "task_intent_id": "ti-rollback-1"
+  },
+  "observed_wave_manifest_hash": "sha256:wave0-stale-manifest-hash-do-not-promote",
+  "occurred_at": "2026-04-19T23:36:57+00:00",
+  "packet_class": "search_assist_packet",
+  "run_id": "rollback-case-1",
+  "runtime": {
+    "artifact_kind": "toon_segment",
+    "fallback_used": false,
+    "serialization_profile_requested": "plain_text_with_toon_segment",
+    "serialization_profile_used": "plain_text_with_toon_segment",
+    "strict_success_hash": "sha256:wave0-stale-strict-hash"
+  }
+}

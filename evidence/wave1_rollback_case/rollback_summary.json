@@ -1,0 +1,13 @@
+{
+  "doctrine": "Operator must record approval state 'rolled_back' for this manifest_hash before any consumer treats it as live again.",
+  "expected_admission_class": "not_admitted",
+  "expected_blocked_reason_codes": [
+    "manifest_hash_mismatch"
+  ],
+  "expected_compatibility_state": "mismatch",
+  "expected_recommended_rollback_target": "refresh trusted local mirror from PACT",
+  "fixture_kind": "wave1_rollback_case",
+  "manifest_hash_in_fixture": "sha256:wave0-stale-manifest-hash-do-not-promote",
+  "manifest_hash_in_pact_envelope": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
+  "rollback_run_path": "evidence/wave1_rollback_case/rollback_run.json"
+}
