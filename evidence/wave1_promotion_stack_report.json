@@ -65,6 +65,7 @@
           "approvals_do_not_mutate_truth",
           "blocked_states_visible",
           "missing_fields_not_healthy",
+          "stale_approval_rejected",
           "strict_non_strict_distinct"
         ],
         "test_returncode": 0
@@ -104,7 +105,7 @@
       "passed": true
     }
   ],
-  "generated_at": "2026-04-19T23:56:18+00:00",
+  "generated_at": "2026-04-20T00:03:11+00:00",
   "manifest_hash": "sha256:26b75ef5232a149e523d1bf2db1302cf5a9ba4025d66cdaecbd227e0dadedcf8",
   "manifest_version": "1.0.0",
   "source_commit": "5af333f81f865fb593952a60a3e7551f3abc4688"

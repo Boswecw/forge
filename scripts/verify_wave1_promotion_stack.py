@@ -325,6 +325,7 @@ def gate_3_forgecommand_operator(root: Path, manifest_hash: str) -> GateResult:
         "missing_fields_not_healthy",
         "strict_non_strict_distinct",
         "approvals_do_not_mutate_truth",
+        "stale_approval_rejected",
     }
     missing_cases = sorted(required_case_ids - proof_case_ids)
     facts = {
