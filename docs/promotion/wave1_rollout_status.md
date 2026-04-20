@@ -37,6 +37,7 @@ All items below must be true for Stage 3 to remain reached. The cross-repo orche
   - strict and non-strict admission counts remain in distinct buckets
   - operator approvals never mutate manifest truth fields
   - approvals for stale manifest hashes remain auditable but never count for the live manifest
+  - rollback / blocked approval states dominate later positive approvals for the same manifest hash
 
 Run command for the cross-repo evidence:
 
