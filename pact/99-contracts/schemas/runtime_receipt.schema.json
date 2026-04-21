@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "file:///mnt/data/pact_v1_artifact_pack/pact/99-contracts/schemas/runtime_receipt.schema.json",
-  "title": "RuntimeReceipt",
+  "$id": "https://bds.local/pact/v1/schemas/runtime_receipt.schema.json",
+  "title": "PACT V1 Runtime Receipt",
   "type": "object",
   "required": [
     "schema_version",
@@ -14,6 +14,7 @@
     "retrieval_mode",
     "pruning_mode",
     "serialization_profile",
+    "serialization_evidence",
     "degradation_state",
     "source_lineage_digest",
     "packet_hash",
@@ -25,23 +26,29 @@
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "1.0.0"
+      "const": "1.1.0"
     },
     "receipt_id": {
-      "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+      "type": "string"
     },
     "request_id": {
-      "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+      "type": "string"
     },
     "trace_id": {
+      "type": "string"
+    },
+    "task_intent_id": {
+      "type": "string"
+    },
+    "context_bundle_id": {
+      "type": "string"
+    },
+    "context_bundle_hash": {
       "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+      "minLength": 8
     },
     "packet_id": {
-      "type": "string",
-      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+      "type": "string"
     },
     "packet_class": {
       "type": "string",
@@ -52,46 +59,52 @@
       ]
     },
     "version_set": {
-      "$ref": "file:///mnt/data/pact_v1_artifact_pack/pact/99-contracts/schemas/version_set.schema.json"
+      "$ref": "./version_set.schema.json"
     },
     "retrieval_mode": {
       "type": "string",
       "enum": [
         "hybrid",
         "lexical_only",
-        "vector_only"
+        "vector_only",
+        "cache_only"
       ]
     },
     "pruning_mode": {
       "type": "string",
       "enum": [
-        "hierarchical",
-        "none",
-        "hierarchical_with_toon_segment"
+        "standard",
+        "reduced",
+        "none"
       ]
     },
     "serialization_profile": {
-      "$ref": "file:///mnt/data/pact_v1_artifact_pack/pact/99-contracts/schemas/serialization_profile_enum.schema.json"
+      "$ref": "./serialization_profile_enum.schema.json"
+    },
+    "serialization_evidence": {
+      "$ref": "./serialization_evidence.schema.json"
     },
     "degradation_state": {
-      "$ref": "file:///mnt/data/pact_v1_artifact_pack/pact/99-contracts/schemas/degradation_state_enum.schema.json"
+      "$ref": "./degradation_state_enum.schema.json"
     },
     "source_lineage_digest": {
-      "$ref": "file:///mnt/data/pact_v1_artifact_pack/pact/99-contracts/schemas/source_lineage_digest.schema.json"
+      "$ref": "./source_lineage_digest.schema.json"
     },
     "packet_hash": {
       "type": "string",
-      "pattern": "^sha256:[a-f0-9]{64}$"
+      "minLength": 16
     },
     "token_counts": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Token Counts",
       "type": "object",
       "required": [
-        "final_input_tokens",
+        "input_tokens",
         "naive_baseline_tokens",
         "reduction_percentage"
       ],
       "properties": {
-        "final_input_tokens": {
+        "input_tokens": {
           "type": "integer",
           "minimum": 0
         },
@@ -100,35 +113,36 @@
           "minimum": 0
         },
         "reduction_percentage": {
-          "type": "number",
-          "minimum": 0
+          "type": "number"
         }
       },
       "additionalProperties": false
     },
     "latency_breakdown": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Latency Breakdown",
       "type": "object",
       "required": [
         "retrieval_ms",
-        "prune_ms",
+        "rerank_prune_ms",
         "compile_validate_ms",
         "total_pact_overhead_ms"
       ],
       "properties": {
         "retrieval_ms": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0
         },
-        "prune_ms": {
-          "type": "number",
+        "rerank_prune_ms": {
+          "type": "integer",
           "minimum": 0
         },
         "compile_validate_ms": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0
         },
         "total_pact_overhead_ms": {
-          "type": "number",
+          "type": "integer",
           "minimum": 0
         }
       },

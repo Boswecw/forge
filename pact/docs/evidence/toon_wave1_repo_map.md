@@ -1,0 +1,46 @@
+# TOON Wave 1 Repo Map
+
+| Path | Exists | Kind |
+|---|---:|---|
+| `.github/workflows/toon-wave1-gate.yml` | yes | file |
+| `runtime/rendering/__init__.py` | yes | file |
+| `runtime/rendering/renderer.py` | yes | file |
+| `runtime/rendering/toon_registry.json` | yes | file |
+| `runtime/rendering/toon_registry.py` | yes | file |
+| `runtime/observability/__init__.py` | yes | file |
+| `runtime/observability/toon_evidence.py` | yes | file |
+| `runtime/engine.py` | yes | file |
+| `scripts/verify_toon_slice_01.py` | yes | file |
+| `scripts/verify_toon_wave1.py` | yes | file |
+| `scripts/verify_toon_observability.py` | yes | file |
+| `scripts/verify_toon_extension_governance.py` | yes | file |
+| `scripts/verify_toon_promotion_packet.py` | yes | file |
+| `scripts/verify_toon_ci_gate_files.py` | yes | file |
+| `scripts/verify_toon_replay_matrix.py` | yes | file |
+| `scripts/verify_toon_golden_hashes.py` | yes | file |
+| `scripts/verify_toon_non_strict_canonical.py` | yes | file |
+| `scripts/verify_toon_non_strict_digest_lock.py` | yes | file |
+| `scripts/verify_toon_wave1_manifest.py` | yes | file |
+| `scripts/verify_toon_repo_gate.py` | yes | file |
+| `tests/fixtures/toon_wave1_replay_cases.json` | yes | file |
+| `tests/fixtures/toon_wave1_golden_hashes.json` | yes | file |
+| `tests/fixtures/toon_wave1_non_strict_canonical_targets.json` | yes | file |
+| `tests/fixtures/toon_wave1_non_strict_canonical_digests.json` | yes | file |
+| `99-contracts/schemas/serialization_evidence.schema.json` | yes | file |
+| `99-contracts/schemas/serialization_evidence_segment_meta.schema.json` | yes | file |
+| `99-contracts/schemas/serialization_evidence_token_estimates.schema.json` | yes | file |
+| `99-contracts/schemas/runtime_receipt.schema.json` | yes | file |
+| `99-contracts/schemas/safe_failure_packet.schema.json` | yes | file |
+| `99-contracts/schemas/toon_registry_wave1.schema.json` | yes | file |
+| `doc/system/10_service-contract/01_receipt_serialization_evidence_strategy.md` | yes | file |
+| `doc/system/20_runtime/01_runtime_serialization_boundary.md` | yes | file |
+| `doc/system/40_governance/01_toon_wave1_rollout_and_feature_flag.md` | yes | file |
+| `doc/system/40_governance/02_toon_extension_admission_policy.md` | yes | file |
+| `doc/system/50_operations/01_toon_wave1_proof_gate.md` | yes | file |
+| `doc/system/50_operations/03_toon_wave1_promotion_packet.md` | yes | file |
+| `doc/system/50_operations/04_toon_ci_gate.md` | yes | file |
+| `doc/system/50_operations/05_toon_replay_matrix.md` | yes | file |
+| `doc/system/50_operations/06_toon_golden_hash_lock.md` | yes | file |
+| `doc/system/50_operations/07_toon_non_strict_canonical_lock.md` | yes | file |
+| `doc/system/50_operations/08_toon_non_strict_digest_lock.md` | yes | file |
+| `doc/system/50_operations/09_toon_wave1_manifest.md` | yes | file |

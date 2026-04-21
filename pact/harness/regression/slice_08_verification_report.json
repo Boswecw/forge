@@ -1,0 +1,33 @@
+{
+  "total_cases": 4,
+  "counts": {
+    "catalog": 1,
+    "detail": 2,
+    "download": 1
+  },
+  "catalog_total_entries": 4,
+  "current_run_bundle_count": 4,
+  "catalog_path": "/home/charlie/Forge/ecosystem/pact/harness/exports/slice_08_export_catalog.json",
+  "results": [
+    {
+      "case_id": "catalog_lists_all_exports",
+      "bundle_count": 4,
+      "catalog_total_entries": 4
+    },
+    {
+      "case_id": "detail_reads_success_bundle",
+      "receipt_id": "rcpt_83c93bd52dc41068",
+      "result_kind": "success"
+    },
+    {
+      "case_id": "detail_reads_safe_failure_bundle",
+      "receipt_id": "rcpt_1ae7ddadb1e68689",
+      "result_kind": "safe_failure"
+    },
+    {
+      "case_id": "download_extracts_bundle",
+      "receipt_id": "rcpt_c9d30156e36fd002",
+      "copied_replay_package_path": "/home/charlie/Forge/ecosystem/pact/harness/downloads/slice_07_replay_package_rcpt_c9d30156e36fd002.zip"
+    }
+  ]
+}

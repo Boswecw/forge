@@ -1,0 +1,42 @@
+{
+  "total_cases": 4,
+  "counts": {
+    "success": 3,
+    "safe_failure": 1
+  },
+  "manifest_entries": 4,
+  "results": [
+    {
+      "case_id": "registry_live_success",
+      "kind": "success",
+      "packet_class": "policy_response_packet",
+      "receipt_id": "rcpt_65b04d4d8548de91",
+      "telemetry_path": "/home/charlie/Forge/ecosystem/pact/harness/telemetry/slice_06_runtime_report_rcpt_65b04d4d8548de91.json",
+      "evidence_path": "/home/charlie/Forge/ecosystem/pact/harness/evidence/slice_06_evidence_rcpt_65b04d4d8548de91.json"
+    },
+    {
+      "case_id": "registry_cache_hit_success",
+      "kind": "success",
+      "packet_class": "search_assist_packet",
+      "receipt_id": "rcpt_490ee297f19b210f",
+      "telemetry_path": "/home/charlie/Forge/ecosystem/pact/harness/telemetry/slice_06_runtime_report_rcpt_490ee297f19b210f.json",
+      "evidence_path": "/home/charlie/Forge/ecosystem/pact/harness/evidence/slice_06_evidence_rcpt_490ee297f19b210f.json"
+    },
+    {
+      "case_id": "replay_success_with_evidence",
+      "kind": "success",
+      "packet_class": "answer_packet",
+      "receipt_id": "rcpt_c9d30156e36fd002",
+      "telemetry_path": "/home/charlie/Forge/ecosystem/pact/harness/telemetry/slice_06_runtime_report_rcpt_c9d30156e36fd002.json",
+      "evidence_path": "/home/charlie/Forge/ecosystem/pact/harness/evidence/slice_06_evidence_rcpt_c9d30156e36fd002.json"
+    },
+    {
+      "case_id": "provider_ref_missing_safe",
+      "kind": "safe_failure",
+      "packet_class": "policy_response_packet",
+      "receipt_id": "rcpt_2e303fa2bc94ac03",
+      "telemetry_path": "/home/charlie/Forge/ecosystem/pact/harness/telemetry/slice_06_runtime_report_rcpt_2e303fa2bc94ac03.json",
+      "evidence_path": "/home/charlie/Forge/ecosystem/pact/harness/evidence/slice_06_evidence_rcpt_2e303fa2bc94ac03.json"
+    }
+  ]
+}
