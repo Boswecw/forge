@@ -58,29 +58,33 @@ out/
 /cortex_bds/
 /dataforge-Local/
 /df-local-foundation/
-/eval-cal-node/
-/fa-local/
-/forge-eval/
-/forge-local-runtime/
-/forgeHQ/
-/forge-smithy/
-/neuronforge/
-/rake/
-/smithy/
-/tarcie/
-/zfss/
+/eval-cal-node/# Ignore everything
+*
 
-/*-local-operator/
+# Allow the docs directory and its contents
+!/docs/
 
-# Non-governance or unresolved root surfaces
-/Forge_Command_Reference/
-/src-tauri/
-/supabase/
-/system/
-/bun.lock
-/context_slices
-/e2e_deployment_test.py
-/install-forge-command-deps.sh
+# Allow specific root-level documentation files
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Optional: Allow the .gitignore file itself
+!.gitignore
+# Ignore everything
+*
+
+# Allow the docs directory and its contents
+!/docs/
+
+# Allow specific root-level documentation files
+!README.md
+!LICENSE
+!CONTRIBUTING.md
+
+# Optional: Allow the .gitignore file itself
+!.gitignore
+
 /occupancy_snapshot
 /pnpm-lock.yaml
 /quick_deploy_check.sh

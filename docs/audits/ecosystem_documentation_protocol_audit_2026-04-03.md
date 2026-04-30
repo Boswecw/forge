@@ -1,7 +1,7 @@
 # Ecosystem Documentation Protocol Audit
 
 **Date:** 2026-04-03
-**Protocol source:** `forgeHQ/BDS_DOCUMENTATION_PROTOCOL_v1.md`
+**Protocol source:** `docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md`
 **Mode:** write
 
 This audit tracks protocol-surface compliance first: required files, modular build surfaces, context-bundle entrypoints, and baseline architecture/roadmap presence.

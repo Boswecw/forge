@@ -2,7 +2,7 @@
 
 **Reference:** `ForgeCommand_Rake_Private_Source_Ingestion_Plan_v1.md` (Option A)  
 **External Review:** Independent security & architecture review (Feb 2026)  
-**Protocol:** `BDS_DOCUMENTATION_PROTOCOL_v1.md` §8 (Prompting Plans)  
+**Protocol:** `docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md` §8 (Prompting Plans)  
 **Date:** February 25, 2026  
 **Status:** PLAN METADATA — Awaiting spec amendments before session authoring  
 **Sessions:** 8 (documentation-first, then code, ordered by dependency)  
@@ -226,6 +226,6 @@ curl -X POST http://localhost:8002/api/v1/missions \
 
 ---
 
-*Per BDS_DOCUMENTATION_PROTOCOL_v1.md §7.1 — this prompting plan is a session-level tactical guide. It does not supersede SYSTEM.md or Architecture Specs. All changes made during these sessions must be reflected back into the relevant SYSTEM.md part files and rebuilt.*
+*Per docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md §7.1 — this prompting plan is a session-level tactical guide. It does not supersede SYSTEM.md or Architecture Specs. All changes made during these sessions must be reflected back into the relevant SYSTEM.md part files and rebuilt.*
 
 *Next step: Resolve spec amendments A-001–A-006, finalize API path decision (A-002), then author full session prompts with context bundles and acceptance criteria.*

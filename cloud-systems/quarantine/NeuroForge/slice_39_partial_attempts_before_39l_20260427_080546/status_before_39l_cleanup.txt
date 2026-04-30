@@ -1,0 +1,16 @@
+ D reports/neuroforge-verification/slice_39j_EVALUATION_METRIC_CONSTRUCTOR_GUARD_REPAIR_ACCEPTANCE.md
+ D reports/neuroforge-verification/slice_39j_dimension_trends_targeted_pytest.txt
+ D reports/neuroforge-verification/slice_39j_evaluation_metric_constructor_guard_repair.timestamp
+ D reports/neuroforge-verification/slice_39j_status.env
+ D reports/neuroforge-verification/slice_39k_ANALYTICS_FIRST_FAILURE_DETAIL_PROBE_ACCEPTANCE.md
+ D reports/neuroforge-verification/slice_39k_analytics_first_failure_detail_probe.json
+ D reports/neuroforge-verification/slice_39k_analytics_first_failure_detail_probe.timestamp
+ D reports/neuroforge-verification/slice_39k_dimension_trends_failure_signals.tsv
+ D reports/neuroforge-verification/slice_39k_dimension_trends_first_failure_detail.txt
+ D reports/neuroforge-verification/slice_39k_dimension_trends_source_context.md
+ D reports/neuroforge-verification/slice_39k_status.env
+ D scripts/neuroforge_apply_slice_39j_evaluation_metric_constructor_guard_repair.py
+ D scripts/neuroforge_probe_slice_39j_first_failure_detail.py
+?? reports/neuroforge-verification/slice_39l_analytics_endpoint_window_contract_repair.timestamp
+?? reports/neuroforge-verification/slice_39l_status.env
+?? scripts/neuroforge_apply_slice_39l_analytics_endpoint_window_contract_repair.py

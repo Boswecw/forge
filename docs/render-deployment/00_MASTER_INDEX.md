@@ -12,6 +12,10 @@
 
 This comprehensive documentation set covers every aspect of the Forge Render-deployed ecosystem, from system-level architecture down to individual component details.
 
+Ecosystem-level Render blueprint YAML files live outside this docs directory at
+[`../../cloud-systems/render-blueprints/`](../../cloud-systems/render-blueprints/).
+Service-local `render.yaml` files remain inside their owning service directories.
+
 ### Core Documentation
 
 | Document | Purpose | Audience |
@@ -25,6 +29,14 @@ This comprehensive documentation set covers every aspect of the Forge Render-dep
 | **[07_MONITORING_OPS.md](./07_MONITORING_OPS.md)** | Monitoring, observability, operational runbooks | Operators, SREs |
 | **[08_DEVELOPMENT.md](./08_DEVELOPMENT.md)** | Local development setup, testing, workflows | Developers |
 | **[09_TROUBLESHOOTING.md](./09_TROUBLESHOOTING.md)** | Common issues, diagnostics, solutions | All technical staff |
+
+### Blueprint YAML Files
+
+| Blueprint | Purpose |
+|-----------|---------|
+| [render-dataforge-only.yaml](../../cloud-systems/render-blueprints/render-dataforge-only.yaml) | DataForge-first deployment bootstrap |
+| [render-testing-phase.yaml](../../cloud-systems/render-blueprints/render-testing-phase.yaml) | Testing-phase ecosystem deployment |
+| [render-consolidated.yaml](../../cloud-systems/render-blueprints/render-consolidated.yaml) | Consolidated backend ecosystem deployment |
 
 ---
 

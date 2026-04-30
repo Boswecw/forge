@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/forgehq_upstream_evidence_refs/v1",
+  "title": "ForgeHQUpstreamEvidenceRefsPayload",
+  "description": "Payload for forgehq_upstream_evidence_refs family v1. References upstream evidence for bounded proposal shaping.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "forgehq_evidence_ref_id",
+    "source_forge_eval_evidence_bundle_ref",
+    "source_eval_calibration_report_ref",
+    "source_forgemath_lane_evaluation_ref",
+    "upstream_artifact_hashes",
+    "non_authoritative_notice"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "forgehq.upstream_evidence_refs.v1"
+    },
+    "forgehq_evidence_ref_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "source_forge_eval_evidence_bundle_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "source_eval_calibration_report_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "source_forgemath_lane_evaluation_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "upstream_artifact_hashes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_family",
+          "artifact_ref",
+          "artifact_hash"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "artifact_family": {
+            "type": "string",
+            "enum": [
+              "forge_eval_evidence_bundle",
+              "eval_calibration_report",
+              "forgemath_lane_evaluation_ref"
+            ]
+          },
+          "artifact_ref": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+          },
+          "artifact_hash": {
+            "type": "string",
+            "pattern": "^sha256:[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "non_authoritative_notice": {
+      "type": "string",
+      "const": "ForgeHQ may reference upstream evidence for proposal shaping but is not mathematical authority and is not operator decision authority."
+    },
+    "proposal_context_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 512
+      },
+      "maxItems": 20
+    }
+  }
+}

@@ -937,7 +937,7 @@ emit_report() {
     echo "# Ecosystem Documentation Protocol Audit"
     echo
     echo "**Date:** ${TODAY}"
-    echo "**Protocol source:** \`forgeHQ/BDS_DOCUMENTATION_PROTOCOL_v1.md\`"
+    echo "**Protocol source:** \`docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md\`"
     echo "**Mode:** $(if [[ "$WRITE_MODE" == true ]]; then echo 'write'; else echo 'audit'; fi)"
     echo
     echo "This audit tracks protocol-surface compliance first: required files, modular build surfaces, context-bundle entrypoints, and baseline architecture/roadmap presence."

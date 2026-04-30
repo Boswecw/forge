@@ -13,9 +13,10 @@ docs/
 ├── audits/              # Quality and compliance audits
 │   └── forgecommand/    # ForgeCommand-specific audits
 ├── contracts/           # API contracts and schemas
+├── protocols/           # Cross-cutting BDS and Forge protocol references
 ├── plans/               # Implementation plans and roadmaps
 │   ├── active/          # Current plans
-│   └── archive/         # Superseded plans (bugcheck, forgeagents, fpvs, doctrine)
+│   └── archive/         # Superseded, completed, and dated plan sets
 ├── changelog/           # Ecosystem-wide changelogs
 ├── archive/             # Historical/superseded documents
 │   └── session-reports/ # One-off session reports
@@ -32,6 +33,15 @@ Core platform reference documents:
 | [ecosystem_canonical.md](canonical/ecosystem_canonical.md) | Authoritative doctrine - defines what Forge is, invariants, architectural intent |
 | [FORGE_SYSTEMS_MANUAL.md](canonical/FORGE_SYSTEMS_MANUAL.md) | Complete systems manual for the ecosystem |
 | [security.md](canonical/security.md) | Security guidelines and policies |
+
+## Protocols
+
+Cross-cutting protocol references live in `protocols/`:
+
+| Document | Description |
+|----------|-------------|
+| [BDS_DOCUMENTATION_PROTOCOL_v1.md](protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md) | Original BDS documentation protocol reference used by older plans and audits |
+| [bds_ai_assisted_development_operations_protocol.md](protocols/bds_ai_assisted_development_operations_protocol.md) | AI-assisted development operations protocol |
 
 ## Architecture
 
@@ -52,14 +62,18 @@ Current implementation roadmaps in `plans/active/`:
 
 ### Archived Plans
 
-Superseded plans preserved in `plans/archive/`:
+Superseded, completed, and dated plans preserved in `plans/archive/`:
 
 | Directory | Description |
 |-----------|-------------|
 | [bugcheck/](plans/archive/bugcheck/) | BugCheck Agent implementation (superseded by master plan) |
+| [completed-plans/](plans/archive/completed-plans/) | Completed Forge plan sets and implementation packs formerly held at repo root |
+| [dataforge-local-analytics-2026-04-17/](plans/archive/dataforge-local-analytics-2026-04-17/) | ForgeCommand to DataForge Local local-systems analytics plan set |
 | [forgeagents/](plans/archive/forgeagents/) | ForgeAgents implementation plans |
 | [fpvs/](plans/archive/fpvs/) | Forge Publishing and Verification System |
 | [doctrine/](plans/archive/doctrine/) | Doctrine validation system |
+| [neuronforge/](plans/archive/neuronforge/) | NeuronForge runtime, prompt stack, and promotion plans |
+| [promotion-integration-2026-04-17/](plans/archive/promotion-integration-2026-04-17/) | Promotion integration canvas set |
 
 ## Audits
 
@@ -90,6 +104,12 @@ API contracts, schemas, and specifications.
 | [run_intent.v1.schema.json](contracts/run_intent.v1.schema.json) | RunIntent v1 JSON schema |
 | [RunIntent_v1_Authority_Contract.docx](contracts/RunIntent_v1_Authority_Contract_Rev5_FINAL.docx) | RunIntent authority contract (Rev5) |
 | [SMITH_Assist_Chatbot_Specification.docx](contracts/SMITH_Assist_Chatbot_Specification.docx) | SMITH chatbot integration spec |
+
+## Render Deployment
+
+Render deployment guides live in [render-deployment/](render-deployment/).
+Ecosystem-level Render blueprint YAML files live in
+[../cloud-systems/render-blueprints/](../cloud-systems/render-blueprints/).
 
 ## Service Documentation
 

@@ -1,0 +1,65 @@
+# Forge Backend - DataForge Only Deployment (Ohio Region)
+# Deploy DataForge first to create database and run all migrations
+# After successful deployment, use render-testing-phase.yaml for remaining services
+
+databases:
+  # Single shared database for ALL services (DataForge owns schema)
+  - name: forge-db
+    databaseName: forge
+    user: forge_user
+    plan: free
+    region: ohio
+    postgresMajorVersion: 15
+    ipAllowList: []  # Render internal access only
+
+services:
+  # DataForge - Knowledge/Data Layer (DATABASE OWNER)
+  - type: web
+    name: dataforge
+    region: ohio
+    runtime: python
+    plan: free
+    repo: https://github.com/Boswecw/DataForge.git
+    branch: master
+    rootDir: DataForge
+    buildCommand: pip install --upgrade pip && CARGO_HOME=/tmp/cargo pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: forge-db
+          property: connectionString
+      - key: REDIS_URL
+        sync: false  # Optional: Redis Cloud URL
+      - key: VOYAGE_API_KEY
+        sync: false  # REQUIRED: Manual entry
+      - key: OPENAI_API_KEY
+        sync: false  # Optional: Manual entry
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "*"
+      - key: LOG_LEVEL
+        value: INFO
+      - key: EMBEDDING_PROVIDER
+        value: voyage
+      - key: EMBEDDING_MODEL
+        value: voyage-2
+
+# Deployment Instructions:
+# 1. Go to https://dashboard.render.com
+# 2. New → Blueprint → Connect this YAML file
+# 3. After deployment completes, check logs for migration success
+# 4. Verify migrations ran: should see "Applying migration 20251216_1900..." and "20251216_1901..."
+# 5. Test health endpoint: curl https://dataforge.onrender.com/health
+# 6. Once verified, deploy remaining services using render-testing-phase.yaml
+#
+# Expected tables created (15 total):
+# - DataForge: users, domains, tags, documents, document_tags, chunks
+# - Rake: jobs
+# - NeuroForge: inferences, model_metrics, champion_states, evaluation_metrics
+# - System: alembic_version + others

@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "forge-contract-core/contracts/families/evaluation_spine_detail_model/v1",
+  "title": "EvaluationSpineDetailModelPayload",
+  "description": "Payload for evaluation_spine_detail_model family v1. ForgeCommand review detail model linking Evaluation Spine layers without storing operator decision state.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "detail_model_id",
+    "repository_id",
+    "forge_eval_evidence_bundle_ref",
+    "eval_calibration_report_ref",
+    "forgemath_lane_evaluation_ref",
+    "forgehq_upstream_evidence_refs_ref",
+    "display_layers",
+    "operator_action_available"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "forgecommand.evaluation_spine_detail_model.v1"
+    },
+    "detail_model_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "repository_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 256
+    },
+    "forge_eval_evidence_bundle_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "eval_calibration_report_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "forgemath_lane_evaluation_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "forgehq_upstream_evidence_refs_ref": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*:[0-9a-fA-F-]{36}:v[1-9][0-9]*$"
+    },
+    "display_layers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "string",
+        "enum": [
+          "centipede_evidence",
+          "forge_eval_artifacts",
+          "eval_calibration",
+          "forgemath_canonical_result",
+          "forgehq_proposal",
+          "operator_action"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "operator_action_available": {
+      "type": "boolean"
+    },
+    "operator_decision_ref": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 512,
+      "description": "Optional reference to a separate operator decision artifact or action route. This field must not carry decision state."
+    },
+    "read_model_hash": {
+      "type": "string",
+      "pattern": "^sha256:[a-f0-9]{64}$"
+    }
+  }
+}

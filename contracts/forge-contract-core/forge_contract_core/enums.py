@@ -140,7 +140,7 @@ class RejectionClass(StrEnum):
     BLOCKED_SENSITIVITY_CLASS = "blocked_sensitivity_class"
 
 
-# Admitted families — proving slice 01 + execution bridge v1
+# Admitted families — proving slice 01 + execution bridge v1 + evaluation spine phase 02
 ADMITTED_FAMILIES: frozenset[str] = frozenset(
     {
         "source_drift_finding",
@@ -149,6 +149,11 @@ ADMITTED_FAMILIES: frozenset[str] = frozenset(
         "execution_request",
         "execution_status_event",
         "approval_artifact",
+        "forge_eval_evidence_bundle",
+        "eval_calibration_report",
+        "forgemath_lane_evaluation_ref",
+        "forgehq_upstream_evidence_refs",
+        "evaluation_spine_detail_model",
     }
 )
 
@@ -160,6 +165,11 @@ ADMITTED_VERSIONS: dict[str, frozenset[int]] = {
     "execution_request": frozenset({1}),
     "execution_status_event": frozenset({1}),
     "approval_artifact": frozenset({1}),
+    "forge_eval_evidence_bundle": frozenset({1}),
+    "eval_calibration_report": frozenset({1}),
+    "forgemath_lane_evaluation_ref": frozenset({1}),
+    "forgehq_upstream_evidence_refs": frozenset({1}),
+    "evaluation_spine_detail_model": frozenset({1}),
 }
 
 # Sensitivity classes that permit promotion

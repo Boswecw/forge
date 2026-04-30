@@ -4,7 +4,7 @@
 **Date:** 2026-02-24  
 **Status:** PROPOSED — Awaiting Roadmap Slot  
 **Priority:** P2 (Scalability Hardening)  
-**Protocol:** `BDS_DOCUMENTATION_PROTOCOL_v1.md` §2.2 (Module Specs)  
+**Protocol:** `docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md` §2.2 (Module Specs)  
 **Reference:** [Dictionary Compression is finally here](https://httptoolkit.com/blog/dictionary-compression-performance-zstd-brotli/) — Tim Perry, February 2026  
 **RFC:** [RFC 9842](https://www.rfc-editor.org/rfc/rfc9842) — Compression Dictionary Transport  
 

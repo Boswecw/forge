@@ -68,7 +68,7 @@ def test_validate_artifact_rejects_invalid_enum():
 
 def test_validate_artifact_rejects_unsupported_family():
     artifact = _load_clean(FIXTURES_DIR / "valid" / "source_drift_finding.v1.valid.json")
-    artifact["artifact_family"] = "approval_artifact"
+    artifact["artifact_family"] = "unsupported_family_for_test"
     with pytest.raises(ArtifactValidationError) as exc_info:
         validate_artifact(artifact, strict_idempotency=False)
     assert exc_info.value.cause == "unsupported_family"
@@ -176,7 +176,7 @@ def test_unknown_repo_fails_role_matrix():
 
 def test_unsupported_family_raises():
     with pytest.raises(UnsupportedFamilyError):
-        validate_family_payload("approval_artifact", 1, {})
+        validate_family_payload("unsupported_family_for_test", 1, {})
 
 
 def test_unsupported_version_raises():

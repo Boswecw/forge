@@ -1,6 +1,6 @@
 # Forge Ecosystem — Next Priorities Implementation Prompt
 
-**Protocol:** `BDS_DOCUMENTATION_PROTOCOL_v1.md` §8 (Prompting Plans)  
+**Protocol:** `docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md` §8 (Prompting Plans)  
 **Date:** February 24, 2026  
 **Version:** 1.0  
 **Status:** Master Implementation Plan  
@@ -834,6 +834,6 @@ grep -r '\[PLANNED\]' */doc/system/             # Zero hits
 
 ---
 
-*Per BDS_DOCUMENTATION_PROTOCOL_v1.md §7.1 — this prompting plan is a session-level tactical guide. It does not supersede SYSTEM.md or Architecture Specs. All changes made during these sessions must be reflected back into the relevant SYSTEM.md part files and rebuilt.*
+*Per docs/protocols/BDS_DOCUMENTATION_PROTOCOL_v1.md §7.1 — this prompting plan is a session-level tactical guide. It does not supersede SYSTEM.md or Architecture Specs. All changes made during these sessions must be reflected back into the relevant SYSTEM.md part files and rebuilt.*
 
 *Last updated: February 24, 2026*

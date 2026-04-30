@@ -1,0 +1,2 @@
+?? reports/neuroforge-verification/slice_39l_analytics_endpoint_window_contract_repair.timestamp
+?? scripts/neuroforge_apply_slice_39l_analytics_endpoint_window_contract_repair.py

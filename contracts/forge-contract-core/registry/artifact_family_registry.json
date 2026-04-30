@@ -1,73 +1,211 @@
 {
-  "registry_version": "1.0.0",
-  "description": "Canonical registry of admitted artifact families for the Forge proving slice.",
+  "registry_version": "1.1.0",
+  "description": "Canonical registry of admitted artifact families for the Forge proving slice and Evaluation Spine phase 02 contract subset.",
   "families": [
     {
       "family": "source_drift_finding",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": true,
       "schema_path": "contracts/families/source_drift_finding/source_drift_finding.v1.schema.json",
       "description": "Describes a detected drift between declared and observed truth for a system.",
-      "admitted_producers": ["dataforge-Local", "forge-eval", "ForgeMath"],
-      "admitted_consumers": ["DataForge", "Forge_Command"]
+      "admitted_producers": [
+        "dataforge-Local",
+        "forge-eval",
+        "ForgeMath"
+      ],
+      "admitted_consumers": [
+        "DataForge",
+        "Forge_Command"
+      ]
     },
     {
       "family": "promotion_envelope",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": false,
       "schema_path": "contracts/families/promotion_envelope/promotion_envelope.v1.schema.json",
       "description": "Wraps a local artifact for promotion to shared truth. Not itself promoted.",
-      "admitted_producers": ["dataforge-Local"],
-      "admitted_consumers": ["DataForge"]
+      "admitted_producers": [
+        "dataforge-Local"
+      ],
+      "admitted_consumers": [
+        "DataForge"
+      ]
     },
     {
       "family": "promotion_receipt",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": false,
       "schema_path": "contracts/families/promotion_receipt/promotion_receipt.v1.schema.json",
       "description": "Durable receipt of a shared intake outcome (accepted, rejected, or duplicate-reconciled).",
-      "admitted_producers": ["DataForge"],
-      "admitted_consumers": ["dataforge-Local", "Forge_Command"]
-    }
-  ,
+      "admitted_producers": [
+        "DataForge"
+      ],
+      "admitted_consumers": [
+        "dataforge-Local",
+        "Forge_Command"
+      ]
+    },
     {
       "family": "execution_request",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": true,
       "schema_path": "contracts/families/execution_request/execution_request.v1.schema.json",
       "description": "Transport artifact carrying a bounded execution request from FA Local through the proving-slice pipeline for operator review and approval.",
-      "admitted_producers": ["fa-local-operator"],
-      "admitted_consumers": ["dataforge-Local", "DataForge", "Forge_Command"]
+      "admitted_producers": [
+        "fa-local-operator"
+      ],
+      "admitted_consumers": [
+        "dataforge-Local",
+        "DataForge",
+        "Forge_Command"
+      ]
     },
     {
       "family": "execution_status_event",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": true,
       "schema_path": "contracts/families/execution_status_event/execution_status_event.v1.schema.json",
       "description": "Truthful execution status snapshot emitted by FA Local, transported through the proving-slice pipeline for operator visibility.",
-      "admitted_producers": ["fa-local-operator"],
-      "admitted_consumers": ["dataforge-Local", "DataForge", "Forge_Command"]
+      "admitted_producers": [
+        "fa-local-operator"
+      ],
+      "admitted_consumers": [
+        "dataforge-Local",
+        "DataForge",
+        "Forge_Command"
+      ]
     },
     {
       "family": "approval_artifact",
       "current_version": 1,
-      "admitted_versions": [1],
+      "admitted_versions": [
+        1
+      ],
       "status": "admitted",
       "promotable": false,
       "schema_path": "contracts/families/approval_artifact/approval_artifact.v1.schema.json",
       "description": "Explicit operator approval or rejection decision for a pending execution request that required explicit_operator_approval posture.",
-      "admitted_producers": ["Forge_Command"],
-      "admitted_consumers": ["fa-local-operator", "dataforge-Local", "DataForge"]
+      "admitted_producers": [
+        "Forge_Command"
+      ],
+      "admitted_consumers": [
+        "fa-local-operator",
+        "dataforge-Local",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "forge_eval_evidence_bundle",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/forge_eval_evidence_bundle/forge_eval_evidence_bundle.v1.schema.json",
+      "description": "Deterministic forge-eval evidence bundle linking Centipede source refs, repo refs, emitted artifact refs, and validation state.",
+      "admitted_producers": [
+        "forge-eval"
+      ],
+      "admitted_consumers": [
+        "eval-cal-node",
+        "Forge_Command",
+        "dataforge-Local"
+      ]
+    },
+    {
+      "family": "eval_calibration_report",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/eval_calibration_report/eval_calibration_report.v1.schema.json",
+      "description": "Evaluation calibration report normalizing forge-eval outputs for bounded ForgeMath lane admission.",
+      "admitted_producers": [
+        "eval-cal-node"
+      ],
+      "admitted_consumers": [
+        "ForgeMath",
+        "Forge_Command",
+        "dataforge-Local"
+      ]
+    },
+    {
+      "family": "forgemath_lane_evaluation_ref",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/forgemath_lane_evaluation_ref/forgemath_lane_evaluation_ref.v1.schema.json",
+      "description": "Reference envelope for a ForgeMath canonical lane evaluation result; downstream systems reference this result and do not recalculate it.",
+      "admitted_producers": [
+        "ForgeMath"
+      ],
+      "admitted_consumers": [
+        "forgeHQ",
+        "Forge_Command",
+        "dataforge-Local"
+      ]
+    },
+    {
+      "family": "forgehq_upstream_evidence_refs",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/forgehq_upstream_evidence_refs/forgehq_upstream_evidence_refs.v1.schema.json",
+      "description": "ForgeHQ upstream evidence reference set used to shape proposal packages without becoming mathematical or operator-decision authority.",
+      "admitted_producers": [
+        "forgeHQ"
+      ],
+      "admitted_consumers": [
+        "Forge_Command",
+        "dataforge-Local"
+      ]
+    },
+    {
+      "family": "evaluation_spine_detail_model",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/evaluation_spine_detail_model/evaluation_spine_detail_model.v1.schema.json",
+      "description": "ForgeCommand review-surface detail model tying Centipede, forge-eval, eval-cal-node, ForgeMath, forgeHQ, and operator-action layers together without storing operator decision state.",
+      "admitted_producers": [
+        "Forge_Command"
+      ],
+      "admitted_consumers": [
+        "Forge_Command",
+        "dataforge-Local"
+      ]
     }
   ],
   "excluded_families": [

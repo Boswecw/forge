@@ -62,14 +62,17 @@ Cross-cutting reference documentation, plans, audits, and archives.
 | `docs/canonical/` | Authoritative doctrine (`ecosystem_canonical.md`, `FORGE_SYSTEMS_MANUAL.md`, `security.md`) |
 | `docs/architecture/` | Architecture diagrams (single-page security diagram) |
 | `docs/contracts/` | API contracts, JSON schemas, specifications |
+| `docs/protocols/` | Cross-cutting BDS and Forge protocol references |
 | `docs/audits/` | Quality audits (build readiness, UX, ForgeCommand) |
+| `docs/plans/README.md` | Plans directory guide and archive map |
 | `docs/plans/active/` | Current implementation plans and roadmaps |
-| `docs/plans/archive/` | Superseded plans (bugcheck, forgeagents, fpvs, doctrine) |
+| `docs/plans/archive/` | Superseded, completed, or dated plan sets (bugcheck, completed plans, DataForge Local analytics, doctrine, forgeagents, fpvs, NeuronForge, promotion integration) |
 | `docs/archive/` | Historical documents and archived holding material |
 | `docs/archive/session-reports/` | One-off session reports and gap closure reports |
 | `docs/changelog/` | Ecosystem-wide changelogs |
 | `docs/qa/` | QA documentation |
 | `docs/render-deployment/` | Render.com deployment guides |
+| `cloud-systems/render-blueprints/` | Ecosystem-level Render blueprint YAML files |
 
 ---
 
@@ -119,10 +122,13 @@ Shared libraries, assets, and utilities.
 | Service guides, API refs, deep-dives | `{service}/docs/` |
 | Ecosystem-wide architecture | `docs/architecture/` |
 | API contracts and schemas | `docs/contracts/` |
+| Cross-cutting protocols | `docs/protocols/` |
 | Active implementation plans | `docs/plans/active/` |
 | Completed/superseded plans | `docs/plans/archive/` |
+| Cross-repo plan sets and planning packs | `docs/plans/active/` while current; `docs/plans/archive/` when dated, completed, or superseded |
 | Audit reports | `docs/audits/` |
 | Session reports, one-off investigations | `docs/archive/session-reports/` |
 | Canonical doctrine | `docs/canonical/` |
 | Deployment guides | `docs/render-deployment/` |
+| Ecosystem-level Render blueprints | `cloud-systems/render-blueprints/` |
 | Root-level loose legacy notes under review | `docs/archive/root-holding/` |

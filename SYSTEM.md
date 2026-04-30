@@ -887,12 +887,16 @@ Directory names, subsystem boundaries, and ownership lines in this chapter are c
 │   ├── canonical/           # Authoritative doctrine
 │   ├── architecture/        # Security diagrams
 │   ├── contracts/           # API contracts & JSON schemas
-│   ├── implementation/      # Implementation plans (bugcheck, fpvs, doctrine)
+│   ├── protocols/           # Cross-cutting BDS and Forge protocols
+│   ├── plans/               # Active and archived implementation plans
 │   ├── audits/              # Quality & compliance audits
 │   ├── changelog/           # Release notes
 │   ├── smith/               # SMITH ecosystem-level summary
 │   ├── qa/                  # QA protocols
-│   └── render-deployment/   # Deployment configs
+│   └── render-deployment/   # Render deployment guides
+│
+├── cloud-systems/
+│   └── render-blueprints/   # Ecosystem-level Render blueprint YAML files
 │
 ├── schemas/                 # Shared JSON schemas
 ├── CLAUDE.md                # AI assistant context (BugCheck canonical)
