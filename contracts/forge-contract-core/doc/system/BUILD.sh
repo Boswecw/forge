@@ -1,26 +1,35 @@
 #!/usr/bin/env bash
-# Assemble SYSTEM.md from doc/system/ section files.
-# Run from repo root: bash doc/system/BUILD.sh
 set -euo pipefail
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
-OUTPUT="$REPO_ROOT/SYSTEM.md"
+PARTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$PARTS_DIR/../.." && pwd)"
+OUTPUT="${OUTPUT:-doc/FCCSYSTEM.md}"
+VALIDATOR="$PARTS_DIR/validate_snapshots.sh"
 
-echo "# forge-contract-core — System Reference" > "$OUTPUT"
-echo "" >> "$OUTPUT"
-echo "> Assembled from \`doc/system/\`. Edit the section files, then run \`bash doc/system/BUILD.sh\`." >> "$OUTPUT"
-echo "" >> "$OUTPUT"
-echo "**Document version:** $(date -u +%Y-%m-%d)" >> "$OUTPUT"
-echo "" >> "$OUTPUT"
-echo "---" >> "$OUTPUT"
-echo "" >> "$OUTPUT"
+mkdir -p "$(dirname "$ROOT_DIR/$OUTPUT")"
 
-for section in "$SCRIPT_DIR"/0*.md; do
-    echo "" >> "$OUTPUT"
-    cat "$section" >> "$OUTPUT"
-    echo "" >> "$OUTPUT"
-    echo "---" >> "$OUTPUT"
+TMP_OUTPUT="$(mktemp)"
+trap 'rm -f "$TMP_OUTPUT"' EXIT
+
+if [ -f "$PARTS_DIR/_index.md" ]; then
+  cat "$PARTS_DIR/_index.md" > "$TMP_OUTPUT"
+fi
+
+shopt -s nullglob
+for part in "$PARTS_DIR"/[0-9][0-9]-*.md; do
+  echo "" >> "$TMP_OUTPUT"
+  echo "---" >> "$TMP_OUTPUT"
+  echo "" >> "$TMP_OUTPUT"
+  cat "$part" >> "$TMP_OUTPUT"
 done
+shopt -u nullglob
 
-echo "SYSTEM.md assembled at $OUTPUT"
+if [ -x "$VALIDATOR" ]; then
+  bash "$VALIDATOR" "$TMP_OUTPUT"
+fi
+
+cp "$TMP_OUTPUT" "$ROOT_DIR/$OUTPUT"
+chmod 664 "$ROOT_DIR/$OUTPUT"
+
+LINE_COUNT=$(wc -l < "$ROOT_DIR/$OUTPUT")
+echo "$OUTPUT assembled: $LINE_COUNT lines"
