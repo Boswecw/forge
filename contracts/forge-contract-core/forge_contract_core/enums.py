@@ -140,7 +140,54 @@ class RejectionClass(StrEnum):
     BLOCKED_SENSITIVITY_CLASS = "blocked_sensitivity_class"
 
 
+class SourceTrustClassification(StrEnum):
+    OFFICIAL = "OFFICIAL"
+    TRUSTED_SECONDARY = "TRUSTED_SECONDARY"
+    ADVISORY = "ADVISORY"
+    BLOCKED = "BLOCKED"
+
+
+class LLMProviderId(StrEnum):
+    OPENAI = "openai"
+    ANTHROPIC = "anthropic"
+    GOOGLE = "google"
+    XAI = "xai"
+    DEEPSEEK = "deepseek"
+    OLLAMA = "ollama"
+
+
+class LLMIntelClaimType(StrEnum):
+    PRICING = "pricing"
+    MODEL_AVAILABILITY = "model_availability"
+    DEPRECATION = "deprecation"
+    CONTEXT_WINDOW = "context_window"
+    MODALITY = "modality"
+    API_BEHAVIOR = "api_behavior"
+    TERMS_SAFETY = "terms_safety"
+    CAPABILITY = "capability"
+    MODEL_METADATA = "model_metadata"
+
+
+class LLMIntelPromotionState(StrEnum):
+    CANDIDATE_DETECTED = "candidate_detected"
+    EVIDENCE_COLLECTED = "evidence_collected"
+    DRIFT_CLASSIFIED = "drift_classified"
+    MAID_REVIEW_REQUIRED = "maid_review_required"
+    MAID_REVIEWED = "maid_reviewed"
+    QUEUED_FOR_OPERATOR_REVIEW = "queued_for_operator_review"
+    APPROVED_FOR_PROMOTION = "approved_for_promotion"
+    REJECTED = "rejected"
+    DEFERRED = "deferred"
+    MORE_EVIDENCE_REQUIRED = "more_evidence_required"
+    PROMOTED = "promoted"
+    SUPERSEDED = "superseded"
+    ROLLBACK_REQUESTED = "rollback_requested"
+    ROLLBACK_COMPLETED = "rollback_completed"
+    ARCHIVED = "archived"
+
+
 # Admitted families — proving slice 01 + execution bridge v1 + evaluation spine phase 02
+# + LLM provider intelligence contract slice 01.
 ADMITTED_FAMILIES: frozenset[str] = frozenset(
     {
         "source_drift_finding",
@@ -154,6 +201,19 @@ ADMITTED_FAMILIES: frozenset[str] = frozenset(
         "forgemath_lane_evaluation_ref",
         "forgehq_upstream_evidence_refs",
         "evaluation_spine_detail_model",
+        "llm_intel_weekly_run",
+        "llm_intel_approved_source",
+        "source_trust_classification",
+        "provider_extraction_profile",
+        "provider_adapter_receipt",
+        "llm_intel_fetch_receipt",
+        "llm_intel_source_fingerprint",
+        "llm_intel_extracted_claim",
+        "llm_intel_drift_report",
+        "llm_intel_review_packet",
+        "llm_intel_promotion_decision",
+        "llm_intel_promoted_record",
+        "promotion_state_machine",
     }
 )
 
@@ -170,6 +230,19 @@ ADMITTED_VERSIONS: dict[str, frozenset[int]] = {
     "forgemath_lane_evaluation_ref": frozenset({1}),
     "forgehq_upstream_evidence_refs": frozenset({1}),
     "evaluation_spine_detail_model": frozenset({1}),
+    "llm_intel_weekly_run": frozenset({1}),
+    "llm_intel_approved_source": frozenset({1}),
+    "source_trust_classification": frozenset({1}),
+    "provider_extraction_profile": frozenset({1}),
+    "provider_adapter_receipt": frozenset({1}),
+    "llm_intel_fetch_receipt": frozenset({1}),
+    "llm_intel_source_fingerprint": frozenset({1}),
+    "llm_intel_extracted_claim": frozenset({1}),
+    "llm_intel_drift_report": frozenset({1}),
+    "llm_intel_review_packet": frozenset({1}),
+    "llm_intel_promotion_decision": frozenset({1}),
+    "llm_intel_promoted_record": frozenset({1}),
+    "promotion_state_machine": frozenset({1}),
 }
 
 # Sensitivity classes that permit promotion

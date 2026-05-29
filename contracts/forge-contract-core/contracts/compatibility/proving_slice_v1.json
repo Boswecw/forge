@@ -1,13 +1,31 @@
 {
   "compatibility_set": "proving_slice_v1",
-  "description": "Compatibility notes and constraints for the Forge proving slice. Includes proving slice 01 families (drift/promotion) and execution bridge v1 families (execution_request, execution_status_event, approval_artifact).",
+  "description": "Compatibility notes and constraints for the Forge proving slice. Includes proving slice 01 families, execution bridge v1 families, Evaluation Spine phase 02 families, and LLM provider intelligence contract slice 01 families.",
   "admitted_families": [
     {"family": "source_drift_finding", "version": 1, "status": "admitted"},
     {"family": "promotion_envelope", "version": 1, "status": "admitted"},
     {"family": "promotion_receipt", "version": 1, "status": "admitted"},
     {"family": "execution_request", "version": 1, "status": "admitted"},
     {"family": "execution_status_event", "version": 1, "status": "admitted"},
-    {"family": "approval_artifact", "version": 1, "status": "admitted"}
+    {"family": "approval_artifact", "version": 1, "status": "admitted"},
+    {"family": "forge_eval_evidence_bundle", "version": 1, "status": "admitted"},
+    {"family": "eval_calibration_report", "version": 1, "status": "admitted"},
+    {"family": "forgemath_lane_evaluation_ref", "version": 1, "status": "admitted"},
+    {"family": "forgehq_upstream_evidence_refs", "version": 1, "status": "admitted"},
+    {"family": "evaluation_spine_detail_model", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_weekly_run", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_approved_source", "version": 1, "status": "admitted"},
+    {"family": "source_trust_classification", "version": 1, "status": "admitted"},
+    {"family": "provider_extraction_profile", "version": 1, "status": "admitted"},
+    {"family": "provider_adapter_receipt", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_fetch_receipt", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_source_fingerprint", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_extracted_claim", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_drift_report", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_review_packet", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_promotion_decision", "version": 1, "status": "admitted"},
+    {"family": "llm_intel_promoted_record", "version": 1, "status": "admitted"},
+    {"family": "promotion_state_machine", "version": 1, "status": "admitted"}
   ],
   "excluded_families": [
     "verification_result",
@@ -24,6 +42,7 @@
     "Execution bridge v1 families (execution_request, execution_status_event, approval_artifact) admitted after proving slice 01 green.",
     "FA Local is the canonical execution consumer for execution_request and execution_status_event.",
     "Forge_Command is the canonical approval authority for approval_artifact.",
-    "Remaining families (verification_result, rollback_result, etc.) excluded until execution bridge v1 is proven."
+    "Remaining families (verification_result, rollback_result, etc.) excluded until execution bridge v1 is proven.",
+    "LLM provider intelligence contract slice 01 admits canonical contracts only; live scraping, scheduling, MAID calls, DataForge writes, and UI are out of scope."
   ]
 }

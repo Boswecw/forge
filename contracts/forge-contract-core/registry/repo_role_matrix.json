@@ -1,13 +1,15 @@
 {
-  "registry_version": "1.1.0",
-  "description": "Repo role matrix defining what each ecosystem repo may emit, consume, and operate on for the proving slice and Evaluation Spine phase 02 contract subset.",
+  "registry_version": "1.2.0",
+  "description": "Repo role matrix defining what each ecosystem repo may emit, consume, and operate on for the proving slice, Evaluation Spine phase 02 contract subset, and LLM provider intelligence contract slice 01.",
   "repos": [
     {
       "repo": "forge-contract-core",
       "role_classes": [
         "contract_core"
       ],
-      "allowed_emit_families": [],
+      "allowed_emit_families": [
+        "source_trust_classification"
+      ],
       "allowed_consume_families": [],
       "promotion_enabled": false,
       "review_surface": false,
@@ -72,11 +74,22 @@
         "shared_truth_owner"
       ],
       "allowed_emit_families": [
-        "promotion_receipt"
+        "promotion_receipt",
+        "llm_intel_approved_source",
+        "llm_intel_promoted_record",
+        "promotion_state_machine"
       ],
       "allowed_consume_families": [
         "source_drift_finding",
-        "promotion_envelope"
+        "promotion_envelope",
+        "llm_intel_weekly_run",
+        "provider_adapter_receipt",
+        "llm_intel_fetch_receipt",
+        "llm_intel_source_fingerprint",
+        "llm_intel_extracted_claim",
+        "llm_intel_drift_report",
+        "llm_intel_review_packet",
+        "llm_intel_promotion_decision"
       ],
       "promotion_enabled": false,
       "review_surface": false,
@@ -104,7 +117,9 @@
       ],
       "allowed_emit_families": [
         "approval_artifact",
-        "evaluation_spine_detail_model"
+        "evaluation_spine_detail_model",
+        "llm_intel_promotion_decision",
+        "promotion_state_machine"
       ],
       "allowed_consume_families": [
         "source_drift_finding",
@@ -115,7 +130,11 @@
         "eval_calibration_report",
         "forgemath_lane_evaluation_ref",
         "forgehq_upstream_evidence_refs",
-        "evaluation_spine_detail_model"
+        "evaluation_spine_detail_model",
+        "llm_intel_weekly_run",
+        "llm_intel_drift_report",
+        "llm_intel_review_packet",
+        "llm_intel_promoted_record"
       ],
       "promotion_enabled": false,
       "review_surface": true,
@@ -280,6 +299,99 @@
       ],
       "required_gate_profiles": [],
       "notes": "Bounded proposal shaping. May reference upstream evidence but is not math authority and is not operator decision authority."
+    },
+    {
+      "repo": "Rake",
+      "role_classes": [
+        "weekly_workflow_owner",
+        "evidence_assembler"
+      ],
+      "allowed_emit_families": [
+        "llm_intel_weekly_run",
+        "provider_extraction_profile",
+        "provider_adapter_receipt",
+        "llm_intel_fetch_receipt",
+        "llm_intel_source_fingerprint",
+        "llm_intel_extracted_claim",
+        "llm_intel_drift_report",
+        "llm_intel_review_packet",
+        "promotion_state_machine"
+      ],
+      "allowed_consume_families": [
+        "llm_intel_approved_source",
+        "source_trust_classification",
+        "provider_adapter_receipt"
+      ],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": [
+        "llm_intel_promoted_record_emit",
+        "llm_intel_promotion_decision_emit"
+      ],
+      "local_only_truth_classes": [
+        "weekly_run_working_state"
+      ],
+      "required_gate_profiles": [],
+      "notes": "Owns bounded weekly workflow state and evidence assembly, but cannot promote truth or mutate NeuroForge registry."
+    },
+    {
+      "repo": "ForgeAgents",
+      "role_classes": [
+        "bounded_worker_executor"
+      ],
+      "allowed_emit_families": [
+        "provider_adapter_receipt",
+        "llm_intel_fetch_receipt",
+        "llm_intel_extracted_claim"
+      ],
+      "allowed_consume_families": [
+        "llm_intel_approved_source",
+        "source_trust_classification",
+        "provider_extraction_profile",
+        "llm_intel_source_fingerprint"
+      ],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": true,
+      "forbidden_payload_classes": [
+        "llm_intel_promoted_record_emit",
+        "llm_intel_promotion_decision_emit",
+        "neuroforge_registry_mutation"
+      ],
+      "local_only_truth_classes": [
+        "worker_attempt_state"
+      ],
+      "required_gate_profiles": [],
+      "notes": "Executes bounded adapter and fetch work assigned by Rake. Does not own workflow, truth, or promotion."
+    },
+    {
+      "repo": "NeuroForge",
+      "role_classes": [
+        "maid_adjudication",
+        "promoted_registry_consumer"
+      ],
+      "allowed_emit_families": [
+        "promotion_state_machine"
+      ],
+      "allowed_consume_families": [
+        "source_trust_classification",
+        "llm_intel_drift_report",
+        "llm_intel_promoted_record"
+      ],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": [
+        "llm_intel_promoted_record_emit",
+        "llm_intel_promotion_decision_emit",
+        "direct_provider_registry_mutation"
+      ],
+      "local_only_truth_classes": [
+        "runtime_provider_registry_cache"
+      ],
+      "required_gate_profiles": [],
+      "notes": "Runs MAID adjudication and refreshes runtime provider cache from DataForge-promoted records only."
     }
   ]
 }

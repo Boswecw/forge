@@ -108,13 +108,13 @@ def test_adversarial_cross_family_key_does_not_verify():
 
 def test_adversarial_forbidden_family_is_blocked():
     """An attacker attempts to inject an artifact with a family outside the
-    proving-slice-01 admitted set (e.g. approval_artifact).
+    admitted family set (e.g. rollback_artifact).
 
     Defence: validate_artifact raises ArtifactValidationError(cause="unsupported_family")
     before any payload validation or database write.
     """
     artifact = _base_finding()
-    artifact["artifact_family"] = "approval_artifact"
+    artifact["artifact_family"] = "rollback_artifact"
 
     with pytest.raises(ArtifactValidationError) as exc_info:
         validate_artifact(artifact, strict_idempotency=False)

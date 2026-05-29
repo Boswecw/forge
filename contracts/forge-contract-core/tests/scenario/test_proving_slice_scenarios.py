@@ -183,7 +183,7 @@ def test_scenario_2_family_gate_rejects_unadmitted_family():
     DataForge Cloud intake.
     """
     artifact = _finding_artifact()
-    artifact["artifact_family"] = "approval_artifact"
+    artifact["artifact_family"] = "rollback_artifact"
 
     with pytest.raises(ArtifactValidationError) as exc_info:
         validate_artifact(artifact, strict_idempotency=False)

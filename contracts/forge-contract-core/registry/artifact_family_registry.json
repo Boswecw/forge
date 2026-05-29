@@ -1,6 +1,6 @@
 {
-  "registry_version": "1.1.0",
-  "description": "Canonical registry of admitted artifact families for the Forge proving slice and Evaluation Spine phase 02 contract subset.",
+  "registry_version": "1.2.0",
+  "description": "Canonical registry of admitted artifact families for the Forge proving slice, Evaluation Spine phase 02 contract subset, and LLM provider intelligence contract slice 01.",
   "families": [
     {
       "family": "source_drift_finding",
@@ -205,6 +205,247 @@
       "admitted_consumers": [
         "Forge_Command",
         "dataforge-Local"
+      ]
+    },
+    {
+      "family": "llm_intel_weekly_run",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_weekly_run/llm_intel_weekly_run.v1.schema.json",
+      "description": "Canonical manifest and closure payload for a bounded weekly LLM provider intelligence refresh run.",
+      "admitted_producers": [
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "DataForge",
+        "Forge_Command"
+      ]
+    },
+    {
+      "family": "llm_intel_approved_source",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_approved_source/llm_intel_approved_source.v1.schema.json",
+      "description": "Approved source registry entry for LLM provider intelligence refreshes.",
+      "admitted_producers": [
+        "DataForge"
+      ],
+      "admitted_consumers": [
+        "Rake",
+        "ForgeAgents"
+      ]
+    },
+    {
+      "family": "source_trust_classification",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/source_trust_classification/source_trust_classification.v1.schema.json",
+      "description": "Canonical source trust classification for LLM provider intelligence sources.",
+      "admitted_producers": [
+        "forge-contract-core"
+      ],
+      "admitted_consumers": [
+        "Rake",
+        "ForgeAgents",
+        "NeuroForge",
+        "DataForge",
+        "Forge_Command"
+      ]
+    },
+    {
+      "family": "provider_extraction_profile",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/provider_extraction_profile/provider_extraction_profile.v1.schema.json",
+      "description": "Provider-specific extraction profile used by bounded adapters.",
+      "admitted_producers": [
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "ForgeAgents",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "provider_adapter_receipt",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/provider_adapter_receipt/provider_adapter_receipt.v1.schema.json",
+      "description": "Receipt emitted by a provider adapter execution against frozen input.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "Rake",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_fetch_receipt",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_fetch_receipt/llm_intel_fetch_receipt.v1.schema.json",
+      "description": "Receipt for an attempted fetch of an approved LLM provider intelligence source.",
+      "admitted_producers": [
+        "Rake",
+        "ForgeAgents"
+      ],
+      "admitted_consumers": [
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_source_fingerprint",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_source_fingerprint/llm_intel_source_fingerprint.v1.schema.json",
+      "description": "Canonical fingerprint of a frozen source snapshot used in LLM intelligence replay.",
+      "admitted_producers": [
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_extracted_claim",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_extracted_claim/llm_intel_extracted_claim.v1.schema.json",
+      "description": "Claim extracted from frozen provider source evidence by a bounded adapter.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "Rake",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_drift_report",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_drift_report/llm_intel_drift_report.v1.schema.json",
+      "description": "Old/new drift report for LLM provider intelligence candidate review.",
+      "admitted_producers": [
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "NeuroForge",
+        "DataForge",
+        "Forge_Command"
+      ]
+    },
+    {
+      "family": "llm_intel_review_packet",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_review_packet/llm_intel_review_packet.v1.schema.json",
+      "description": "ForgeCommand review packet assembled from immutable LLM intelligence evidence.",
+      "admitted_producers": [
+        "Rake"
+      ],
+      "admitted_consumers": [
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_promotion_decision",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/llm_intel_promotion_decision/llm_intel_promotion_decision.v1.schema.json",
+      "description": "ForgeCommand operator decision receipt for an LLM intelligence promotion candidate.",
+      "admitted_producers": [
+        "Forge_Command"
+      ],
+      "admitted_consumers": [
+        "DataForge"
+      ]
+    },
+    {
+      "family": "llm_intel_promoted_record",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": true,
+      "schema_path": "contracts/families/llm_intel_promoted_record/llm_intel_promoted_record.v1.schema.json",
+      "description": "DataForge-promoted canonical LLM provider or model registry record.",
+      "admitted_producers": [
+        "DataForge"
+      ],
+      "admitted_consumers": [
+        "NeuroForge",
+        "Forge_Command"
+      ]
+    },
+    {
+      "family": "promotion_state_machine",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/promotion_state_machine/promotion_state_machine.v1.schema.json",
+      "description": "Auditable promotion state transition for LLM provider intelligence candidates.",
+      "admitted_producers": [
+        "Rake",
+        "NeuroForge",
+        "Forge_Command",
+        "DataForge"
+      ],
+      "admitted_consumers": [
+        "DataForge",
+        "Forge_Command"
       ]
     }
   ],
