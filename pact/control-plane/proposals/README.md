@@ -1,3 +1,0 @@
-# proposals
-
-Proposal drafting boundary.

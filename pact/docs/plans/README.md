@@ -1,3 +1,0 @@
-# plans
-
-PACT plan artifacts.

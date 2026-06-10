@@ -1,1 +1,0 @@
-{"name": "confidence", "description": "Confidence level of a detection or finding.", "values": ["high", "medium", "low", "unknown"]}

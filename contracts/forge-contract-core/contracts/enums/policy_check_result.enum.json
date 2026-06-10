@@ -1,1 +1,0 @@
-{"name": "policy_check_result", "description": "Outcome of local promotion policy checks.", "values": ["passed", "failed", "blocked", "waived"]}

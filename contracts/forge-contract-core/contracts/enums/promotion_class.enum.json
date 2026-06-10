@@ -1,1 +1,0 @@
-{"name": "promotion_class", "description": "Whether an artifact may be promoted from local truth to shared truth.", "values": ["promotable", "local_only", "blocked"]}
