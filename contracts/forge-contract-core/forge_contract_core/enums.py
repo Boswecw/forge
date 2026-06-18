@@ -186,8 +186,113 @@ class LLMIntelPromotionState(StrEnum):
     ARCHIVED = "archived"
 
 
+class TripleVariantAuditLane(StrEnum):
+    CONTRACT = "contract"
+    FUNCTIONAL = "functional"
+    DRIFT_RESILIENCE = "drift_resilience"
+
+
+class TripleVariantAuditLaneStatus(StrEnum):
+    PASS = "PASS"
+    FAIL = "FAIL"
+    WARNING = "WARNING"
+    NEEDS_OPERATOR_REVIEW = "NEEDS_OPERATOR_REVIEW"
+
+
+class TripleVariantAuditFindingSeverity(StrEnum):
+    INFO = "info"
+    WARNING = "warning"
+    ERROR = "error"
+    BLOCKING = "blocking"
+
+
+class TripleVariantAuditFindingCategory(StrEnum):
+    SCHEMA = "schema"
+    RECEIPT = "receipt"
+    RUNTIME = "runtime"
+    TEST = "test"
+    DRIFT = "drift"
+    INSTRUCTION = "instruction"
+    EVIDENCE = "evidence"
+    SECURITY = "security"
+    OPERATOR_REVIEW = "operator_review"
+    MUTATION_AUTHORITY = "mutation_authority"
+
+
+class TripleVariantAuditEvidenceType(StrEnum):
+    TERMINAL_LOG = "terminal_log"
+    SCHEMA_FIXTURE = "schema_fixture"
+    TEST_REPORT = "test_report"
+    DIFF = "diff"
+    GENERATED_INSTRUCTION = "generated_instruction"
+    PROVIDER_RESPONSE = "provider_response"
+    OPERATOR_NOTE = "operator_note"
+    DATAFORGE_RECORD = "dataforge_record"
+    REPLAY_MANIFEST = "replay_manifest"
+
+
+class TripleVariantAuditEvidenceProducer(StrEnum):
+    FORGE_CONTRACT_CORE = "forge_contract_core"
+    FORGE_SMITHY = "forge-smithy"
+    FORGE_AGENTS = "Forge-Agents"
+    DATAFORGE_LOCAL = "DataForge Local"
+    FORGE_COMMAND = "Forge_Command"
+    NEUROFORGE = "NeuroForge"
+    OPERATOR = "operator"
+
+
+class TripleVariantAuditTargetType(StrEnum):
+    REPO = "repo"
+    PATCH = "patch"
+    AGENT_RUN = "agent_run"
+    AAR_RECORD = "aar_record"
+    PROVIDER_RESULT = "provider_result"
+    REVIEW_ARTIFACT = "review_artifact"
+
+
+class TripleVariantAuditTier(StrEnum):
+    FAST_PR = "FAST_PR"
+    STANDARD_PR = "STANDARD_PR"
+    NIGHTLY_FULL = "NIGHTLY_FULL"
+    RELEASE_GATE = "RELEASE_GATE"
+    INCIDENT_REPLAY = "INCIDENT_REPLAY"
+
+
+class TripleVariantAuditRerunReason(StrEnum):
+    REQUEST_REPAIR = "REQUEST_REPAIR"
+    ESCALATE_TO_SMITH = "ESCALATE_TO_SMITH"
+    OPERATOR_RECHECK = "OPERATOR_RECHECK"
+    INCIDENT_REPLAY = "INCIDENT_REPLAY"
+    CACHE_REVALIDATION = "CACHE_REVALIDATION"
+
+
+class TripleVariantAuditFinalStatus(StrEnum):
+    PASS = "PASS"
+    PASS_WITH_WARNINGS = "PASS_WITH_WARNINGS"
+    NEEDS_OPERATOR_REVIEW = "NEEDS_OPERATOR_REVIEW"
+    BLOCKED_CONTRACT_FAILURE = "BLOCKED_CONTRACT_FAILURE"
+    BLOCKED_RUNTIME_FAILURE = "BLOCKED_RUNTIME_FAILURE"
+    BLOCKED_DRIFT_RISK = "BLOCKED_DRIFT_RISK"
+    BLOCKED_MISSING_RECEIPT = "BLOCKED_MISSING_RECEIPT"
+    BLOCKED_UNAUTHORIZED_MUTATION = "BLOCKED_UNAUTHORIZED_MUTATION"
+
+
+class TripleVariantAuditGateDecision(StrEnum):
+    ALLOW_PROMOTION = "ALLOW_PROMOTION"
+    BLOCK_PROMOTION = "BLOCK_PROMOTION"
+    REQUIRE_OPERATOR_REVIEW = "REQUIRE_OPERATOR_REVIEW"
+    ESCALATE_TO_SMITH = "ESCALATE_TO_SMITH"
+
+
+class TripleVariantAuditProviderMode(StrEnum):
+    NONE = "none"
+    MOCKED = "mocked"
+    REPLAYED = "replayed"
+    LIVE = "live"
+
+
 # Admitted families — proving slice 01 + execution bridge v1 + evaluation spine phase 02
-# + LLM provider intelligence contract slice 01.
+# + LLM provider intelligence contract slice 01 + triple-variant audit proof slice 01.
 ADMITTED_FAMILIES: frozenset[str] = frozenset(
     {
         "source_drift_finding",
@@ -214,6 +319,12 @@ ADMITTED_FAMILIES: frozenset[str] = frozenset(
         "llm_intel_promotion_decision",
         "llm_intel_promoted_record",
         "promotion_state_machine",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_replay_manifest",
     }
 )
 
@@ -243,6 +354,12 @@ ADMITTED_VERSIONS: dict[str, frozenset[int]] = {
     "llm_intel_promotion_decision": frozenset({1}),
     "llm_intel_promoted_record": frozenset({1}),
     "promotion_state_machine": frozenset({1}),
+    "triple_variant_audit_receipt": frozenset({1}),
+    "triple_variant_audit_lane_result": frozenset({1}),
+    "triple_variant_audit_finding": frozenset({1}),
+    "triple_variant_audit_evidence_ref": frozenset({1}),
+    "triple_variant_audit_gate_decision": frozenset({1}),
+    "triple_variant_audit_replay_manifest": frozenset({1}),
 }
 
 # Sensitivity classes that permit promotion

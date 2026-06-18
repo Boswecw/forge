@@ -1,6 +1,6 @@
 {
-  "registry_version": "1.2.0",
-  "description": "Canonical registry of admitted artifact families for the Forge proving slice, Evaluation Spine phase 02 contract subset, and LLM provider intelligence contract slice 01.",
+  "registry_version": "1.3.0",
+  "description": "Canonical registry of admitted artifact families for the Forge proving slice, Evaluation Spine phase 02 contract subset, LLM provider intelligence contract slice 01, and triple-variant audit proof slice 01.",
   "families": [
     {
       "family": "source_drift_finding",
@@ -446,6 +446,142 @@
       "admitted_consumers": [
         "DataForge",
         "Forge_Command"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_receipt",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_receipt/triple_variant_audit_receipt.v1.schema.json",
+      "description": "Durable triple-proof audit receipt containing contract, functional, and drift/adversarial lane results plus replay and gate references.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "forge-contract-core"
+      ],
+      "admitted_consumers": [
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_lane_result",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_lane_result/triple_variant_audit_lane_result.v1.schema.json",
+      "description": "One deterministic lane result for a triple-proof audit receipt.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "forge-contract-core"
+      ],
+      "admitted_consumers": [
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_finding",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_finding/triple_variant_audit_finding.v1.schema.json",
+      "description": "Typed audit finding used inside triple-proof audit lane results.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "forge-contract-core"
+      ],
+      "admitted_consumers": [
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_evidence_ref",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_evidence_ref/triple_variant_audit_evidence_ref.v1.schema.json",
+      "description": "Hash-required evidence reference for terminal logs, fixtures, generated instructions, provider responses, DataForge records, and replay manifests.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "forge-contract-core",
+        "dataforge-Local",
+        "Forge_Command",
+        "NeuroForge"
+      ],
+      "admitted_consumers": [
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_gate_decision",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_gate_decision/triple_variant_audit_gate_decision.v1.schema.json",
+      "description": "Explicit audit gate decision that allows, blocks, requires operator review, or escalates to SMITH.",
+      "admitted_producers": [
+        "forge-smithy",
+        "Forge_Command",
+        "operator"
+      ],
+      "admitted_consumers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
+      ]
+    },
+    {
+      "family": "triple_variant_audit_replay_manifest",
+      "current_version": 1,
+      "admitted_versions": [
+        1
+      ],
+      "status": "admitted",
+      "promotable": false,
+      "schema_path": "contracts/families/triple_variant_audit_replay_manifest/triple_variant_audit_replay_manifest.v1.schema.json",
+      "description": "Replay manifest listing deterministic audit inputs, tool versions, commands, and provider response mode.",
+      "admitted_producers": [
+        "ForgeAgents",
+        "forge-smithy",
+        "forge-contract-core"
+      ],
+      "admitted_consumers": [
+        "forge-smithy",
+        "dataforge-Local",
+        "Forge_Command",
+        "DataForge"
       ]
     }
   ],

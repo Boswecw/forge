@@ -1,6 +1,6 @@
 {
-  "registry_version": "1.2.0",
-  "description": "Repo role matrix defining what each ecosystem repo may emit, consume, and operate on for the proving slice, Evaluation Spine phase 02 contract subset, and LLM provider intelligence contract slice 01.",
+  "registry_version": "1.3.0",
+  "description": "Repo role matrix defining what each ecosystem repo may emit, consume, and operate on for the proving slice, Evaluation Spine phase 02 contract subset, LLM provider intelligence contract slice 01, and triple-variant audit proof slice 01.",
   "repos": [
     {
       "repo": "forge-contract-core",
@@ -8,7 +8,12 @@
         "contract_core"
       ],
       "allowed_emit_families": [
-        "source_trust_classification"
+        "source_trust_classification",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_replay_manifest"
       ],
       "allowed_consume_families": [],
       "promotion_enabled": false,
@@ -42,7 +47,13 @@
         "eval_calibration_report",
         "forgemath_lane_evaluation_ref",
         "forgehq_upstream_evidence_refs",
-        "evaluation_spine_detail_model"
+        "evaluation_spine_detail_model",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_replay_manifest"
       ],
       "promotion_enabled": true,
       "review_surface": false,
@@ -89,7 +100,13 @@
         "llm_intel_extracted_claim",
         "llm_intel_drift_report",
         "llm_intel_review_packet",
-        "llm_intel_promotion_decision"
+        "llm_intel_promotion_decision",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_replay_manifest"
       ],
       "promotion_enabled": false,
       "review_surface": false,
@@ -119,7 +136,8 @@
         "approval_artifact",
         "evaluation_spine_detail_model",
         "llm_intel_promotion_decision",
-        "promotion_state_machine"
+        "promotion_state_machine",
+        "triple_variant_audit_gate_decision"
       ],
       "allowed_consume_families": [
         "source_drift_finding",
@@ -134,7 +152,13 @@
         "llm_intel_weekly_run",
         "llm_intel_drift_report",
         "llm_intel_review_packet",
-        "llm_intel_promoted_record"
+        "llm_intel_promoted_record",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_replay_manifest"
       ],
       "promotion_enabled": false,
       "review_surface": true,
@@ -343,13 +367,19 @@
       "allowed_emit_families": [
         "provider_adapter_receipt",
         "llm_intel_fetch_receipt",
-        "llm_intel_extracted_claim"
+        "llm_intel_extracted_claim",
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_replay_manifest"
       ],
       "allowed_consume_families": [
         "llm_intel_approved_source",
         "source_trust_classification",
         "provider_extraction_profile",
-        "llm_intel_source_fingerprint"
+        "llm_intel_source_fingerprint",
+        "triple_variant_audit_gate_decision"
       ],
       "promotion_enabled": false,
       "review_surface": false,
@@ -377,7 +407,8 @@
       "allowed_consume_families": [
         "source_trust_classification",
         "llm_intel_drift_report",
-        "llm_intel_promoted_record"
+        "llm_intel_promoted_record",
+        "triple_variant_audit_evidence_ref"
       ],
       "promotion_enabled": false,
       "review_surface": false,
@@ -392,6 +423,39 @@
       ],
       "required_gate_profiles": [],
       "notes": "Runs MAID adjudication and refreshes runtime provider cache from DataForge-promoted records only."
+    },
+    {
+      "repo": "forge-smithy",
+      "role_classes": [
+        "patch_promotion_gate",
+        "audit_consumer"
+      ],
+      "allowed_emit_families": [
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_evidence_ref"
+      ],
+      "allowed_consume_families": [
+        "triple_variant_audit_receipt",
+        "triple_variant_audit_lane_result",
+        "triple_variant_audit_finding",
+        "triple_variant_audit_evidence_ref",
+        "triple_variant_audit_gate_decision",
+        "triple_variant_audit_replay_manifest"
+      ],
+      "promotion_enabled": false,
+      "review_surface": false,
+      "execution_enabled": false,
+      "forbidden_payload_classes": [
+        "audit_self_promotion",
+        "live_provider_adjudication"
+      ],
+      "local_only_truth_classes": [
+        "patch_working_state"
+      ],
+      "required_gate_profiles": [
+        "triple_variant_audit_receipt_validation"
+      ],
+      "notes": "Consumes triple-proof audit receipts as a patch-promotion gate. It does not own contract schemas and must not self-promote without an explicit gate decision."
     }
   ]
 }

@@ -25,8 +25,7 @@ It does **not** own:
 
 ```bash
 pip install -e ".[test]"
-python -m forge_contract_core.gates.run_all
-pytest
+bash ci_gate.sh
 ```
 
 ## Contract governance

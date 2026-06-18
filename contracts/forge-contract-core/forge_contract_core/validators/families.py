@@ -9,7 +9,10 @@ from typing import Any
 import jsonschema
 
 from forge_contract_core.enums import ADMITTED_FAMILIES, ADMITTED_VERSIONS
-from forge_contract_core.validators.llm_intel import semantic_errors
+from forge_contract_core.validators.llm_intel import semantic_errors as llm_intel_semantic_errors
+from forge_contract_core.validators.triple_variant_audit import (
+    semantic_errors as triple_variant_audit_semantic_errors,
+)
 
 _SCHEMAS_DIR = Path(__file__).parent.parent.parent / "contracts" / "families"
 
@@ -69,7 +72,8 @@ def validate_family_payload(
     validator = jsonschema.Draft7Validator(schema)
     errors = sorted(validator.iter_errors(payload), key=lambda e: list(e.path))
     messages = [f"{'.'.join(str(p) for p in e.path) or 'root'}: {e.message}" for e in errors]
-    messages.extend(semantic_errors(family, payload))
+    messages.extend(llm_intel_semantic_errors(family, payload))
+    messages.extend(triple_variant_audit_semantic_errors(family, payload))
     if messages:
         raise FamilyValidationError(
             f"Payload validation failed for {family} v{version} with {len(messages)} error(s)",

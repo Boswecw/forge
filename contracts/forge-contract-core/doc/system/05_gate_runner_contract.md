@@ -52,23 +52,26 @@ records:
 | `gates` | Per-gate `name`, `passed`, `failures` list |
 
 Reports are written to `reports/` (gitignored, preserved during CI runs). Python repos
-also emit a JUnit XML local-test report (`reports/local_tests_*.xml`). ForgeCommand
-emits a Vitest JSON report (`reports/vitest_proving_slice_*.json`).
+also emit a JUnit XML local-test report (`reports/local_tests_*.xml`). Python bytecode
+gates run with `PYTHONPYCACHEPREFIX` pointed outside the repo so ignored stale
+`__pycache__` ownership cannot mask source syntax failures. ForgeCommand emits a
+Vitest JSON report (`reports/vitest_proving_slice_*.json`).
 
 ## Participating repos and CI gate scripts
 
 Each proving-slice participating repo carries a `ci_gate.sh` at its root. These
 scripts resolve the contract-core path relative to the ecosystem root, invoke
 the canonical gate runner (Gate 1), and run the repo-local proving-slice test
-suite (Gate 2). Both gates must pass.
+suite (Gate 2). Python repos may add a bytecode compile gate (Gate 3). All gates
+in a repo script must pass.
 
-| Repo | Script | Gate 1 | Gate 2 |
-|------|--------|--------|--------|
-| `contracts/forge-contract-core` | `ci_gate.sh` | Self (gate runner) | — |
-| `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/proving_slice/` |
-| `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/test_proving_slice_intake.py` |
-| `Forge_Command` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `npm run test -- tests/utils/provingSlice.test.ts tests/stores/provingSlice.test.ts` |
-| `Local systems/fa-local-operator` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `cargo test` |
+| Repo | Script | Gate 1 | Gate 2 | Gate 3 |
+|------|--------|--------|--------|--------|
+| `contracts/forge-contract-core` | `ci_gate.sh` | Self (gate runner) | `pytest tests/` | `compileall forge_contract_core tests` |
+| `Local systems/dataforge-Local` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/proving_slice/ tests/test_triple_variant_audit_store.py` | `compileall app tests` |
+| `Cloud Systems/DataForge` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `pytest tests/test_proving_slice_intake.py` | — |
+| `Forge_Command` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `npm run test -- tests/utils/provingSlice.test.ts tests/stores/provingSlice.test.ts` | — |
+| `Local systems/fa-local-operator` | `ci_gate.sh` | `../../contracts/forge-contract-core` | `cargo test` | — |
 
 All Gate 1 invocations use the contract-core `.venv/bin/python` if present.
 Gate 2 Python invocations use the repo-local venv. Gate 2 for ForgeCommand uses `npm`.
