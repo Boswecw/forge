@@ -1,6 +1,6 @@
 # Slice 01 Support Promotion Candidate Queue
 
-Generated: `2026-06-19T15:59:54+00:00`
+Generated: `2026-06-19T16:14:36+00:00`
 
 This queue is generated from reviewed `source_local_hold` drift. It does not authorize copying artifacts into app support.
 
@@ -9,8 +9,8 @@ This queue is generated from reviewed `source_local_hold` drift. It does not aut
 | Metric | Count |
 | --- | ---: |
 | `source_local_hold` | 645 |
-| `candidate_after_target_role` | 297 |
-| `default_hold` | 348 |
+| `candidate_after_target_role` | 296 |
+| `default_hold` | 349 |
 | `missing_from_target` | 0 |
 | `unknown` | 0 |
 | `dangerous_drift` | 0 |
@@ -20,11 +20,11 @@ This queue is generated from reviewed `source_local_hold` drift. It does not aut
 | Type | Count | Posture |
 | --- | ---: | --- |
 | `source_contract_schema_migration` | 53 | `candidate_after_contract_compatibility` |
-| `source_docs_or_doc_mirror` | 102 | `default_hold_docs_rule` |
+| `source_docs_or_doc_mirror` | 103 | `default_hold_docs_rule` |
 | `source_evidence_reports_prompts` | 56 | `default_hold_evidence_receipt_only` |
 | `source_local_subproject` | 183 | `default_hold` |
 | `source_proof_tests` | 118 | `pair_with_promoted_runtime_or_contract` |
-| `source_runtime_or_capability` | 102 | `candidate_after_target_role` |
+| `source_runtime_or_capability` | 101 | `candidate_after_target_role` |
 | `source_scaffold_config` | 7 | `default_hold_dependency_adoption_required` |
 | `source_scripts_ci` | 24 | `candidate_when_tied_to_support_proof_command` |
 

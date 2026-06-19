@@ -1,0 +1,71 @@
+generated_at: "2026-06-19T16:14:36Z"
+scope: "Slice 01 DF Local public-applications read runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: d93347c6963f82801a4af40bdbdb1f92cd616391
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  route_promoted: true
+  migration_promoted: false
+  schema_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-public-applications-read-runtime.yaml
+runtime_boundary:
+  routes:
+    - GET /api/v1/public-applications
+  read_failure: "503 public_applications_read_failure"
+  non_goals:
+    - "No public-application mutations promoted."
+    - "No migrations or schema ownership promoted."
+    - "No AuthorForge app behavior changed."
+source_authority:
+  router: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/public_applications_router.py
+  tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_public_applications_routes.py
+  handoff_evidence: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/docs/authorforge-consumer-handoff.md
+support_artifacts:
+  router: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/public_applications_router.py
+  service: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/public_applications_services.py
+  tests: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_public_applications_routes.py
+verification:
+  support_pytest:
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "183 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: ruff check app/public_applications_services.py app/api/public_applications_router.py app/main.py tests/api/test_public_applications_routes.py
+    result: passed
+    output: "All checks passed"
+  source_public_applications:
+    command: .venv/bin/python -m pytest tests/api/test_public_applications_routes.py -q
+    result: passed
+    output: "4 passed"
+drift_result_after_resolution:
+  dataforge_pair:
+    same: 8
+    intentional_app_support_adaptation: 21
+    source_local_hold: 130
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 224
+  all_pairs:
+    same: 2233
+    intentional_app_support_adaptation: 71
+    source_local_hold: 645
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 851
+queue_after_resolution:
+  source_local_hold: 645
+  candidate_after_target_role: 296
+  default_hold: 349
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Select the next read-only candidate lane from DF Local target roles, or hold durable-truth write surfaces until schema ownership and authorization proof exists."

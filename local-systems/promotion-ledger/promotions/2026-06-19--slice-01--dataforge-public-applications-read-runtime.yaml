@@ -1,0 +1,83 @@
+promotion_id: "2026-06-19--slice-01--dataforge-public-applications-read-runtime"
+slice_name: "Slice 01 - DF Local Public Applications Read Runtime Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local"
+source_branch: "master"
+source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation"
+target_branch: "main"
+target_commit: "d93347c6963f82801a4af40bdbdb1f92cd616391"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/public_applications_router.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/public_applications_services.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/main.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_public_applications_routes.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/docs/authorforge-consumer-handoff.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/healing_proposal_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py"
+promotion_manifest:
+  - "Promoted the DF Local public-applications read endpoint into app support as a support-native adapter."
+  - "Mounted only GET /api/v1/public-applications."
+  - "Preserved the source filter semantics: enabled public applications only."
+  - "Adapted the source SQLAlchemy session boundary to the support app's FastAPI/asyncpg foundation boundary."
+  - "Held the AuthorForge consumer handoff report as source-local evidence."
+  - "Did not promote public-application mutations, schema ownership, migrations, or additional source APIs."
+proof_commands:
+  - "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+  - "ruff check app/public_applications_services.py app/api/public_applications_router.py app/main.py tests/api/test_public_applications_routes.py"
+  - ".venv/bin/python -m pytest tests/api/test_public_applications_routes.py -q"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_pytest:
+    command: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    result: "183 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: "ruff check app/public_applications_services.py app/api/public_applications_router.py app/main.py tests/api/test_public_applications_routes.py"
+    result: "All checks passed"
+  source_public_applications:
+    command: ".venv/bin/python -m pytest tests/api/test_public_applications_routes.py -q"
+    result: "4 passed"
+  dataforge_pair_drift:
+    same: 8
+    intentional_app_support_adaptation: 21
+    source_local_hold: 130
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 224
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 71
+    source_local_hold: 645
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 851
+  support_promotion_queue:
+    source_local_hold: 645
+    candidate_after_target_role: 296
+    default_hold: 349
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Support runtime exposes only GET /api/v1/public-applications and explicit 503 public_applications_read_failure on unreadable source tables."
+authorforge_impact: "read-only support visibility only; no AuthorForge behavior, UI, schema, write path, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded read-only public-applications support adapter under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T16:14:36Z"
+rollback_source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+rollback_target_commit: "e0f56d6696c000ff44f5161d68daf0f0c58c197a"
+rollback_command: "Revert the DF Local support commit d93347c6963f82801a4af40bdbdb1f92cd616391, remove the public-applications runtime resolution, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--dataforge-local-api-target-role"
