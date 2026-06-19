@@ -1,0 +1,183 @@
+version: 1
+created_at: "2026-06-19T09:11:55Z"
+scope: "Classify Slice 00 runtime and test unknown drift after support-side proof runs."
+evidence:
+  cortex_support:
+    command: make test-runtime
+    result: passed
+    output: "Ran 110 tests in 1.407s - OK"
+  df_local_foundation_support:
+    command: env PYTHONPATH=. /tmp/df-local-support-verify-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "169 passed, 7 skipped, 1 warning in 6.07s"
+    note: "Skipped tests are live PostgreSQL integration tests gated by DF_LOCAL env vars."
+  fa_local_support:
+    command: cargo test
+    result: passed
+    output: "119 tests passed across integration test binaries; doc-tests passed with 0 tests."
+  neuronforge_support:
+    command: python3 -m pytest tests -q
+    result: passed
+    output: "45 passed, 3 warnings in 1.77s"
+resolutions:
+  - resolution_id: slice-00-cortex-runtime-modified
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Cortex runtime files differ between source and support while the support runtime test gate passes."
+    recommended_action: "Keep as support runtime adaptation. Recompare before promoting changes back to the proving repo."
+    paths:
+      - cortex_runtime/service_status.py
+      - cortex_runtime/source_lanes.py
+
+  - resolution_id: slice-00-cortex-service-target-only
+    repo_pair: cortex__cortex
+    shape: target_only
+    classification: target_only_glue
+    justification: "The service package is target-only app-support glue over Cortex runtime and is covered by the support runtime test gate."
+    recommended_action: "Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary."
+    paths:
+      - service/__init__.py
+      - service/__main__.py
+      - service/authorforge_app.py
+      - service/authorforge_translation.py
+
+  - resolution_id: slice-00-cortex-runtime-test-modified
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The service-status runtime test differs with the support runtime surface and passed in the support test gate."
+    recommended_action: "Keep paired with the support runtime adaptation."
+    paths:
+      - tests/runtime/test_service_status.py
+
+  - resolution_id: slice-00-dataforge-runtime-modified
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The support ASGI app files differ from source and are covered by the DF support test tree."
+    recommended_action: "Keep as support runtime adaptation. Promote only after matching source authority exists."
+    paths:
+      - app/__init__.py
+      - app/main.py
+
+  - resolution_id: slice-00-dataforge-runtime-target-only
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: target_only
+    classification: target_only_glue
+    justification: "The target-only DF core/app runtime is the app-support foundation implementation and is covered by the DF support test tree."
+    recommended_action: "Keep as support runtime glue. Backport only as explicit local-system source promotion."
+    paths:
+      - app/__main__.py
+      - core/__init__.py
+      - core/backup/__init__.py
+      - core/backup/manager.py
+      - core/backup/signing.py
+      - core/config/__init__.py
+      - core/config/settings.py
+      - core/export/__init__.py
+      - core/export/manager.py
+      - core/health/__init__.py
+      - core/health/reporter.py
+      - core/lifecycle/__init__.py
+      - core/lifecycle/compatibility.py
+      - core/lifecycle/maintenance.py
+      - core/lifecycle/manager.py
+      - core/lifecycle/migration_lock.py
+
+  - resolution_id: slice-00-dataforge-tests-target-only
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: target_only
+    classification: target_only_glue
+    justification: "The target-only DF tests prove the support foundation implementation. Hermetic tests passed and live PostgreSQL integration tests skipped without required env."
+    recommended_action: "Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available."
+    paths:
+      - tests/api/__init__.py
+      - tests/api/test_health_api.py
+      - tests/backup_restore/__init__.py
+      - tests/backup_restore/test_envelope_signing.py
+      - tests/backup_restore/test_restore_redteam.py
+      - tests/backup_restore/test_restore_validation.py
+      - tests/first_integration/__init__.py
+      - tests/first_integration/test_authorforge_attachment.py
+      - tests/migration_status/__init__.py
+      - tests/migration_status/test_migration_contract.py
+      - tests/migration_status/test_migration_lock.py
+      - tests/registration/__init__.py
+      - tests/registration/test_app_registration.py
+      - tests/registration/test_compatibility_semantics.py
+      - tests/registration/test_config_bypass.py
+      - tests/visibility_boundary/__init__.py
+      - tests/visibility_boundary/test_cli_authority.py
+      - tests/visibility_boundary/test_health_contract.py
+      - tests/visibility_boundary/test_health_event_discipline.py
+      - tests/visibility_boundary/test_status_redteam.py
+
+  - resolution_id: slice-00-fa-local-runtime-modified
+    repo_pair: fa-local-operator__fa-local
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "FA Local support runtime differs from source while the support Cargo test gate passes."
+    recommended_action: "Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice."
+    paths:
+      - src/app/intake_service.rs
+      - src/domain/shared/schema.rs
+      - src/errors/mod.rs
+      - src/integrations/cortex/mod.rs
+      - src/integrations/df_local/mod.rs
+
+  - resolution_id: slice-00-fa-local-test-modified
+    repo_pair: fa-local-operator__fa-local
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The modified FA Local contract-loading test is part of the support Cargo test gate."
+    recommended_action: "Keep paired with the FA Local support runtime adaptation."
+    paths:
+      - tests/contracts_loading.rs
+
+  - resolution_id: slice-00-neuronforge-runtime-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The NeuronForge support service entrypoint differs from source while the support pytest gate passes."
+    recommended_action: "Keep as support service adaptation. Reconcile source only through a bounded service promotion slice."
+    paths:
+      - service/main.py
+
+  - resolution_id: slice-00-neuronforge-service-target-only
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: target_only
+    classification: target_only_glue
+    justification: "The target-only NeuronForge service modules are app-support glue and are covered by support tests."
+    recommended_action: "Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes."
+    paths:
+      - service/authorforge_task_contract.py
+      - service/authorforge_task_service.py
+      - service/cloud_escalation.py
+      - service/dogfood_telemetry.py
+      - service/local_runtime.py
+      - service/proofread_lane.py
+      - service/scene_lane.py
+
+  - resolution_id: slice-00-neuronforge-test-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The style-analysis test differs with support behavior and the support pytest gate passes."
+    recommended_action: "Keep paired with the NeuronForge support adaptation."
+    paths:
+      - tests/test-style-analysis.py
+
+  - resolution_id: slice-00-neuronforge-tests-target-only
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: target_only
+    classification: target_only_glue
+    justification: "The target-only NeuronForge tests prove the app-support service lanes and passed in the support pytest gate."
+    recommended_action: "Keep as support proof glue."
+    paths:
+      - tests/test_authorforge_task_contract.py
+      - tests/test_authorforge_task_service.py
+      - tests/test_cloud_escalation.py
+      - tests/test_dogfood_telemetry.py
+      - tests/test_proofread_lane.py
+      - tests/test_scene_lane.py

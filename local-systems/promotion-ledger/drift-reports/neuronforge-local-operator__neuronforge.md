@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T08:55:43+00:00`
+Generated: `2026-06-19T09:13:04+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
 Target commit: `dc67b04863e313f3116565ddf1e7e369d6349a67`
 
-Resolutions applied: `17`
+Resolutions applied: `32`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 392 |
-| intentional_app_support_adaptation | 7 |
+| intentional_app_support_adaptation | 9 |
 | missing_from_target | 173 |
-| target_only_glue | 10 |
+| target_only_glue | 23 |
 | dangerous_drift | 0 |
-| unknown | 30 |
+| unknown | 15 |
 
 ## Items
 
@@ -161,15 +161,15 @@ Resolutions applied: `17`
 | `scripts/style_analysis/models.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `scripts/validate_beat_candidate_output.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/verify_promotion_seam.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `service/authorforge_task_contract.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/authorforge_task_service.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/cloud_escalation.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `service/authorforge_task_contract.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
+| `service/authorforge_task_service.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
+| `service/cloud_escalation.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/cor_gnat_semantic_handoff.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `service/dogfood_telemetry.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/local_runtime.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/main.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `service/proofread_lane.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/scene_lane.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `service/dogfood_telemetry.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
+| `service/local_runtime.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
+| `service/main.py` | intentional_app_support_adaptation | `slice-00-neuronforge-runtime-modified` | Keep as support service adaptation. Reconcile source only through a bounded service promotion slice. |
+| `service/proofread_lane.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
+| `service/scene_lane.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `src/nlo_experiment_memory/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `src/nlo_experiment_memory/cli/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `src/nlo_experiment_memory/cli/__main__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -240,13 +240,13 @@ Resolutions applied: `17`
 | `tests/fixtures/experiment_memory/records/run-2026-03-13-016.run.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/fixtures/experiment_memory/records/run-fixture-oom-001.run.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test-cor-gnat-semantic-handoff.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test-style-analysis.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `tests/test_authorforge_task_contract.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/test_authorforge_task_service.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/test_cloud_escalation.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/test_dogfood_telemetry.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/test_proofread_lane.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/test_scene_lane.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/test-style-analysis.py` | intentional_app_support_adaptation | `slice-00-neuronforge-test-modified` | Keep paired with the NeuronForge support adaptation. |
+| `tests/test_authorforge_task_contract.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_authorforge_task_service.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_cloud_escalation.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_dogfood_telemetry.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_proofread_lane.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_scene_lane.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
 
 ## Blocking Rule
 

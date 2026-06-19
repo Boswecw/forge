@@ -1,0 +1,61 @@
+generated_at: "2026-06-19T09:13:28Z"
+scope: "Slice 00 runtime and test drift resolution"
+resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-runtime-test-surfaces.yaml
+df_support_fix_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
+verification:
+  cortex_support:
+    command: make test-runtime
+    result: passed
+    output: "Ran 110 tests in 1.407s - OK"
+  df_local_foundation_support:
+    dependency_setup:
+      command: /tmp/df-local-support-verify-venv/bin/python -m pip install declared dependencies
+      result: passed
+      note: "Editable install failed due missing Hatch package selection, so declared dependencies were installed directly and repo code was loaded with PYTHONPATH=."
+    command: env PYTHONPATH=. /tmp/df-local-support-verify-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "169 passed, 7 skipped, 1 warning in 6.07s"
+    skipped: "PostgreSQL integration tests skipped without DF_LOCAL env vars."
+  fa_local_support:
+    command: cargo test
+    result: passed
+    output: "119 tests passed across integration test binaries; doc-tests passed with 0 tests."
+  neuronforge_support:
+    command: python3 -m pytest tests -q
+    result: passed
+    output: "45 passed, 3 warnings in 1.77s"
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+    generated_at: "2026-06-19T09:13:04+00:00"
+drift_result:
+  before:
+    same: 2233
+    intentional_app_support_adaptation: 27
+    missing_from_target: 648
+    target_only_glue: 60
+    dangerous_drift: 0
+    unknown: 104
+    runtime_test_unknown: 66
+  after:
+    same: 2233
+    intentional_app_support_adaptation: 40
+    missing_from_target: 648
+    target_only_glue: 113
+    dangerous_drift: 0
+    unknown: 38
+    runtime_test_unknown: 0
+    resolutions_applied: 153
+resolved_runtime_tests:
+  runtime_or_adapter_code: 37
+  test_surface: 29
+classification_policy:
+  modified_in_both: intentional_app_support_adaptation
+  target_only: target_only_glue
+blocking_status:
+  docs_unknown: 0
+  doc_system_unknown: 0
+  runtime_test_unknown: 0
+  dangerous_drift: 0
+  unresolved_unknown: 38
+next_gate: "Resolve contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo scaffold."

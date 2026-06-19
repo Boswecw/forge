@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T08:55:43+00:00`
+Generated: `2026-06-19T09:13:04+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
 Target commit: `af2be69626dd26aec171dc2ea730bb4148373543`
 
-Resolutions applied: `16`
+Resolutions applied: `23`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 1587 |
-| intentional_app_support_adaptation | 6 |
+| intentional_app_support_adaptation | 9 |
 | missing_from_target | 319 |
-| target_only_glue | 10 |
+| target_only_glue | 14 |
 | dangerous_drift | 0 |
-| unknown | 12 |
+| unknown | 5 |
 
 ## Items
 
@@ -60,8 +60,8 @@ Resolutions applied: `16`
 | `cortex_runtime/gnats/workers/rtf_text.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/gnats/workers/text_common.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/health_cli.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `cortex_runtime/service_status.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `cortex_runtime/source_lanes.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `cortex_runtime/service_status.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-modified` | Keep as support runtime adaptation. Recompare before promoting changes back to the proving repo. |
+| `cortex_runtime/source_lanes.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-modified` | Keep as support runtime adaptation. Recompare before promoting changes back to the proving repo. |
 | `doc/CRTSYSTEM.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
 | `doc/SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
 | `doc/cxSYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
@@ -306,10 +306,10 @@ Resolutions applied: `16`
 | `scripts/benchmark_gnat_rtf.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnats.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/validate_schemas.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `service/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/__main__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/authorforge_app.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `service/authorforge_translation.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `service/__init__.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
+| `service/__main__.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
+| `service/authorforge_app.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
+| `service/authorforge_translation.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
 | `tests/contracts/fixtures/invalid/gnat-cache-record-missing-version.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -360,7 +360,7 @@ Resolutions applied: `16`
 | `tests/runtime/test_gnat_semantic_handoff.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/runtime/test_gnat_serial_runner.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/runtime/test_gnat_status.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/runtime/test_service_status.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `tests/runtime/test_service_status.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-test-modified` | Keep paired with the support runtime adaptation. |
 | `worm/Cargo.lock` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `worm/Cargo.toml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `worm/src/adapter.rs` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |

@@ -45,6 +45,7 @@ ledger has 183 remaining `unknown` items. None are `/docs` unknowns.
 ## Next Gate
 
 `/doc/system` mirror drift is resolved in
-`docs/slice-00/doc-system-mirror-resolution-proof.md`, leaving 104 unknowns.
-Handle runtime and tests together next, followed by contracts, promotion
-evidence, scripts, and repo scaffold.
+`docs/slice-00/doc-system-mirror-resolution-proof.md`. Runtime and test drift is
+resolved in `docs/slice-00/runtime-test-resolution-proof.md`, leaving 38
+unknowns: contracts/schema/sql, promotion evidence, operator tooling/scripts,
+and repo scaffold.

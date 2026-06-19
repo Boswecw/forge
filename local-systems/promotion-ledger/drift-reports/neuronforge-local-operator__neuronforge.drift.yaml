@@ -5,15 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
 target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-generated_at: '2026-06-19T08:55:43+00:00'
+generated_at: '2026-06-19T09:13:04+00:00'
 classification_summary:
   same: 392
-  intentional_app_support_adaptation: 7
+  intentional_app_support_adaptation: 9
   missing_from_target: 173
-  target_only_glue: 10
+  target_only_glue: 23
   dangerous_drift: 0
-  unknown: 30
-resolutions_applied: 17
+  unknown: 15
+resolutions_applied: 32
 items:
 - path: .claude/settings.local.json
   classification: unknown
@@ -1150,26 +1150,38 @@ items:
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: service/authorforge_task_contract.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/authorforge_task_service.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/cloud_escalation.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/cor_gnat_semantic_handoff.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1179,41 +1191,60 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: service/dogfood_telemetry.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/local_runtime.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/main.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: The NeuronForge support service entrypoint differs from source while
+    the support pytest gate passes.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support service adaptation. Reconcile source only through
+    a bounded service promotion slice.
+  resolution_id: slice-00-neuronforge-runtime-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/proofread_lane.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: service/scene_lane.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge service modules are app-support glue
+    and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support service glue. Backport only if the proving repo
+    adopts these AuthorForge service lanes.
+  resolution_id: slice-00-neuronforge-service-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: src/nlo_experiment_memory/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1775,52 +1806,72 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test-style-analysis.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: The style-analysis test differs with support behavior and the support
+    pytest gate passes.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep paired with the NeuronForge support adaptation.
+  resolution_id: slice-00-neuronforge-test-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_authorforge_task_contract.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_authorforge_task_service.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_cloud_escalation.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_dogfood_telemetry.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_proofread_lane.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_scene_lane.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only NeuronForge tests prove the app-support service lanes
+    and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support proof glue.
+  resolution_id: slice-00-neuronforge-tests-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml

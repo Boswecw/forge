@@ -38,5 +38,7 @@ drift. It does not treat `/doc/system` as general documentation.
 
 ## Remaining Gate
 
-The remaining 104 unknowns are runtime, tests, contracts, promotion evidence,
-scripts, and repo scaffold. Runtime plus tests should be resolved next.
+Runtime and test drift is resolved in
+`docs/slice-00/runtime-test-resolution-proof.md`, leaving 38 unknowns:
+contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo
+scaffold.

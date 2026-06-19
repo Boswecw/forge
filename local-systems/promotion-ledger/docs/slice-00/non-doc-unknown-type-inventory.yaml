@@ -107,4 +107,8 @@ doc_system_mirror_resolution:
   status: complete
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/doc-system-mirror-resolution-proof.yaml
   unknown_after: 104
-next_gate: "Resolve runtime plus tests, then contracts, promotion evidence, scripts, and repo scaffold."
+runtime_test_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/runtime-test-resolution-proof.yaml
+  unknown_after: 38
+next_gate: "Resolve contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo scaffold."

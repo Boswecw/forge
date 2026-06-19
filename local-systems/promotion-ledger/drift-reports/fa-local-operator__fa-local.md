@@ -1,6 +1,6 @@
 # Drift Report: fa-local-operator__fa-local
 
-Generated: `2026-06-19T08:55:43+00:00`
+Generated: `2026-06-19T09:13:04+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/fa-local-operator`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/fa-local`
 Target branch: `master`
 Target commit: `6608a60f40e47a5473cd85a1fbbf9e587e053509`
 
-Resolutions applied: `18`
+Resolutions applied: `24`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 131 |
-| intentional_app_support_adaptation | 4 |
+| intentional_app_support_adaptation | 10 |
 | missing_from_target | 20 |
 | target_only_glue | 14 |
 | dangerous_drift | 0 |
-| unknown | 10 |
+| unknown | 4 |
 
 ## Items
 
@@ -63,17 +63,17 @@ Resolutions applied: `18`
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `reports/contract_core_gate_20260404_102436.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-dispatch-envelope.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `src/app/intake_service.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `src/app/intake_service.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
 | `src/bin/fa_local_run.rs` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `src/domain/shared/schema.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `src/errors/mod.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `src/integrations/cortex/mod.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `src/integrations/df_local/mod.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `src/domain/shared/schema.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
+| `src/errors/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
+| `src/integrations/cortex/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
+| `src/integrations/df_local/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
 | `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/contracts_loading.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `tests/contracts_loading.rs` | intentional_app_support_adaptation | `slice-00-fa-local-test-modified` | Keep paired with the FA Local support runtime adaptation. |
 | `tests/gnat_dispatch.rs` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 
 ## Blocking Rule

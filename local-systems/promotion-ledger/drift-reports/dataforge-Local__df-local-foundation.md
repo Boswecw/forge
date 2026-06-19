@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T08:55:43+00:00`
+Generated: `2026-06-19T09:13:04+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,20 +8,20 @@ Source commit: `536b700fa7f11bf92c75e5f8c540c4b571ebb17b`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `6760634671ff88eda50ec3d99dd9e524694be4d9`
+Target commit: `b2f44d46b1bc953503a0c31381fa4683c852b0dd`
 
-Resolutions applied: `30`
+Resolutions applied: `68`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 8 |
-| intentional_app_support_adaptation | 5 |
+| intentional_app_support_adaptation | 7 |
 | missing_from_target | 135 |
-| target_only_glue | 25 |
+| target_only_glue | 61 |
 | dangerous_drift | 0 |
-| unknown | 52 |
+| unknown | 14 |
 
 ## Items
 
@@ -58,8 +58,8 @@ Resolutions applied: `30`
 | `alembic/versions/20260608_06_forge_lineage_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `alembic/versions/20260609_01_create_context_packs.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `alembic/versions/20260611_01_create_public_applications.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/__init__.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `app/__main__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `app/__init__.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
+| `app/__main__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `app/analytics_config.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `app/analytics_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `app/analytics_services.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -75,7 +75,7 @@ Resolutions applied: `30`
 | `app/evaluation_spine/lineage.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `app/evaluation_spine/lineage_cli.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `app/evaluation_spine/triple_variant_audit_store.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/main.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `app/main.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
 | `ci_gate.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `constants/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `constants/public_applications.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -87,21 +87,21 @@ Resolutions applied: `30`
 | `contracts/app-registration.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `contracts/health.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `contracts/migration-status.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/backup/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/backup/manager.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/backup/signing.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/config/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/config/settings.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/export/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/export/manager.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/health/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/health/reporter.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/lifecycle/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/lifecycle/compatibility.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/lifecycle/maintenance.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/lifecycle/manager.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `core/lifecycle/migration_lock.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `core/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/backup/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/backup/manager.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/backup/signing.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/config/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/config/settings.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/export/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/export/manager.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/health/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/health/reporter.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/lifecycle/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/lifecycle/compatibility.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/lifecycle/maintenance.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/lifecycle/manager.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
+| `core/lifecycle/migration_lock.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `doc/DFLSYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/DLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
@@ -204,42 +204,42 @@ Resolutions applied: `30`
 | `sql/core/0002_core_metadata.sql` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `sql/dev_reset.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `sql/manual_checks.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/api/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/api/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/api/test_analytics_compute.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/api/test_analytics_routes.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/api/test_context_pack_routes.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/api/test_health_api.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/backup_restore/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/backup_restore/test_envelope_signing.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/backup_restore/test_restore_redteam.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/backup_restore/test_restore_validation.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/first_integration/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/first_integration/test_authorforge_attachment.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/api/test_health_api.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/backup_restore/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/backup_restore/test_envelope_signing.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/backup_restore/test_restore_redteam.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/backup_restore/test_restore_validation.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/first_integration/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/first_integration/test_authorforge_attachment.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/gnat_runtime/test_persistence.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/migration_status/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/migration_status/test_migration_contract.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/migration_status/test_migration_lock.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/migration_status/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/migration_status/test_migration_contract.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/migration_status/test_migration_lock.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/proving_slice/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/proving_slice/conftest.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/proving_slice/test_admission.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/proving_slice/test_queue.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/proving_slice/test_read_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/proving_slice/test_reconciliation.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/registration/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/registration/test_app_registration.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/registration/test_compatibility_semantics.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/registration/test_config_bypass.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/registration/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/registration/test_app_registration.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/registration/test_compatibility_semantics.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/registration/test_config_bypass.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/test_constants.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test_evaluation_spine_phase08_lineage.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test_schema_registry_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test_service_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test_triple_variant_audit_store.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/test_vocabularies.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/visibility_boundary/__init__.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/visibility_boundary/test_cli_authority.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/visibility_boundary/test_health_contract.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/visibility_boundary/test_health_event_discipline.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tests/visibility_boundary/test_status_redteam.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tests/visibility_boundary/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/visibility_boundary/test_cli_authority.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/visibility_boundary/test_health_contract.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/visibility_boundary/test_health_event_discipline.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
+| `tests/visibility_boundary/test_status_redteam.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tools/db-backup` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `tools/db-export` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `tools/db-restore` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
