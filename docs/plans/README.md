@@ -12,6 +12,12 @@ Root-level plan sets should not live at the ecosystem repo root. Move them here
 unless they are service-specific, in which case they belong inside the owning
 service repo.
 
+## Active Plans
+
+| File | Contents |
+|------|----------|
+| `active/neuroforge_neuronforge_ollama_boundary_updated_plan_2026-06-19.md` | Updated NeuroForge -> NeuronForge Ollama delegation boundary plan |
+
 ## Archived Plan Sets
 
 | Directory | Contents |
