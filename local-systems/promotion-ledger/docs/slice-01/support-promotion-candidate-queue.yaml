@@ -1,0 +1,239 @@
+generated_at: '2026-06-19T09:45:48+00:00'
+scope: Slice 01 support promotion candidate queue from reviewed source-local holds
+input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
+summary:
+  source_local_hold: 651
+  candidate_after_target_role: 304
+  default_hold: 347
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+promotion_rule: A source-local hold may enter app support only after a named promotion
+  slice declares the target role, source proof command, support proof command, and
+  post-promotion drift report.
+category_summary:
+  source_contract_schema_migration:
+    count: 53
+    posture: candidate_after_contract_compatibility
+  source_docs_or_doc_mirror:
+    count: 102
+    posture: default_hold_docs_rule
+  source_evidence_reports_prompts:
+    count: 55
+    posture: default_hold_evidence_receipt_only
+  source_local_subproject:
+    count: 183
+    posture: default_hold
+  source_proof_tests:
+    count: 120
+    posture: pair_with_promoted_runtime_or_contract
+  source_runtime_or_capability:
+    count: 107
+    posture: candidate_after_target_role
+  source_scaffold_config:
+    count: 7
+    posture: default_hold_dependency_adoption_required
+  source_scripts_ci:
+    count: 24
+    posture: candidate_when_tied_to_support_proof_command
+candidate_categories:
+  source_contract_schema_migration: 53
+  source_proof_tests: 120
+  source_runtime_or_capability: 107
+  source_scripts_ci: 24
+default_hold_categories:
+  source_docs_or_doc_mirror: 102
+  source_evidence_reports_prompts: 55
+  source_local_subproject: 183
+  source_scaffold_config: 7
+repo_breakdown:
+  cortex__cortex: 319
+  dataforge-Local__df-local-foundation: 137
+  fa-local-operator__fa-local: 21
+  forge-local-systems-runtime__forge-local-runtime-master-reference: 1
+  neuronforge-local-operator__neuronforge: 173
+repo_category_breakdown:
+  cortex__cortex:
+    source_contract_schema_migration: 9
+    source_docs_or_doc_mirror: 35
+    source_evidence_reports_prompts: 3
+    source_local_subproject: 183
+    source_proof_tests: 50
+    source_runtime_or_capability: 32
+    source_scaffold_config: 1
+    source_scripts_ci: 6
+  dataforge-Local__df-local-foundation:
+    source_contract_schema_migration: 30
+    source_docs_or_doc_mirror: 30
+    source_evidence_reports_prompts: 30
+    source_proof_tests: 16
+    source_runtime_or_capability: 24
+    source_scripts_ci: 7
+  fa-local-operator__fa-local:
+    source_contract_schema_migration: 1
+    source_docs_or_doc_mirror: 11
+    source_evidence_reports_prompts: 2
+    source_proof_tests: 5
+    source_runtime_or_capability: 1
+    source_scripts_ci: 1
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    source_docs_or_doc_mirror: 1
+  neuronforge-local-operator__neuronforge:
+    source_contract_schema_migration: 13
+    source_docs_or_doc_mirror: 25
+    source_evidence_reports_prompts: 20
+    source_proof_tests: 49
+    source_runtime_or_capability: 50
+    source_scaffold_config: 6
+    source_scripts_ci: 10
+samples:
+  cortex__cortex:
+    source_contract_schema_migration:
+    - schemas/gnat-cache-record.schema.json
+    - schemas/gnat-dispatch-envelope.schema.json
+    - schemas/gnat-operator-run-status.schema.json
+    - schemas/gnat-run-plan.schema.json
+    - schemas/gnat-run-request.schema.json
+    source_docs_or_doc_mirror:
+    - docs/Worm.md
+    - docs/architecture/gnats-boundary-matrix.md
+    - docs/benchmarks/gnat-docx-lane-proof.md
+    - docs/benchmarks/gnat-epub-lane-proof.md
+    - docs/benchmarks/gnat-odt-lane-proof.md
+    source_evidence_reports_prompts:
+    - DECISIONS/0017-cortex-local-system-identity-and-cor-plan-lineage.md
+    - DECISIONS/0018-gnat-bounded-parallel-worker-authorization.md
+    - DECISIONS/0019-fa-local-owns-gnat-execution-routing.md
+    source_local_subproject:
+    - repo-crawler/APPLY.md
+    - repo-crawler/Cargo.lock
+    - repo-crawler/Cargo.toml
+    - repo-crawler/README.md
+    - repo-crawler/VERIFY.md
+    source_proof_tests:
+    - tests/contracts/fixtures/invalid/gnat-cache-record-missing-version.json
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
+    - tests/contracts/fixtures/invalid/gnat-operator-run-status-raw-preview.json
+    source_runtime_or_capability:
+    - cortex_runtime/gnats/__init__.py
+    - cortex_runtime/gnats/fa_local_client.py
+    - cortex_runtime/gnats/models.py
+    - cortex_runtime/gnats/operator_status.py
+    - cortex_runtime/gnats/parallel_runner.py
+    source_scaffold_config:
+    - .codex
+    source_scripts_ci:
+    - scripts/benchmark_gnat_docx.py
+    - scripts/benchmark_gnat_epub.py
+    - scripts/benchmark_gnat_odt.py
+    - scripts/benchmark_gnat_pdf.py
+    - scripts/benchmark_gnat_rtf.py
+  dataforge-Local__df-local-foundation:
+    source_contract_schema_migration:
+    - alembic.ini
+    - alembic/README.md
+    - alembic/env.py
+    - alembic/script.py.mako
+    - alembic/versions/20260402_01_create_local_substrate_schemas.py
+    source_docs_or_doc_mirror:
+    - doc/DLOSYSTEM.md
+    - doc/plans/local-analytics/df_local_analytics_slice_01.md
+    - doc/system/00_overview/01-overview-philosophy.md
+    - doc/system/00_overview/02-architecture.md
+    - doc/system/00_overview/03-project-structure.md
+    source_evidence_reports_prompts:
+    - proving_slice/__init__.py
+    - proving_slice/models.py
+    - proving_slice/services/__init__.py
+    - proving_slice/services/artifact_ingest.py
+    - proving_slice/services/promotion_admission.py
+    source_proof_tests:
+    - tests/api/test_analytics_compute.py
+    - tests/api/test_analytics_routes.py
+    - tests/api/test_context_pack_routes.py
+    - tests/gnat_runtime/test_persistence.py
+    - tests/proving_slice/__init__.py
+    source_runtime_or_capability:
+    - app/analytics_config.py
+    - app/analytics_models.py
+    - app/analytics_services.py
+    - app/api/__init__.py
+    - app/api/analytics_router.py
+    source_scripts_ci:
+    - ci_gate.sh
+    - scripts/bootstrap_local_env.sh
+    - scripts/init_db.sh
+    - scripts/reset_db.sh
+    - scripts/run_local.sh
+  fa-local-operator__fa-local:
+    source_contract_schema_migration:
+    - schemas/gnat-dispatch-envelope.schema.json
+    source_docs_or_doc_mirror:
+    - doc/FLOSYSTEM.md
+    - doc/system/00_overview/01-overview-charter.md
+    - doc/system/10_service-contract/02-contract-surface.md
+    - doc/system/20_runtime/03-execution-bridge-writeback.md
+    - doc/system/30_dependencies/04-dependencies.md
+    source_evidence_reports_prompts:
+    - reports/contract_core_gate_20260404_102436.json
+    - reports/contract_core_gate_20260619_053018.json
+    source_proof_tests:
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
+    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
+    - tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json
+    - tests/gnat_dispatch.rs
+    source_runtime_or_capability:
+    - src/bin/fa_local_run.rs
+    source_scripts_ci:
+    - ci_gate.sh
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    source_docs_or_doc_mirror:
+    - doc/FLSSYSTEM.md
+  neuronforge-local-operator__neuronforge:
+    source_contract_schema_migration:
+    - schemas/experiment_memory/nlo-evaluation-record.v1.schema.json
+    - schemas/experiment_memory/nlo-experiment-event.v1.schema.json
+    - schemas/experiment_memory/nlo-failure-observation.v1.schema.json
+    - schemas/experiment_memory/nlo-hardware-profile.v1.schema.json
+    - schemas/experiment_memory/nlo-operator-decision.v1.schema.json
+    source_docs_or_doc_mirror:
+    - GEMINI.md
+    - NLOSYSTEM.md
+    - doc/system/07-experiment-memory-graphiti-pilot.md
+    - docs/adr/ADR-001-promotion-truth-upstream-of-pact.md
+    - docs/cor-gnat-semantic-handoff.md
+    source_evidence_reports_prompts:
+    - evals/beat_candidate_bakeoff/beat_candidate_bakeoff_status.md
+    - evidence/promotion_seam/operator_examples.md
+    - evidence/promotion_seam/promotion_runs.jsonl
+    - evidence/promotion_seam/seam_report.json
+    - inputs/beat_candidate_bakeoff/scene_001.md
+    source_proof_tests:
+    - tests/experiment_memory/conftest.py
+    - tests/experiment_memory/test_contracts.py
+    - tests/experiment_memory/test_fail_open.py
+    - tests/experiment_memory/test_hardware_capture.py
+    - tests/experiment_memory/test_identity.py
+    source_runtime_or_capability:
+    - prompt_assembly/AGENTS.md
+    - prompt_assembly/README.md
+    - prompt_assembly/__init__.py
+    - prompt_assembly/config/defaults.yaml
+    - prompt_assembly/contracts/common_enums.schema.json
+    source_scaffold_config:
+    - .env.graphiti
+    - .env.graphiti.example
+    - docker-compose.graphiti-pilot.yml
+    - requirements-dev.txt
+    - requirements-graphiti.txt
+    source_scripts_ci:
+    - scripts/graph/_compose.sh
+    - scripts/graph/capture-hardware-profile.sh
+    - scripts/graph/graph-doctor.sh
+    - scripts/graph/graph-down.sh
+    - scripts/graph/graph-reset.sh
+next_gate: Select exactly one candidate category and repo pair, then create a promotion
+  slice with explicit support target role and proof commands.
