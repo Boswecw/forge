@@ -1,0 +1,49 @@
+generated_at: "2026-06-19T09:51:48Z"
+scope: "Slice 01 Cortex GNAT support target-role opening"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
+support_branch: master
+support_commit: f0275e42fc429434dd8a66c8283d5bad9ebf69e0
+source_repo: /home/charlie/Forge/ecosystem/local-systems/cortex
+source_branch: master
+source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+decision:
+  status: target_role_opened
+  runtime_promoted: false
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-cortex-gnat-target-role.yaml
+target_role:
+  repo_pair: cortex__cortex
+  classification: target_only_glue
+  path: docs/source-lanes/gnat-target-role.md
+  purpose: "Bounded AuthorForge-facing syntax extraction and run-summary target role for future GNAT promotion."
+  non_goals:
+    - "No GNAT runtime copied in this slice."
+    - "No service endpoints added."
+    - "No AuthorForge behavior changed."
+    - "No scheduler, watcher, queue, retry, or execution-routing ownership added."
+source_authority:
+  gnat_boundary_matrix: /home/charlie/Forge/ecosystem/local-systems/cortex/docs/architecture/gnats-boundary-matrix.md
+  gnat_run_request: /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-request.md
+  gnat_run_summary: /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-summary.md
+verification:
+  support_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (19 valid fixtures, 20 invalid fixtures, 7 schemas)"
+  support_runtime:
+    command: make test-runtime
+    result: passed
+    output: "Ran 110 tests in 0.608s - OK"
+  source_gnat:
+    command: make test-gnats
+    result: passed
+    output: "Ran 87 tests in 0.409s - OK"
+drift_result_after_resolution:
+  same: 2233
+  intentional_app_support_adaptation: 61
+  source_local_hold: 651
+  missing_from_target: 0
+  target_only_glue: 131
+  dangerous_drift: 0
+  unknown: 0
+next_gate: "Select exact GNAT files and support service contract for a later runtime promotion slice, or keep GNAT held source-local."

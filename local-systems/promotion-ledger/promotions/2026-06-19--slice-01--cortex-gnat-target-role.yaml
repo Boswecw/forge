@@ -1,0 +1,55 @@
+promotion_id: "2026-06-19--slice-01--cortex-gnat-target-role"
+slice_name: "Slice 01 - Cortex GNAT Support Target Role"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/cortex"
+source_branch: "master"
+source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/cortex"
+target_branch: "master"
+target_commit: "f0275e42fc429434dd8a66c8283d5bad9ebf69e0"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/schemas/gnat-*.schema.json"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_*.py"
+promotion_manifest:
+  - "Opened a support target-role document for future Cortex GNAT promotion."
+  - "Did not promote GNAT runtime code, schemas, tests, service endpoints, or AuthorForge behavior."
+  - "Kept GNAT runtime artifacts classified as source_local_hold until a later named runtime promotion slice."
+proof_commands:
+  - "make validate"
+  - "make test-runtime"
+  - "make test-gnats"
+  - "python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+proof_results:
+  status: "passed"
+  support_validate:
+    command: "make validate"
+    result: "VALIDATION PASSED (19 valid fixtures, 20 invalid fixtures, 7 schemas)"
+  support_runtime:
+    command: "make test-runtime"
+    result: "Ran 110 tests in 0.608s - OK"
+  source_gnat:
+    command: "make test-gnats"
+    result: "Ran 87 tests in 0.409s - OK"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 651
+    missing_from_target: 0
+    target_only_glue: 131
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 843
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "not applicable; target-role documentation only, no support runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI opened the bounded support target role. Charlie Boswell must review and accept or reject before runtime promotion."
+created_at: "2026-06-19T09:51:48Z"
+rollback_source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+rollback_target_commit: "f0275e42fc429434dd8a66c8283d5bad9ebf69e0"
+rollback_command: "Revert the Cortex support commit f0275e42fc429434dd8a66c8283d5bad9ebf69e0 and regenerate the promotion-ledger drift reports."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null

@@ -1,0 +1,32 @@
+version: 1
+created_at: "2026-06-19T09:51:48Z"
+scope: "Classify the Cortex support-only GNAT target-role opening document."
+evidence:
+  support_commit: f0275e42fc429434dd8a66c8283d5bad9ebf69e0
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/architecture/gnats-boundary-matrix.md
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-request.md
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-summary.md
+  proof_commands:
+    support_validate: "make validate"
+    support_runtime: "make test-runtime"
+    source_gnat: "make test-gnats"
+  proof_results:
+    support_validate: "VALIDATION PASSED (19 valid fixtures, 20 invalid fixtures, 7 schemas)"
+    support_runtime: "Ran 110 tests in 0.608s - OK"
+    source_gnat: "Ran 87 tests in 0.409s - OK"
+resolutions:
+  - resolution_id: slice-01-cortex-gnat-target-role-doc
+    repo_pair: cortex__cortex
+    path: docs/source-lanes/gnat-target-role.md
+    shape: target_only
+    classification: target_only_glue
+    justification: "This support-only document opens a bounded Cortex GNAT app-support target role while explicitly withholding runtime promotion. Source GNAT authority remains in the local-system Cortex repo."
+    recommended_action: "Keep as support target-role glue. Promote GNAT runtime only through a later named slice with exact files, source proof, support proof, and regenerated drift report."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md
+      - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/architecture/gnats-boundary-matrix.md
+      - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-request.md
+      - /home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-run-summary.md
