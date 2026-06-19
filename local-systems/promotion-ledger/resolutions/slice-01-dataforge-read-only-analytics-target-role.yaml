@@ -3,7 +3,7 @@ created_at: "2026-06-19T16:12:44Z"
 scope: "Classify the DF Local support-only read-only analytics target-role opening document."
 evidence:
   support_commit: 90b3926745bc7fd5d63255602ec04b21313a8dd5
-  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
   support_doc: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
   source_authority:
     - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/doc/plans/local-analytics/df_local_analytics_slice_01.md
@@ -21,7 +21,7 @@ evidence:
     support_diff_check: "passed"
     support_pytest: "blocked: system Python is missing pydantic_settings, asyncpg, and pytest_asyncio; no .venv/bin/python exists in this checkout"
     source_analytics_compute: "6 passed"
-    source_analytics_routes: "blocked: timed out after 20 seconds with no output"
+    source_analytics_routes: "5 passed"
 resolutions:
   - resolution_id: slice-01-dataforge-read-only-analytics-target-role-doc
     repo_pair: dataforge-Local__df-local-foundation
@@ -29,7 +29,7 @@ resolutions:
     shape: target_only
     classification: target_only_glue
     justification: "This support-only document opens a bounded DF Local read-only analytics target role while explicitly withholding routes, models, services, migrations, tests, and schema promotion. Source analytics authority remains in the local-system DataForge repo."
-    recommended_action: "Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, passing source route proof, passing support proof, and regenerated drift report."
+    recommended_action: "Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, passing support proof, and regenerated drift report."
     evidence:
       - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
       - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/doc/plans/local-analytics/df_local_analytics_slice_01.md

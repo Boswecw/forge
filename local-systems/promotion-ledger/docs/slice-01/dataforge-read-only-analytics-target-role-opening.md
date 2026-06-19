@@ -13,7 +13,7 @@ models, or change execution behavior.
 | Support repo | `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation` |
 | Support commit | `90b3926745bc7fd5d63255602ec04b21313a8dd5` |
 | Source repo | `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local` |
-| Source commit | `536b700fa7f11bf92c75e5f8c540c4b571ebb17b` |
+| Source commit | `c6ba6d14d21cd609563516c3758b583bb2cd9484` |
 | Support document | `docs/contracts/read-only-analytics-target-role.md` |
 | Runtime promoted | No |
 | Route promoted | No |
@@ -37,10 +37,11 @@ target, regenerated drift report, and rollback path.
 | Support documentation | `git diff --check` passed. |
 | Support pytest | Blocked: system Python is missing `pydantic_settings`, `asyncpg`, and `pytest_asyncio`; no `.venv/bin/python` exists in this checkout. |
 | Source analytics compute | `timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q` passed: 6 passed. |
-| Source analytics routes | Blocked: `timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q` timed out with no output. |
+| Source analytics routes | `timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q` passed: 5 passed. |
 
 This target-role slice is therefore documentation-opened with follow-up required
-before any runtime, route, migration, or schema promotion.
+before any runtime, route, migration, or schema promotion because support pytest
+dependencies remain unavailable in this checkout.
 
 ## Drift Result After Resolution
 

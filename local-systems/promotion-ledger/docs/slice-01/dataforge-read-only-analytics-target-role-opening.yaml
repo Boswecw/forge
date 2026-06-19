@@ -5,7 +5,7 @@ support_branch: main
 support_commit: 90b3926745bc7fd5d63255602ec04b21313a8dd5
 source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
 source_branch: master
-source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
 decision:
   status: target_role_opened_needs_followup
   runtime_promoted: false
@@ -45,8 +45,8 @@ verification:
     output: "6 passed"
   source_analytics_routes:
     command: timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q
-    result: blocked
-    output: "Timed out after 20 seconds with no output."
+    result: passed
+    output: "5 passed"
 drift_result_after_resolution:
   same: 2233
   intentional_app_support_adaptation: 61
@@ -55,4 +55,4 @@ drift_result_after_resolution:
   target_only_glue: 134
   dangerous_drift: 0
   unknown: 0
-next_gate: "Fix local support test dependencies and source analytics route test timeout before promoting analytics runtime, routes, migrations, or schema."
+next_gate: "Fix local support test dependencies before promoting analytics runtime, routes, migrations, or schema."
