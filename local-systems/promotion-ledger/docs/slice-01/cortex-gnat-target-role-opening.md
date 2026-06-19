@@ -6,9 +6,11 @@ This slice opens a Cortex support target role for future GNAT promotion. It does
 not promote GNAT runtime code, add endpoints, or change AuthorForge behavior.
 
 Status update: this target-role opening is now partially implemented by
-`2026-06-19--slice-01--cortex-gnat-contract-schemas`. The contract schema
-promotion receipt is `cortex-gnat-contract-schema-promotion.md`; GNAT runtime
-remains source-local.
+`2026-06-19--slice-01--cortex-gnat-contract-schemas` and
+`2026-06-19--slice-01--cortex-gnat-status-summary`. The receipts are
+`cortex-gnat-contract-schema-promotion.md` and
+`cortex-gnat-status-summary-promotion.md`; GNAT execution runtime remains
+source-local.
 
 ## Decision
 
@@ -23,13 +25,13 @@ remains source-local.
 
 ## Boundary
 
-The support document is target-only glue. It declares the app-support role that a
-later GNAT runtime promotion would need, while keeping GNAT implementation,
-contracts, and proof in the local-system Cortex repo.
+The support document is target-only glue. It declares the app-support role for
+the promoted GNAT contract schema and status-summary surfaces while keeping GNAT
+execution implementation and proof authority in the local-system Cortex repo.
 
-GNAT remains `source_local_hold` until a later promotion slice names exact files,
-source proof, support proof, service contract or adapter target, regenerated
-drift report, and rollback path.
+GNAT execution runtime remains `source_local_hold` until a later promotion slice
+names exact files, source proof, support proof, service contract or adapter
+target, regenerated drift report, and rollback path.
 
 ## Proof
 

@@ -1,9 +1,9 @@
-generated_at: '2026-06-19T17:23:37+00:00'
+generated_at: '2026-06-19T17:39:21+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 592
-  candidate_after_target_role: 241
+  source_local_hold: 588
+  candidate_after_target_role: 237
   default_hold: 351
   missing_from_target: 0
   unknown: 0
@@ -25,10 +25,10 @@ category_summary:
     count: 183
     posture: default_hold
   source_proof_tests:
-    count: 79
+    count: 78
     posture: pair_with_promoted_runtime_or_contract
   source_runtime_or_capability:
-    count: 95
+    count: 92
     posture: candidate_after_target_role
   source_scaffold_config:
     count: 7
@@ -38,8 +38,8 @@ category_summary:
     posture: candidate_when_tied_to_support_proof_command
 candidate_categories:
   source_contract_schema_migration: 43
-  source_proof_tests: 79
-  source_runtime_or_capability: 95
+  source_proof_tests: 78
+  source_runtime_or_capability: 92
   source_scripts_ci: 24
 default_hold_categories:
   source_docs_or_doc_mirror: 103
@@ -47,7 +47,7 @@ default_hold_categories:
   source_local_subproject: 183
   source_scaffold_config: 7
 repo_breakdown:
-  cortex__cortex: 277
+  cortex__cortex: 273
   dataforge-Local__df-local-foundation: 127
   fa-local-operator__fa-local: 15
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
@@ -57,8 +57,8 @@ repo_category_breakdown:
     source_docs_or_doc_mirror: 35
     source_evidence_reports_prompts: 3
     source_local_subproject: 183
-    source_proof_tests: 17
-    source_runtime_or_capability: 32
+    source_proof_tests: 16
+    source_runtime_or_capability: 29
     source_scaffold_config: 1
     source_scripts_ci: 6
   dataforge-Local__df-local-foundation:
@@ -107,11 +107,11 @@ samples:
     - tests/runtime/test_gnat_docx_lane.py
     - tests/runtime/test_gnat_epub_lane.py
     source_runtime_or_capability:
-    - cortex_runtime/gnats/__init__.py
     - cortex_runtime/gnats/fa_local_client.py
-    - cortex_runtime/gnats/models.py
     - cortex_runtime/gnats/operator_status.py
     - cortex_runtime/gnats/parallel_runner.py
+    - cortex_runtime/gnats/persistence.py
+    - cortex_runtime/gnats/persistent_runner.py
     source_scaffold_config:
     - .codex
     source_scripts_ci:

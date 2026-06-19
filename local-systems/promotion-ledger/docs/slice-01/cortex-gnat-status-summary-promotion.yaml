@@ -1,0 +1,85 @@
+generated_at: "2026-06-19T17:36:38Z"
+scope: "Slice 01 Cortex GNAT status summary promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
+support_branch: master
+support_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+source_repo: /home/charlie/Forge/ecosystem/local-systems/cortex
+source_branch: master
+source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+decision:
+  status: status_summary_promoted_needs_review
+  contract_schemas_promoted: true
+  status_summary_promoted: true
+  execution_runtime_promoted: false
+  endpoints_promoted: false
+  authorforge_behavior_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-cortex-gnat-status-summary.yaml
+contract_boundary:
+  promoted_status_truth:
+    - serial_contract_proof default profile
+    - admitted GNAT worker types from admitted Cortex source lanes
+    - max_concurrency 4 and hard_cap 8
+    - FA Local required for parallel readiness
+    - serial fallback available
+  non_goals:
+    - "No GNAT planners, workers, dispatch, persistence, retrieval preparation, semantic handoff, or execution runners promoted."
+    - "No gnat_core package promoted."
+    - "No service endpoints, queue, watcher, retry, scheduler, or execution routing promoted."
+    - "No AuthorForge behavior changed."
+support_artifacts:
+  status_package: /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats
+  service_status: /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/service_status.py
+  source_lanes: /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/source_lanes.py
+  schema: /home/charlie/Forge/apps/public-app-local-support/cortex/schemas/service-status.schema.json
+  proof_test: /home/charlie/Forge/apps/public-app-local-support/cortex/tests/runtime/test_gnat_status.py
+verification:
+  support_gnat_status:
+    command: python3 -m unittest tests.runtime.test_gnat_status -v
+    result: passed
+    output: "Ran 3 tests in 0.011s - OK"
+  support_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  support_runtime:
+    command: make test-runtime
+    result: passed
+    output: "Ran 113 tests in 0.618s - OK"
+  source_gnat_status:
+    command: python3 -m unittest tests.runtime.test_gnat_status -v
+    result: passed
+    output: "Ran 3 tests in 0.003s - OK"
+  source_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  source_gnat:
+    command: make test-gnats
+    result: passed
+    output: "Ran 87 tests in 0.394s - OK"
+drift_result_after_resolution:
+  cortex_pair:
+    same: 1632
+    intentional_app_support_adaptation: 14
+    source_local_hold: 273
+    missing_from_target: 0
+    target_only_glue: 16
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 303
+  all_pairs:
+    same: 2288
+    intentional_app_support_adaptation: 83
+    source_local_hold: 588
+    missing_from_target: 0
+    target_only_glue: 136
+    dangerous_drift: 0
+    unknown: 0
+queue_after_resolution:
+  source_local_hold: 588
+  candidate_after_target_role: 237
+  default_hold: 351
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Promote Cortex GNAT execution runtime only through a separate named slice that identifies exact runtime modules and proof commands."

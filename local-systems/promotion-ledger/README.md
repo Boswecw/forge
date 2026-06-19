@@ -11,6 +11,7 @@ Canonical documentation lives in:
 - `docs/slice-01/support-promotion-candidate-queue.md`
 - `docs/slice-01/cortex-gnat-target-role-opening.md`
 - `docs/slice-01/cortex-gnat-contract-schema-promotion.md`
+- `docs/slice-01/cortex-gnat-status-summary-promotion.md`
 - `docs/slice-01/fa-local-gnat-dispatch-target-role-opening.md`
 - `docs/slice-01/fa-local-gnat-dispatch-runtime-promotion.md`
 - `docs/slice-01/neuronforge-cor-gnat-semantic-handoff-target-role-opening.md`
@@ -28,10 +29,10 @@ opens an explicit app-support target role.
 Current Slice 01 intake queue: `source_local_hold` artifacts are grouped by
 candidate type before any support promotion slice is opened.
 
-Current Slice 01 promotion status: Cortex GNAT contract schemas, FA Local GNAT
-dispatch runtime/schema, and NeuronForge COR GNAT semantic handoff receipt
-runtime have been promoted into app support as bounded surfaces. DF Local
-read-only analytics currently has target-role/read-runtime receipts only.
+Current Slice 01 promotion status: Cortex GNAT contract schemas/status summary,
+FA Local GNAT dispatch runtime/schema, and NeuronForge COR GNAT semantic handoff
+receipt runtime have been promoted into app support as bounded surfaces. DF
+Local read-only analytics currently has target-role/read-runtime receipts only.
 Unnamed runtime, route, schema, migration, model execution, and durable behavior
 remain held source-local until later promotion slices name exact files and proof
 commands.

@@ -4,17 +4,17 @@ target_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
 source_branch: master
 target_branch: master
 source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-generated_at: '2026-06-19T17:23:10+00:00'
+target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+generated_at: '2026-06-19T17:39:13+00:00'
 classification_summary:
-  same: 1629
-  intentional_app_support_adaptation: 13
-  source_local_hold: 277
+  same: 1632
+  intentional_app_support_adaptation: 14
+  source_local_hold: 273
   missing_from_target: 0
   target_only_glue: 16
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 306
+resolutions_applied: 303
 items:
 - path: .codex
   classification: source_local_hold
@@ -22,7 +22,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -36,7 +36,7 @@ items:
   justification: Cortex support scaffold differs from source and is covered by support
     validation and runtime tests.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support scaffold adaptation. Reconcile only with an
     explicit repo-scaffold promotion slice.
   resolution_id: slice-00-cortex-scaffold-modified
@@ -48,7 +48,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -61,7 +61,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -74,7 +74,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -86,7 +86,7 @@ items:
   justification: Cortex support scaffold differs from source and is covered by support
     validation and runtime tests.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support scaffold adaptation. Reconcile only with an
     explicit repo-scaffold promotion slice.
   resolution_id: slice-00-cortex-scaffold-modified
@@ -97,32 +97,39 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: cortex_runtime/gnats/__init__.py
-  classification: source_local_hold
-  justification: The current source-only backlog for this repo pair was inventoried,
-    reviewed, and kept as source-local proving material until a concrete app-support
-    target role is opened.
+  classification: intentional_app_support_adaptation
+  justification: The support repo promotes only the GNAT status-summary contract needed
+    by service-status truth. Its gnats package is intentionally trimmed to FaLocalCapabilityState,
+    concurrency caps, and gnat_status_summary while the source repo keeps the full
+    planners, workers, dispatch, persistence, retrieval, semantic handoff, and runners.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep source-local. Do not copy into app support without a bounded
-    promotion slice, explicit support role, proof command, and regenerated drift report.
-  resolution_id: slice-00-cortex-source-local-hold
-  resolved_shape: source_only
-  resolution_source: resolutions/slice-00-source-local-holds.yaml
-  resolution_evidence: *id001
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+  recommended_action: Keep as support-native status-summary adaptation. Do not promote
+    the remaining GNAT execution runtime without a separate named slice, exact file
+    list, source proof, support proof, regenerated drift report, and rollback path.
+  resolution_id: slice-01-cortex-gnat-status-summary-trimmed-package
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-01-cortex-gnat-status-summary.yaml
+  resolution_evidence: &id002
+  - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/__init__.py
+  - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/models.py
+  - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/status.py
+  - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/status.py
+  - /home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_status.py
 - path: cortex_runtime/gnats/fa_local_client.py
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -130,25 +137,27 @@ items:
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
 - path: cortex_runtime/gnats/models.py
-  classification: source_local_hold
-  justification: The current source-only backlog for this repo pair was inventoried,
-    reviewed, and kept as source-local proving material until a concrete app-support
-    target role is opened.
+  classification: intentional_app_support_adaptation
+  justification: The support repo promotes only the GNAT status-summary contract needed
+    by service-status truth. Its gnats package is intentionally trimmed to FaLocalCapabilityState,
+    concurrency caps, and gnat_status_summary while the source repo keeps the full
+    planners, workers, dispatch, persistence, retrieval, semantic handoff, and runners.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep source-local. Do not copy into app support without a bounded
-    promotion slice, explicit support role, proof command, and regenerated drift report.
-  resolution_id: slice-00-cortex-source-local-hold
-  resolved_shape: source_only
-  resolution_source: resolutions/slice-00-source-local-holds.yaml
-  resolution_evidence: *id001
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+  recommended_action: Keep as support-native status-summary adaptation. Do not promote
+    the remaining GNAT execution runtime without a separate named slice, exact file
+    list, source proof, support proof, regenerated drift report, and rollback path.
+  resolution_id: slice-01-cortex-gnat-status-summary-trimmed-package
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-01-cortex-gnat-status-summary.yaml
+  resolution_evidence: *id002
 - path: cortex_runtime/gnats/operator_status.py
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -161,7 +170,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -174,7 +183,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -187,7 +196,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -200,7 +209,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -213,7 +222,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -226,7 +235,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -239,7 +248,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -252,7 +261,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -265,7 +274,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -278,7 +287,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -291,7 +300,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -299,25 +308,27 @@ items:
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
 - path: cortex_runtime/gnats/status.py
-  classification: source_local_hold
-  justification: The current source-only backlog for this repo pair was inventoried,
-    reviewed, and kept as source-local proving material until a concrete app-support
-    target role is opened.
+  classification: intentional_app_support_adaptation
+  justification: The support repo promotes only the GNAT status-summary contract needed
+    by service-status truth. Its gnats package is intentionally trimmed to FaLocalCapabilityState,
+    concurrency caps, and gnat_status_summary while the source repo keeps the full
+    planners, workers, dispatch, persistence, retrieval, semantic handoff, and runners.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep source-local. Do not copy into app support without a bounded
-    promotion slice, explicit support role, proof command, and regenerated drift report.
-  resolution_id: slice-00-cortex-source-local-hold
-  resolved_shape: source_only
-  resolution_source: resolutions/slice-00-source-local-holds.yaml
-  resolution_evidence: *id001
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+  recommended_action: Keep as support-native status-summary adaptation. Do not promote
+    the remaining GNAT execution runtime without a separate named slice, exact file
+    list, source proof, support proof, regenerated drift report, and rollback path.
+  resolution_id: slice-01-cortex-gnat-status-summary-trimmed-package
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-01-cortex-gnat-status-summary.yaml
+  resolution_evidence: *id002
 - path: cortex_runtime/gnats/workers/__init__.py
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -330,7 +341,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -343,7 +354,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -356,7 +367,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -369,7 +380,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -382,7 +393,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -395,7 +406,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -408,7 +419,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -421,7 +432,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -434,30 +445,19 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
   resolved_shape: source_only
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
-- path: cortex_runtime/service_status.py
-  classification: intentional_app_support_adaptation
-  justification: Cortex runtime files differ between source and support while the
-    support runtime test gate passes.
-  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep as support runtime adaptation. Recompare before promoting
-    changes back to the proving repo.
-  resolution_id: slice-00-cortex-runtime-modified
-  resolved_shape: modified_in_both
-  resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: cortex_runtime/source_lanes.py
   classification: intentional_app_support_adaptation
   justification: Cortex runtime files differ between source and support while the
     support runtime test gate passes.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support runtime adaptation. Recompare before promoting
     changes back to the proving repo.
   resolution_id: slice-00-cortex-runtime-modified
@@ -468,7 +468,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -479,7 +479,7 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
@@ -490,7 +490,7 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
@@ -501,7 +501,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -512,7 +512,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -523,7 +523,7 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
@@ -534,7 +534,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -545,7 +545,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -556,7 +556,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -567,7 +567,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -578,7 +578,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -589,7 +589,7 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
@@ -600,7 +600,7 @@ items:
   justification: Both source and support Cortex mirrors build cleanly. These files
     differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     runtime or service changes and compare before promotion.
   resolution_id: slice-00-cortex-doc-system-modified
@@ -611,7 +611,7 @@ items:
   justification: These support-side Cortex mirror files document the app-support code
     mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same mirror designation and structure.
   resolution_id: slice-00-cortex-doc-system-target-only
@@ -623,7 +623,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -636,7 +636,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -649,7 +649,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -662,7 +662,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -675,7 +675,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -688,7 +688,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -701,7 +701,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -714,7 +714,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -727,7 +727,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -740,7 +740,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -753,7 +753,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -766,7 +766,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -779,7 +779,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -792,7 +792,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -805,7 +805,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -818,7 +818,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -831,7 +831,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -844,7 +844,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -857,7 +857,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -870,7 +870,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -883,7 +883,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -896,7 +896,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -909,7 +909,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -922,7 +922,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -935,7 +935,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -948,7 +948,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -961,7 +961,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -974,7 +974,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -987,7 +987,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1000,7 +1000,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1013,7 +1013,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1026,7 +1026,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1039,7 +1039,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1052,7 +1052,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1065,7 +1065,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1078,7 +1078,7 @@ items:
     Cortex HTTP seam. It documents target-side service wiring over cortex_runtime
     and is not source authority for Cortex extraction logic.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep in the support repo under /docs/service. Backport only
     if the local Cortex proving repo adds a generic service authority document.
   resolution_id: slice-00-cortex-authorforge-service-doc
@@ -1088,14 +1088,15 @@ items:
   - /home/charlie/Forge/apps/public-app-local-support/cortex/docs/service/authorforge-service.md
 - path: docs/source-lanes/gnat-target-role.md
   classification: target_only_glue
-  justification: This support-only document opens a bounded Cortex GNAT app-support
-    target role while explicitly withholding runtime promotion. Source GNAT authority
-    remains in the local-system Cortex repo.
+  justification: This support-only document opened the bounded Cortex GNAT app-support
+    target role and now records that GNAT contract schemas/fixtures and the service-status
+    summary are promoted while execution runtime remains held source-local.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep as support target-role glue. Promote GNAT runtime only
-    through a later named slice with exact files, source proof, support proof, and
-    regenerated drift report.
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+  recommended_action: Keep as support target-role glue for the promoted GNAT contract
+    schema and status-summary surface. Promote GNAT execution runtime only through
+    a later named slice with exact files, source proof, support proof, and regenerated
+    drift report.
   resolution_id: slice-01-cortex-gnat-target-role-doc
   resolved_shape: target_only
   resolution_source: resolutions/slice-01-cortex-gnat-target-role.yaml
@@ -1110,7 +1111,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1123,7 +1124,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1136,7 +1137,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1149,7 +1150,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1162,7 +1163,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1175,7 +1176,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1188,7 +1189,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1201,7 +1202,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1214,7 +1215,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1227,7 +1228,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1240,7 +1241,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1253,7 +1254,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1266,7 +1267,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1279,7 +1280,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1292,7 +1293,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1305,7 +1306,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1318,7 +1319,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1331,7 +1332,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1344,7 +1345,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1357,7 +1358,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1370,7 +1371,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1383,7 +1384,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1396,7 +1397,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1409,7 +1410,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1422,7 +1423,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1435,7 +1436,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1448,7 +1449,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1461,7 +1462,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1474,7 +1475,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1487,7 +1488,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1500,7 +1501,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1513,7 +1514,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1526,7 +1527,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1539,7 +1540,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1552,7 +1553,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1565,7 +1566,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1578,7 +1579,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1591,7 +1592,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1604,7 +1605,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1617,7 +1618,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1630,7 +1631,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1643,7 +1644,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1656,7 +1657,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1669,7 +1670,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1682,7 +1683,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1695,7 +1696,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1708,7 +1709,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1721,7 +1722,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1734,7 +1735,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1747,7 +1748,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1760,7 +1761,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1773,7 +1774,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1786,7 +1787,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1799,7 +1800,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1812,7 +1813,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1825,7 +1826,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1838,7 +1839,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1851,7 +1852,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1864,7 +1865,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1877,7 +1878,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1890,7 +1891,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1903,7 +1904,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1916,7 +1917,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1929,7 +1930,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1942,7 +1943,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1955,7 +1956,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1968,7 +1969,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1981,7 +1982,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -1994,7 +1995,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2007,7 +2008,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2020,7 +2021,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2033,7 +2034,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2046,7 +2047,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2059,7 +2060,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2072,7 +2073,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2085,7 +2086,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2098,7 +2099,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2111,7 +2112,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2124,7 +2125,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2137,7 +2138,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2150,7 +2151,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2163,7 +2164,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2176,7 +2177,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2189,7 +2190,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2202,7 +2203,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2215,7 +2216,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2228,7 +2229,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2241,7 +2242,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2254,7 +2255,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2267,7 +2268,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2280,7 +2281,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2293,7 +2294,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2306,7 +2307,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2319,7 +2320,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2332,7 +2333,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2345,7 +2346,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2358,7 +2359,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2371,7 +2372,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2384,7 +2385,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2397,7 +2398,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2410,7 +2411,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2423,7 +2424,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2436,7 +2437,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2449,7 +2450,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2462,7 +2463,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2475,7 +2476,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2488,7 +2489,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2501,7 +2502,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2514,7 +2515,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2527,7 +2528,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2540,7 +2541,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2553,7 +2554,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2566,7 +2567,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2579,7 +2580,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2592,7 +2593,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2605,7 +2606,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2618,7 +2619,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2631,7 +2632,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2644,7 +2645,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2657,7 +2658,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2670,7 +2671,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2683,7 +2684,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2696,7 +2697,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2709,7 +2710,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2722,7 +2723,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2735,7 +2736,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2748,7 +2749,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2761,7 +2762,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2774,7 +2775,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2787,7 +2788,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2800,7 +2801,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2813,7 +2814,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2826,7 +2827,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2839,7 +2840,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2852,7 +2853,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2865,7 +2866,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2878,7 +2879,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2891,7 +2892,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2904,7 +2905,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2917,7 +2918,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2930,7 +2931,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2943,7 +2944,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2956,7 +2957,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2969,7 +2970,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2982,7 +2983,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -2995,7 +2996,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3008,7 +3009,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3021,7 +3022,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3034,7 +3035,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3047,7 +3048,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3060,7 +3061,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3073,7 +3074,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3086,7 +3087,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3099,7 +3100,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3112,7 +3113,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3125,7 +3126,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3138,7 +3139,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3151,7 +3152,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3164,7 +3165,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3177,7 +3178,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3190,7 +3191,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3203,7 +3204,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3216,7 +3217,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3229,7 +3230,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3242,7 +3243,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3255,7 +3256,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3268,7 +3269,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3281,7 +3282,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3294,7 +3295,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3307,7 +3308,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3320,7 +3321,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3333,7 +3334,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3346,7 +3347,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3359,7 +3360,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3372,7 +3373,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3385,7 +3386,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3397,22 +3398,11 @@ items:
   justification: The support requirements file is target-only dependency glue for
     the support Cortex runtime.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support dependency glue. Backport only if the proving
     repo adopts the same package boundary.
   resolution_id: slice-00-cortex-requirements-target-only
   resolved_shape: target_only
-  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
-- path: schemas/service-status.schema.json
-  classification: intentional_app_support_adaptation
-  justification: Cortex schema and schema-validation tooling differ from source and
-    passed the support validation gate.
-  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep as support validation adaptation. Recompare before promoting
-    schema changes upstream.
-  resolution_id: slice-00-cortex-schema-tooling-modified
-  resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: scripts/benchmark_gnat_docx.py
   classification: source_local_hold
@@ -3420,7 +3410,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3433,7 +3423,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3446,7 +3436,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3459,7 +3449,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3472,7 +3462,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3485,7 +3475,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3497,7 +3487,7 @@ items:
   justification: Cortex schema and schema-validation tooling differ from source and
     passed the support validation gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support validation adaptation. Recompare before promoting
     schema changes upstream.
   resolution_id: slice-00-cortex-schema-tooling-modified
@@ -3508,7 +3498,7 @@ items:
   justification: The service package is target-only app-support glue over Cortex runtime
     and is covered by the support runtime test gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support adapter glue. Backport only if the local Cortex
     proving repo adopts the AuthorForge HTTP service boundary.
   resolution_id: slice-00-cortex-service-target-only
@@ -3519,7 +3509,7 @@ items:
   justification: The service package is target-only app-support glue over Cortex runtime
     and is covered by the support runtime test gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support adapter glue. Backport only if the local Cortex
     proving repo adopts the AuthorForge HTTP service boundary.
   resolution_id: slice-00-cortex-service-target-only
@@ -3530,7 +3520,7 @@ items:
   justification: The service package is target-only app-support glue over Cortex runtime
     and is covered by the support runtime test gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support adapter glue. Backport only if the local Cortex
     proving repo adopts the AuthorForge HTTP service boundary.
   resolution_id: slice-00-cortex-service-target-only
@@ -3541,7 +3531,7 @@ items:
   justification: The service package is target-only app-support glue over Cortex runtime
     and is covered by the support runtime test gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep as support adapter glue. Backport only if the local Cortex
     proving repo adopts the AuthorForge HTTP service boundary.
   resolution_id: slice-00-cortex-service-target-only
@@ -3553,7 +3543,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3566,7 +3556,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3579,7 +3569,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3592,7 +3582,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3605,7 +3595,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3618,7 +3608,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3631,7 +3621,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3644,7 +3634,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3657,7 +3647,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3670,7 +3660,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3683,7 +3673,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3696,7 +3686,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3709,7 +3699,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3722,7 +3712,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3735,7 +3725,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3748,20 +3738,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
-  recommended_action: Keep source-local. Do not copy into app support without a bounded
-    promotion slice, explicit support role, proof command, and regenerated drift report.
-  resolution_id: slice-00-cortex-source-local-hold
-  resolved_shape: source_only
-  resolution_source: resolutions/slice-00-source-local-holds.yaml
-  resolution_evidence: *id001
-- path: tests/runtime/test_gnat_status.py
-  classification: source_local_hold
-  justification: The current source-only backlog for this repo pair was inventoried,
-    reviewed, and kept as source-local proving material until a concrete app-support
-    target role is opened.
-  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3773,7 +3750,7 @@ items:
   justification: The service-status runtime test differs with the support runtime
     surface and passed in the support test gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep paired with the support runtime adaptation.
   resolution_id: slice-00-cortex-runtime-test-modified
   resolved_shape: modified_in_both
@@ -3784,7 +3761,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3797,7 +3774,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3810,7 +3787,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3823,7 +3800,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3836,7 +3813,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3849,7 +3826,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3862,7 +3839,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3875,7 +3852,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3888,7 +3865,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3901,7 +3878,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3914,7 +3891,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3927,7 +3904,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold
@@ -3940,7 +3917,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+  target_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-cortex-source-local-hold

@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T17:23:10+00:00`
+Generated: `2026-06-19T17:39:13+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -8,17 +8,17 @@ Source commit: `98ac9ad521bb21c5956301ebfa410e520d331a70`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
-Target commit: `a85a72bff50f9b9e7f0d2991926bc98e002a09e3`
+Target commit: `c6d508fd6cb135b45ebd2a93636e30c077686bec`
 
-Resolutions applied: `306`
+Resolutions applied: `303`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 1629 |
-| intentional_app_support_adaptation | 13 |
-| source_local_hold | 277 |
+| same | 1632 |
+| intentional_app_support_adaptation | 14 |
+| source_local_hold | 273 |
 | missing_from_target | 0 |
 | target_only_glue | 16 |
 | dangerous_drift | 0 |
@@ -35,9 +35,9 @@ Resolutions applied: `306`
 | `DECISIONS/0019-fa-local-owns-gnat-execution-routing.md` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `Makefile` | intentional_app_support_adaptation | `slice-00-cortex-scaffold-modified` | Keep as support scaffold adaptation. Reconcile only with an explicit repo-scaffold promotion slice. |
 | `SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
-| `cortex_runtime/gnats/__init__.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `cortex_runtime/gnats/__init__.py` | intentional_app_support_adaptation | `slice-01-cortex-gnat-status-summary-trimmed-package` | Keep as support-native status-summary adaptation. Do not promote the remaining GNAT execution runtime without a separate named slice, exact file list, source proof, support proof, regenerated drift report, and rollback path. |
 | `cortex_runtime/gnats/fa_local_client.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `cortex_runtime/gnats/models.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `cortex_runtime/gnats/models.py` | intentional_app_support_adaptation | `slice-01-cortex-gnat-status-summary-trimmed-package` | Keep as support-native status-summary adaptation. Do not promote the remaining GNAT execution runtime without a separate named slice, exact file list, source proof, support proof, regenerated drift report, and rollback path. |
 | `cortex_runtime/gnats/operator_status.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/parallel_runner.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/persistence.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -50,7 +50,7 @@ Resolutions applied: `306`
 | `cortex_runtime/gnats/schema_validation.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/semantic_handoff.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/serial_runner.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `cortex_runtime/gnats/status.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `cortex_runtime/gnats/status.py` | intentional_app_support_adaptation | `slice-01-cortex-gnat-status-summary-trimmed-package` | Keep as support-native status-summary adaptation. Do not promote the remaining GNAT execution runtime without a separate named slice, exact file list, source proof, support proof, regenerated drift report, and rollback path. |
 | `cortex_runtime/gnats/workers/__init__.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/workers/docx_text.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/workers/epub_text.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -61,7 +61,6 @@ Resolutions applied: `306`
 | `cortex_runtime/gnats/workers/rtf_text.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/gnats/workers/text_common.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `cortex_runtime/health_cli.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `cortex_runtime/service_status.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-modified` | Keep as support runtime adaptation. Recompare before promoting changes back to the proving repo. |
 | `cortex_runtime/source_lanes.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-modified` | Keep as support runtime adaptation. Recompare before promoting changes back to the proving repo. |
 | `doc/CRTSYSTEM.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
 | `doc/SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
@@ -113,7 +112,7 @@ Resolutions applied: `306`
 | `docs/planning/COR_Gnats_Plan_Set/12_PHASE_10_SHARED_CORE_EXTRACTION.md` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/repo_crawler_parser_implementation_plan(1).md` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/service/authorforge-service.md` | target_only_glue | `slice-00-cortex-authorforge-service-doc` | Keep in the support repo under /docs/service. Backport only if the local Cortex proving repo adds a generic service authority document. |
-| `docs/source-lanes/gnat-target-role.md` | target_only_glue | `slice-01-cortex-gnat-target-role-doc` | Keep as support target-role glue. Promote GNAT runtime only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
+| `docs/source-lanes/gnat-target-role.md` | target_only_glue | `slice-01-cortex-gnat-target-role-doc` | Keep as support target-role glue for the promoted GNAT contract schema and status-summary surface. Promote GNAT execution runtime only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
 | `gnat_core/__init__.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `gnat_core/cache.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `gnat_core/hashing.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -291,7 +290,6 @@ Resolutions applied: `306`
 | `repo-crawler/tools/svelte-provider/tools/svelte-provider/src/probe.ts` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `repo-crawler/tools/svelte-provider/tsconfig.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `requirements.txt` | target_only_glue | `slice-00-cortex-requirements-target-only` | Keep as support dependency glue. Backport only if the proving repo adopts the same package boundary. |
-| `schemas/service-status.schema.json` | intentional_app_support_adaptation | `slice-00-cortex-schema-tooling-modified` | Keep as support validation adaptation. Recompare before promoting schema changes upstream. |
 | `scripts/benchmark_gnat_docx.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `scripts/benchmark_gnat_epub.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `scripts/benchmark_gnat_odt.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -319,7 +317,6 @@ Resolutions applied: `306`
 | `tests/runtime/test_gnat_rtf_lane.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/test_gnat_semantic_handoff.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/test_gnat_serial_runner.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/runtime/test_gnat_status.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/test_service_status.py` | intentional_app_support_adaptation | `slice-00-cortex-runtime-test-modified` | Keep paired with the support runtime adaptation. |
 | `worm/Cargo.lock` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `worm/Cargo.toml` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |

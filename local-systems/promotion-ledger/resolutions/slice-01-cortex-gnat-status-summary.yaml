@@ -1,0 +1,51 @@
+version: 1
+created_at: "2026-06-19T17:35:33Z"
+scope: "Classify the support-safe Cortex GNAT status summary promoted into app support."
+evidence:
+  support_commit: c6d508fd6cb135b45ebd2a93636e30c077686bec
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  support_runtime:
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/__init__.py
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/models.py
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/status.py
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/service_status.py
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/source_lanes.py
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/schemas/service-status.schema.json
+    - /home/charlie/Forge/apps/public-app-local-support/cortex/tests/runtime/test_gnat_status.py
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/status.py
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/models.py
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/service_status.py
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/source_lanes.py
+    - /home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_status.py
+  proof_commands:
+    support_validate: "make validate"
+    support_runtime: "make test-runtime"
+    support_gnat_status: "python3 -m unittest tests.runtime.test_gnat_status -v"
+    source_validate: "make validate"
+    source_gnat_status: "python3 -m unittest tests.runtime.test_gnat_status -v"
+    source_gnat: "make test-gnats"
+  proof_results:
+    support_validate: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+    support_runtime: "Ran 113 tests in 0.618s - OK"
+    support_gnat_status: "Ran 3 tests in 0.011s - OK"
+    source_validate: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+    source_gnat_status: "Ran 3 tests in 0.003s - OK"
+    source_gnat: "Ran 87 tests in 0.394s - OK"
+resolutions:
+  - resolution_id: slice-01-cortex-gnat-status-summary-trimmed-package
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    paths:
+      - cortex_runtime/gnats/__init__.py
+      - cortex_runtime/gnats/models.py
+      - cortex_runtime/gnats/status.py
+    justification: "The support repo promotes only the GNAT status-summary contract needed by service-status truth. Its gnats package is intentionally trimmed to FaLocalCapabilityState, concurrency caps, and gnat_status_summary while the source repo keeps the full planners, workers, dispatch, persistence, retrieval, semantic handoff, and runners."
+    recommended_action: "Keep as support-native status-summary adaptation. Do not promote the remaining GNAT execution runtime without a separate named slice, exact file list, source proof, support proof, regenerated drift report, and rollback path."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/__init__.py
+      - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/models.py
+      - /home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/status.py
+      - /home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/status.py
+      - /home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_status.py

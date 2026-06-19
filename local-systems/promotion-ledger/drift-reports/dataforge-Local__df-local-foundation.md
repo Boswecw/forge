@@ -1,16 +1,16 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T17:23:10+00:00`
+Generated: `2026-06-19T17:39:13+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
 Source commit: `50512dbf569795ec3744805e83005e3b8888f24d`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
-Target branch: `main`
-Target commit: `7d0e5479157f608e57507a0750a19cc2baf5fc0f`
+Target branch: `authorforge/phase1-support-schema-6b79fc`
+Target commit: `cead2c965a93d248c01ff249505a9849e865e870`
 
-Resolutions applied: `233`
+Resolutions applied: `234`
 
 ## Classification Summary
 
@@ -20,7 +20,7 @@ Resolutions applied: `233`
 | intentional_app_support_adaptation | 33 |
 | source_local_hold | 127 |
 | missing_from_target | 0 |
-| target_only_glue | 73 |
+| target_only_glue | 74 |
 | dangerous_drift | 0 |
 | unknown | 0 |
 
@@ -212,6 +212,7 @@ Resolutions applied: `233`
 | `seeds/schema_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `seeds/service_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `sql/apps/authorforge/0001_authorforge_attach.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
+| `sql/apps/authorforge/0002_authorforge_support_schema.sql` | target_only_glue | `slice-01-dataforge-authorforge-support-schema-target-only` | Keep as target-only app-support schema glue. Promote into the proving repo only through a separate source-authority migration slice with explicit database proof and rollback. |
 | `sql/bootstrap.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `sql/core/0001_core_foundation.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `sql/core/0002_core_metadata.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |

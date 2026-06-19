@@ -1,0 +1,105 @@
+promotion_id: "2026-06-19--slice-01--cortex-gnat-status-summary"
+slice_name: "Slice 01 - Cortex GNAT Status Summary Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/cortex"
+source_branch: "master"
+source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/cortex"
+target_branch: "master"
+target_commit: "c6d508fd6cb135b45ebd2a93636e30c077686bec"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/__init__.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/models.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/gnats/status.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/source_lanes.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/cortex_runtime/service_status.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/service-status.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/tests/runtime/test_gnat_status.py"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/fa_local_client.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/operator_status.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/parallel_runner.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/persistence.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/persistent_runner.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/planner.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/retrieval_prepare.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/semantic_handoff.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/serial_runner.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/workers/"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/gnat_core/"
+promotion_manifest:
+  - "Promoted the Cortex GNAT service-status summary into app support."
+  - "Added a support-safe trimmed cortex_runtime.gnats package that exports only FaLocalCapabilityState and gnat_status_summary."
+  - "Marked admitted source lanes with GNAT worker types so the status summary reports honest lane capability."
+  - "Extended service-status.schema.json and emit_service_status() to include gnat_summary."
+  - "Added focused runtime proof for serial default truth, schema-valid service status, and FA Local ready-state truth."
+  - "Updated the Cortex GNAT support target-role document to record status-summary promotion while execution runtime remains source-local."
+  - "Did not promote GNAT planners, workers, dispatch, persistence, retrieval preparation, semantic handoff, execution runners, endpoints, queue, watcher, retry, scheduler, gnat_core, or AuthorForge behavior."
+proof_commands:
+  - "python3 -m unittest tests.runtime.test_gnat_status -v"
+  - "make validate"
+  - "make test-runtime"
+  - "make test-gnats"
+  - "git diff --check"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_gnat_status:
+    command: "python3 -m unittest tests.runtime.test_gnat_status -v"
+    result: "Ran 3 tests in 0.011s - OK"
+  support_validate:
+    command: "make validate"
+    result: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  support_runtime:
+    command: "make test-runtime"
+    result: "Ran 113 tests in 0.618s - OK"
+  source_gnat_status:
+    command: "python3 -m unittest tests.runtime.test_gnat_status -v"
+    result: "Ran 3 tests in 0.003s - OK"
+  source_validate:
+    command: "make validate"
+    result: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  source_gnat:
+    command: "make test-gnats"
+    result: "Ran 87 tests in 0.394s - OK"
+  diff_check:
+    command: "git diff --check"
+    result: "passed"
+  cortex_pair_drift:
+    same: 1632
+    intentional_app_support_adaptation: 14
+    source_local_hold: 273
+    missing_from_target: 0
+    target_only_glue: 16
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 303
+  drift_totals:
+    same: 2288
+    intentional_app_support_adaptation: 83
+    source_local_hold: 588
+    missing_from_target: 0
+    target_only_glue: 136
+    dangerous_drift: 0
+    unknown: 0
+  support_promotion_queue:
+    source_local_hold: 588
+    candidate_after_target_role: 237
+    default_hold: 351
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Support service-status now embeds GNAT status truth: serial_contract_proof by default, admitted worker types from source lanes, max_concurrency 4, hard_cap 8, FA Local required for parallel execution, FA Local unavailable by default, parallel_execution_ready false, and serial_fallback_available true."
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, write path, public surface, or canonical content behavior changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded Cortex GNAT status-summary support surface under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T17:36:38Z"
+rollback_source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+rollback_target_commit: "a85a72bff50f9b9e7f0d2991926bc98e002a09e3"
+rollback_command: "Revert Cortex support commits c6d508fd6cb135b45ebd2a93636e30c077686bec and 4430b53ab598dc4ef93d662f95f1461c10ee280a, restore the target-role document to schema-only status, remove the Cortex GNAT status summary promotion receipts/resolution, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--cortex-gnat-target-role"
