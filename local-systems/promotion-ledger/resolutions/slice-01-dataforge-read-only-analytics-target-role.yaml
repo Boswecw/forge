@@ -14,12 +14,12 @@ evidence:
     - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_routes.py
   proof_commands:
     support_diff_check: "git diff --check"
-    support_pytest: "python3 -m pytest tests -q"
+    support_pytest: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
     source_analytics_compute: "timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q"
     source_analytics_routes: "timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q"
   proof_results:
     support_diff_check: "passed"
-    support_pytest: "blocked: system Python is missing pydantic_settings, asyncpg, and pytest_asyncio; no .venv/bin/python exists in this checkout"
+    support_pytest: "169 passed, 7 skipped, 1 warning"
     source_analytics_compute: "6 passed"
     source_analytics_routes: "5 passed"
 resolutions:
@@ -29,7 +29,7 @@ resolutions:
     shape: target_only
     classification: target_only_glue
     justification: "This support-only document opens a bounded DF Local read-only analytics target role while explicitly withholding routes, models, services, migrations, tests, and schema promotion. Source analytics authority remains in the local-system DataForge repo."
-    recommended_action: "Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, passing support proof, and regenerated drift report."
+    recommended_action: "Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report."
     evidence:
       - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
       - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/doc/plans/local-analytics/df_local_analytics_slice_01.md

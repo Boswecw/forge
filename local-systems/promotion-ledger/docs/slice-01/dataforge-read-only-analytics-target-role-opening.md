@@ -35,13 +35,13 @@ target, regenerated drift report, and rollback path.
 | Surface | Result |
 | --- | --- |
 | Support documentation | `git diff --check` passed. |
-| Support pytest | Blocked: system Python is missing `pydantic_settings`, `asyncpg`, and `pytest_asyncio`; no `.venv/bin/python` exists in this checkout. |
+| Support pytest | `env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q` passed: 169 passed, 7 skipped, 1 warning. |
 | Source analytics compute | `timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q` passed: 6 passed. |
 | Source analytics routes | `timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q` passed: 5 passed. |
 
-This target-role slice is therefore documentation-opened with follow-up required
-before any runtime, route, migration, or schema promotion because support pytest
-dependencies remain unavailable in this checkout.
+This target-role slice is documentation-opened only. Runtime, route, migration,
+and schema promotion still require a later named promotion slice with exact file
+scope and regenerated drift.
 
 ## Drift Result After Resolution
 

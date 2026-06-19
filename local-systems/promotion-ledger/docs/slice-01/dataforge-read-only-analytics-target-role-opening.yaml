@@ -36,9 +36,9 @@ verification:
     command: git diff --check
     result: passed
   support_pytest:
-    command: python3 -m pytest tests -q
-    result: blocked
-    output: "System Python is missing pydantic_settings, asyncpg, and pytest_asyncio; no .venv/bin/python exists in this checkout."
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "169 passed, 7 skipped, 1 warning"
   source_analytics_compute:
     command: timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q
     result: passed
@@ -55,4 +55,4 @@ drift_result_after_resolution:
   target_only_glue: 134
   dangerous_drift: 0
   unknown: 0
-next_gate: "Fix local support test dependencies before promoting analytics runtime, routes, migrations, or schema."
+next_gate: "Open a later named runtime promotion slice with exact files before promoting analytics runtime, routes, migrations, or schema."
