@@ -1,0 +1,52 @@
+generated_at: "2026-06-19T15:36:18Z"
+scope: "Slice 01 NeuronForge COR GNAT semantic handoff support target-role opening"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/neuronforge
+support_branch: master
+support_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+source_repo: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator
+source_branch: master
+source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
+decision:
+  status: target_role_opened
+  runtime_promoted: false
+  route_promoted: false
+  schema_promoted: false
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/contracts/cor-gnat-semantic-handoff-target-role.md
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-neuronforge-cor-gnat-semantic-handoff-target-role.yaml
+target_role:
+  repo_pair: neuronforge-local-operator__neuronforge
+  classification: target_only_glue
+  path: docs/contracts/cor-gnat-semantic-handoff-target-role.md
+  purpose: "Bounded candidate-generation side of the Cortex GNAT support surface."
+  non_goals:
+    - "No COR GNAT semantic handoff route copied in this slice."
+    - "No COR GNAT semantic handoff runtime copied in this slice."
+    - "No graph, prompt assembly, experiment-memory, or model execution behavior changed."
+    - "No semantic candidates promoted into canonical app truth."
+source_authority:
+  handoff_doc: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/cor-gnat-semantic-handoff.md
+  handoff_runtime: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/cor_gnat_semantic_handoff.py
+  route_surface: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/main.py
+  handoff_tests: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/tests/test-cor-gnat-semantic-handoff.py
+verification:
+  support_pytest:
+    command: python3 -m pytest tests -q
+    result: passed
+    output: "45 passed, 3 warnings"
+  source_handoff_test:
+    command: python3 tests/test-cor-gnat-semantic-handoff.py
+    result: passed
+    output: "Ran 6 tests - OK"
+  full_source_gate:
+    command: bash scripts/run-tests.sh
+    result: interrupted
+    output: "Interrupted after no new output for more than two minutes inside the route-oriented style-analysis suite."
+drift_result_after_resolution:
+  same: 2233
+  intentional_app_support_adaptation: 61
+  source_local_hold: 652
+  missing_from_target: 0
+  target_only_glue: 133
+  dangerous_drift: 0
+  unknown: 0
+next_gate: "Select exact COR GNAT semantic handoff files and support service contract for a later runtime/schema promotion slice, or keep semantic handoff held source-local."

@@ -1,0 +1,53 @@
+promotion_id: "2026-06-19--slice-01--neuronforge-cor-gnat-semantic-handoff-target-role"
+slice_name: "Slice 01 - NeuronForge COR GNAT Semantic Handoff Support Target Role"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator"
+source_branch: "master"
+source_commit: "006ef57c9ece79b666581b303fce06e54debaa42"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/neuronforge"
+target_branch: "master"
+target_commit: "4aa1e98666dbb39380af7af93fe41e07a1759cb1"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/contracts/cor-gnat-semantic-handoff-target-role.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/cor-gnat-semantic-handoff.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/cor_gnat_semantic_handoff.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/main.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/tests/test-cor-gnat-semantic-handoff.py"
+promotion_manifest:
+  - "Opened a support target-role document for future NeuronForge COR GNAT semantic handoff promotion."
+  - "Did not promote handoff runtime code, route handlers, schemas, tests, graph assets, prompt assembly, or model execution behavior."
+  - "Kept COR GNAT semantic handoff artifacts classified as source_local_hold until a later named runtime promotion slice."
+proof_commands:
+  - "python3 -m pytest tests -q"
+  - "python3 tests/test-cor-gnat-semantic-handoff.py"
+  - "python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 local-systems/promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_pytest:
+    command: "python3 -m pytest tests -q"
+    result: "45 passed, 3 warnings"
+  source_handoff_test:
+    command: "python3 tests/test-cor-gnat-semantic-handoff.py"
+    result: "Ran 6 tests - OK"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 652
+    missing_from_target: 0
+    target_only_glue: 133
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 846
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "not applicable; target-role documentation only, no support runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI opened the bounded support target role. Charlie Boswell must review and accept or reject before runtime promotion."
+created_at: "2026-06-19T15:36:18Z"
+rollback_source_commit: "006ef57c9ece79b666581b303fce06e54debaa42"
+rollback_target_commit: "4aa1e98666dbb39380af7af93fe41e07a1759cb1"
+rollback_command: "Revert the NeuronForge support commit 4aa1e98666dbb39380af7af93fe41e07a1759cb1 and regenerate the promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null

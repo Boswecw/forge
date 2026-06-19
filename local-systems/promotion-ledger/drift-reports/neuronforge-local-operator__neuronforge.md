@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T15:02:48+00:00`
+Generated: `2026-06-19T15:12:21+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -8,9 +8,9 @@ Source commit: `006ef57c9ece79b666581b303fce06e54debaa42`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
-Target commit: `dc67b04863e313f3116565ddf1e7e369d6349a67`
+Target commit: `4aa1e98666dbb39380af7af93fe41e07a1759cb1`
 
-Resolutions applied: `220`
+Resolutions applied: `221`
 
 ## Classification Summary
 
@@ -20,7 +20,7 @@ Resolutions applied: `220`
 | intentional_app_support_adaptation | 18 |
 | source_local_hold | 173 |
 | missing_from_target | 0 |
-| target_only_glue | 29 |
+| target_only_glue | 30 |
 | dangerous_drift | 0 |
 | unknown | 0 |
 
@@ -52,6 +52,7 @@ Resolutions applied: `220`
 | `docker-compose.graphiti-pilot.yml` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/adr/ADR-001-promotion-truth-upstream-of-pact.md` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/adr/ADR-2026-04-18-promotion-truth-upstream.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-adr-doc` | Keep as historical support doctrine. Do not back-promote its target mirror path claims as source authority without a fresh proving repo ADR update. |
+| `docs/contracts/cor-gnat-semantic-handoff-target-role.md` | target_only_glue | `slice-01-neuronforge-cor-gnat-semantic-handoff-target-role-doc` | Keep as support target-role glue. Promote COR GNAT semantic handoff runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
 | `docs/cor-gnat-semantic-handoff.md` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/dogfood-cloud-quota-log.md` | intentional_app_support_adaptation | `slice-00-neuronforge-dogfood-quota-doc` | Keep as support planning documentation until telemetry is implemented and proved in the local system. |
 | `docs/evidence/promotion_runs_demo.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-runs-demo` | Keep as support evidence. Regenerate from the proving repo seam when the promotion seam changes. |
