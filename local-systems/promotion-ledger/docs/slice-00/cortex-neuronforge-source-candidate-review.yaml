@@ -1,0 +1,86 @@
+generated_at: "2026-06-19T09:28:31Z"
+scope: "Slice 00 Cortex and NeuronForge source-only runtime/contract/test candidate review"
+input_inventory: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+candidate_counts:
+  cortex__cortex:
+    source_runtime_or_capability: 32
+    source_contract_schema_migration: 9
+    source_scripts_ci: 6
+    source_proof_tests: 50
+    total: 97
+  neuronforge-local-operator__neuronforge:
+    source_runtime_or_capability: 50
+    source_contract_schema_migration: 13
+    source_scripts_ci: 10
+    source_proof_tests: 49
+    total: 122
+verification:
+  cortex_gnat:
+    command: make test-gnats
+    result: passed
+    output: "Ran 87 tests in 0.410s - OK"
+  neuronforge_prompt_assembly:
+    command: python3 -m pytest prompt_assembly/tests/ -q
+    result: passed
+    output: "100 passed in 0.46s"
+  neuronforge_cor_gnat_handoff:
+    command: python3 tests/test-cor-gnat-semantic-handoff.py
+    result: passed
+    output: "Ran 6 tests in 0.328s - OK"
+  neuronforge_continuity_adjacent_scene:
+    command: bash tests/test-continuity-adjacent-scene.sh
+    result: passed
+    output: "Passed: 27; Failed: 0"
+  neuronforge_experiment_memory:
+    command: python3 -m pytest tests/experiment_memory/ -q
+    result: passed
+    output: "61 passed, 1 skipped in 0.86s"
+  neuronforge_full_runner:
+    command: bash scripts/run-tests.sh
+    result: interrupted
+    output: "Hung in style-analysis route test after unit tests began; focused candidate subsets were run separately."
+decisions:
+  cortex_gnat_bundle:
+    posture: hold_source_local
+    applies_to:
+      - cortex_runtime/gnats/**
+      - gnat_core/**
+      - schemas/gnat-*.schema.json
+      - tests/runtime/test_gnat_*.py
+      - scripts/benchmark_gnat*.py
+    reason: "GNAT is a proved local-system capability, but the support Cortex target currently exposes a narrower AuthorForge file-intelligence adapter. Promoting GNAT requires an explicit support target role and service boundary."
+    promotion_requirements:
+      - "Declare app-support target role for GNAT."
+      - "Promote runtime, schemas, fixtures, tests, and support-facing docs together."
+      - "Run support test gate and regenerate drift reports after promotion."
+  neuronforge_prompt_assembly:
+    posture: hold_source_local
+    applies_to:
+      - prompt_assembly/**
+    reason: "Prompt assembly is source-proved but not currently an app-support NeuronForge service lane."
+    promotion_requirements:
+      - "Declare support owner and caller for prompt assembly."
+      - "Promote contracts, runtime, tests, and validation tooling together."
+  neuronforge_experiment_memory:
+    posture: hold_source_local
+    applies_to:
+      - src/nlo_experiment_memory/**
+      - schemas/experiment_memory/**
+      - tests/experiment_memory/**
+      - tests/fixtures/experiment_memory/**
+      - scripts/graph/**
+      - runtime/graph/**
+    reason: "Experiment memory and graph runtime are local-system proving surfaces with Graphiti/runtime dependencies, not current app-support surfaces."
+    promotion_requirements:
+      - "Declare whether support target will own experiment-memory projection."
+      - "Promote dependency config, graph scripts, schemas, runtime, and tests as a bundle if adopted."
+  neuronforge_cor_gnat_handoff:
+    posture: hold_source_local
+    applies_to:
+      - service/cor_gnat_semantic_handoff.py
+      - tests/test-cor-gnat-semantic-handoff.py
+    reason: "The handoff is source-proved, but support NeuronForge already has bounded AuthorForge service lanes. Promotion needs an explicit handoff endpoint decision."
+    promotion_requirements:
+      - "Declare support route and caller."
+      - "Run support service tests after promotion."
+next_gate: "Review DataForge source-only migration/runtime/contracts, then FA Local thin source-only surfaces."

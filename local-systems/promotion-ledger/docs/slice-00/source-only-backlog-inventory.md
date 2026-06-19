@@ -38,3 +38,8 @@ migrations/contracts and source runtime.
 
 No source-only artifact should be copied into app support without an explicit
 target role, proof command, and post-promotion drift report.
+
+The Cortex/NeuronForge candidate review is recorded in
+`docs/slice-00/cortex-neuronforge-source-candidate-review.md`; reviewed
+surfaces are source-proved but held source-local until a support target role is
+opened.

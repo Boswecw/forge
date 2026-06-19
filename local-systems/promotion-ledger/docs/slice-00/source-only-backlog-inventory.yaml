@@ -135,3 +135,8 @@ promotion_queue:
 next_gate:
   first_slice: "Review source_runtime_or_capability plus source_contract_schema_migration for Cortex and NeuronForge, paired with their tests."
   rule: "No source-only artifact should be copied into app support without an explicit target role, proof command, and post-promotion drift report."
+cortex_neuronforge_candidate_review:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/cortex-neuronforge-source-candidate-review.yaml
+  posture: hold_source_local
+  next_gate: "Review DataForge source-only migration/runtime/contracts, then FA Local thin source-only surfaces."
