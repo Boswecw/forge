@@ -5,7 +5,7 @@ source_branch: main
 target_branch: main
 source_commit: df31e1a98d4789a488e800483a8442643e4036aa
 target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
-generated_at: '2026-06-19T08:30:33+00:00'
+generated_at: '2026-06-19T08:47:50+00:00'
 classification_summary:
   same: 115
   intentional_app_support_adaptation: 0
@@ -13,6 +13,7 @@ classification_summary:
   target_only_glue: 0
   dangerous_drift: 0
   unknown: 6
+resolutions_applied: 0
 items:
 - path: doc/FLSSYSTEM.md
   classification: missing_from_target

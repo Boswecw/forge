@@ -22,6 +22,7 @@ except Exception as exc:  # pragma: no cover - environment dependent
 LEDGER_ROOT = Path(__file__).resolve().parents[1]
 REGISTRY_PATH = LEDGER_ROOT / "repo-registry.yaml"
 REPORT_DIR = LEDGER_ROOT / "drift-reports"
+RESOLUTION_DIR = LEDGER_ROOT / "resolutions"
 
 CLASSIFICATIONS = [
     "same",
@@ -31,6 +32,12 @@ CLASSIFICATIONS = [
     "dangerous_drift",
     "unknown",
 ]
+
+RESOLUTION_SHAPES = {
+    "source_only",
+    "target_only",
+    "modified_in_both",
+}
 
 IGNORED_DIRS = {
     ".git",
@@ -109,7 +116,7 @@ def make_item(
     source_commit: str,
     target_commit: str,
     recommended_action: str,
-) -> dict[str, str]:
+) -> dict[str, Any]:
     return {
         "path": path,
         "classification": classification,
@@ -120,7 +127,136 @@ def make_item(
     }
 
 
-def compare_pair(pair: dict[str, Any], generated_at: str) -> dict[str, Any]:
+def resolution_source(path: Path) -> str:
+    try:
+        return path.relative_to(LEDGER_ROOT).as_posix()
+    except ValueError:
+        return str(path)
+
+
+def resolution_files(path: Path) -> list[Path]:
+    if not path.exists():
+        return []
+    if path.is_file():
+        return [path]
+    files = list(path.glob("*.yaml"))
+    files.extend(path.glob("*.yml"))
+    return sorted(files)
+
+
+def load_resolutions(path: Path) -> dict[tuple[str, str, str], dict[str, Any]]:
+    resolutions: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for file_path in resolution_files(path):
+        with file_path.open("r", encoding="utf-8") as handle:
+            data = yaml.safe_load(handle) or {}
+        if not isinstance(data, dict):
+            raise ValueError(f"resolution file must be a mapping: {file_path}")
+        entries = data.get("resolutions", [])
+        if not isinstance(entries, list):
+            raise ValueError(f"resolutions must be a list: {file_path}")
+        for index, entry in enumerate(entries, start=1):
+            if not isinstance(entry, dict):
+                raise ValueError(f"resolution entry {index} must be a mapping: {file_path}")
+            missing = [
+                field
+                for field in ("resolution_id", "repo_pair", "path", "shape", "classification")
+                if not entry.get(field)
+            ]
+            if missing:
+                raise ValueError(
+                    f"resolution entry {index} missing required fields {missing}: {file_path}"
+                )
+            classification = entry["classification"]
+            if classification not in CLASSIFICATIONS or classification == "same":
+                raise ValueError(
+                    f"resolution {entry['resolution_id']} has invalid classification: "
+                    f"{classification}"
+                )
+            shape = entry["shape"]
+            if shape not in RESOLUTION_SHAPES:
+                raise ValueError(
+                    f"resolution {entry['resolution_id']} has invalid shape: {shape}"
+                )
+            key = (entry["repo_pair"], entry["path"], shape)
+            if key in resolutions:
+                raise ValueError(f"duplicate resolution for {key}: {file_path}")
+            stored = dict(entry)
+            stored["_resolution_source"] = resolution_source(file_path)
+            resolutions[key] = stored
+    return resolutions
+
+
+def resolved_item(
+    resolutions: dict[tuple[str, str, str], dict[str, Any]],
+    repo_pair: str,
+    path: str,
+    shape: str,
+    default_classification: str,
+    default_justification: str,
+    source_commit: str,
+    target_commit: str,
+    default_recommended_action: str,
+) -> dict[str, Any]:
+    resolution = resolutions.get((repo_pair, path, shape))
+    if resolution is None:
+        return make_item(
+            path,
+            default_classification,
+            default_justification,
+            source_commit,
+            target_commit,
+            default_recommended_action,
+        )
+
+    item = make_item(
+        path,
+        resolution["classification"],
+        resolution.get("justification", default_justification),
+        source_commit,
+        target_commit,
+        resolution.get("recommended_action", default_recommended_action),
+    )
+    item["resolution_id"] = resolution["resolution_id"]
+    item["resolved_shape"] = shape
+    item["resolution_source"] = resolution["_resolution_source"]
+    if "evidence" in resolution:
+        item["resolution_evidence"] = resolution["evidence"]
+    return item
+
+
+def add_drift_item(
+    items: list[dict[str, Any]],
+    counts: Counter[str],
+    resolutions: dict[tuple[str, str, str], dict[str, Any]],
+    repo_pair: str,
+    path: str,
+    shape: str,
+    default_classification: str,
+    default_justification: str,
+    source_commit: str,
+    target_commit: str,
+    default_recommended_action: str,
+) -> None:
+    item = resolved_item(
+        resolutions,
+        repo_pair,
+        path,
+        shape,
+        default_classification,
+        default_justification,
+        source_commit,
+        target_commit,
+        default_recommended_action,
+    )
+    counts[item["classification"]] += 1
+    items.append(item)
+
+
+def compare_pair(
+    pair: dict[str, Any],
+    generated_at: str,
+    resolutions: dict[tuple[str, str, str], dict[str, Any]],
+) -> dict[str, Any]:
     source_repo = Path(pair["source_repo"])
     target_repo = Path(pair["target_repo"])
     if not source_repo.exists():
@@ -133,9 +269,10 @@ def compare_pair(pair: dict[str, Any], generated_at: str) -> dict[str, Any]:
     source_files = inventory(source_repo)
     target_files = inventory(target_repo)
     all_paths = sorted(set(source_files) | set(target_files))
+    pair_name = pair["repo_pair"]
 
     counts: Counter[str] = Counter({classification: 0 for classification in CLASSIFICATIONS})
-    items: list[dict[str, str]] = []
+    items: list[dict[str, Any]] = []
 
     for path in all_paths:
         in_source = path in source_files
@@ -144,46 +281,52 @@ def compare_pair(pair: dict[str, Any], generated_at: str) -> dict[str, Any]:
             counts["same"] += 1
             continue
         if in_source and not in_target:
-            counts["missing_from_target"] += 1
-            items.append(
-                make_item(
-                    path,
-                    "missing_from_target",
-                    "Source artifact exists in the proving repo but is absent from the app-support target.",
-                    source_commit,
-                    target_commit,
-                    "Review whether this source artifact should be promoted or intentionally excluded.",
-                )
+            add_drift_item(
+                items,
+                counts,
+                resolutions,
+                pair_name,
+                path,
+                "source_only",
+                "missing_from_target",
+                "Source artifact exists in the proving repo but is absent from the app-support target.",
+                source_commit,
+                target_commit,
+                "Review whether this source artifact should be promoted or intentionally excluded.",
             )
             continue
         if in_target and not in_source:
-            counts["unknown"] += 1
-            items.append(
-                make_item(
-                    path,
-                    "unknown",
-                    "Target-only artifact requires human classification before promotion.",
-                    source_commit,
-                    target_commit,
-                    "Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo.",
-                )
+            add_drift_item(
+                items,
+                counts,
+                resolutions,
+                pair_name,
+                path,
+                "target_only",
+                "unknown",
+                "Target-only artifact requires human classification before promotion.",
+                source_commit,
+                target_commit,
+                "Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo.",
             )
             continue
 
-        counts["unknown"] += 1
-        items.append(
-            make_item(
-                path,
-                "unknown",
-                "Artifact exists in both repos but content differs. Slice 00 does not infer intent.",
-                source_commit,
-                target_commit,
-                "Compare source and target intent; resolve by human decision, backport, or explicit exception.",
-            )
+        add_drift_item(
+            items,
+            counts,
+            resolutions,
+            pair_name,
+            path,
+            "modified_in_both",
+            "unknown",
+            "Artifact exists in both repos but content differs. Slice 00 does not infer intent.",
+            source_commit,
+            target_commit,
+            "Compare source and target intent; resolve by human decision, backport, or explicit exception.",
         )
 
     return {
-        "repo_pair": pair["repo_pair"],
+        "repo_pair": pair_name,
         "source_repo": str(source_repo),
         "target_repo": str(target_repo),
         "source_branch": git_branch(source_repo),
@@ -192,6 +335,7 @@ def compare_pair(pair: dict[str, Any], generated_at: str) -> dict[str, Any]:
         "target_commit": target_commit,
         "generated_at": generated_at,
         "classification_summary": {key: int(counts[key]) for key in CLASSIFICATIONS},
+        "resolutions_applied": sum(1 for item in items if "resolution_id" in item),
         "items": items,
     }
 
@@ -216,6 +360,7 @@ def write_markdown(report: dict[str, Any], path: Path, overwrite: bool) -> None:
         handle.write(f"Target repo: `{report['target_repo']}`\n")
         handle.write(f"Target branch: `{report['target_branch']}`\n")
         handle.write(f"Target commit: `{report['target_commit']}`\n\n")
+        handle.write(f"Resolutions applied: `{report.get('resolutions_applied', 0)}`\n\n")
         handle.write("## Classification Summary\n\n")
         handle.write("| Classification | Count |\n")
         handle.write("| --- | ---: |\n")
@@ -225,11 +370,14 @@ def write_markdown(report: dict[str, Any], path: Path, overwrite: bool) -> None:
         if not report["items"]:
             handle.write("No differing items found.\n")
         else:
-            handle.write("| Path | Classification | Recommended action |\n")
-            handle.write("| --- | --- | --- |\n")
+            handle.write("| Path | Classification | Resolution | Recommended action |\n")
+            handle.write("| --- | --- | --- | --- |\n")
             for item in report["items"]:
+                resolution = item.get("resolution_id", "")
+                resolution_cell = f"`{resolution}`" if resolution else ""
                 handle.write(
-                    f"| `{item['path']}` | {item['classification']} | {item['recommended_action']} |\n"
+                    f"| `{item['path']}` | {item['classification']} | "
+                    f"{resolution_cell} | {item['recommended_action']} |\n"
                 )
         handle.write("\n## Blocking Rule\n\n")
         handle.write(
@@ -261,24 +409,27 @@ def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--registry", default=str(REGISTRY_PATH))
     parser.add_argument("--out-dir", default=str(REPORT_DIR))
+    parser.add_argument("--resolutions-dir", default=str(RESOLUTION_DIR))
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args(argv[1:])
 
     registry_path = Path(args.registry)
     out_dir = Path(args.out_dir)
+    resolutions_path = Path(args.resolutions_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
     try:
         registry = load_registry(registry_path)
+        resolutions = load_resolutions(resolutions_path)
     except Exception as exc:
-        print(f"FAIL: could not load registry: {exc}", file=sys.stderr)
+        print(f"FAIL: could not load registry or resolutions: {exc}", file=sys.stderr)
         return 2
 
     generated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
     written: list[Path] = []
     try:
         for pair in registry["repo_pairs"]:
-            report = compare_pair(pair, generated_at)
+            report = compare_pair(pair, generated_at, resolutions)
             stem = pair["repo_pair"]
             yaml_path = out_dir / f"{stem}.drift.yaml"
             md_path = out_dir / f"{stem}.md"

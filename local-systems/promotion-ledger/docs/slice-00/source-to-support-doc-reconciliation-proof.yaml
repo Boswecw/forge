@@ -57,4 +57,9 @@ remaining_target_only_docs:
   - neuronforge-local-operator__neuronforge docs/evidence/promotion_runs_demo.md
   - neuronforge-local-operator__neuronforge docs/evidence/promotion_seam_example.md
   - neuronforge-local-operator__neuronforge docs/evidence/promotion_seam_report.json
-next_gate: classify remaining target-only docs as support-only receipts, evidence, path-renamed equivalents, or source-backport candidates
+target_only_doc_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/target-only-doc-resolution-proof.yaml
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-doc-target-only.yaml
+  docs_unknown_target_only_after: 0
+next_gate: resolve remaining non-doc unknown drift or promote/backport missing source artifacts

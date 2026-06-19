@@ -5,14 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
 target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-generated_at: '2026-06-19T08:30:33+00:00'
+generated_at: '2026-06-19T08:47:50+00:00'
 classification_summary:
   same: 1587
   intentional_app_support_adaptation: 0
   missing_from_target: 319
-  target_only_glue: 0
+  target_only_glue: 1
   dangerous_drift: 0
-  unknown: 28
+  unknown: 27
+resolutions_applied: 1
 items:
 - path: .codex
   classification: missing_from_target
@@ -678,12 +679,19 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/service/authorforge-service.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: This is a public app support adapter document for the AuthorForge-facing
+    Cortex HTTP seam. It documents target-side service wiring over cortex_runtime
+    and is not source authority for Cortex extraction logic.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep in the support repo under /docs/service. Backport only
+    if the local Cortex proving repo adds a generic service authority document.
+  resolution_id: slice-00-cortex-authorforge-service-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/cortex/docs/service/authorforge-service.md
 - path: gnat_core/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the

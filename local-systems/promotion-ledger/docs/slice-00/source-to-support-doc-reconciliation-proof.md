@@ -46,6 +46,6 @@ committed local-system source baselines.
 
 ## Next Gate
 
-Classify the eight remaining target-only `/docs` items as support-only receipts,
-evidence, path-renamed equivalents, or source-backport candidates. Do not promote
-them as source authority until that decision is recorded.
+Completed by `docs/slice-00/target-only-doc-resolution-proof.md`. The eight
+remaining target-only `/docs` items are now classified by
+`resolutions/slice-00-doc-target-only.yaml`, leaving zero `/docs` unknowns.

@@ -5,14 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
 target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-generated_at: '2026-06-19T08:30:33+00:00'
+generated_at: '2026-06-19T08:47:50+00:00'
 classification_summary:
   same: 392
-  intentional_app_support_adaptation: 0
+  intentional_app_support_adaptation: 5
   missing_from_target: 173
   target_only_glue: 0
   dangerous_drift: 0
-  unknown: 47
+  unknown: 42
+resolutions_applied: 5
 items:
 - path: .claude/settings.local.json
   classification: unknown
@@ -188,12 +189,21 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This target ADR is retained as support-side history for the promoted
+    PACT truth boundary. Source authority remains in the local proving repo ADR and
+    promotion seam evidence.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as historical support doctrine. Do not back-promote its
+    target mirror path claims as source authority without a fresh proving repo ADR
+    update.
+  resolution_id: slice-00-neuronforge-promotion-adr-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+  - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/adr/ADR-001-promotion-truth-upstream-of-pact.md
 - path: docs/cor-gnat-semantic-handoff.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -203,33 +213,61 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/dogfood-cloud-quota-log.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This is a target support doctrine and schema sketch for future dogfood
+    telemetry. It is explicitly not implemented and does not claim source runtime
+    authority.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support planning documentation until telemetry is implemented
+    and proved in the local system.
+  resolution_id: slice-00-neuronforge-dogfood-quota-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/dogfood-cloud-quota-log.md
 - path: docs/evidence/promotion_runs_demo.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This is target-side operator-readable evidence derived from the promotion
+    seam proof, not a new source authority surface.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support evidence. Regenerate from the proving repo seam
+    when the promotion seam changes.
+  resolution_id: slice-00-neuronforge-promotion-runs-demo
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_runs_demo.md
+  - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/promotion_runs.jsonl
 - path: docs/evidence/promotion_seam_example.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This is target-side explanatory evidence for the promoted seam examples.
+    It summarizes proving repo seam behavior for support operators.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support evidence. Refresh from the proving repo when
+    the seam proof changes.
+  resolution_id: slice-00-neuronforge-promotion-seam-example
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_seam_example.md
+  - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/operator_examples.md
 - path: docs/evidence/promotion_seam_report.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This is target-side machine-readable evidence from the promotion
+    seam verification. It belongs in support docs as a promoted evidence receipt.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support evidence. Regenerate from the local proving
+    repo verification output when the seam changes.
+  resolution_id: slice-00-neuronforge-promotion-seam-report
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_seam_report.json
+  - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/seam_report.json
 - path: docs/forge-command-integration-handoff.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the

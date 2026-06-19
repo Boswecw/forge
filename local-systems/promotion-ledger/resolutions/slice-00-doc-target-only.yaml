@@ -1,0 +1,88 @@
+version: 1
+created_at: "2026-06-19T08:47:30Z"
+scope: "Classify the remaining Slice 00 target-only /docs artifacts before promotion."
+resolutions:
+  - resolution_id: slice-00-cortex-authorforge-service-doc
+    repo_pair: cortex__cortex
+    path: docs/service/authorforge-service.md
+    shape: target_only
+    classification: target_only_glue
+    justification: "This is a public app support adapter document for the AuthorForge-facing Cortex HTTP seam. It documents target-side service wiring over cortex_runtime and is not source authority for Cortex extraction logic."
+    recommended_action: "Keep in the support repo under /docs/service. Backport only if the local Cortex proving repo adds a generic service authority document."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/cortex/docs/service/authorforge-service.md"
+
+  - resolution_id: slice-00-df-closeout-doc
+    repo_pair: dataforge-Local__df-local-foundation
+    path: docs/closeout-initial-governed-implementation.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This is a condensed implementation closeout retained as support documentation evidence. It explicitly says it is not the canonical code mirror."
+    recommended_action: "Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/closeout-initial-governed-implementation.md"
+
+  - resolution_id: slice-00-df-roadmap-doc
+    repo_pair: dataforge-Local__df-local-foundation
+    path: docs/df-local-foundation_extended_roadmap.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This roadmap is a support-side, product-named adaptation of the source roadmap rather than an independent authority claim."
+    recommended_action: "Keep in the support repo with the product-specific filename. Reconcile naming later only if roadmap authority moves upstream."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/df-local-foundation_extended_roadmap.md"
+      - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/docs/dataforge-local_extended_roadmap.md"
+
+  - resolution_id: slice-00-neuronforge-promotion-adr-doc
+    repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This target ADR is retained as support-side history for the promoted PACT truth boundary. Source authority remains in the local proving repo ADR and promotion seam evidence."
+    recommended_action: "Keep as historical support doctrine. Do not back-promote its target mirror path claims as source authority without a fresh proving repo ADR update."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/adr/ADR-2026-04-18-promotion-truth-upstream.md"
+      - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/adr/ADR-001-promotion-truth-upstream-of-pact.md"
+
+  - resolution_id: slice-00-neuronforge-dogfood-quota-doc
+    repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/dogfood-cloud-quota-log.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This is a target support doctrine and schema sketch for future dogfood telemetry. It is explicitly not implemented and does not claim source runtime authority."
+    recommended_action: "Keep as support planning documentation until telemetry is implemented and proved in the local system."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/dogfood-cloud-quota-log.md"
+
+  - resolution_id: slice-00-neuronforge-promotion-runs-demo
+    repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_runs_demo.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This is target-side operator-readable evidence derived from the promotion seam proof, not a new source authority surface."
+    recommended_action: "Keep as support evidence. Regenerate from the proving repo seam when the promotion seam changes."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_runs_demo.md"
+      - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/promotion_runs.jsonl"
+
+  - resolution_id: slice-00-neuronforge-promotion-seam-example
+    repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_seam_example.md
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This is target-side explanatory evidence for the promoted seam examples. It summarizes proving repo seam behavior for support operators."
+    recommended_action: "Keep as support evidence. Refresh from the proving repo when the seam proof changes."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_seam_example.md"
+      - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/operator_examples.md"
+
+  - resolution_id: slice-00-neuronforge-promotion-seam-report
+    repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_seam_report.json
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This is target-side machine-readable evidence from the promotion seam verification. It belongs in support docs as a promoted evidence receipt."
+    recommended_action: "Keep as support evidence. Regenerate from the local proving repo verification output when the seam changes."
+    evidence:
+      - "/home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/evidence/promotion_seam_report.json"
+      - "/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/evidence/promotion_seam/seam_report.json"

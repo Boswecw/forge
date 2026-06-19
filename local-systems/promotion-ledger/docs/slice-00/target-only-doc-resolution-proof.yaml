@@ -1,0 +1,68 @@
+generated_at: "2026-06-19T08:48:18Z"
+scope: "Slice 00 target-only /docs resolution"
+resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-doc-target-only.yaml
+generator_update: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/scripts/generate_drift_inventory.py
+verification:
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+    generated_at: "2026-06-19T08:47:50+00:00"
+  aggregate_check:
+    command: python3 aggregate drift count check
+    result: passed
+drift_result:
+  before:
+    same: 2233
+    intentional_app_support_adaptation: 0
+    missing_from_target: 648
+    target_only_glue: 0
+    dangerous_drift: 0
+    unknown: 191
+    docs_unknown_target_only: 8
+  after:
+    same: 2233
+    intentional_app_support_adaptation: 7
+    missing_from_target: 648
+    target_only_glue: 1
+    dangerous_drift: 0
+    unknown: 183
+    docs_unknown_target_only: 0
+    resolutions_applied: 8
+resolved_docs:
+  - repo_pair: cortex__cortex
+    path: docs/service/authorforge-service.md
+    classification: target_only_glue
+    resolution_id: slice-00-cortex-authorforge-service-doc
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/closeout-initial-governed-implementation.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-df-closeout-doc
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/df-local-foundation_extended_roadmap.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-df-roadmap-doc
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-neuronforge-promotion-adr-doc
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/dogfood-cloud-quota-log.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-neuronforge-dogfood-quota-doc
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_runs_demo.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-neuronforge-promotion-runs-demo
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_seam_example.md
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-neuronforge-promotion-seam-example
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/evidence/promotion_seam_report.json
+    classification: intentional_app_support_adaptation
+    resolution_id: slice-00-neuronforge-promotion-seam-report
+blocking_status:
+  docs_unknown: 0
+  dangerous_drift: 0
+  unresolved_non_doc_unknown: 183
+next_gate: "Resolve remaining non-doc unknown drift or promote/backport missing source artifacts."

@@ -5,14 +5,15 @@ source_branch: master
 target_branch: main
 source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
 target_commit: 6760634671ff88eda50ec3d99dd9e524694be4d9
-generated_at: '2026-06-19T08:30:33+00:00'
+generated_at: '2026-06-19T08:47:50+00:00'
 classification_summary:
   same: 8
-  intentional_app_support_adaptation: 0
+  intentional_app_support_adaptation: 2
   missing_from_target: 135
   target_only_glue: 0
   dangerous_drift: 0
-  unknown: 82
+  unknown: 80
+resolutions_applied: 2
 items:
 - path: .gitignore
   classification: unknown
@@ -963,12 +964,18 @@ items:
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: docs/closeout-initial-governed-implementation.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This is a condensed implementation closeout retained as support documentation
+    evidence. It explicitly says it is not the canonical code mirror.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: 6760634671ff88eda50ec3d99dd9e524694be4d9
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as a support-side historical receipt. Do not promote upstream
+    unless the proving repo opens a matching closeout evidence lane.
+  resolution_id: slice-00-df-closeout-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/closeout-initial-governed-implementation.md
 - path: docs/dataforge-local_architecture_spec.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -986,12 +993,19 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/df-local-foundation_extended_roadmap.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: intentional_app_support_adaptation
+  justification: This roadmap is a support-side, product-named adaptation of the source
+    roadmap rather than an independent authority claim.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: 6760634671ff88eda50ec3d99dd9e524694be4d9
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep in the support repo with the product-specific filename.
+    Reconcile naming later only if roadmap authority moves upstream.
+  resolution_id: slice-00-df-roadmap-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-target-only.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/df-local-foundation_extended_roadmap.md
+  - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/docs/dataforge-local_extended_roadmap.md
 - path: docs/evaluation-spine-phase-08-dataforge-local-lineage.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the

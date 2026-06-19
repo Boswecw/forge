@@ -1,6 +1,6 @@
 # Drift Report: forge-local-systems-runtime__forge-local-runtime-master-reference
 
-Generated: `2026-06-19T08:30:33+00:00`
+Generated: `2026-06-19T08:47:50+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/forge-local-systems-runtime`
 Source branch: `main`
@@ -9,6 +9,8 @@ Source commit: `df31e1a98d4789a488e800483a8442643e4036aa`
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/forge-local-runtime-master-reference`
 Target branch: `main`
 Target commit: `c68ae960eb0b609718c93a626f50ccd0a1226c93`
+
+Resolutions applied: `0`
 
 ## Classification Summary
 
@@ -23,15 +25,15 @@ Target commit: `c68ae960eb0b609718c93a626f50ccd0a1226c93`
 
 ## Items
 
-| Path | Classification | Recommended action |
-| --- | --- | --- |
-| `doc/FLSSYSTEM.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/FOLSYSTEM.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/SYSTEM.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/90-appendices.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/BUILD.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| Path | Classification | Resolution | Recommended action |
+| --- | --- | --- | --- |
+| `doc/FLSSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/FOLSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/SYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/90-appendices.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/validate_snapshots.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 
 ## Blocking Rule
 
