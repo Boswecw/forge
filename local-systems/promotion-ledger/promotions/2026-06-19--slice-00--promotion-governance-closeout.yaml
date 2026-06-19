@@ -1,0 +1,67 @@
+promotion_id: "2026-06-19--slice-00--promotion-governance-closeout"
+slice_name: "Slice 00 - Promotion Governance Closeout"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems"
+source_branch: "main"
+source_commit: "dde7d82cf97998e6d3c2867cba5948b4f451bcc3"
+target_repo: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger"
+target_branch: "n/a"
+target_commit: "n/a"
+promoted_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/promotion-ledger-governance.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/documentation-governance.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-source-local-holds.yaml"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/schema/drift-report.schema.json"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/scripts/generate_drift_inventory.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/templates/drift-report.template.md"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/templates/drift-report.template.yaml"
+  - "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports/"
+excluded_files:
+  - "Runtime behavior, service logic, schemas, UI behavior, and AuthorForge public surfaces remain unchanged by Slice 00 closeout."
+promotion_manifest:
+  - "Records the completed promotion-ledger governance bootstrap."
+  - "Adds source_local_hold as the reviewed source-only hold classification."
+  - "Moves all current source-only drift out of unresolved missing_from_target and into explicit source-local hold resolution."
+  - "Regenerates drift reports with zero missing_from_target, zero dangerous_drift, and zero unknown."
+  - "Keeps held source-local artifacts out of app support until a named support promotion slice opens an explicit target role."
+proof_commands:
+  - "python3 -m py_compile local-systems/promotion-ledger/scripts/generate_drift_inventory.py"
+  - "python3 YAML and JSON parse check for local-systems/promotion-ledger"
+  - "python3 drift aggregate count check for local-systems/promotion-ledger/drift-reports"
+  - "git diff --check -- local-systems/promotion-ledger"
+proof_results:
+  status: "passed"
+  generator_compile: "passed"
+  yaml_json_parse: "passed"
+  drift_inventory:
+    command: "python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+    result: "passed"
+    generated_at: "2026-06-19T09:36:35+00:00"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 651
+    missing_from_target: 0
+    target_only_glue: 130
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 842
+  source_local_hold_resolution:
+    result: "complete"
+    proof: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml"
+    resolution_file: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-source-local-holds.yaml"
+    exact_source_only_paths: 651
+  whitespace_check: "passed"
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00"
+runtime_status_proof: "not applicable; governance-only closeout, no runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI drafted the Slice 00 closeout. Charlie Boswell must review and accept or reject."
+created_at: "2026-06-19T09:43:21Z"
+rollback_source_commit: "dde7d82cf97998e6d3c2867cba5948b4f451bcc3"
+rollback_target_commit: "n/a"
+rollback_command: "Revert the closeout commit if Charlie rejects the Slice 00 closeout receipt."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00"
+supersedes_promotion_id: "2026-06-19--slice-00--promotion-governance-bootstrap"
