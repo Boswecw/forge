@@ -1,0 +1,56 @@
+version: 1
+created_at: "2026-06-19T17:18:12Z"
+scope: "Classify FA Local GNAT dispatch runtime promoted into app support."
+evidence:
+  support_commit: 457c2838f9df2f631cb8c93906b6e139a53e71be
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  support_runtime:
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/schemas/gnat-dispatch-envelope.schema.json
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/src/integrations/cortex/mod.rs
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/src/domain/shared/schema.rs
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/src/bin/fa_local_run.rs
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/tests/gnat_dispatch.rs
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts_loading.rs
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/schemas/gnat-dispatch-envelope.schema.json
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/cortex/mod.rs
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/domain/shared/schema.rs
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/bin/fa_local_run.rs
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs
+    - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/contracts_loading.rs
+  proof_commands:
+    source_gnat_dispatch: "cargo test --test gnat_dispatch -- --nocapture"
+    support_gnat_dispatch: "cargo test --test gnat_dispatch -- --nocapture"
+    support_contract_loading: "cargo test --test contracts_loading -- --nocapture"
+    support_full_cargo: "cargo test"
+    support_format: "cargo fmt --check"
+  proof_results:
+    source_gnat_dispatch: "12 passed, 0 failed"
+    support_gnat_dispatch: "12 passed, 0 failed"
+    support_contract_loading: "13 passed, 0 failed"
+    support_full_cargo: "147 passed, 0 failed"
+    support_format: "passed"
+    source_format_note: "Source cargo fmt --check reports pre-existing formatting diffs in source files; support-side promoted files were rustfmt-normalized."
+resolutions:
+  - resolution_id: slice-01-fa-local-gnat-dispatch-cli-adapter
+    repo_pair: fa-local-operator__fa-local
+    path: src/bin/fa_local_run.rs
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The support CLI preserves the promoted FA Local diagnostic/status boundary but binds validation directly to the support repo's existing ExecutionRequest::load_contract_value API instead of the source-only IntakeService::validate_request_bytes helper. The adaptation keeps the CLI compileable without expanding GNAT execution, queue, watcher, retry, scheduler, durable record, or semantic-label behavior."
+    recommended_action: "Keep as support-native CLI adaptation for the promoted GNAT dispatch support surface. Reconcile only if the support repo later promotes the source IntakeService helper through its own bounded slice."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/fa-local/src/bin/fa_local_run.rs
+      - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/bin/fa_local_run.rs
+      - /home/charlie/Forge/apps/public-app-local-support/fa-local/src/domain/execution/mod.rs
+
+  - resolution_id: slice-01-fa-local-gnat-dispatch-rustfmt-test
+    repo_pair: fa-local-operator__fa-local
+    path: tests/gnat_dispatch.rs
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "The support GNAT dispatch test carries the same assertions as the source proof test but was rustfmt-normalized in support so cargo fmt --check passes there. The source repo currently has pre-existing rustfmt diffs outside this support promotion."
+    recommended_action: "Keep as support-native proof for the promoted GNAT dispatch validator. Do not backport formatting-only support changes unless the source repo runs a separate formatting cleanup."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/fa-local/tests/gnat_dispatch.rs
+      - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs

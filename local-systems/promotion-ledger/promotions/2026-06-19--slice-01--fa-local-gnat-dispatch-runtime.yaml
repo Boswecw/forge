@@ -1,0 +1,98 @@
+promotion_id: "2026-06-19--slice-01--fa-local-gnat-dispatch-runtime"
+slice_name: "Slice 01 - FA Local GNAT Dispatch Runtime Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator"
+source_branch: "master"
+source_commit: "5f6a7dad737f7366403a09711bc3d57a48a725cd"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/fa-local"
+target_branch: "master"
+target_commit: "457c2838f9df2f631cb8c93906b6e139a53e71be"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/Cargo.toml"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/docs/contracts/gnat-dispatch-target-role.md"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/schemas/gnat-dispatch-envelope.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/src/domain/shared/schema.rs"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/src/integrations/cortex/mod.rs"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/src/bin/fa_local_run.rs"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts_loading.rs"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/gnat_dispatch.rs"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/ci_gate.sh"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/reports/"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/doc/system/"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/app/intake_service.rs"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/df_local/mod.rs"
+promotion_manifest:
+  - "Promoted the FA Local GNAT dispatch schema into app support."
+  - "Promoted the Cortex GNAT dispatch validator/types into the support Cortex integration boundary."
+  - "Wired SchemaName::GnatDispatchEnvelope and support GNAT dispatch contract fixtures."
+  - "Added the FA Local diagnostic/status CLI binary while adapting validation to the support repo's existing ExecutionRequest loader."
+  - "Promoted GNAT dispatch proof tests and typed fixture-loading coverage."
+  - "Did not promote queue, watcher, retry, scheduler, durable GNAT record ownership, semantic labeling, or execution-service behavior changes."
+proof_commands:
+  - "cargo test --test gnat_dispatch -- --nocapture"
+  - "cargo test --test contracts_loading -- --nocapture"
+  - "cargo test"
+  - "cargo fmt --check"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed_with_source_format_note"
+  source_gnat_dispatch:
+    command: "cargo test --test gnat_dispatch -- --nocapture"
+    result: "12 passed, 0 failed"
+  support_gnat_dispatch:
+    command: "cargo test --test gnat_dispatch -- --nocapture"
+    result: "12 passed, 0 failed"
+  support_contract_loading:
+    command: "cargo test --test contracts_loading -- --nocapture"
+    result: "13 passed, 0 failed"
+  support_full_cargo:
+    command: "cargo test"
+    result: "147 passed, 0 failed"
+  support_format:
+    command: "cargo fmt --check"
+    result: "passed"
+  source_format_note:
+    command: "cargo fmt --check"
+    result: "reports pre-existing formatting diffs in fa-local-operator; source tests still passed and support promoted files were rustfmt-normalized"
+  fa_pair_drift:
+    same: 140
+    intentional_app_support_adaptation: 12
+    source_local_hold: 15
+    missing_from_target: 0
+    target_only_glue: 15
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 42
+  drift_totals:
+    same: 2243
+    intentional_app_support_adaptation: 82
+    source_local_hold: 634
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+  support_promotion_queue:
+    source_local_hold: 634
+    candidate_after_target_role: 283
+    default_hold: 351
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Support validates Cortex-originated GnatDispatchEnvelope.v1, enforces FA Local execution-routing ownership, clamps concurrency to admitted local capability, permits explicit serial fallback only when contract-authorized, and denies unsupported worker types, unsupported contract versions, malformed shard plans, and Cortex-owned execution routing."
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, write path, public surface, or canonical content behavior changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded FA Local GNAT dispatch runtime/schema support surface under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T17:20:11Z"
+rollback_source_commit: "5f6a7dad737f7366403a09711bc3d57a48a725cd"
+rollback_target_commit: "2f3698deddf0e080286dd28b6cdf51dc7cd3db40"
+rollback_command: "Revert the FA Local support commit 457c2838f9df2f631cb8c93906b6e139a53e71be, remove the FA Local GNAT dispatch runtime resolution and promotion receipts, restore the target-role resolution text if needed, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--fa-local-gnat-dispatch-target-role"

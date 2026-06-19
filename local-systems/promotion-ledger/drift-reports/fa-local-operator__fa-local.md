@@ -1,6 +1,6 @@
 # Drift Report: fa-local-operator__fa-local
 
-Generated: `2026-06-19T17:07:18+00:00`
+Generated: `2026-06-19T17:15:46+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/fa-local-operator`
 Source branch: `master`
@@ -8,17 +8,17 @@ Source commit: `5f6a7dad737f7366403a09711bc3d57a48a725cd`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/fa-local`
 Target branch: `master`
-Target commit: `2f3698deddf0e080286dd28b6cdf51dc7cd3db40`
+Target commit: `457c2838f9df2f631cb8c93906b6e139a53e71be`
 
-Resolutions applied: `51`
+Resolutions applied: `42`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 131 |
-| intentional_app_support_adaptation | 14 |
-| source_local_hold | 22 |
+| same | 140 |
+| intentional_app_support_adaptation | 12 |
+| source_local_hold | 15 |
 | missing_from_target | 0 |
 | target_only_glue | 15 |
 | dangerous_drift | 0 |
@@ -30,7 +30,6 @@ Resolutions applied: `51`
 | --- | --- | --- | --- |
 | `.gitignore` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
 | `CLAUDE.md` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
-| `Cargo.toml` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
 | `README.md` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
 | `SYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `ci_gate.sh` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -62,23 +61,15 @@ Resolutions applied: `51`
 | `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
-| `docs/contracts/gnat-dispatch-target-role.md` | target_only_glue | `slice-01-fa-local-gnat-dispatch-target-role-doc` | Keep as support target-role glue. Promote GNAT dispatch runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
+| `docs/contracts/gnat-dispatch-target-role.md` | target_only_glue | `slice-01-fa-local-gnat-dispatch-target-role-doc` | Keep as support target-role glue for the promoted bounded GNAT dispatch support role. Do not expand it into queue, watcher, retry, scheduler, durable record, or semantic-label ownership without a later named slice. |
 | `reports/contract_core_gate_20260404_102436.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `reports/contract_core_gate_20260619_053018.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `reports/contract_core_gate_20260619_110109.json` | source_local_hold | `slice-01-fa-local-gnat-dispatch-proof-report` | Keep source-local as proof evidence. Do not copy into app support except as a named evidence receipt. |
-| `schemas/gnat-dispatch-envelope.schema.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `src/app/intake_service.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
-| `src/bin/fa_local_run.rs` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `src/domain/shared/schema.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
+| `src/bin/fa_local_run.rs` | intentional_app_support_adaptation | `slice-01-fa-local-gnat-dispatch-cli-adapter` | Keep as support-native CLI adaptation for the promoted GNAT dispatch support surface. Reconcile only if the support repo later promotes the source IntakeService helper through its own bounded slice. |
 | `src/errors/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
-| `src/integrations/cortex/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
 | `src/integrations/df_local/mod.rs` | intentional_app_support_adaptation | `slice-00-fa-local-runtime-modified` | Keep as support runtime adaptation. Reconcile source authority only through a bounded Rust promotion slice. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts_loading.rs` | intentional_app_support_adaptation | `slice-00-fa-local-test-modified` | Keep paired with the FA Local support runtime adaptation. |
-| `tests/gnat_dispatch.rs` | source_local_hold | `slice-00-fa-local-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/gnat_dispatch.rs` | intentional_app_support_adaptation | `slice-01-fa-local-gnat-dispatch-rustfmt-test` | Keep as support-native proof for the promoted GNAT dispatch validator. Do not backport formatting-only support changes unless the source repo runs a separate formatting cleanup. |
 
 ## Blocking Rule
 

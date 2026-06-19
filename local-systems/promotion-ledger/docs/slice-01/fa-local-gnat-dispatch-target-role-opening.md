@@ -6,6 +6,10 @@ This slice opens an FA Local support target role for future GNAT dispatch
 promotion. It does not promote runtime code, copy schemas, add queues, or change
 execution behavior.
 
+Status update: this target-role opening is now implemented by
+`2026-06-19--slice-01--fa-local-gnat-dispatch-runtime`. The runtime/schema
+promotion receipt is `fa-local-gnat-dispatch-runtime-promotion.md`.
+
 ## Decision
 
 | Field | Value |

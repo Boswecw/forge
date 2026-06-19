@@ -1,9 +1,9 @@
-generated_at: '2026-06-19T17:07:28+00:00'
+generated_at: '2026-06-19T17:16:07+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 642
-  candidate_after_target_role: 291
+  source_local_hold: 634
+  candidate_after_target_role: 283
   default_hold: 351
   missing_from_target: 0
   unknown: 0
@@ -13,7 +13,7 @@ promotion_rule: A source-local hold may enter app support only after a named pro
   post-promotion drift report.
 category_summary:
   source_contract_schema_migration:
-    count: 54
+    count: 52
     posture: candidate_after_contract_compatibility
   source_docs_or_doc_mirror:
     count: 103
@@ -25,10 +25,10 @@ category_summary:
     count: 183
     posture: default_hold
   source_proof_tests:
-    count: 117
+    count: 112
     posture: pair_with_promoted_runtime_or_contract
   source_runtime_or_capability:
-    count: 96
+    count: 95
     posture: candidate_after_target_role
   source_scaffold_config:
     count: 7
@@ -37,9 +37,9 @@ category_summary:
     count: 24
     posture: candidate_when_tied_to_support_proof_command
 candidate_categories:
-  source_contract_schema_migration: 54
-  source_proof_tests: 117
-  source_runtime_or_capability: 96
+  source_contract_schema_migration: 52
+  source_proof_tests: 112
+  source_runtime_or_capability: 95
   source_scripts_ci: 24
 default_hold_categories:
   source_docs_or_doc_mirror: 103
@@ -48,8 +48,8 @@ default_hold_categories:
   source_scaffold_config: 7
 repo_breakdown:
   cortex__cortex: 319
-  dataforge-Local__df-local-foundation: 128
-  fa-local-operator__fa-local: 22
+  dataforge-Local__df-local-foundation: 127
+  fa-local-operator__fa-local: 15
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
   neuronforge-local-operator__neuronforge: 172
 repo_category_breakdown:
@@ -63,18 +63,15 @@ repo_category_breakdown:
     source_scaffold_config: 1
     source_scripts_ci: 6
   dataforge-Local__df-local-foundation:
-    source_contract_schema_migration: 31
+    source_contract_schema_migration: 30
     source_docs_or_doc_mirror: 31
     source_evidence_reports_prompts: 32
     source_proof_tests: 13
     source_runtime_or_capability: 14
     source_scripts_ci: 7
   fa-local-operator__fa-local:
-    source_contract_schema_migration: 1
     source_docs_or_doc_mirror: 11
     source_evidence_reports_prompts: 3
-    source_proof_tests: 5
-    source_runtime_or_capability: 1
     source_scripts_ci: 1
   forge-local-systems-runtime__forge-local-runtime-master-reference:
     source_docs_or_doc_mirror: 1
@@ -168,8 +165,6 @@ samples:
     - scripts/reset_db.sh
     - scripts/run_local.sh
   fa-local-operator__fa-local:
-    source_contract_schema_migration:
-    - schemas/gnat-dispatch-envelope.schema.json
     source_docs_or_doc_mirror:
     - doc/FLOSYSTEM.md
     - doc/system/00_overview/01-overview-charter.md
@@ -180,14 +175,6 @@ samples:
     - reports/contract_core_gate_20260404_102436.json
     - reports/contract_core_gate_20260619_053018.json
     - reports/contract_core_gate_20260619_110109.json
-    source_proof_tests:
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
-    - tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json
-    - tests/gnat_dispatch.rs
-    source_runtime_or_capability:
-    - src/bin/fa_local_run.rs
     source_scripts_ci:
     - ci_gate.sh
   forge-local-systems-runtime__forge-local-runtime-master-reference:

@@ -1,0 +1,91 @@
+generated_at: "2026-06-19T17:20:11Z"
+scope: "Slice 01 FA Local GNAT dispatch runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/fa-local
+support_branch: master
+support_commit: 457c2838f9df2f631cb8c93906b6e139a53e71be
+source_repo: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator
+source_branch: master
+source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  schema_promoted: true
+  execution_service_behavior_promoted: false
+  durable_storage_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-fa-local-gnat-dispatch-runtime.yaml
+runtime_boundary:
+  schema: GnatDispatchEnvelope.v1
+  operation: syntax_extract
+  fa_local_owns_execution_routing: true
+  cortex_validates_receipts: true
+  retry_policy: infrastructure_only
+  invariants:
+    - "Requested concurrency is clamped by FA Local capability."
+    - "Serial fallback is explicit and contract-authorized."
+    - "Unsupported worker types and contract versions are denied."
+    - "Shard-count mismatches and Cortex-owned execution routing are denied."
+  non_goals:
+    - "No queue, watcher, retry scheduler, or durable GNAT record ownership promoted."
+    - "No semantic labels, candidate meaning, or canonical content behavior promoted."
+    - "No execution service behavior changed."
+source_authority:
+  schema: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/schemas/gnat-dispatch-envelope.schema.json
+  validator: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/cortex/mod.rs
+  tests: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs
+support_artifacts:
+  schema: /home/charlie/Forge/apps/public-app-local-support/fa-local/schemas/gnat-dispatch-envelope.schema.json
+  validator: /home/charlie/Forge/apps/public-app-local-support/fa-local/src/integrations/cortex/mod.rs
+  schema_registry: /home/charlie/Forge/apps/public-app-local-support/fa-local/src/domain/shared/schema.rs
+  cli: /home/charlie/Forge/apps/public-app-local-support/fa-local/src/bin/fa_local_run.rs
+  tests:
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/tests/gnat_dispatch.rs
+    - /home/charlie/Forge/apps/public-app-local-support/fa-local/tests/contracts_loading.rs
+verification:
+  source_gnat_dispatch:
+    command: cargo test --test gnat_dispatch -- --nocapture
+    result: passed
+    output: "12 passed, 0 failed"
+  support_gnat_dispatch:
+    command: cargo test --test gnat_dispatch -- --nocapture
+    result: passed
+    output: "12 passed, 0 failed"
+  support_contract_loading:
+    command: cargo test --test contracts_loading -- --nocapture
+    result: passed
+    output: "13 passed, 0 failed"
+  support_full_cargo:
+    command: cargo test
+    result: passed
+    output: "147 passed, 0 failed"
+  support_format:
+    command: cargo fmt --check
+    result: passed
+  source_format_note:
+    result: informational
+    output: "Source cargo fmt --check reports pre-existing formatting diffs in fa-local-operator; source GNAT tests passed and support files are formatted."
+drift_result_after_resolution:
+  fa_local_pair:
+    same: 140
+    intentional_app_support_adaptation: 12
+    source_local_hold: 15
+    missing_from_target: 0
+    target_only_glue: 15
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 42
+  all_pairs:
+    same: 2243
+    intentional_app_support_adaptation: 82
+    source_local_hold: 634
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+queue_after_resolution:
+  source_local_hold: 634
+  candidate_after_target_role: 283
+  default_hold: 351
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Select the next source-local candidate by repo pair and type; remaining FA Local holds are source-local docs, CI, report, and mirror artifacts unless a later slice names them."
