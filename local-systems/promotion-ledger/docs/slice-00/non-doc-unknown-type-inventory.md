@@ -1,6 +1,6 @@
 # Slice 00 Non-Doc Unknown Type Inventory
 
-Generated: `2026-06-19T08:58:00Z`
+Generated: `2026-06-19T08:53:30Z`
 
 After source-backed docs and target-only `/docs` receipts were resolved, the
 ledger has 183 remaining `unknown` items. None are `/docs` unknowns.
@@ -44,6 +44,7 @@ ledger has 183 remaining `unknown` items. None are `/docs` unknowns.
 
 ## Next Gate
 
-Resolve `/doc/system` mirror drift first because it is the canonical code mirror,
-not general documentation. Then handle runtime and tests together, followed by
-contracts, promotion evidence, scripts, and repo scaffold.
+`/doc/system` mirror drift is resolved in
+`docs/slice-00/doc-system-mirror-resolution-proof.md`, leaving 104 unknowns.
+Handle runtime and tests together next, followed by contracts, promotion
+evidence, scripts, and repo scaffold.

@@ -1,0 +1,81 @@
+generated_at: "2026-06-19T08:56:08Z"
+scope: "Slice 00 /doc/system and root SYSTEM.md mirror resolution"
+resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-doc-system-mirror.yaml
+generator_update: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/scripts/generate_drift_inventory.py
+verification:
+  support_mirror_builds:
+    cortex:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/CRTSYSTEM.md assembled: 813 lines"
+    df-local-foundation:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/DFLSYSTEM.md assembled: 386 lines"
+    fa-local:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/FLLSYSTEM.md assembled: 661 lines"
+    forge-local-runtime-master-reference:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/FOLSYSTEM.md assembled: 341 lines"
+    neuronforge:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/NRNSYSTEM.md assembled: 3586 lines"
+  source_mirror_builds:
+    cortex:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "SYSTEM.md assembled: 652 lines"
+    dataforge-Local:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "BUILD_OK designation=DLO output=doc/DLOSYSTEM.md parts=20 lines=966"
+    fa-local-operator:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "BUILD_OK designation=FLO output=doc/FLOSYSTEM.md parts=10 lines=852"
+    forge-local-systems-runtime:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "doc/FLSSYSTEM.md assembled: 341 lines"
+    neuronforge-local-operator:
+      command: bash doc/system/BUILD.sh
+      result: passed
+      output: "NLOSYSTEM.md assembled: 3556 lines"
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+    generated_at: "2026-06-19T08:55:43+00:00"
+drift_result:
+  before:
+    same: 2233
+    intentional_app_support_adaptation: 7
+    missing_from_target: 648
+    target_only_glue: 1
+    dangerous_drift: 0
+    unknown: 183
+    doc_system_unknown: 79
+  after:
+    same: 2233
+    intentional_app_support_adaptation: 27
+    missing_from_target: 648
+    target_only_glue: 60
+    dangerous_drift: 0
+    unknown: 104
+    doc_system_unknown: 0
+    resolutions_applied: 87
+resolved_doc_system:
+  modified_in_both: 20
+  target_only: 59
+classification_policy:
+  modified_in_both: intentional_app_support_adaptation
+  target_only: target_only_glue
+blocking_status:
+  docs_unknown: 0
+  doc_system_unknown: 0
+  dangerous_drift: 0
+  unresolved_unknown: 104
+next_gate: "Resolve runtime plus tests, then contracts, promotion evidence, scripts, and repo scaffold."

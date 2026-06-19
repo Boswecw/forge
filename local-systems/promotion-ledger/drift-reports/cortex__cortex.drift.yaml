@@ -5,15 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
 target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-generated_at: '2026-06-19T08:47:50+00:00'
+generated_at: '2026-06-19T08:55:43+00:00'
 classification_summary:
   same: 1587
-  intentional_app_support_adaptation: 0
+  intentional_app_support_adaptation: 6
   missing_from_target: 319
-  target_only_glue: 1
+  target_only_glue: 10
   dangerous_drift: 0
-  unknown: 27
-resolutions_applied: 1
+  unknown: 12
+resolutions_applied: 16
 items:
 - path: .codex
   classification: missing_from_target
@@ -64,13 +64,16 @@ items:
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: SYSTEM.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: cortex_runtime/gnats/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -296,108 +299,159 @@ items:
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/CRTSYSTEM.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/SYSTEM.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/cxSYSTEM.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/00-overview.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/01-architecture.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/04-validation-and-delivery.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/10-scope.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/20-structure.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/30-governance.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/40-change-control.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/90-appendices.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/BUILD.sh
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/_index.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support Cortex mirrors build cleanly. These files
+    differ because each repo mirrors its own code and support service surface.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    runtime or service changes and compare before promotion.
+  resolution_id: slice-00-cortex-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/validate_snapshots.sh
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side Cortex mirror files document the app-support code
+    mirror and were verified by the support mirror build.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same mirror designation and structure.
+  resolution_id: slice-00-cortex-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: docs/Worm.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the

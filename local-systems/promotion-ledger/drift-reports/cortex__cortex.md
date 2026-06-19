@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T08:47:50+00:00`
+Generated: `2026-06-19T08:55:43+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
 Target commit: `af2be69626dd26aec171dc2ea730bb4148373543`
 
-Resolutions applied: `1`
+Resolutions applied: `16`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 1587 |
-| intentional_app_support_adaptation | 0 |
+| intentional_app_support_adaptation | 6 |
 | missing_from_target | 319 |
-| target_only_glue | 1 |
+| target_only_glue | 10 |
 | dangerous_drift | 0 |
-| unknown | 27 |
+| unknown | 12 |
 
 ## Items
 
@@ -33,7 +33,7 @@ Resolutions applied: `1`
 | `DECISIONS/0018-gnat-bounded-parallel-worker-authorization.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `DECISIONS/0019-fa-local-owns-gnat-execution-routing.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `Makefile` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `SYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
 | `cortex_runtime/gnats/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/gnats/fa_local_client.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/gnats/models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -62,20 +62,20 @@ Resolutions applied: `1`
 | `cortex_runtime/health_cli.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/service_status.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `cortex_runtime/source_lanes.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/CRTSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/SYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/cxSYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/00-overview.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/01-architecture.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/04-validation-and-delivery.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/10-scope.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/20-structure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/30-governance.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/40-change-control.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/90-appendices.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/CRTSYSTEM.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
+| `doc/cxSYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
+| `doc/system/00-overview.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/01-architecture.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/04-validation-and-delivery.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
+| `doc/system/10-scope.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/20-structure.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/30-governance.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/40-change-control.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/90-appendices.md` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
+| `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
+| `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
+| `doc/system/validate_snapshots.sh` | target_only_glue | `slice-00-cortex-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure. |
 | `docs/Worm.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/architecture/gnats-boundary-matrix.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/benchmarks/gnat-docx-lane-proof.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |

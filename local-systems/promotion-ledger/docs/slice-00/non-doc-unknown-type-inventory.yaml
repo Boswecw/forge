@@ -1,4 +1,4 @@
-generated_at: "2026-06-19T08:58:00Z"
+generated_at: "2026-06-19T08:53:30Z"
 scope: "Slice 00 remaining non-doc unknown drift type inventory"
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 method: "Read generated drift reports, select classification=unknown, then derive drift shape by checking source/target file presence and sha256 digest."
@@ -103,4 +103,8 @@ blocking_status:
   docs_unknown: 0
   non_doc_unknown: 183
   dangerous_drift: 0
-next_gate: "Resolve doc/system mirror drift first, then runtime plus tests, then contracts, promotion evidence, scripts, and repo scaffold."
+doc_system_mirror_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/doc-system-mirror-resolution-proof.yaml
+  unknown_after: 104
+next_gate: "Resolve runtime plus tests, then contracts, promotion evidence, scripts, and repo scaffold."

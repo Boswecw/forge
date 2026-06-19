@@ -1,0 +1,175 @@
+version: 1
+created_at: "2026-06-19T08:54:49Z"
+scope: "Classify Slice 00 /doc/system and root SYSTEM.md mirror drift after source and support mirror builds passed."
+evidence:
+  support_builds:
+    cortex: "doc/CRTSYSTEM.md assembled: 813 lines"
+    df-local-foundation: "doc/DFLSYSTEM.md assembled: 386 lines"
+    fa-local: "doc/FLLSYSTEM.md assembled: 661 lines"
+    forge-local-runtime-master-reference: "doc/FOLSYSTEM.md assembled: 341 lines"
+    neuronforge: "doc/NRNSYSTEM.md assembled: 3586 lines"
+  source_builds:
+    cortex: "SYSTEM.md assembled: 652 lines"
+    dataforge-Local: "BUILD_OK designation=DLO output=doc/DLOSYSTEM.md parts=20 lines=966"
+    fa-local-operator: "BUILD_OK designation=FLO output=doc/FLOSYSTEM.md parts=10 lines=852"
+    forge-local-systems-runtime: "doc/FLSSYSTEM.md assembled: 341 lines"
+    neuronforge-local-operator: "NLOSYSTEM.md assembled: 3556 lines"
+resolutions:
+  - resolution_id: slice-00-cortex-doc-system-modified
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Both source and support Cortex mirrors build cleanly. These files differ because each repo mirrors its own code and support service surface."
+    recommended_action: "Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion."
+    paths:
+      - SYSTEM.md
+      - doc/SYSTEM.md
+      - doc/cxSYSTEM.md
+      - doc/system/04-validation-and-delivery.md
+      - doc/system/BUILD.sh
+      - doc/system/_index.md
+
+  - resolution_id: slice-00-cortex-doc-system-target-only
+    repo_pair: cortex__cortex
+    shape: target_only
+    classification: target_only_glue
+    justification: "These support-side Cortex mirror files document the app-support code mirror and were verified by the support mirror build."
+    recommended_action: "Keep as target support mirror glue. Backport only if the proving repo adopts the same mirror designation and structure."
+    paths:
+      - doc/CRTSYSTEM.md
+      - doc/system/00-overview.md
+      - doc/system/01-architecture.md
+      - doc/system/10-scope.md
+      - doc/system/20-structure.md
+      - doc/system/30-governance.md
+      - doc/system/40-change-control.md
+      - doc/system/90-appendices.md
+      - doc/system/validate_snapshots.sh
+
+  - resolution_id: slice-00-dataforge-doc-system-modified
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Both source and support DataForge mirrors build cleanly. The differing mirror build files reflect repo-local mirror assembly."
+    recommended_action: "Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes."
+    paths:
+      - doc/system/BUILD.sh
+      - doc/system/_index.md
+      - doc/system/validate_snapshots.sh
+
+  - resolution_id: slice-00-dataforge-doc-system-target-only
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: target_only
+    classification: target_only_glue
+    justification: "These support-side DataForge mirror files document the app-support code mirror and were verified by the support mirror build."
+    recommended_action: "Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure."
+    paths:
+      - SYSTEM.md
+      - doc/DFLSYSTEM.md
+      - doc/SYSTEM.md
+      - doc/system/00-overview.md
+      - doc/system/01-architecture.md
+      - doc/system/01-overview-philosophy.md
+      - doc/system/02-architecture.md
+      - doc/system/03-tech-stack.md
+      - doc/system/04-project-structure.md
+      - doc/system/05-configuration.md
+      - doc/system/06-design-system.md
+      - doc/system/07-frontend.md
+      - doc/system/08-api-layer.md
+      - doc/system/09-backend.md
+      - doc/system/10-ecosystem-integration.md
+      - doc/system/10-scope.md
+      - doc/system/11-database-schema.md
+      - doc/system/12-ai-integration.md
+      - doc/system/13-error-handling.md
+      - doc/system/14-testing-infrastructure.md
+      - doc/system/15-handover-migration-notes.md
+      - doc/system/20-structure.md
+      - doc/system/30-governance.md
+      - doc/system/40-change-control.md
+      - doc/system/90-appendices.md
+
+  - resolution_id: slice-00-fa-local-doc-system-modified
+    repo_pair: fa-local-operator__fa-local
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Both source and support FA Local mirrors build cleanly. The differing mirror files reflect repo-local mirror assembly and designation."
+    recommended_action: "Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes."
+    paths:
+      - doc/faSYSTEM.md
+      - doc/system/BUILD.sh
+      - doc/system/_index.md
+      - doc/system/validate_snapshots.sh
+
+  - resolution_id: slice-00-fa-local-doc-system-target-only
+    repo_pair: fa-local-operator__fa-local
+    shape: target_only
+    classification: target_only_glue
+    justification: "These support-side FA Local mirror files document the app-support code mirror and were verified by the support mirror build."
+    recommended_action: "Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure."
+    paths:
+      - SYSTEM.md
+      - doc/FLLSYSTEM.md
+      - doc/SYSTEM.md
+      - doc/system/00-overview.md
+      - doc/system/01-architecture.md
+      - doc/system/01-overview-charter.md
+      - doc/system/02-boundaries-and-doctrine.md
+      - doc/system/03-contract-surface.md
+      - doc/system/04-validation-and-delivery.md
+      - doc/system/10-scope.md
+      - doc/system/20-structure.md
+      - doc/system/30-governance.md
+      - doc/system/40-change-control.md
+      - doc/system/90-appendices.md
+
+  - resolution_id: slice-00-runtime-reference-doc-system-modified
+    repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Both source and support runtime-reference mirrors build cleanly. The differing mirror files reflect source designation versus app-support reference designation."
+    recommended_action: "Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes."
+    paths:
+      - doc/SYSTEM.md
+      - doc/system/90-appendices.md
+      - doc/system/BUILD.sh
+      - doc/system/_index.md
+      - doc/system/validate_snapshots.sh
+
+  - resolution_id: slice-00-runtime-reference-doc-system-target-only
+    repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+    shape: target_only
+    classification: target_only_glue
+    justification: "This support-side runtime-reference aggregate mirror is generated for the app-support target and was verified by the support mirror build."
+    recommended_action: "Keep as target support mirror glue. Backport only if the proving repo adopts the same aggregate mirror filename."
+    paths:
+      - doc/FOLSYSTEM.md
+
+  - resolution_id: slice-00-neuronforge-doc-system-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Both source and support NeuronForge mirrors build cleanly. The differing mirror build files reflect repo-local mirror assembly."
+    recommended_action: "Keep as support mirror adaptation. Rebuild /doc/system after service or mirror-index changes."
+    paths:
+      - doc/system/BUILD.sh
+      - doc/system/_index.md
+
+  - resolution_id: slice-00-neuronforge-doc-system-target-only
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: target_only
+    classification: target_only_glue
+    justification: "These support-side NeuronForge mirror files document the app-support code mirror and were verified by the support mirror build."
+    recommended_action: "Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure."
+    paths:
+      - SYSTEM.md
+      - doc/NRNSYSTEM.md
+      - doc/system/00-overview.md
+      - doc/system/01-architecture.md
+      - doc/system/10-scope.md
+      - doc/system/20-structure.md
+      - doc/system/30-governance.md
+      - doc/system/40-change-control.md
+      - doc/system/90-appendices.md
+      - doc/system/validate_snapshots.sh

@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T08:47:50+00:00`
+Generated: `2026-06-19T08:55:43+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundat
 Target branch: `main`
 Target commit: `6760634671ff88eda50ec3d99dd9e524694be4d9`
 
-Resolutions applied: `2`
+Resolutions applied: `30`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 8 |
-| intentional_app_support_adaptation | 2 |
+| intentional_app_support_adaptation | 5 |
 | missing_from_target | 135 |
-| target_only_glue | 0 |
+| target_only_glue | 25 |
 | dangerous_drift | 0 |
-| unknown | 80 |
+| unknown | 52 |
 
 ## Items
 
@@ -30,7 +30,7 @@ Resolutions applied: `2`
 | `.gitignore` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `CLAUDE.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `SYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `alembic.ini` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `alembic/README.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `alembic/env.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -102,55 +102,55 @@ Resolutions applied: `2`
 | `core/lifecycle/maintenance.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `core/lifecycle/manager.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `core/lifecycle/migration_lock.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/DFLSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/DFLSYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/DLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/SYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/plans/local-analytics/df_local_analytics_slice_01.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/00-overview.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/00-overview.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/00_overview/01-overview-philosophy.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/00_overview/02-architecture.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/00_overview/03-project-structure.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/01-architecture.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/01-overview-philosophy.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/02-architecture.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/03-tech-stack.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/04-project-structure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/05-configuration.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/06-design-system.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/07-frontend.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/08-api-layer.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/09-backend.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/10-ecosystem-integration.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/10-scope.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/01-architecture.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/01-overview-philosophy.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/02-architecture.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/03-tech-stack.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/04-project-structure.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/05-configuration.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/06-design-system.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/07-frontend.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/08-api-layer.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/09-backend.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/10-ecosystem-integration.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/10-scope.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/10_service-contract/04-design-system.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/10_service-contract/05-frontend.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/10_service-contract/06-api-layer.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/10_service-contract/07-proving-slice.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/11-database-schema.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/12-ai-integration.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/13-error-handling.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/14-testing-infrastructure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/15-handover-migration-notes.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/20-structure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/11-database-schema.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/12-ai-integration.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/13-error-handling.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/14-testing-infrastructure.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/15-handover-migration-notes.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/20-structure.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/20_runtime/08-backend.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/20_runtime/09-database-schema.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/20_runtime/10-ai-integration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/20_runtime/11-error-handling.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/30-governance.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/30-governance.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/30_dependencies/12-tech-stack.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/30_dependencies/13-ecosystem-integration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/40-change-control.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/40-change-control.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/40_governance/14-scope.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/40_governance/15-governance.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/40_governance/16-change-control.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/50_operations/17-configuration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/50_operations/18-testing-infrastructure.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/50_operations/19-handover-migration-notes.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/90-appendices.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/90-appendices.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/99_appendices/20-appendices.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
+| `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
+| `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `docs/closeout-initial-governed-implementation.md` | intentional_app_support_adaptation | `slice-00-df-closeout-doc` | Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane. |
 | `docs/dataforge-local_architecture_spec.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/dataforge-local_extended_roadmap.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |

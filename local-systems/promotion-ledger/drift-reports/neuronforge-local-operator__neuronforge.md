@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T08:47:50+00:00`
+Generated: `2026-06-19T08:55:43+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
 Target commit: `dc67b04863e313f3116565ddf1e7e369d6349a67`
 
-Resolutions applied: `5`
+Resolutions applied: `17`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 392 |
-| intentional_app_support_adaptation | 5 |
+| intentional_app_support_adaptation | 7 |
 | missing_from_target | 173 |
-| target_only_glue | 0 |
+| target_only_glue | 10 |
 | dangerous_drift | 0 |
-| unknown | 42 |
+| unknown | 30 |
 
 ## Items
 
@@ -35,19 +35,19 @@ Resolutions applied: `5`
 | `GEMINI.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `NLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `SYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/NRNSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/00-overview.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/01-architecture.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `SYSTEM.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/NRNSYSTEM.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/00-overview.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/01-architecture.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/07-experiment-memory-graphiti-pilot.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/10-scope.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/20-structure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/30-governance.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/40-change-control.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/90-appendices.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/10-scope.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/20-structure.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/30-governance.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/40-change-control.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/90-appendices.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-neuronforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after service or mirror-index changes. |
+| `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-neuronforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after service or mirror-index changes. |
+| `doc/system/validate_snapshots.sh` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `docker-compose.graphiti-pilot.yml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/adr/ADR-001-promotion-truth-upstream-of-pact.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/adr/ADR-2026-04-18-promotion-truth-upstream.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-adr-doc` | Keep as historical support doctrine. Do not back-promote its target mirror path claims as source authority without a fresh proving repo ADR update. |

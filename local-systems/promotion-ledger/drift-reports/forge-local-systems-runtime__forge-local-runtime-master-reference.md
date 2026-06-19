@@ -1,6 +1,6 @@
 # Drift Report: forge-local-systems-runtime__forge-local-runtime-master-reference
 
-Generated: `2026-06-19T08:47:50+00:00`
+Generated: `2026-06-19T08:55:43+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/forge-local-systems-runtime`
 Source branch: `main`
@@ -10,30 +10,30 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/forge-local-runt
 Target branch: `main`
 Target commit: `c68ae960eb0b609718c93a626f50ccd0a1226c93`
 
-Resolutions applied: `0`
+Resolutions applied: `6`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 115 |
-| intentional_app_support_adaptation | 0 |
+| intentional_app_support_adaptation | 5 |
 | missing_from_target | 1 |
-| target_only_glue | 0 |
+| target_only_glue | 1 |
 | dangerous_drift | 0 |
-| unknown | 6 |
+| unknown | 0 |
 
 ## Items
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
 | `doc/FLSSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/FOLSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/SYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/90-appendices.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/FOLSYSTEM.md` | target_only_glue | `slice-00-runtime-reference-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same aggregate mirror filename. |
+| `doc/SYSTEM.md` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
+| `doc/system/90-appendices.md` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
+| `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
+| `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
+| `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
 
 ## Blocking Rule
 

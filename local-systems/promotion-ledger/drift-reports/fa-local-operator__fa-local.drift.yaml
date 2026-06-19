@@ -5,15 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
 target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-generated_at: '2026-06-19T08:47:50+00:00'
+generated_at: '2026-06-19T08:55:43+00:00'
 classification_summary:
   same: 131
-  intentional_app_support_adaptation: 0
+  intentional_app_support_adaptation: 4
   missing_from_target: 20
-  target_only_glue: 0
+  target_only_glue: 14
   dangerous_drift: 0
-  unknown: 28
-resolutions_applied: 0
+  unknown: 10
+resolutions_applied: 18
 items:
 - path: .gitignore
   classification: unknown
@@ -48,12 +48,16 @@ items:
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: SYSTEM.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: ci_gate.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -63,12 +67,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/FLLSYSTEM.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/FLOSYSTEM.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -78,27 +86,38 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/SYSTEM.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/faSYSTEM.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support FA Local mirrors build cleanly. The differing
+    mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    code or mirror-index changes.
+  resolution_id: slice-00-fa-local-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/00-overview.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/00_overview/01-overview-charter.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -108,47 +127,71 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/01-architecture.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/01-overview-charter.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/02-boundaries-and-doctrine.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/03-contract-surface.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/04-validation-and-delivery.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/10-scope.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/10_service-contract/02-contract-surface.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -158,12 +201,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/20-structure.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/20_runtime/03-execution-bridge-writeback.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -173,12 +220,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/30-governance.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/30_dependencies/04-dependencies.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -188,12 +239,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/40-change-control.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/40_governance/05-scope.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -235,12 +290,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/90-appendices.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: These support-side FA Local mirror files document the app-support
+    code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as target support mirror glue. Backport only if the proving
+    repo adopts the same support mirror structure.
+  resolution_id: slice-00-fa-local-doc-system-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/99_appendices/10-appendices.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -250,29 +309,38 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/BUILD.sh
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support FA Local mirrors build cleanly. The differing
+    mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    code or mirror-index changes.
+  resolution_id: slice-00-fa-local-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/_index.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support FA Local mirrors build cleanly. The differing
+    mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    code or mirror-index changes.
+  resolution_id: slice-00-fa-local-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/validate_snapshots.sh
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Both source and support FA Local mirrors build cleanly. The differing
+    mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
+    code or mirror-index changes.
+  resolution_id: slice-00-fa-local-doc-system-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: reports/contract_core_gate_20260404_102436.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the

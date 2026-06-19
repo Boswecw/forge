@@ -1,6 +1,6 @@
 # Drift Report: fa-local-operator__fa-local
 
-Generated: `2026-06-19T08:47:50+00:00`
+Generated: `2026-06-19T08:55:43+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/fa-local-operator`
 Source branch: `master`
@@ -10,18 +10,18 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/fa-local`
 Target branch: `master`
 Target commit: `6608a60f40e47a5473cd85a1fbbf9e587e053509`
 
-Resolutions applied: `0`
+Resolutions applied: `18`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 131 |
-| intentional_app_support_adaptation | 0 |
+| intentional_app_support_adaptation | 4 |
 | missing_from_target | 20 |
-| target_only_glue | 0 |
+| target_only_glue | 14 |
 | dangerous_drift | 0 |
-| unknown | 28 |
+| unknown | 10 |
 
 ## Items
 
@@ -31,36 +31,36 @@ Resolutions applied: `0`
 | `CLAUDE.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `Cargo.toml` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `SYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `SYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `ci_gate.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/FLLSYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/FLLSYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/FLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/SYSTEM.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/faSYSTEM.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/00-overview.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/SYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/faSYSTEM.md` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
+| `doc/system/00-overview.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/00_overview/01-overview-charter.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/01-architecture.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/01-overview-charter.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/02-boundaries-and-doctrine.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/03-contract-surface.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/04-validation-and-delivery.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `doc/system/10-scope.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/01-architecture.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/01-overview-charter.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/02-boundaries-and-doctrine.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/03-contract-surface.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/04-validation-and-delivery.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
+| `doc/system/10-scope.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/10_service-contract/02-contract-surface.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/20-structure.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/20-structure.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/20_runtime/03-execution-bridge-writeback.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/30-governance.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/30-governance.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/30_dependencies/04-dependencies.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/40-change-control.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/40-change-control.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/40_governance/05-scope.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/40_governance/06-governance.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/40_governance/07-change-control.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/40_governance/08-boundaries-and-doctrine.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/system/50_operations/09-validation-and-delivery.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/90-appendices.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `doc/system/90-appendices.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/99_appendices/10-appendices.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/BUILD.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/_index.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `doc/system/validate_snapshots.sh` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
+| `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
+| `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-fa-local-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `reports/contract_core_gate_20260404_102436.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-dispatch-envelope.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `src/app/intake_service.rs` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |

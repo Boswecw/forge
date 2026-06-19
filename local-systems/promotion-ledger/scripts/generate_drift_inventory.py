@@ -159,12 +159,30 @@ def load_resolutions(path: Path) -> dict[tuple[str, str, str], dict[str, Any]]:
                 raise ValueError(f"resolution entry {index} must be a mapping: {file_path}")
             missing = [
                 field
-                for field in ("resolution_id", "repo_pair", "path", "shape", "classification")
+                for field in ("resolution_id", "repo_pair", "shape", "classification")
                 if not entry.get(field)
             ]
             if missing:
                 raise ValueError(
                     f"resolution entry {index} missing required fields {missing}: {file_path}"
+                )
+            if entry.get("path") and entry.get("paths"):
+                raise ValueError(
+                    f"resolution entry {index} must use either path or paths, not both: "
+                    f"{file_path}"
+                )
+            if entry.get("path"):
+                paths = [entry["path"]]
+            else:
+                paths = entry.get("paths", [])
+            if (
+                not isinstance(paths, list)
+                or not paths
+                or any(not isinstance(path, str) or not path for path in paths)
+            ):
+                raise ValueError(
+                    f"resolution entry {index} must provide path or non-empty paths: "
+                    f"{file_path}"
                 )
             classification = entry["classification"]
             if classification not in CLASSIFICATIONS or classification == "same":
@@ -177,12 +195,15 @@ def load_resolutions(path: Path) -> dict[tuple[str, str, str], dict[str, Any]]:
                 raise ValueError(
                     f"resolution {entry['resolution_id']} has invalid shape: {shape}"
                 )
-            key = (entry["repo_pair"], entry["path"], shape)
-            if key in resolutions:
-                raise ValueError(f"duplicate resolution for {key}: {file_path}")
-            stored = dict(entry)
-            stored["_resolution_source"] = resolution_source(file_path)
-            resolutions[key] = stored
+            for resolved_path in paths:
+                key = (entry["repo_pair"], resolved_path, shape)
+                if key in resolutions:
+                    raise ValueError(f"duplicate resolution for {key}: {file_path}")
+                stored = dict(entry)
+                stored["path"] = resolved_path
+                stored.pop("paths", None)
+                stored["_resolution_source"] = resolution_source(file_path)
+                resolutions[key] = stored
     return resolutions
 
 
