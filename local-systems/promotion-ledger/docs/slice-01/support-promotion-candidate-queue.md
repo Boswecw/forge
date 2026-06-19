@@ -1,6 +1,6 @@
 # Slice 01 Support Promotion Candidate Queue
 
-Generated: `2026-06-19T16:21:58+00:00`
+Generated: `2026-06-19T16:30:55+00:00`
 
 This queue is generated from reviewed `source_local_hold` drift. It does not authorize copying artifacts into app support.
 
@@ -8,8 +8,8 @@ This queue is generated from reviewed `source_local_hold` drift. It does not aut
 
 | Metric | Count |
 | --- | ---: |
-| `source_local_hold` | 643 |
-| `candidate_after_target_role` | 294 |
+| `source_local_hold` | 642 |
+| `candidate_after_target_role` | 293 |
 | `default_hold` | 349 |
 | `missing_from_target` | 0 |
 | `unknown` | 0 |
@@ -24,7 +24,7 @@ This queue is generated from reviewed `source_local_hold` drift. It does not aut
 | `source_evidence_reports_prompts` | 56 | `default_hold_evidence_receipt_only` |
 | `source_local_subproject` | 183 | `default_hold` |
 | `source_proof_tests` | 117 | `pair_with_promoted_runtime_or_contract` |
-| `source_runtime_or_capability` | 100 | `candidate_after_target_role` |
+| `source_runtime_or_capability` | 99 | `candidate_after_target_role` |
 | `source_scaffold_config` | 7 | `default_hold_dependency_adoption_required` |
 | `source_scripts_ci` | 24 | `candidate_when_tied_to_support_proof_command` |
 
@@ -33,7 +33,7 @@ This queue is generated from reviewed `source_local_hold` drift. It does not aut
 | Repo pair | Source-local holds |
 | --- | ---: |
 | `cortex__cortex` | 319 |
-| `dataforge-Local__df-local-foundation` | 128 |
+| `dataforge-Local__df-local-foundation` | 127 |
 | `fa-local-operator__fa-local` | 22 |
 | `forge-local-systems-runtime__forge-local-runtime-master-reference` | 1 |
 | `neuronforge-local-operator__neuronforge` | 173 |
