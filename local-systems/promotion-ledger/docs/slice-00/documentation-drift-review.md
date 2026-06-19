@@ -176,6 +176,9 @@ Evidence, output, run logs, and report records. These may remain outside /docs b
 2. Review the `/docs` condensed-documentation lane for inactive plans that still need shorter status records.
 3. Keep evidence and run records as receipts only; link them from condensed `/docs` summaries when they matter.
 
+Continuation: `docs-condensed-authority-review.md` classifies the 17 `/docs`
+items by authority direction and source-intake requirement.
+
 ## Blocking Note
 
 These items remain `unknown` in the canonical drift reports. Documentation drift still blocks promotion until Charlie reviews, backports, or explicitly excepts it.

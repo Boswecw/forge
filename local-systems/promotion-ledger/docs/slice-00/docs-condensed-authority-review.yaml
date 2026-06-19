@@ -1,0 +1,102 @@
+generated_at: "2026-06-19T08:09:06Z"
+source_review: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/documentation-drift-review.yaml
+rule:
+  docs_home: /docs
+  target_only_support_docs_are_source_authority: false
+  source_authority_requirement: foundational doctrine, contracts, routing rules, integration contracts, privacy rules, migration rules, and registries must exist in the local-system proving repo before support promotion
+summary:
+  total_docs_condensed_items: 17
+  source_intake_required_before_promotion: 11
+  source_diff_reconciliation_required: 3
+  target_support_only_or_receipt: 2
+  source_equivalent_condensed: 1
+items:
+  - repo_pair: cortex__cortex
+    path: docs/service/authorforge-service.md
+    decision: target_support_only_or_receipt
+    reason: app-support service operation doc; not source authority unless the proving repo owns the AuthorForge service wrapper
+    next_action: keep in target docs and exclude from source-authority promotion
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/app-integration-contract.md
+    decision: source_intake_required_before_promotion
+    reason: defines app attachment and compatibility contract
+    next_action: add source-side DF Local app attachment contract and prove against schema/runtime surfaces
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/architecture.md
+    decision: source_intake_required_before_promotion
+    reason: defines DF Local Foundation ownership and non-goals
+    next_action: backport as source architecture doctrine or merge into the source architecture spec
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/backup-export-restore.md
+    decision: source_intake_required_before_promotion
+    reason: defines backup, export, restore, and operator safety doctrine
+    next_action: backport to source before support promotion
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/closeout-initial-governed-implementation.md
+    decision: target_support_only_or_receipt
+    reason: closeout receipt for target support implementation
+    next_action: keep as target evidence unless matching source proof exists
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/df-local-foundation_extended_roadmap.md
+    decision: source_equivalent_condensed
+    reason: source has docs/dataforge-local_extended_roadmap.md with equivalent condensed baseline roadmap
+    next_action: reconcile naming only after source proof
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/migration-doctrine.md
+    decision: source_intake_required_before_promotion
+    reason: defines migration tooling, ordering, fail-closed posture, and schema-version reporting
+    next_action: backport migration doctrine and validate against source tooling
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/operational-visibility.md
+    decision: source_intake_required_before_promotion
+    reason: defines allowed and banned control-plane status fields
+    next_action: backport visibility contract and prove no content-bearing fields leak
+  - repo_pair: dataforge-Local__df-local-foundation
+    path: docs/privacy-doctrine.md
+    decision: source_intake_required_before_promotion
+    reason: defines local-first privacy and ForgeCommand visibility boundaries
+    next_action: backport privacy doctrine and tie it to source validation
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+    decision: source_diff_reconciliation_required
+    reason: source has docs/adr/ADR-001-promotion-truth-upstream-of-pact.md but target names different mirror paths and run logs
+    next_action: reconcile target claims to source truth before promotion
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/authorforge-task-envelope-contract.md
+    decision: source_intake_required_before_promotion
+    reason: defines AuthorForge to NeuronForge task envelope contract
+    next_action: backport or re-author in NeuronForge source before support promotion
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/authorforge-task-router-plan.md
+    decision: source_intake_required_before_promotion
+    reason: active scope-expansion plan defining task routing ownership
+    next_action: keep active-plan status and backport into source planning docs
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/local-first-cloud-assist-boundary.md
+    decision: source_intake_required_before_promotion
+    reason: defines local/cloud assist trust and degradation boundaries
+    next_action: backport as source doctrine and prove degraded/entitlement boundaries
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/model-routing-doctrine.md
+    decision: source_intake_required_before_promotion
+    reason: defines routing ownership and partial runtime claims
+    next_action: verify source runtime claims before backporting as authority
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/neuronforge_architecture_spec.md
+    decision: source_diff_reconciliation_required
+    reason: source doc exists, but target drift needs comparison
+    next_action: compare drift and prefer source-code-backed claims
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/neuronforge_extended_roadmap.md
+    decision: source_diff_reconciliation_required
+    reason: source doc exists, but target wording differs
+    next_action: reconcile support wording after source roadmap is current
+  - repo_pair: neuronforge-local-operator__neuronforge
+    path: docs/registries/task-lanes.md
+    decision: source_intake_required_before_promotion
+    reason: defines task lane registry and lifecycle states
+    next_action: backport task lane registry to source before support promotion
+next_slice:
+  - backport or re-author the 11 source-intake docs in local-system proving repos
+  - reconcile the 3 source/target drift docs by preferring source-code-backed truth
+  - regenerate drift reports and verify the docs_condensed_documentation lane shrinks to support-only receipts or source-backed deltas
