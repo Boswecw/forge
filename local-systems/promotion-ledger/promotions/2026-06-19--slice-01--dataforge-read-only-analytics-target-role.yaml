@@ -1,0 +1,62 @@
+promotion_id: "2026-06-19--slice-01--dataforge-read-only-analytics-target-role"
+slice_name: "Slice 01 - DF Local Read-Only Analytics Support Target Role"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local"
+source_branch: "master"
+source_commit: "536b700fa7f11bf92c75e5f8c540c4b571ebb17b"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation"
+target_branch: "main"
+target_commit: "90b3926745bc7fd5d63255602ec04b21313a8dd5"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/analytics_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_models.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_services.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_compute.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_routes.py"
+promotion_manifest:
+  - "Opened a support target-role document for future DF Local read-only analytics promotion."
+  - "Did not promote analytics routes, runtime code, models, services, migrations, schemas, tests, or write behavior."
+  - "Kept read-only analytics artifacts classified as source_local_hold until a later named runtime promotion slice with passing route and support proof."
+proof_commands:
+  - "git diff --check"
+  - "python3 -m pytest tests -q"
+  - "timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q"
+  - "timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q"
+  - "python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 local-systems/promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "needs-followup"
+  support_diff_check:
+    command: "git diff --check"
+    result: "passed"
+  support_pytest:
+    command: "python3 -m pytest tests -q"
+    result: "blocked: missing pydantic_settings, asyncpg, and pytest_asyncio under system Python; no .venv/bin/python exists"
+  source_analytics_compute:
+    command: "timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q"
+    result: "6 passed"
+  source_analytics_routes:
+    command: "timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q"
+    result: "blocked: timed out after 20 seconds with no output"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 652
+    missing_from_target: 0
+    target_only_glue: 134
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 847
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "not applicable; target-role documentation only, no support runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI opened the bounded support target role. Runtime promotion must wait for passing source route proof and support pytest dependencies."
+created_at: "2026-06-19T16:12:44Z"
+rollback_source_commit: "536b700fa7f11bf92c75e5f8c540c4b571ebb17b"
+rollback_target_commit: "90b3926745bc7fd5d63255602ec04b21313a8dd5"
+rollback_command: "Revert the DF Local support commit 90b3926745bc7fd5d63255602ec04b21313a8dd5 and regenerate the promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null

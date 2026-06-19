@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T15:12:21+00:00`
+Generated: `2026-06-19T15:20:53+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,9 +8,9 @@ Source commit: `536b700fa7f11bf92c75e5f8c540c4b571ebb17b`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `b2f44d46b1bc953503a0c31381fa4683c852b0dd`
+Target commit: `90b3926745bc7fd5d63255602ec04b21313a8dd5`
 
-Resolutions applied: `219`
+Resolutions applied: `220`
 
 ## Classification Summary
 
@@ -20,7 +20,7 @@ Resolutions applied: `219`
 | intentional_app_support_adaptation | 11 |
 | source_local_hold | 137 |
 | missing_from_target | 0 |
-| target_only_glue | 71 |
+| target_only_glue | 72 |
 | dangerous_drift | 0 |
 | unknown | 0 |
 
@@ -153,6 +153,7 @@ Resolutions applied: `219`
 | `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `docs/closeout-initial-governed-implementation.md` | intentional_app_support_adaptation | `slice-00-df-closeout-doc` | Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane. |
+| `docs/contracts/read-only-analytics-target-role.md` | target_only_glue | `slice-01-dataforge-read-only-analytics-target-role-doc` | Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, passing source route proof, passing support proof, and regenerated drift report. |
 | `docs/dataforge-local_architecture_spec.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/dataforge-local_extended_roadmap.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/df-local-foundation_extended_roadmap.md` | intentional_app_support_adaptation | `slice-00-df-roadmap-doc` | Keep in the support repo with the product-specific filename. Reconcile naming later only if roadmap authority moves upstream. |

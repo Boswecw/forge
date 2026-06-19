@@ -1,0 +1,58 @@
+generated_at: "2026-06-19T16:12:44Z"
+scope: "Slice 01 DF Local read-only analytics support target-role opening"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: 90b3926745bc7fd5d63255602ec04b21313a8dd5
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+decision:
+  status: target_role_opened_needs_followup
+  runtime_promoted: false
+  route_promoted: false
+  migration_promoted: false
+  schema_promoted: false
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-read-only-analytics-target-role.yaml
+target_role:
+  repo_pair: dataforge-Local__df-local-foundation
+  classification: target_only_glue
+  path: docs/contracts/read-only-analytics-target-role.md
+  purpose: "Bounded app-support visibility side of the local-system read-only analytics substrate."
+  non_goals:
+    - "No analytics route copied in this slice."
+    - "No analytics runtime, models, services, migrations, or tests copied in this slice."
+    - "No write endpoints added under the analytics namespace."
+    - "No derived analytics promoted as canonical app-domain truth."
+source_authority:
+  analytics_plan: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/doc/plans/local-analytics/df_local_analytics_slice_01.md
+  analytics_router: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/analytics_router.py
+  analytics_models: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_models.py
+  analytics_services: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_services.py
+  analytics_compute_tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_compute.py
+  analytics_route_tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_routes.py
+verification:
+  support_diff_check:
+    command: git diff --check
+    result: passed
+  support_pytest:
+    command: python3 -m pytest tests -q
+    result: blocked
+    output: "System Python is missing pydantic_settings, asyncpg, and pytest_asyncio; no .venv/bin/python exists in this checkout."
+  source_analytics_compute:
+    command: timeout 20s python3 -m pytest tests/api/test_analytics_compute.py -q
+    result: passed
+    output: "6 passed"
+  source_analytics_routes:
+    command: timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q
+    result: blocked
+    output: "Timed out after 20 seconds with no output."
+drift_result_after_resolution:
+  same: 2233
+  intentional_app_support_adaptation: 61
+  source_local_hold: 652
+  missing_from_target: 0
+  target_only_glue: 134
+  dangerous_drift: 0
+  unknown: 0
+next_gate: "Fix local support test dependencies and source analytics route test timeout before promoting analytics runtime, routes, migrations, or schema."
