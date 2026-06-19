@@ -1,0 +1,56 @@
+generated_at: "2026-06-19T15:58:37Z"
+scope: "Slice 01 DF Local remaining API target-role opening"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: e0f56d6696c000ff44f5161d68daf0f0c58c197a
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
+decision:
+  status: target_role_opened_needs_followup
+  runtime_promoted: false
+  route_promoted: false
+  migration_promoted: false
+  schema_promoted: false
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-local-api-target-roles.yaml
+target_role:
+  repo_pair: dataforge-Local__df-local-foundation
+  classification: target_only_glue
+  path: docs/contracts/local-api-target-roles.md
+  purpose: "Separate future read-only support adapter candidates from durable-truth mutation endpoints."
+  read_only_candidates:
+    - GET /df/rag/context-pack/{context_pack_id}
+    - GET /api/v1/healing-proposals
+    - GET /api/v1/healing-proposals/{proposal_id}
+    - GET /api/v1/lineage/nodes
+    - GET /api/v1/lineage/nodes/{node_id}
+    - GET /api/v1/lineage/nodes/{node_id}/downstream
+    - GET /api/v1/proving-slice/queue
+    - GET /api/v1/proving-slice/queue/{staged_promotion_id}
+    - GET /api/v1/public-applications
+  hold_lane:
+    - POST /df/rag/context-pack
+    - POST /api/v1/healing-proposals
+    - PATCH /api/v1/healing-proposals/{proposal_id}
+    - POST /api/v1/lineage/nodes
+    - POST /api/v1/lineage/edges
+    - POST /api/v1/lineage/envelopes
+verification:
+  support_pytest:
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "179 passed, 7 skipped, 1 warning"
+  source_proving_slice_read_models:
+    command: .venv/bin/python -m pytest tests/proving_slice/test_read_models.py -q
+    result: passed
+    output: "31 passed"
+  source_context_pack_direct:
+    command: direct route-handler proof with fake session
+    result: passed
+    output: "PASS: direct context-pack route logic proof"
+  source_context_pack_testclient:
+    command: .venv/bin/python -m pytest tests/api/test_context_pack_routes.py -q
+    result: blocked
+    output: "Interrupted after local TestClient route harness hung; no source code changed."
+next_gate: "Select one read-only candidate lane and create a runtime promotion slice with exact files, source proof, support proof, migration/schema decision, regenerated drift report, and rollback path."

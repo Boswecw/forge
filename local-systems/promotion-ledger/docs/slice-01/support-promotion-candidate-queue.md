@@ -1,6 +1,6 @@
 # Slice 01 Support Promotion Candidate Queue
 
-Generated: `2026-06-19T15:53:14+00:00`
+Generated: `2026-06-19T15:59:54+00:00`
 
 This queue is generated from reviewed `source_local_hold` drift. It does not authorize copying artifacts into app support.
 

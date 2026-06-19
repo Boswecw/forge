@@ -1,0 +1,36 @@
+version: 1
+created_at: "2026-06-19T15:58:37Z"
+scope: "Classify the DF Local support-only target-role document for remaining source API candidates."
+evidence:
+  support_commit: e0f56d6696c000ff44f5161d68daf0f0c58c197a
+  source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/healing_proposal_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/public_applications_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/
+  proof_commands:
+    support_pytest: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    source_proving_slice_read_models: ".venv/bin/python -m pytest tests/proving_slice/test_read_models.py -q"
+    source_context_pack_direct: ".venv/bin/python - <<'PY' direct route-handler context-pack proof"
+  proof_results:
+    support_pytest: "179 passed, 7 skipped, 1 warning"
+    source_proving_slice_read_models: "31 passed"
+    source_context_pack_direct: "PASS: direct context-pack route logic proof"
+    source_context_pack_testclient: "blocked; source TestClient route harness hung under current local FastAPI/httpx environment"
+resolutions:
+  - resolution_id: slice-01-dataforge-local-api-target-roles-doc
+    repo_pair: dataforge-Local__df-local-foundation
+    path: docs/contracts/local-api-target-roles.md
+    shape: target_only
+    classification: target_only_glue
+    justification: "This support-only document opens target roles for remaining DF Local source API candidates without promoting runtime, routes, schemas, migrations, or write behavior. It separates read-only support-adapter candidates from durable-truth mutation endpoints that require later schema and authorization proof."
+    recommended_action: "Keep as target-role glue. Promote exactly one read-only lane at a time through a later named slice with source proof, support proof, migration/schema decision, regenerated drift report, and rollback path."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/proving_slice/test_read_models.py

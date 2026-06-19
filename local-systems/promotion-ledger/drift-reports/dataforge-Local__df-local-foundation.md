@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T15:53:06+00:00`
+Generated: `2026-06-19T15:59:45+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,9 +8,9 @@ Source commit: `c6ba6d14d21cd609563516c3758b583bb2cd9484`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `e3c1e831dbaa8d3cf3ace31e6829ab243abcc4a6`
+Target commit: `e0f56d6696c000ff44f5161d68daf0f0c58c197a`
 
-Resolutions applied: `220`
+Resolutions applied: `221`
 
 ## Classification Summary
 
@@ -20,7 +20,7 @@ Resolutions applied: `220`
 | intentional_app_support_adaptation | 18 |
 | source_local_hold | 130 |
 | missing_from_target | 0 |
-| target_only_glue | 72 |
+| target_only_glue | 73 |
 | dangerous_drift | 0 |
 | unknown | 0 |
 
@@ -153,6 +153,7 @@ Resolutions applied: `220`
 | `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `docs/closeout-initial-governed-implementation.md` | intentional_app_support_adaptation | `slice-00-df-closeout-doc` | Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane. |
+| `docs/contracts/local-api-target-roles.md` | target_only_glue | `slice-01-dataforge-local-api-target-roles-doc` | Keep as target-role glue. Promote exactly one read-only lane at a time through a later named slice with source proof, support proof, migration/schema decision, regenerated drift report, and rollback path. |
 | `docs/contracts/read-only-analytics-target-role.md` | target_only_glue | `slice-01-dataforge-read-only-analytics-target-role-doc` | Keep as support contract glue. Promote any additional analytics schema, migrations, or write behavior only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
 | `docs/dataforge-local_architecture_spec.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/dataforge-local_extended_roadmap.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |

@@ -1,0 +1,64 @@
+promotion_id: "2026-06-19--slice-01--dataforge-local-api-target-role"
+slice_name: "Slice 01 - DF Local Remaining API Support Target Roles"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local"
+source_branch: "master"
+source_commit: "c6ba6d14d21cd609563516c3758b583bb2cd9484"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation"
+target_branch: "main"
+target_commit: "e0f56d6696c000ff44f5161d68daf0f0c58c197a"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/healing_proposal_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/public_applications_router.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/"
+promotion_manifest:
+  - "Opened a support target-role document for remaining DF Local source API candidates."
+  - "Separated read-only support adapter candidates from durable-truth mutation endpoints."
+  - "Did not promote routes, runtime code, migrations, schemas, write endpoints, or consumer behavior."
+  - "Kept source API runtime artifacts classified as source_local_hold until later named lane-specific runtime promotions."
+proof_commands:
+  - "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+  - ".venv/bin/python -m pytest tests/proving_slice/test_read_models.py -q"
+  - "direct route-handler context-pack proof with fake session"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed_with_source_harness_blocker"
+  support_pytest:
+    command: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    result: "179 passed, 7 skipped, 1 warning"
+  source_proving_slice_read_models:
+    command: ".venv/bin/python -m pytest tests/proving_slice/test_read_models.py -q"
+    result: "31 passed"
+  source_context_pack_direct:
+    command: "direct route-handler context-pack proof with fake session"
+    result: "PASS: direct context-pack route logic proof"
+  source_context_pack_testclient:
+    command: ".venv/bin/python -m pytest tests/api/test_context_pack_routes.py -q"
+    result: "blocked by local TestClient route harness hang; source unchanged"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 68
+    source_local_hold: 645
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 848
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "not applicable; target-role documentation only, no support runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI opened the bounded support target role. Charlie Boswell must review and accept, reject, or select a lane for runtime promotion."
+created_at: "2026-06-19T15:58:37Z"
+rollback_source_commit: "c6ba6d14d21cd609563516c3758b583bb2cd9484"
+rollback_target_commit: "e3c1e831dbaa8d3cf3ace31e6829ab243abcc4a6"
+rollback_command: "Revert the DF Local support commit e0f56d6696c000ff44f5161d68daf0f0c58c197a and regenerate the promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
