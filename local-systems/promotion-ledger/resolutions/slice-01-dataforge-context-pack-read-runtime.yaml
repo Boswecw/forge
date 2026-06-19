@@ -1,0 +1,44 @@
+version: 1
+created_at: "2026-06-19T16:21:25Z"
+scope: "Classify DF Local context-pack read runtime promoted into app support."
+evidence:
+  support_commit: 283017da7d078ed5c29e38e2bf2e4b731e27bb4e
+  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  support_runtime:
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/context_pack_router.py
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/context_pack_services.py
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_context_pack_routes.py
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_context_pack_routes.py
+  proof_commands:
+    support_pytest: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    support_touched_ruff: "ruff check app/context_pack_services.py app/api/context_pack_router.py app/main.py tests/api/test_context_pack_routes.py"
+    source_context_pack_direct: ".venv/bin/python - <<'PY' direct route-handler context-pack proof"
+  proof_results:
+    support_pytest: "187 passed, 7 skipped, 1 warning"
+    support_touched_ruff: "All checks passed"
+    source_context_pack_direct: "PASS: direct context-pack route logic proof"
+resolutions:
+  - resolution_id: slice-01-dataforge-context-pack-read-adapter
+    repo_pair: dataforge-Local__df-local-foundation
+    paths:
+      - app/api/context_pack_router.py
+      - tests/api/test_context_pack_routes.py
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "These files preserve the source context-pack GET read shape while adapting route wiring and tests to the app-support FastAPI/asyncpg foundation. The target exposes only GET /df/rag/context-pack/{context_pack_id}; POST store/refresh remains source-local."
+    recommended_action: "Keep as promoted support-native read adapter. Do not add context-pack write behavior or schema ownership without a separate named slice."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_context_pack_routes.py
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
+  - resolution_id: slice-01-dataforge-context-pack-support-service
+    repo_pair: dataforge-Local__df-local-foundation
+    path: app/context_pack_services.py
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This target-only support service is the asyncpg adapter layer required by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo because the source route reads through its own session boundary."
+    recommended_action: "Keep as support-native adapter glue for the read-only context-pack route."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/context_pack_services.py
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_context_pack_routes.py

@@ -1,0 +1,71 @@
+generated_at: "2026-06-19T16:21:58Z"
+scope: "Slice 01 DF Local context-pack read runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: 283017da7d078ed5c29e38e2bf2e4b731e27bb4e
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  route_promoted: true
+  migration_promoted: false
+  schema_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-context-pack-read-runtime.yaml
+runtime_boundary:
+  routes:
+    - GET /df/rag/context-pack/{context_pack_id}
+  missing_pack: "404 context pack {context_pack_id} not found"
+  read_failure: "503 context_pack_read_failure"
+  non_goals:
+    - "No context-pack POST store/refresh promoted."
+    - "No migrations or schema ownership promoted."
+    - "No NeuroForge behavior changed."
+source_authority:
+  router: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
+  tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_context_pack_routes.py
+support_artifacts:
+  router: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/context_pack_router.py
+  service: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/context_pack_services.py
+  tests: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_context_pack_routes.py
+verification:
+  support_pytest:
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "187 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: ruff check app/context_pack_services.py app/api/context_pack_router.py app/main.py tests/api/test_context_pack_routes.py
+    result: passed
+    output: "All checks passed"
+  source_context_pack_direct:
+    command: direct route-handler context-pack proof with fake session
+    result: passed
+    output: "PASS: direct context-pack route logic proof"
+drift_result_after_resolution:
+  dataforge_pair:
+    same: 8
+    intentional_app_support_adaptation: 24
+    source_local_hold: 128
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 225
+  all_pairs:
+    same: 2233
+    intentional_app_support_adaptation: 74
+    source_local_hold: 643
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 852
+queue_after_resolution:
+  source_local_hold: 643
+  candidate_after_target_role: 294
+  default_hold: 349
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Select the next read-only candidate lane from DF Local target roles, or hold durable-truth write surfaces until schema ownership and authorization proof exists."
