@@ -1,8 +1,9 @@
 version: 1
 created_at: "2026-06-19T16:12:44Z"
-scope: "Classify the DF Local support-only read-only analytics target-role opening document."
+updated_at: "2026-06-19T15:52:21Z"
+scope: "Classify the DF Local support-only read-only analytics target-role document."
 evidence:
-  support_commit: 90b3926745bc7fd5d63255602ec04b21313a8dd5
+  support_commit: e3c1e831dbaa8d3cf3ace31e6829ab243abcc4a6
   source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
   support_doc: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
   source_authority:
@@ -19,17 +20,17 @@ evidence:
     source_analytics_routes: "timeout 20s python3 -m pytest tests/api/test_analytics_routes.py -q"
   proof_results:
     support_diff_check: "passed"
-    support_pytest: "169 passed, 7 skipped, 1 warning"
+    support_pytest: "179 passed, 7 skipped, 1 warning"
     source_analytics_compute: "6 passed"
-    source_analytics_routes: "5 passed"
+    source_analytics_routes: "5 passed before route-harness follow-up; current combined source analytics proof is 11 passed"
 resolutions:
   - resolution_id: slice-01-dataforge-read-only-analytics-target-role-doc
     repo_pair: dataforge-Local__df-local-foundation
     path: docs/contracts/read-only-analytics-target-role.md
     shape: target_only
     classification: target_only_glue
-    justification: "This support-only document opens a bounded DF Local read-only analytics target role while explicitly withholding routes, models, services, migrations, tests, and schema promotion. Source analytics authority remains in the local-system DataForge repo."
-    recommended_action: "Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report."
+    justification: "This support-only document records the bounded DF Local read-only analytics support role and its non-goals. Runtime adapters are now promoted in the follow-up runtime slice, while migrations and schema remain outside app support."
+    recommended_action: "Keep as support contract glue. Promote any additional analytics schema, migrations, or write behavior only through a later named slice with exact files, source proof, support proof, and regenerated drift report."
     evidence:
       - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/read-only-analytics-target-role.md
       - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/doc/plans/local-analytics/df_local_analytics_slice_01.md

@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T15:29:02+00:00`
+Generated: `2026-06-19T15:53:06+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,7 +8,7 @@ Source commit: `c6ba6d14d21cd609563516c3758b583bb2cd9484`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `90b3926745bc7fd5d63255602ec04b21313a8dd5`
+Target commit: `e3c1e831dbaa8d3cf3ace31e6829ab243abcc4a6`
 
 Resolutions applied: `220`
 
@@ -17,8 +17,8 @@ Resolutions applied: `220`
 | Classification | Count |
 | --- | ---: |
 | same | 8 |
-| intentional_app_support_adaptation | 11 |
-| source_local_hold | 137 |
+| intentional_app_support_adaptation | 18 |
+| source_local_hold | 130 |
 | missing_from_target | 0 |
 | target_only_glue | 72 |
 | dangerous_drift | 0 |
@@ -61,11 +61,11 @@ Resolutions applied: `220`
 | `alembic/versions/20260611_01_create_public_applications.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `app/__init__.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
 | `app/__main__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
-| `app/analytics_config.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `app/analytics_models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `app/analytics_services.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `app/api/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `app/api/analytics_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/analytics_config.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
+| `app/analytics_models.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
+| `app/analytics_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
+| `app/api/__init__.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
+| `app/api/analytics_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
 | `app/api/context_pack_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `app/api/healing_proposal_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `app/api/lineage_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -153,7 +153,7 @@ Resolutions applied: `220`
 | `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `docs/closeout-initial-governed-implementation.md` | intentional_app_support_adaptation | `slice-00-df-closeout-doc` | Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane. |
-| `docs/contracts/read-only-analytics-target-role.md` | target_only_glue | `slice-01-dataforge-read-only-analytics-target-role-doc` | Keep as support target-role glue. Promote read-only analytics runtime/schema only through a later named slice with exact files, passing source route proof, passing support proof, and regenerated drift report. |
+| `docs/contracts/read-only-analytics-target-role.md` | target_only_glue | `slice-01-dataforge-read-only-analytics-target-role-doc` | Keep as support contract glue. Promote any additional analytics schema, migrations, or write behavior only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
 | `docs/dataforge-local_architecture_spec.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/dataforge-local_extended_roadmap.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/df-local-foundation_extended_roadmap.md` | intentional_app_support_adaptation | `slice-00-df-roadmap-doc` | Keep in the support repo with the product-specific filename. Reconcile naming later only if roadmap authority moves upstream. |
@@ -209,8 +209,8 @@ Resolutions applied: `220`
 | `sql/dev_reset.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `sql/manual_checks.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/api/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tests/api/test_analytics_compute.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/api/test_analytics_routes.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/api/test_analytics_compute.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
+| `tests/api/test_analytics_routes.py` | intentional_app_support_adaptation | `slice-01-dataforge-read-only-analytics-runtime-adapters` | Keep as promoted support-native analytics runtime adapters. Do not promote analytics migrations, durable schema ownership, or write behavior without a separate named slice. |
 | `tests/api/test_context_pack_routes.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/api/test_health_api.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/backup_restore/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |

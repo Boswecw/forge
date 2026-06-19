@@ -1,0 +1,80 @@
+generated_at: "2026-06-19T15:53:14Z"
+scope: "Slice 01 DF Local read-only analytics runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: e3c1e831dbaa8d3cf3ace31e6829ab243abcc4a6
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: c6ba6d14d21cd609563516c3758b583bb2cd9484
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  route_promoted: true
+  migration_promoted: false
+  schema_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-read-only-analytics-runtime.yaml
+runtime_boundary:
+  routes:
+    - GET /api/v1/analytics/overview
+    - GET /api/v1/analytics/systems
+    - GET /api/v1/analytics/queue
+    - GET /api/v1/analytics/freshness
+  read_failure: "503 analytics_read_failure"
+  non_goals:
+    - "No analytics migrations promoted."
+    - "No app-domain truth ownership added."
+    - "No write endpoints added under the analytics namespace."
+source_authority:
+  analytics_config: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_config.py
+  analytics_models: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_models.py
+  analytics_services: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/analytics_services.py
+  analytics_router: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/analytics_router.py
+  analytics_compute_tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_compute.py
+  analytics_route_tests: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_analytics_routes.py
+support_artifacts:
+  analytics_config: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/analytics_config.py
+  analytics_models: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/analytics_models.py
+  analytics_services: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/analytics_services.py
+  analytics_router: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/analytics_router.py
+  analytics_compute_tests: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_analytics_compute.py
+  analytics_route_tests: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_analytics_routes.py
+verification:
+  support_pytest:
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "179 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: ruff check app/analytics_config.py app/analytics_models.py app/analytics_services.py app/api/__init__.py app/api/analytics_router.py app/main.py tests/api/test_analytics_compute.py tests/api/test_analytics_routes.py
+    result: passed
+    output: "All checks passed"
+  source_analytics:
+    command: .venv/bin/python -m pytest tests/api/test_analytics_compute.py tests/api/test_analytics_routes.py -q
+    result: passed
+    output: "11 passed"
+drift_result_after_resolution:
+  dataforge_pair:
+    same: 8
+    intentional_app_support_adaptation: 18
+    source_local_hold: 130
+    missing_from_target: 0
+    target_only_glue: 72
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 220
+  all_pairs:
+    same: 2233
+    intentional_app_support_adaptation: 68
+    source_local_hold: 645
+    missing_from_target: 0
+    target_only_glue: 134
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 847
+queue_after_resolution:
+  source_local_hold: 645
+  candidate_after_target_role: 297
+  default_hold: 348
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Select the next DF Local source-local hold only through a named slice with support target role, source proof, support proof, and regenerated drift report."
