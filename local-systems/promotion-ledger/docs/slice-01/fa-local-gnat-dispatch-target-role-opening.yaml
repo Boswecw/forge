@@ -1,0 +1,46 @@
+generated_at: "2026-06-19T15:01:59Z"
+scope: "Slice 01 FA Local GNAT dispatch support target-role opening"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/fa-local
+support_branch: master
+support_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
+source_repo: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator
+source_branch: master
+source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+decision:
+  status: target_role_opened
+  runtime_promoted: false
+  schema_promoted: false
+  support_doc: /home/charlie/Forge/apps/public-app-local-support/fa-local/docs/contracts/gnat-dispatch-target-role.md
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-fa-local-gnat-dispatch-target-role.yaml
+target_role:
+  repo_pair: fa-local-operator__fa-local
+  classification: target_only_glue
+  path: docs/contracts/gnat-dispatch-target-role.md
+  purpose: "Bounded execution-routing side of the Cortex GNAT support surface."
+  non_goals:
+    - "No GNAT dispatch runtime copied in this slice."
+    - "No GNAT dispatch schema copied in this slice."
+    - "No execution service behavior changed."
+    - "No queue, watcher, retry, scheduler, or durable-record ownership added."
+source_authority:
+  gnat_dispatch_schema: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/schemas/gnat-dispatch-envelope.schema.json
+  gnat_dispatch_tests: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs
+  cortex_integration: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/cortex/mod.rs
+verification:
+  support_cargo:
+    command: cargo test
+    result: passed
+    output: "cargo test passed"
+  source_ci:
+    command: bash ci_gate.sh
+    result: passed
+    output: "FA Local CI gate: PASSED"
+drift_result_after_resolution:
+  same: 2233
+  intentional_app_support_adaptation: 61
+  source_local_hold: 652
+  missing_from_target: 0
+  target_only_glue: 132
+  dangerous_drift: 0
+  unknown: 0
+next_gate: "Select exact GNAT dispatch files and support service contract for a later runtime/schema promotion slice, or keep GNAT dispatch held source-local."

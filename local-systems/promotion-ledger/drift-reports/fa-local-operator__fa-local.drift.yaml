@@ -4,24 +4,24 @@ target_repo: /home/charlie/Forge/apps/public-app-local-support/fa-local
 source_branch: master
 target_branch: master
 source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-generated_at: '2026-06-19T09:52:39+00:00'
+target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
+generated_at: '2026-06-19T15:02:48+00:00'
 classification_summary:
   same: 131
   intentional_app_support_adaptation: 14
-  source_local_hold: 21
+  source_local_hold: 22
   missing_from_target: 0
-  target_only_glue: 14
+  target_only_glue: 15
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 49
+resolutions_applied: 51
 items:
 - path: .gitignore
   classification: intentional_app_support_adaptation
   justification: FA Local support scaffold and Cargo manifest differ from source and
     are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-fa-local-scaffold-modified
   resolved_shape: modified_in_both
@@ -31,7 +31,7 @@ items:
   justification: FA Local support scaffold and Cargo manifest differ from source and
     are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-fa-local-scaffold-modified
   resolved_shape: modified_in_both
@@ -41,7 +41,7 @@ items:
   justification: FA Local support scaffold and Cargo manifest differ from source and
     are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-fa-local-scaffold-modified
   resolved_shape: modified_in_both
@@ -51,7 +51,7 @@ items:
   justification: FA Local support scaffold and Cargo manifest differ from source and
     are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-fa-local-scaffold-modified
   resolved_shape: modified_in_both
@@ -61,7 +61,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -73,7 +73,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -87,7 +87,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -99,7 +99,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -111,7 +111,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -122,7 +122,7 @@ items:
   justification: Both source and support FA Local mirrors build cleanly. The differing
     mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
   resolution_id: slice-00-fa-local-doc-system-modified
@@ -133,7 +133,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -145,7 +145,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -157,7 +157,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -168,7 +168,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -179,7 +179,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -190,7 +190,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -201,7 +201,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -212,7 +212,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -224,7 +224,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -236,7 +236,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -248,7 +248,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -260,7 +260,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -272,7 +272,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -284,7 +284,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -296,7 +296,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -309,7 +309,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -322,7 +322,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -335,7 +335,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -348,7 +348,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -360,7 +360,7 @@ items:
   justification: These support-side FA Local mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-fa-local-doc-system-target-only
@@ -372,7 +372,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -384,7 +384,7 @@ items:
   justification: Both source and support FA Local mirrors build cleanly. The differing
     mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
   resolution_id: slice-00-fa-local-doc-system-modified
@@ -395,7 +395,7 @@ items:
   justification: Both source and support FA Local mirrors build cleanly. The differing
     mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
   resolution_id: slice-00-fa-local-doc-system-modified
@@ -406,19 +406,37 @@ items:
   justification: Both source and support FA Local mirrors build cleanly. The differing
     mirror files reflect repo-local mirror assembly and designation.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
   resolution_id: slice-00-fa-local-doc-system-modified
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
+- path: docs/contracts/gnat-dispatch-target-role.md
+  classification: target_only_glue
+  justification: This support-only document opens a bounded FA Local GNAT dispatch
+    target role while explicitly withholding runtime and schema promotion. Source
+    dispatch authority remains in the local-system FA Local repo.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
+  recommended_action: Keep as support target-role glue. Promote GNAT dispatch runtime/schema
+    only through a later named slice with exact files, source proof, support proof,
+    and regenerated drift report.
+  resolution_id: slice-01-fa-local-gnat-dispatch-target-role-doc
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-01-fa-local-gnat-dispatch-target-role.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/fa-local/docs/contracts/gnat-dispatch-target-role.md
+  - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/schemas/gnat-dispatch-envelope.schema.json
+  - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs
+  - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/cortex/mod.rs
 - path: reports/contract_core_gate_20260404_102436.json
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -431,20 +449,33 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
   resolved_shape: source_only
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
+- path: reports/contract_core_gate_20260619_110109.json
+  classification: source_local_hold
+  justification: This source-only report was produced by the FA Local source CI gate
+    while proving the GNAT dispatch target-role slice.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
+  recommended_action: Keep source-local as proof evidence. Do not copy into app support
+    except as a named evidence receipt.
+  resolution_id: slice-01-fa-local-gnat-dispatch-proof-report
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-01-fa-local-gnat-dispatch-target-role.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/ecosystem/local-systems/fa-local-operator/reports/contract_core_gate_20260619_110109.json
 - path: schemas/gnat-dispatch-envelope.schema.json
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -456,7 +487,7 @@ items:
   justification: FA Local support runtime differs from source while the support Cargo
     test gate passes.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support runtime adaptation. Reconcile source authority
     only through a bounded Rust promotion slice.
   resolution_id: slice-00-fa-local-runtime-modified
@@ -468,7 +499,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -480,7 +511,7 @@ items:
   justification: FA Local support runtime differs from source while the support Cargo
     test gate passes.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support runtime adaptation. Reconcile source authority
     only through a bounded Rust promotion slice.
   resolution_id: slice-00-fa-local-runtime-modified
@@ -491,7 +522,7 @@ items:
   justification: FA Local support runtime differs from source while the support Cargo
     test gate passes.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support runtime adaptation. Reconcile source authority
     only through a bounded Rust promotion slice.
   resolution_id: slice-00-fa-local-runtime-modified
@@ -502,7 +533,7 @@ items:
   justification: FA Local support runtime differs from source while the support Cargo
     test gate passes.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support runtime adaptation. Reconcile source authority
     only through a bounded Rust promotion slice.
   resolution_id: slice-00-fa-local-runtime-modified
@@ -513,7 +544,7 @@ items:
   justification: FA Local support runtime differs from source while the support Cargo
     test gate passes.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep as support runtime adaptation. Reconcile source authority
     only through a bounded Rust promotion slice.
   resolution_id: slice-00-fa-local-runtime-modified
@@ -525,7 +556,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -538,7 +569,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -551,7 +582,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -564,7 +595,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold
@@ -576,7 +607,7 @@ items:
   justification: The modified FA Local contract-loading test is part of the support
     Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep paired with the FA Local support runtime adaptation.
   resolution_id: slice-00-fa-local-test-modified
   resolved_shape: modified_in_both
@@ -587,7 +618,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
-  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  target_commit: 2f3698deddf0e080286dd28b6cdf51dc7cd3db40
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-fa-local-source-local-hold

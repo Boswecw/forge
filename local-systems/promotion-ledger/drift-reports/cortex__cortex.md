@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T09:52:39+00:00`
+Generated: `2026-06-19T15:02:48+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`

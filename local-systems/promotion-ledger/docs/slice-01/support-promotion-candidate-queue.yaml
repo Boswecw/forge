@@ -1,10 +1,10 @@
-generated_at: '2026-06-19T09:45:48+00:00'
+generated_at: '2026-06-19T15:03:00+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 651
+  source_local_hold: 652
   candidate_after_target_role: 304
-  default_hold: 347
+  default_hold: 348
   missing_from_target: 0
   unknown: 0
   dangerous_drift: 0
@@ -19,7 +19,7 @@ category_summary:
     count: 102
     posture: default_hold_docs_rule
   source_evidence_reports_prompts:
-    count: 55
+    count: 56
     posture: default_hold_evidence_receipt_only
   source_local_subproject:
     count: 183
@@ -43,13 +43,13 @@ candidate_categories:
   source_scripts_ci: 24
 default_hold_categories:
   source_docs_or_doc_mirror: 102
-  source_evidence_reports_prompts: 55
+  source_evidence_reports_prompts: 56
   source_local_subproject: 183
   source_scaffold_config: 7
 repo_breakdown:
   cortex__cortex: 319
   dataforge-Local__df-local-foundation: 137
-  fa-local-operator__fa-local: 21
+  fa-local-operator__fa-local: 22
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
   neuronforge-local-operator__neuronforge: 173
 repo_category_breakdown:
@@ -72,7 +72,7 @@ repo_category_breakdown:
   fa-local-operator__fa-local:
     source_contract_schema_migration: 1
     source_docs_or_doc_mirror: 11
-    source_evidence_reports_prompts: 2
+    source_evidence_reports_prompts: 3
     source_proof_tests: 5
     source_runtime_or_capability: 1
     source_scripts_ci: 1
@@ -179,6 +179,7 @@ samples:
     source_evidence_reports_prompts:
     - reports/contract_core_gate_20260404_102436.json
     - reports/contract_core_gate_20260619_053018.json
+    - reports/contract_core_gate_20260619_110109.json
     source_proof_tests:
     - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
     - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json

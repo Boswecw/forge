@@ -1,0 +1,53 @@
+promotion_id: "2026-06-19--slice-01--fa-local-gnat-dispatch-target-role"
+slice_name: "Slice 01 - FA Local GNAT Dispatch Support Target Role"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator"
+source_branch: "master"
+source_commit: "5f6a7dad737f7366403a09711bc3d57a48a725cd"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/fa-local"
+target_branch: "master"
+target_commit: "2f3698deddf0e080286dd28b6cdf51dc7cd3db40"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/fa-local/docs/contracts/gnat-dispatch-target-role.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/schemas/gnat-dispatch-envelope.schema.json"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/integrations/cortex/mod.rs"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/src/bin/fa_local_run.rs"
+  - "/home/charlie/Forge/ecosystem/local-systems/fa-local-operator/tests/gnat_dispatch.rs"
+promotion_manifest:
+  - "Opened a support target-role document for future FA Local GNAT dispatch promotion."
+  - "Did not promote GNAT dispatch runtime code, schemas, tests, service adapters, queues, or durable execution behavior."
+  - "Kept GNAT dispatch runtime and schema artifacts classified as source_local_hold until a later named runtime promotion slice."
+proof_commands:
+  - "cargo test"
+  - "bash ci_gate.sh"
+  - "python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 local-systems/promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_cargo:
+    command: "cargo test"
+    result: "passed"
+  source_ci:
+    command: "bash ci_gate.sh"
+    result: "FA Local CI gate: PASSED"
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 652
+    missing_from_target: 0
+    target_only_glue: 132
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 845
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "not applicable; target-role documentation only, no support runtime behavior changed"
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI opened the bounded support target role. Charlie Boswell must review and accept or reject before runtime promotion."
+created_at: "2026-06-19T15:01:59Z"
+rollback_source_commit: "5f6a7dad737f7366403a09711bc3d57a48a725cd"
+rollback_target_commit: "2f3698deddf0e080286dd28b6cdf51dc7cd3db40"
+rollback_command: "Revert the FA Local support commit 2f3698deddf0e080286dd28b6cdf51dc7cd3db40 and regenerate the promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
