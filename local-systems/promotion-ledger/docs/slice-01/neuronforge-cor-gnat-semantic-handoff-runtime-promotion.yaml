@@ -1,0 +1,78 @@
+generated_at: "2026-06-19T17:07:39Z"
+scope: "Slice 01 NeuronForge COR GNAT semantic handoff runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/neuronforge
+support_branch: master
+support_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
+source_repo: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator
+source_branch: master
+source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  route_promoted: true
+  model_execution_promoted: false
+  durable_storage_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-neuronforge-cor-gnat-semantic-handoff-runtime.yaml
+runtime_boundary:
+  routes:
+    - POST /api/v1/cortex/gnat-semantic-handoff
+  receipt_only: true
+  semantic_result_posture: non_canonical_candidate
+  cor_receipts_mutation_allowed: false
+  non_goals:
+    - "No model execution from the handoff route."
+    - "No semantic candidate materialization promoted."
+    - "No COR receipt or source GNAT artifact mutation."
+    - "No graph assets, prompt assembly, experiment-memory records, queues, schedulers, watchers, or durable storage ownership promoted."
+source_authority:
+  contract_and_service: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/cor_gnat_semantic_handoff.py
+  route: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/main.py
+  tests: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/tests/test-cor-gnat-semantic-handoff.py
+support_artifacts:
+  contract_and_service: /home/charlie/Forge/apps/public-app-local-support/neuronforge/service/cor_gnat_semantic_handoff.py
+  route: /home/charlie/Forge/apps/public-app-local-support/neuronforge/service/main.py
+  tests: /home/charlie/Forge/apps/public-app-local-support/neuronforge/tests/test_cor_gnat_semantic_handoff.py
+verification:
+  support_handoff_test:
+    command: .venv/bin/python tests/test_cor_gnat_semantic_handoff.py
+    result: passed
+    output: "Ran 6 tests - OK"
+  source_handoff_test:
+    command: .venv/bin/python tests/test-cor-gnat-semantic-handoff.py
+    result: passed
+    output: "Ran 6 tests - OK"
+  support_py_compile:
+    command: .venv/bin/python -m py_compile service/cor_gnat_semantic_handoff.py service/main.py tests/test_cor_gnat_semantic_handoff.py
+    result: passed
+  support_standalone_tests:
+    result: passed
+    output: "45 passed, 0 failed across standalone Python scripts; continuity shell 27 passed, 0 failed"
+  known_environment_gap:
+    result: blocked
+    output: "Existing support venv lacks pytest/httpx; pytest all-tests and style-analysis route tests could not run through that path."
+drift_result_after_resolution:
+  neuronforge_pair:
+    same: 393
+    intentional_app_support_adaptation: 19
+    source_local_hold: 172
+    missing_from_target: 0
+    target_only_glue: 30
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 221
+  all_pairs:
+    same: 2234
+    intentional_app_support_adaptation: 84
+    source_local_hold: 642
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+queue_after_resolution:
+  source_local_hold: 642
+  candidate_after_target_role: 291
+  default_hold: 351
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Select the next support candidate from Cortex, FA Local, or remaining NeuronForge source-runtime candidates; schema/migration and generated report artifacts remain held."

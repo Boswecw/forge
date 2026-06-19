@@ -1,0 +1,32 @@
+version: 1
+created_at: "2026-06-19T17:06:29Z"
+scope: "Classify new DataForge source-only AuthorForge support artifacts as source-local holds."
+evidence:
+  source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+  target_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+  source_artifacts:
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/versions/20260619_01_attach_authorforge_support.py
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/contract_core_gate_20260619_130437.json
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/local_tests_20260619_130437.xml
+resolutions:
+  - resolution_id: slice-01-dataforge-authorforge-support-source-migration-hold
+    repo_pair: dataforge-Local__df-local-foundation
+    path: alembic/versions/20260619_01_attach_authorforge_support.py
+    shape: source_only
+    classification: source_local_hold
+    justification: "This source-only Alembic migration belongs to the DataForge local source branch's AuthorForge support attachment work. It is not part of the df-local-foundation support adapter promotion lane and must not be copied into app support without a schema-ownership promotion slice."
+    recommended_action: "Keep source-local until a later schema/migration ownership slice names the support role, compatibility proof, rollback path, and generated drift report."
+    evidence:
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/versions/20260619_01_attach_authorforge_support.py
+  - resolution_id: slice-01-dataforge-authorforge-support-report-hold
+    repo_pair: dataforge-Local__df-local-foundation
+    paths:
+      - reports/contract_core_gate_20260619_130437.json
+      - reports/local_tests_20260619_130437.xml
+    shape: source_only
+    classification: source_local_hold
+    justification: "These source-only generated report receipts document DataForge local verification. They are evidence artifacts, not app-support runtime, schema, or contract files."
+    recommended_action: "Keep source-local as verification evidence. Do not promote into app support runtime."
+    evidence:
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/contract_core_gate_20260619_130437.json
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/local_tests_20260619_130437.xml

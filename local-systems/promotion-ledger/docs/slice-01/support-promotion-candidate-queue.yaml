@@ -1,10 +1,10 @@
-generated_at: '2026-06-19T16:43:56+00:00'
+generated_at: '2026-06-19T17:07:28+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 640
+  source_local_hold: 642
   candidate_after_target_role: 291
-  default_hold: 349
+  default_hold: 351
   missing_from_target: 0
   unknown: 0
   dangerous_drift: 0
@@ -13,13 +13,13 @@ promotion_rule: A source-local hold may enter app support only after a named pro
   post-promotion drift report.
 category_summary:
   source_contract_schema_migration:
-    count: 53
+    count: 54
     posture: candidate_after_contract_compatibility
   source_docs_or_doc_mirror:
     count: 103
     posture: default_hold_docs_rule
   source_evidence_reports_prompts:
-    count: 56
+    count: 58
     posture: default_hold_evidence_receipt_only
   source_local_subproject:
     count: 183
@@ -28,7 +28,7 @@ category_summary:
     count: 117
     posture: pair_with_promoted_runtime_or_contract
   source_runtime_or_capability:
-    count: 97
+    count: 96
     posture: candidate_after_target_role
   source_scaffold_config:
     count: 7
@@ -37,21 +37,21 @@ category_summary:
     count: 24
     posture: candidate_when_tied_to_support_proof_command
 candidate_categories:
-  source_contract_schema_migration: 53
+  source_contract_schema_migration: 54
   source_proof_tests: 117
-  source_runtime_or_capability: 97
+  source_runtime_or_capability: 96
   source_scripts_ci: 24
 default_hold_categories:
   source_docs_or_doc_mirror: 103
-  source_evidence_reports_prompts: 56
+  source_evidence_reports_prompts: 58
   source_local_subproject: 183
   source_scaffold_config: 7
 repo_breakdown:
   cortex__cortex: 319
-  dataforge-Local__df-local-foundation: 125
+  dataforge-Local__df-local-foundation: 128
   fa-local-operator__fa-local: 22
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
-  neuronforge-local-operator__neuronforge: 173
+  neuronforge-local-operator__neuronforge: 172
 repo_category_breakdown:
   cortex__cortex:
     source_contract_schema_migration: 9
@@ -63,9 +63,9 @@ repo_category_breakdown:
     source_scaffold_config: 1
     source_scripts_ci: 6
   dataforge-Local__df-local-foundation:
-    source_contract_schema_migration: 30
+    source_contract_schema_migration: 31
     source_docs_or_doc_mirror: 31
-    source_evidence_reports_prompts: 30
+    source_evidence_reports_prompts: 32
     source_proof_tests: 13
     source_runtime_or_capability: 14
     source_scripts_ci: 7
@@ -83,7 +83,7 @@ repo_category_breakdown:
     source_docs_or_doc_mirror: 25
     source_evidence_reports_prompts: 20
     source_proof_tests: 49
-    source_runtime_or_capability: 50
+    source_runtime_or_capability: 49
     source_scaffold_config: 6
     source_scripts_ci: 10
 samples:

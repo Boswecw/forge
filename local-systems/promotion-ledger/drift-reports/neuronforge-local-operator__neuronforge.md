@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T16:43:48+00:00`
+Generated: `2026-06-19T17:07:18+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -8,7 +8,7 @@ Source commit: `006ef57c9ece79b666581b303fce06e54debaa42`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
-Target commit: `4aa1e98666dbb39380af7af93fe41e07a1759cb1`
+Target commit: `69b10fe340b19ec33b1fe36006956fdad67be9f1`
 
 Resolutions applied: `221`
 
@@ -16,9 +16,9 @@ Resolutions applied: `221`
 
 | Classification | Count |
 | --- | ---: |
-| same | 392 |
-| intentional_app_support_adaptation | 18 |
-| source_local_hold | 173 |
+| same | 393 |
+| intentional_app_support_adaptation | 19 |
+| source_local_hold | 172 |
 | missing_from_target | 0 |
 | target_only_glue | 30 |
 | dangerous_drift | 0 |
@@ -52,7 +52,7 @@ Resolutions applied: `221`
 | `docker-compose.graphiti-pilot.yml` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/adr/ADR-001-promotion-truth-upstream-of-pact.md` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/adr/ADR-2026-04-18-promotion-truth-upstream.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-adr-doc` | Keep as historical support doctrine. Do not back-promote its target mirror path claims as source authority without a fresh proving repo ADR update. |
-| `docs/contracts/cor-gnat-semantic-handoff-target-role.md` | target_only_glue | `slice-01-neuronforge-cor-gnat-semantic-handoff-target-role-doc` | Keep as support target-role glue. Promote COR GNAT semantic handoff runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report. |
+| `docs/contracts/cor-gnat-semantic-handoff-target-role.md` | target_only_glue | `slice-01-neuronforge-cor-gnat-semantic-handoff-target-role-doc` | Keep as support target-role glue. Any expansion beyond the candidate receipt adapter requires a later named slice with exact files, source proof, support proof, and regenerated drift report. |
 | `docs/cor-gnat-semantic-handoff.md` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/dogfood-cloud-quota-log.md` | intentional_app_support_adaptation | `slice-00-neuronforge-dogfood-quota-doc` | Keep as support planning documentation until telemetry is implemented and proved in the local system. |
 | `docs/evidence/promotion_runs_demo.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-runs-demo` | Keep as support evidence. Regenerate from the proving repo seam when the promotion seam changes. |
@@ -166,7 +166,6 @@ Resolutions applied: `221`
 | `service/authorforge_task_contract.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/authorforge_task_service.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/cloud_escalation.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
-| `service/cor_gnat_semantic_handoff.py` | source_local_hold | `slice-00-neuronforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `service/dogfood_telemetry.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/local_runtime.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/main.py` | intentional_app_support_adaptation | `slice-00-neuronforge-runtime-modified` | Keep as support service adaptation. Reconcile source only through a bounded service promotion slice. |
@@ -246,6 +245,7 @@ Resolutions applied: `221`
 | `tests/test_authorforge_task_contract.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
 | `tests/test_authorforge_task_service.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
 | `tests/test_cloud_escalation.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
+| `tests/test_cor_gnat_semantic_handoff.py` | intentional_app_support_adaptation | `slice-01-neuronforge-cor-gnat-semantic-handoff-support-test` | Keep as support-native proof for the promoted COR GNAT semantic handoff adapter. |
 | `tests/test_dogfood_telemetry.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
 | `tests/test_proofread_lane.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |
 | `tests/test_scene_lane.py` | target_only_glue | `slice-00-neuronforge-tests-target-only` | Keep as support proof glue. |

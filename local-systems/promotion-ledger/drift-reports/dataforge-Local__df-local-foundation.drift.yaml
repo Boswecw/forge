@@ -1,26 +1,26 @@
 repo_pair: dataforge-Local__df-local-foundation
 source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
 target_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
-source_branch: master
+source_branch: authorforge/phase1-attach-e7408e
 target_branch: main
-source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
 target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
-generated_at: '2026-06-19T16:43:48+00:00'
+generated_at: '2026-06-19T17:07:18+00:00'
 classification_summary:
   same: 8
   intentional_app_support_adaptation: 33
-  source_local_hold: 125
+  source_local_hold: 128
   missing_from_target: 0
   target_only_glue: 73
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 231
+resolutions_applied: 234
 items:
 - path: .gitignore
   classification: intentional_app_support_adaptation
   justification: DF support scaffold differs from source and is covered by the support
     test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-dataforge-scaffold-modified
@@ -30,7 +30,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: DF support scaffold differs from source and is covered by the support
     test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-dataforge-scaffold-modified
@@ -40,7 +40,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: DF support scaffold differs from source and is covered by the support
     test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-dataforge-scaffold-modified
@@ -50,7 +50,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -62,7 +62,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -77,7 +77,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -90,7 +90,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -103,7 +103,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -116,7 +116,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -129,7 +129,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -142,7 +142,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -155,7 +155,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -168,7 +168,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -181,7 +181,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -194,7 +194,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -207,7 +207,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -220,7 +220,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -233,7 +233,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -246,7 +246,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -259,7 +259,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -272,7 +272,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -285,7 +285,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -298,7 +298,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -311,7 +311,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -324,7 +324,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -337,7 +337,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -350,7 +350,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -363,7 +363,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -376,7 +376,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -389,7 +389,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -402,7 +402,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -410,11 +410,27 @@ items:
   resolved_shape: source_only
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
+- path: alembic/versions/20260619_01_attach_authorforge_support.py
+  classification: source_local_hold
+  justification: This source-only Alembic migration belongs to the DataForge local
+    source branch's AuthorForge support attachment work. It is not part of the df-local-foundation
+    support adapter promotion lane and must not be copied into app support without
+    a schema-ownership promotion slice.
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
+  target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
+  recommended_action: Keep source-local until a later schema/migration ownership slice
+    names the support role, compatibility proof, rollback path, and generated drift
+    report.
+  resolution_id: slice-01-dataforge-authorforge-support-source-migration-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-01-dataforge-authorforge-support-source-local-holds.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/versions/20260619_01_attach_authorforge_support.py
 - path: app/__init__.py
   classification: intentional_app_support_adaptation
   justification: The support ASGI app files differ from source and are covered by
     the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime adaptation. Promote only after matching
     source authority exists.
@@ -425,7 +441,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -438,7 +454,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -457,7 +473,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -472,7 +488,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -487,7 +503,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -502,7 +518,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -517,14 +533,14 @@ items:
     adapting route wiring and tests to the app-support FastAPI/asyncpg foundation.
     The target exposes only GET /df/rag/context-pack/{context_pack_id}; POST store/refresh
     remains source-local.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add context-pack
     write behavior or schema ownership without a separate named slice.
   resolution_id: slice-01-dataforge-context-pack-read-adapter
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-01-dataforge-context-pack-read-runtime.yaml
-  resolution_evidence: &id003
+  resolution_evidence: &id004
   - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_context_pack_routes.py
   - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/context_pack_router.py
 - path: app/api/healing_proposal_router.py
@@ -533,7 +549,7 @@ items:
     read shape while adapting route wiring to the app-support FastAPI foundation.
     The target exposes only GET /api/v1/healing-proposals and GET /api/v1/healing-proposals/{proposal_id};
     POST ingest and PATCH decision updates remain source-local durable-truth behavior.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add healing-proposal
     write behavior, schema ownership, or migrations without a separate named slice.
@@ -550,7 +566,7 @@ items:
     The target exposes only GET /api/v1/lineage/nodes, GET /api/v1/lineage/nodes/{node_id},
     and GET /api/v1/lineage/nodes/{node_id}/downstream; POST node, edge, and envelope
     writes remain source-local durable-truth behavior.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add lineage
     write behavior, schema ownership, or migrations without a separate named slice.
@@ -566,7 +582,7 @@ items:
     read shapes while adapting route wiring to the app-support FastAPI foundation.
     The target exposes only GET /api/v1/proving-slice/queue and GET /api/v1/proving-slice/queue/{staged_promotion_id};
     queue lifecycle mutations remain source-local worker behavior.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add proving-slice
     lifecycle writes, schema ownership, or migrations without a separate named slice.
@@ -582,14 +598,14 @@ items:
     while adapting tests and route wiring to the app-support FastAPI/asyncpg foundation.
     The target exposes only GET /api/v1/public-applications and filters enabled public
     rows.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add public-application
     mutations or schema ownership without a separate named slice.
   resolution_id: slice-01-dataforge-public-applications-read-adapters
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-01-dataforge-public-applications-read-runtime.yaml
-  resolution_evidence: &id004
+  resolution_evidence: &id005
   - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_public_applications_routes.py
   - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/tests/api/test_public_applications_routes.py
 - path: app/context_pack_services.py
@@ -597,7 +613,7 @@ items:
   justification: This target-only support service is the asyncpg adapter layer required
     by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo
     because the source route reads through its own session boundary.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter glue for the read-only context-pack
     route.
@@ -612,7 +628,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -625,7 +641,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -638,7 +654,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -651,7 +667,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -664,7 +680,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -677,7 +693,7 @@ items:
   justification: This target-only support service is the asyncpg adapter layer required
     by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo
     because the source route reads through its own session boundary.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter glue for the read-only healing-proposals
     routes.
@@ -692,7 +708,7 @@ items:
   justification: This target-only support service is the asyncpg adapter layer required
     by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo
     because the source route reads through its own session boundary.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter glue for the read-only lineage
     routes.
@@ -706,7 +722,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: The support ASGI app files differ from source and are covered by
     the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime adaptation. Promote only after matching
     source authority exists.
@@ -719,7 +735,7 @@ items:
     read-model layer required by df-local-foundation. It preserves the source derived
     queue/detail shapes without importing the source proving_slice package or its
     mutation/lifecycle services into app support.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter glue for the read-only proving-slice
     queue routes.
@@ -734,7 +750,7 @@ items:
   justification: This target-only support service is the asyncpg adapter layer required
     by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo
     because the source route reads through its own session boundary.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter glue for the read-only public-applications
     route.
@@ -749,7 +765,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -762,7 +778,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -775,7 +791,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -788,7 +804,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -801,7 +817,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -814,7 +830,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -827,7 +843,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -840,7 +856,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -852,7 +868,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -863,7 +879,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -874,7 +890,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -885,7 +901,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -896,7 +912,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -907,7 +923,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -918,7 +934,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -929,7 +945,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -940,7 +956,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -951,7 +967,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -962,7 +978,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -973,7 +989,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -984,7 +1000,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -995,7 +1011,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -1006,7 +1022,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -1017,7 +1033,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -1028,7 +1044,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -1039,7 +1055,7 @@ items:
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
     implementation and is covered by the DF support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support runtime glue. Backport only as explicit local-system
     source promotion.
@@ -1050,7 +1066,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1062,7 +1078,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1074,7 +1090,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1086,7 +1102,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1098,7 +1114,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1110,7 +1126,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1123,7 +1139,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1136,7 +1152,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1148,7 +1164,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1159,7 +1175,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1170,7 +1186,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1181,7 +1197,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1192,7 +1208,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1203,7 +1219,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1214,7 +1230,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1225,7 +1241,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1236,7 +1252,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1247,7 +1263,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1258,7 +1274,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1269,7 +1285,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1281,7 +1297,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1294,7 +1310,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1307,7 +1323,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1320,7 +1336,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1332,7 +1348,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1343,7 +1359,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1354,7 +1370,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1365,7 +1381,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1376,7 +1392,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1387,7 +1403,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1399,7 +1415,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1412,7 +1428,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1425,7 +1441,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1438,7 +1454,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1450,7 +1466,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1462,7 +1478,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1475,7 +1491,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1487,7 +1503,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1499,7 +1515,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1512,7 +1528,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1525,7 +1541,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1538,7 +1554,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1551,7 +1567,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1564,7 +1580,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1576,7 +1592,7 @@ items:
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
@@ -1588,7 +1604,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1600,7 +1616,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: Both source and support DataForge mirrors build cleanly. The differing
     mirror build files reflect repo-local mirror assembly.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
@@ -1611,7 +1627,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: Both source and support DataForge mirrors build cleanly. The differing
     mirror build files reflect repo-local mirror assembly.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
@@ -1622,7 +1638,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: Both source and support DataForge mirrors build cleanly. The differing
     mirror build files reflect repo-local mirror assembly.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     code or mirror-index changes.
@@ -1633,7 +1649,7 @@ items:
   classification: source_local_hold
   justification: This source-side handoff report documents the AuthorForge consumer
     branch and remains evidence in the proving repo. It is not a support runtime artifact.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local as evidence. Promote only condensed support-facing
     contract decisions into /docs when a later support slice requires them.
@@ -1646,7 +1662,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: This is a condensed implementation closeout retained as support documentation
     evidence. It explicitly says it is not the canonical code mirror.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as a support-side historical receipt. Do not promote upstream
     unless the proving repo opens a matching closeout evidence lane.
@@ -1661,7 +1677,7 @@ items:
     source API candidates without promoting runtime, routes, schemas, migrations,
     or write behavior. It separates read-only support-adapter candidates from durable-truth
     mutation endpoints that require later schema and authorization proof.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as target-role glue. Promote exactly one read-only lane
     at a time through a later named slice with source proof, support proof, migration/schema
@@ -1679,7 +1695,7 @@ items:
   justification: This support-only document records the bounded DF Local read-only
     analytics support role and its non-goals. Runtime adapters are now promoted in
     the follow-up runtime slice, while migrations and schema remain outside app support.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract glue. Promote any additional analytics
     schema, migrations, or write behavior only through a later named slice with exact
@@ -1697,7 +1713,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1710,7 +1726,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1722,7 +1738,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: This roadmap is a support-side, product-named adaptation of the source
     roadmap rather than an independent authority claim.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep in the support repo with the product-specific filename.
     Reconcile naming later only if roadmap authority moves upstream.
@@ -1737,7 +1753,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1750,7 +1766,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1763,7 +1779,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1776,7 +1792,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1789,7 +1805,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1802,7 +1818,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1815,7 +1831,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1828,7 +1844,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1841,7 +1857,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1854,7 +1870,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1867,7 +1883,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1880,7 +1896,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1893,7 +1909,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1906,7 +1922,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1919,7 +1935,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1932,7 +1948,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1944,7 +1960,7 @@ items:
   classification: intentional_app_support_adaptation
   justification: DF support scaffold differs from source and is covered by the support
     test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-dataforge-scaffold-modified
@@ -1955,7 +1971,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1968,7 +1984,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1981,7 +1997,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -1994,7 +2010,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2007,7 +2023,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2020,7 +2036,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2033,7 +2049,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2046,7 +2062,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2054,12 +2070,27 @@ items:
   resolved_shape: source_only
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
+- path: reports/contract_core_gate_20260619_130437.json
+  classification: source_local_hold
+  justification: These source-only generated report receipts document DataForge local
+    verification. They are evidence artifacts, not app-support runtime, schema, or
+    contract files.
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
+  target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
+  recommended_action: Keep source-local as verification evidence. Do not promote into
+    app support runtime.
+  resolution_id: slice-01-dataforge-authorforge-support-report-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-01-dataforge-authorforge-support-source-local-holds.yaml
+  resolution_evidence: &id003
+  - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/contract_core_gate_20260619_130437.json
+  - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/reports/local_tests_20260619_130437.xml
 - path: reports/local_tests_20260404_093918.xml
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2072,7 +2103,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2085,7 +2116,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2098,7 +2129,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2111,7 +2142,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2124,7 +2155,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2137,7 +2168,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2150,7 +2181,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2158,12 +2189,25 @@ items:
   resolved_shape: source_only
   resolution_source: resolutions/slice-00-source-local-holds.yaml
   resolution_evidence: *id001
+- path: reports/local_tests_20260619_130437.xml
+  classification: source_local_hold
+  justification: These source-only generated report receipts document DataForge local
+    verification. They are evidence artifacts, not app-support runtime, schema, or
+    contract files.
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
+  target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
+  recommended_action: Keep source-local as verification evidence. Do not promote into
+    app support runtime.
+  resolution_id: slice-01-dataforge-authorforge-support-report-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-01-dataforge-authorforge-support-source-local-holds.yaml
+  resolution_evidence: *id003
 - path: scripts/bootstrap_local_env.sh
   classification: source_local_hold
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2176,7 +2220,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2189,7 +2233,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2202,7 +2246,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2215,7 +2259,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2228,7 +2272,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2241,7 +2285,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2254,7 +2298,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2267,7 +2311,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2280,7 +2324,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2293,7 +2337,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2306,7 +2350,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2318,7 +2362,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -2330,7 +2374,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2342,7 +2386,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -2353,7 +2397,7 @@ items:
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
     glue covered by the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support contract/schema glue. Promote upstream only
     through a source authority slice.
@@ -2365,7 +2409,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2378,7 +2422,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2391,7 +2435,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2404,7 +2448,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -2419,7 +2463,7 @@ items:
     compute semantics while adapting the runtime boundary to the app-support FastAPI/asyncpg
     foundation. The target exposes only GET analytics routes and returns explicit
     503 analytics_read_failure on unreadable source tables.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native analytics runtime adapters.
     Do not promote analytics migrations, durable schema ownership, or write behavior
@@ -2434,21 +2478,21 @@ items:
     adapting route wiring and tests to the app-support FastAPI/asyncpg foundation.
     The target exposes only GET /df/rag/context-pack/{context_pack_id}; POST store/refresh
     remains source-local.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add context-pack
     write behavior or schema ownership without a separate named slice.
   resolution_id: slice-01-dataforge-context-pack-read-adapter
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-01-dataforge-context-pack-read-runtime.yaml
-  resolution_evidence: *id003
+  resolution_evidence: *id004
 - path: tests/api/test_healing_proposal_routes.py
   classification: intentional_app_support_adaptation
   justification: 'This target-only test proves the support adapter boundary: GET-only
     route registration, source-compatible list/detail response shape, 404 for missing
     proposals, and explicit 503 on unreadable source table. Source route behavior
     was separately proved with a direct handler proof.'
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter proof for the read-only healing-proposals
     routes.
@@ -2463,7 +2507,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2476,7 +2520,7 @@ items:
     route registration, source-compatible list/detail/downstream response shapes,
     404 for missing nodes, and explicit 503 on unreadable source table. Source route
     behavior was separately proved with a direct handler proof.'
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter proof for the read-only lineage
     routes.
@@ -2492,7 +2536,7 @@ items:
     route registration, source-compatible queue/detail response shapes, 404 for missing
     queue entries, and explicit 503 on unreadable source tables. Source route behavior
     was separately proved with a direct handler proof.'
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support-native adapter proof for the read-only proving-slice
     queue routes.
@@ -2508,20 +2552,20 @@ items:
     while adapting tests and route wiring to the app-support FastAPI/asyncpg foundation.
     The target exposes only GET /api/v1/public-applications and filters enabled public
     rows.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as promoted support-native read adapter. Do not add public-application
     mutations or schema ownership without a separate named slice.
   resolution_id: slice-01-dataforge-public-applications-read-adapters
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-01-dataforge-public-applications-read-runtime.yaml
-  resolution_evidence: *id004
+  resolution_evidence: *id005
 - path: tests/backup_restore/__init__.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2533,7 +2577,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2545,7 +2589,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2557,7 +2601,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2569,7 +2613,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2581,7 +2625,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2593,7 +2637,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2606,7 +2650,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2618,7 +2662,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2630,7 +2674,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2642,7 +2686,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2655,7 +2699,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2668,7 +2712,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2681,7 +2725,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2694,7 +2738,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2707,7 +2751,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2720,7 +2764,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2732,7 +2776,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2744,7 +2788,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2756,7 +2800,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2768,7 +2812,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2781,7 +2825,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2794,7 +2838,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2807,7 +2851,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2820,7 +2864,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2833,7 +2877,7 @@ items:
   justification: The current source-only backlog for this repo pair was inventoried,
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
@@ -2846,7 +2890,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2858,7 +2902,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2870,7 +2914,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2882,7 +2926,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2894,7 +2938,7 @@ items:
   justification: The target-only DF tests prove the support foundation implementation.
     Hermetic tests passed and live PostgreSQL integration tests skipped without required
     env.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support proof glue. Run the integration-marked tests
     when DF_LOCAL database env is available.
@@ -2905,7 +2949,7 @@ items:
   classification: target_only_glue
   justification: DF target-only tools are support operator glue and are covered by
     CLI authority tests in the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support tooling glue.
   resolution_id: slice-00-dataforge-tools-target-only
@@ -2915,7 +2959,7 @@ items:
   classification: target_only_glue
   justification: DF target-only tools are support operator glue and are covered by
     CLI authority tests in the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support tooling glue.
   resolution_id: slice-00-dataforge-tools-target-only
@@ -2925,7 +2969,7 @@ items:
   classification: target_only_glue
   justification: DF target-only tools are support operator glue and are covered by
     CLI authority tests in the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support tooling glue.
   resolution_id: slice-00-dataforge-tools-target-only
@@ -2935,7 +2979,7 @@ items:
   classification: target_only_glue
   justification: DF target-only tools are support operator glue and are covered by
     CLI authority tests in the support test tree.
-  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  source_commit: 56a5c7e09d82e0ec0ef833bf69033ee9430b59d7
   target_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
   recommended_action: Keep as support tooling glue.
   resolution_id: slice-00-dataforge-tools-target-only

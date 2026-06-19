@@ -1,6 +1,6 @@
 version: 1
 created_at: "2026-06-19T15:36:18Z"
-scope: "Classify the NeuronForge support-only COR GNAT semantic handoff target-role opening document."
+scope: "Classify the NeuronForge support-only COR GNAT semantic handoff target-role document."
 evidence:
   support_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
@@ -22,8 +22,8 @@ resolutions:
     path: docs/contracts/cor-gnat-semantic-handoff-target-role.md
     shape: target_only
     classification: target_only_glue
-    justification: "This support-only document opens a bounded NeuronForge COR GNAT semantic handoff target role while explicitly withholding route, runtime, schema, graph, prompt assembly, and test promotion. Source handoff authority remains in the local-system NeuronForge repo."
-    recommended_action: "Keep as support target-role glue. Promote COR GNAT semantic handoff runtime/schema only through a later named slice with exact files, source proof, support proof, and regenerated drift report."
+    justification: "This support-only document declares the bounded NeuronForge COR GNAT semantic handoff support role and now records the runtime promotion boundary: candidate-generation receipt adapter only, no model execution, no COR receipt mutation, and no canonical semantic truth."
+    recommended_action: "Keep as support target-role glue. Any expansion beyond the candidate receipt adapter requires a later named slice with exact files, source proof, support proof, and regenerated drift report."
     evidence:
       - /home/charlie/Forge/apps/public-app-local-support/neuronforge/docs/contracts/cor-gnat-semantic-handoff-target-role.md
       - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/cor-gnat-semantic-handoff.md

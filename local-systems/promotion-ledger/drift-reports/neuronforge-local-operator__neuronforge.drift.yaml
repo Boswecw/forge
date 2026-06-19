@@ -4,12 +4,12 @@ target_repo: /home/charlie/Forge/apps/public-app-local-support/neuronforge
 source_branch: master
 target_branch: master
 source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
-generated_at: '2026-06-19T16:43:48+00:00'
+target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
+generated_at: '2026-06-19T17:07:18+00:00'
 classification_summary:
-  same: 392
-  intentional_app_support_adaptation: 18
-  source_local_hold: 173
+  same: 393
+  intentional_app_support_adaptation: 19
+  source_local_hold: 172
   missing_from_target: 0
   target_only_glue: 30
   dangerous_drift: 0
@@ -21,7 +21,7 @@ items:
   justification: The target-only local settings file is support checkout glue, not
     source authority.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep local to the support target and do not promote upstream.
   resolution_id: slice-00-neuronforge-local-settings-target-only
   resolved_shape: target_only
@@ -32,7 +32,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -47,7 +47,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -59,7 +59,7 @@ items:
   justification: NeuronForge support scaffold differs from source and is covered by
     support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-neuronforge-scaffold-modified
   resolved_shape: modified_in_both
@@ -69,7 +69,7 @@ items:
   justification: NeuronForge support scaffold differs from source and is covered by
     support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-neuronforge-scaffold-modified
   resolved_shape: modified_in_both
@@ -80,7 +80,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -93,7 +93,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -105,7 +105,7 @@ items:
   justification: NeuronForge support scaffold differs from source and is covered by
     support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support scaffold adaptation.
   resolution_id: slice-00-neuronforge-scaffold-modified
   resolved_shape: modified_in_both
@@ -115,7 +115,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -126,7 +126,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -137,7 +137,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -148,7 +148,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -160,7 +160,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -172,7 +172,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -183,7 +183,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -194,7 +194,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -205,7 +205,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -216,7 +216,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -227,7 +227,7 @@ items:
   justification: Both source and support NeuronForge mirrors build cleanly. The differing
     mirror build files reflect repo-local mirror assembly.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     service or mirror-index changes.
   resolution_id: slice-00-neuronforge-doc-system-modified
@@ -238,7 +238,7 @@ items:
   justification: Both source and support NeuronForge mirrors build cleanly. The differing
     mirror build files reflect repo-local mirror assembly.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support mirror adaptation. Rebuild /doc/system after
     service or mirror-index changes.
   resolution_id: slice-00-neuronforge-doc-system-modified
@@ -249,7 +249,7 @@ items:
   justification: These support-side NeuronForge mirror files document the app-support
     code mirror and were verified by the support mirror build.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as target support mirror glue. Backport only if the proving
     repo adopts the same support mirror structure.
   resolution_id: slice-00-neuronforge-doc-system-target-only
@@ -261,7 +261,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -274,7 +274,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -287,7 +287,7 @@ items:
     PACT truth boundary. Source authority remains in the local proving repo ADR and
     promotion seam evidence.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as historical support doctrine. Do not back-promote its
     target mirror path claims as source authority without a fresh proving repo ADR
     update.
@@ -299,15 +299,15 @@ items:
   - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/docs/adr/ADR-001-promotion-truth-upstream-of-pact.md
 - path: docs/contracts/cor-gnat-semantic-handoff-target-role.md
   classification: target_only_glue
-  justification: This support-only document opens a bounded NeuronForge COR GNAT semantic
-    handoff target role while explicitly withholding route, runtime, schema, graph,
-    prompt assembly, and test promotion. Source handoff authority remains in the local-system
-    NeuronForge repo.
+  justification: 'This support-only document declares the bounded NeuronForge COR
+    GNAT semantic handoff support role and now records the runtime promotion boundary:
+    candidate-generation receipt adapter only, no model execution, no COR receipt
+    mutation, and no canonical semantic truth.'
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
-  recommended_action: Keep as support target-role glue. Promote COR GNAT semantic
-    handoff runtime/schema only through a later named slice with exact files, source
-    proof, support proof, and regenerated drift report.
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
+  recommended_action: Keep as support target-role glue. Any expansion beyond the candidate
+    receipt adapter requires a later named slice with exact files, source proof, support
+    proof, and regenerated drift report.
   resolution_id: slice-01-neuronforge-cor-gnat-semantic-handoff-target-role-doc
   resolved_shape: target_only
   resolution_source: resolutions/slice-01-neuronforge-cor-gnat-semantic-handoff-target-role.yaml
@@ -322,7 +322,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -335,7 +335,7 @@ items:
     telemetry. It is explicitly not implemented and does not claim source runtime
     authority.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support planning documentation until telemetry is implemented
     and proved in the local system.
   resolution_id: slice-00-neuronforge-dogfood-quota-doc
@@ -348,7 +348,7 @@ items:
   justification: This is target-side operator-readable evidence derived from the promotion
     seam proof, not a new source authority surface.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support evidence. Regenerate from the proving repo seam
     when the promotion seam changes.
   resolution_id: slice-00-neuronforge-promotion-runs-demo
@@ -362,7 +362,7 @@ items:
   justification: This is target-side explanatory evidence for the promoted seam examples.
     It summarizes proving repo seam behavior for support operators.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support evidence. Refresh from the proving repo when
     the seam proof changes.
   resolution_id: slice-00-neuronforge-promotion-seam-example
@@ -376,7 +376,7 @@ items:
   justification: This is target-side machine-readable evidence from the promotion
     seam verification. It belongs in support docs as a promoted evidence receipt.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support evidence. Regenerate from the local proving
     repo verification output when the seam changes.
   resolution_id: slice-00-neuronforge-promotion-seam-report
@@ -391,7 +391,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -404,7 +404,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -417,7 +417,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -430,7 +430,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -443,7 +443,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -456,7 +456,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -469,7 +469,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -482,7 +482,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -495,7 +495,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -508,7 +508,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -521,7 +521,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -534,7 +534,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -547,7 +547,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -560,7 +560,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -573,7 +573,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -586,7 +586,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -599,7 +599,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -612,7 +612,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -625,7 +625,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -638,7 +638,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -651,7 +651,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -664,7 +664,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -677,7 +677,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -690,7 +690,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -703,7 +703,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -716,7 +716,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -729,7 +729,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -742,7 +742,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -755,7 +755,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -768,7 +768,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -781,7 +781,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -794,7 +794,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -807,7 +807,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -820,7 +820,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -833,7 +833,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -846,7 +846,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -859,7 +859,7 @@ items:
     are support promotion evidence glue. Support and source promotion seam verification
     passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion evidence. Refresh only from proved
     PACT/source evidence.
   resolution_id: slice-00-neuronforge-promotion-target-only
@@ -871,7 +871,7 @@ items:
     are support promotion evidence glue. Support and source promotion seam verification
     passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion evidence. Refresh only from proved
     PACT/source evidence.
   resolution_id: slice-00-neuronforge-promotion-target-only
@@ -882,7 +882,7 @@ items:
   justification: Modified NeuronForge promotion runtime and registry files differ
     between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion adaptation. Reconcile only through
     a bounded promotion evidence refresh.
   resolution_id: slice-00-neuronforge-promotion-modified
@@ -893,7 +893,7 @@ items:
   justification: Modified NeuronForge promotion runtime and registry files differ
     between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion adaptation. Reconcile only through
     a bounded promotion evidence refresh.
   resolution_id: slice-00-neuronforge-promotion-modified
@@ -905,7 +905,7 @@ items:
     are support promotion evidence glue. Support and source promotion seam verification
     passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion evidence. Refresh only from proved
     PACT/source evidence.
   resolution_id: slice-00-neuronforge-promotion-target-only
@@ -917,7 +917,7 @@ items:
     are support promotion evidence glue. Support and source promotion seam verification
     passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion evidence. Refresh only from proved
     PACT/source evidence.
   resolution_id: slice-00-neuronforge-promotion-target-only
@@ -929,7 +929,7 @@ items:
     are support promotion evidence glue. Support and source promotion seam verification
     passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion evidence. Refresh only from proved
     PACT/source evidence.
   resolution_id: slice-00-neuronforge-promotion-target-only
@@ -941,7 +941,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -953,7 +953,7 @@ items:
   justification: Modified NeuronForge promotion runtime and registry files differ
     between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion adaptation. Reconcile only through
     a bounded promotion evidence refresh.
   resolution_id: slice-00-neuronforge-promotion-modified
@@ -965,7 +965,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -978,7 +978,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -991,7 +991,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1004,7 +1004,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1017,7 +1017,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1030,7 +1030,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1043,7 +1043,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1056,7 +1056,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1069,7 +1069,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1082,7 +1082,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1095,7 +1095,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1108,7 +1108,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1121,7 +1121,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1134,7 +1134,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1147,7 +1147,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1160,7 +1160,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1173,7 +1173,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1186,7 +1186,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1199,7 +1199,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1212,7 +1212,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1225,7 +1225,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1238,7 +1238,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1251,7 +1251,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1264,7 +1264,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1277,7 +1277,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1290,7 +1290,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1303,7 +1303,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1316,7 +1316,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1329,7 +1329,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1341,7 +1341,7 @@ items:
   justification: Modified NeuronForge promotion runtime and registry files differ
     between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support promotion adaptation. Reconcile only through
     a bounded promotion evidence refresh.
   resolution_id: slice-00-neuronforge-promotion-modified
@@ -1353,7 +1353,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1366,7 +1366,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1379,7 +1379,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1392,7 +1392,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1405,7 +1405,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1418,7 +1418,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1431,7 +1431,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1444,7 +1444,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1457,7 +1457,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1470,7 +1470,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1483,7 +1483,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1496,7 +1496,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1509,7 +1509,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1522,7 +1522,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1535,7 +1535,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1548,7 +1548,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1561,7 +1561,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1574,7 +1574,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1587,7 +1587,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1600,7 +1600,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1613,7 +1613,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1626,7 +1626,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1639,7 +1639,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1652,7 +1652,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1665,7 +1665,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1678,7 +1678,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1691,7 +1691,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1703,7 +1703,7 @@ items:
   justification: Modified NeuronForge scripts are covered by support tests and source/support
     promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support script adaptation. Recompare before upstream
     promotion.
   resolution_id: slice-00-neuronforge-scripts-modified
@@ -1715,7 +1715,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1727,7 +1727,7 @@ items:
   justification: Modified NeuronForge scripts are covered by support tests and source/support
     promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support script adaptation. Recompare before upstream
     promotion.
   resolution_id: slice-00-neuronforge-scripts-modified
@@ -1738,7 +1738,7 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1749,7 +1749,7 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1760,31 +1760,18 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
-- path: service/cor_gnat_semantic_handoff.py
-  classification: source_local_hold
-  justification: The current source-only backlog for this repo pair was inventoried,
-    reviewed, and kept as source-local proving material until a concrete app-support
-    target role is opened.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
-  recommended_action: Keep source-local. Do not copy into app support without a bounded
-    promotion slice, explicit support role, proof command, and regenerated drift report.
-  resolution_id: slice-00-neuronforge-source-local-hold
-  resolved_shape: source_only
-  resolution_source: resolutions/slice-00-source-local-holds.yaml
-  resolution_evidence: *id001
 - path: service/dogfood_telemetry.py
   classification: target_only_glue
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1795,7 +1782,7 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1806,7 +1793,7 @@ items:
   justification: The NeuronForge support service entrypoint differs from source while
     the support pytest gate passes.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service adaptation. Reconcile source only through
     a bounded service promotion slice.
   resolution_id: slice-00-neuronforge-runtime-modified
@@ -1817,7 +1804,7 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1828,7 +1815,7 @@ items:
   justification: The target-only NeuronForge service modules are app-support glue
     and are covered by support tests.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support service glue. Backport only if the proving repo
     adopts these AuthorForge service lanes.
   resolution_id: slice-00-neuronforge-service-target-only
@@ -1840,7 +1827,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1853,7 +1840,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1866,7 +1853,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1879,7 +1866,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1892,7 +1879,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1905,7 +1892,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1918,7 +1905,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1931,7 +1918,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1944,7 +1931,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1957,7 +1944,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1970,7 +1957,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1983,7 +1970,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -1996,7 +1983,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2009,7 +1996,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2022,7 +2009,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2035,7 +2022,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2048,7 +2035,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2061,7 +2048,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2074,7 +2061,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2087,7 +2074,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2100,7 +2087,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2113,7 +2100,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2126,7 +2113,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2139,7 +2126,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2152,7 +2139,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2165,7 +2152,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2178,7 +2165,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2191,7 +2178,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2204,7 +2191,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2217,7 +2204,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2230,7 +2217,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2243,7 +2230,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2256,7 +2243,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2269,7 +2256,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2282,7 +2269,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2295,7 +2282,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2308,7 +2295,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2321,7 +2308,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2334,7 +2321,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2347,7 +2334,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2360,7 +2347,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2373,7 +2360,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2386,7 +2373,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2399,7 +2386,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2412,7 +2399,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2425,7 +2412,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2438,7 +2425,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2451,7 +2438,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2464,7 +2451,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2477,7 +2464,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2490,7 +2477,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2503,7 +2490,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2516,7 +2503,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2529,7 +2516,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2542,7 +2529,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2555,7 +2542,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2568,7 +2555,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2581,7 +2568,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2594,7 +2581,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2607,7 +2594,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2620,7 +2607,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2633,7 +2620,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2646,7 +2633,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2659,7 +2646,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2672,7 +2659,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2685,7 +2672,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2698,7 +2685,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2711,7 +2698,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2724,7 +2711,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2737,7 +2724,7 @@ items:
     reviewed, and kept as source-local proving material until a concrete app-support
     target role is opened.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep source-local. Do not copy into app support without a bounded
     promotion slice, explicit support role, proof command, and regenerated drift report.
   resolution_id: slice-00-neuronforge-source-local-hold
@@ -2749,7 +2736,7 @@ items:
   justification: The style-analysis test differs with support behavior and the support
     pytest gate passes.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep paired with the NeuronForge support adaptation.
   resolution_id: slice-00-neuronforge-test-modified
   resolved_shape: modified_in_both
@@ -2759,7 +2746,7 @@ items:
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
@@ -2769,7 +2756,7 @@ items:
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
@@ -2779,17 +2766,32 @@ items:
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
+- path: tests/test_cor_gnat_semantic_handoff.py
+  classification: intentional_app_support_adaptation
+  justification: 'This target-only support test proves the promoted adapter boundary:
+    candidate receipt only, raw-content rejection, model-resource disclosure, immutable
+    COR receipts, partial-source consistency, and route registration.'
+  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
+  recommended_action: Keep as support-native proof for the promoted COR GNAT semantic
+    handoff adapter.
+  resolution_id: slice-01-neuronforge-cor-gnat-semantic-handoff-support-test
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-01-neuronforge-cor-gnat-semantic-handoff-runtime.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/apps/public-app-local-support/neuronforge/tests/test_cor_gnat_semantic_handoff.py
+  - /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator/service/cor_gnat_semantic_handoff.py
 - path: tests/test_dogfood_telemetry.py
   classification: target_only_glue
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
@@ -2799,7 +2801,7 @@ items:
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
@@ -2809,7 +2811,7 @@ items:
   justification: The target-only NeuronForge tests prove the app-support service lanes
     and passed in the support pytest gate.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4aa1e98666dbb39380af7af93fe41e07a1759cb1
+  target_commit: 69b10fe340b19ec33b1fe36006956fdad67be9f1
   recommended_action: Keep as support proof glue.
   resolution_id: slice-00-neuronforge-tests-target-only
   resolved_shape: target_only
