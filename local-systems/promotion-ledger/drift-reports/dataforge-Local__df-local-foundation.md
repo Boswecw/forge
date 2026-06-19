@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T16:37:10+00:00`
+Generated: `2026-06-19T16:43:48+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,17 +8,17 @@ Source commit: `50512dbf569795ec3744805e83005e3b8888f24d`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `f581f2a681d50709678ddcd379e180cfee0f9c1b`
+Target commit: `7d0e5479157f608e57507a0750a19cc2baf5fc0f`
 
-Resolutions applied: `229`
+Resolutions applied: `231`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 8 |
-| intentional_app_support_adaptation | 30 |
-| source_local_hold | 126 |
+| intentional_app_support_adaptation | 33 |
+| source_local_hold | 125 |
 | missing_from_target | 0 |
 | target_only_glue | 73 |
 | dangerous_drift | 0 |
@@ -69,7 +69,7 @@ Resolutions applied: `229`
 | `app/api/context_pack_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-context-pack-read-adapter` | Keep as promoted support-native read adapter. Do not add context-pack write behavior or schema ownership without a separate named slice. |
 | `app/api/healing_proposal_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-healing-proposals-read-adapter` | Keep as promoted support-native read adapter. Do not add healing-proposal write behavior, schema ownership, or migrations without a separate named slice. |
 | `app/api/lineage_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-lineage-read-adapter` | Keep as promoted support-native read adapter. Do not add lineage write behavior, schema ownership, or migrations without a separate named slice. |
-| `app/api/proving_slice_queue_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/proving_slice_queue_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-proving-slice-queue-read-adapter` | Keep as promoted support-native read adapter. Do not add proving-slice lifecycle writes, schema ownership, or migrations without a separate named slice. |
 | `app/api/public_applications_router.py` | intentional_app_support_adaptation | `slice-01-dataforge-public-applications-read-adapters` | Keep as promoted support-native read adapter. Do not add public-application mutations or schema ownership without a separate named slice. |
 | `app/context_pack_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-context-pack-support-service` | Keep as support-native adapter glue for the read-only context-pack route. |
 | `app/database.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -80,6 +80,7 @@ Resolutions applied: `229`
 | `app/healing_proposal_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-healing-proposals-support-service` | Keep as support-native adapter glue for the read-only healing-proposals routes. |
 | `app/lineage_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-lineage-support-service` | Keep as support-native adapter glue for the read-only lineage routes. |
 | `app/main.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
+| `app/proving_slice_queue_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-proving-slice-queue-support-service` | Keep as support-native adapter glue for the read-only proving-slice queue routes. |
 | `app/public_applications_services.py` | intentional_app_support_adaptation | `slice-01-dataforge-public-applications-support-service` | Keep as support-native adapter glue for the read-only public-applications route. |
 | `ci_gate.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `constants/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -221,6 +222,7 @@ Resolutions applied: `229`
 | `tests/api/test_healing_proposal_routes.py` | intentional_app_support_adaptation | `slice-01-dataforge-healing-proposals-support-tests` | Keep as support-native adapter proof for the read-only healing-proposals routes. |
 | `tests/api/test_health_api.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/api/test_lineage_routes.py` | intentional_app_support_adaptation | `slice-01-dataforge-lineage-support-tests` | Keep as support-native adapter proof for the read-only lineage routes. |
+| `tests/api/test_proving_slice_queue_routes.py` | intentional_app_support_adaptation | `slice-01-dataforge-proving-slice-queue-support-tests` | Keep as support-native adapter proof for the read-only proving-slice queue routes. |
 | `tests/api/test_public_applications_routes.py` | intentional_app_support_adaptation | `slice-01-dataforge-public-applications-read-adapters` | Keep as promoted support-native read adapter. Do not add public-application mutations or schema ownership without a separate named slice. |
 | `tests/backup_restore/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/backup_restore/test_envelope_signing.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |

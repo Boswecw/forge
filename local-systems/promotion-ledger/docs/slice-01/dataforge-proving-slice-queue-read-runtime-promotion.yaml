@@ -1,0 +1,72 @@
+generated_at: "2026-06-19T16:44:14Z"
+scope: "Slice 01 DF Local proving-slice queue read runtime promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+support_branch: main
+support_commit: 7d0e5479157f608e57507a0750a19cc2baf5fc0f
+source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+source_branch: master
+source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+decision:
+  status: runtime_promoted_needs_review
+  runtime_promoted: true
+  route_promoted: true
+  migration_promoted: false
+  schema_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-dataforge-proving-slice-queue-read-runtime.yaml
+runtime_boundary:
+  routes:
+    - GET /api/v1/proving-slice/queue
+    - GET /api/v1/proving-slice/queue/{staged_promotion_id}
+  missing_queue_entry: "404 Queue entry not found: {staged_promotion_id}"
+  read_failure: "503 proving_slice_queue_read_failure"
+  non_goals:
+    - "No proving-slice lifecycle mutation services promoted."
+    - "No artifact ingest, promotion admission, reconciliation, or worker behavior promoted."
+    - "No migrations or schema ownership promoted."
+    - "No AuthorForge behavior changed."
+source_authority:
+  router: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py
+  read_models: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/services/read_models.py
+support_artifacts:
+  router: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/proving_slice_queue_router.py
+  service: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/proving_slice_queue_services.py
+  tests: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_proving_slice_queue_routes.py
+verification:
+  support_pytest:
+    command: env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "204 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: ruff check app/proving_slice_queue_services.py app/api/proving_slice_queue_router.py app/main.py tests/api/test_proving_slice_queue_routes.py
+    result: passed
+    output: "All checks passed"
+  source_proving_slice_queue_direct:
+    command: direct route-handler proving-slice queue proof with fake session
+    result: passed
+    output: "PASS: direct proving-slice queue route logic proof"
+drift_result_after_resolution:
+  dataforge_pair:
+    same: 8
+    intentional_app_support_adaptation: 33
+    source_local_hold: 125
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 231
+  all_pairs:
+    same: 2233
+    intentional_app_support_adaptation: 83
+    source_local_hold: 640
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+queue_after_resolution:
+  source_local_hold: 640
+  candidate_after_target_role: 291
+  default_hold: 349
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "DF Local target-role read-only candidate lane is closed for the named source routers; durable-truth write surfaces remain held until schema ownership and authorization proof exists."

@@ -1,0 +1,80 @@
+promotion_id: "2026-06-19--slice-01--dataforge-proving-slice-queue-read-runtime"
+slice_name: "Slice 01 - DF Local Proving-Slice Queue Read Runtime Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local"
+source_branch: "master"
+source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation"
+target_branch: "main"
+target_commit: "7d0e5479157f608e57507a0750a19cc2baf5fc0f"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/proving_slice_queue_router.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/proving_slice_queue_services.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/main.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_proving_slice_queue_routes.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/services/promotion_queue.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/services/promotion_admission.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/services/promotion_reconciliation.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/proving_slice/services/artifact_ingest.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/versions/20260402_06_create_runtime_promotion_tables.py"
+promotion_manifest:
+  - "Promoted the DF Local proving-slice queue GET list/detail endpoints into app support as support-native read adapters."
+  - "Mounted only GET /api/v1/proving-slice/queue and GET /api/v1/proving-slice/queue/{staged_promotion_id}."
+  - "Preserved the source derived queue/detail read shapes, including lifecycle explanation, evidence summary, derived markers, audit summary, and dead-letter posture."
+  - "Adapted the source SQLAlchemy/session and proving_slice package boundary to the support app's FastAPI/asyncpg foundation boundary."
+  - "Did not promote proving-slice lifecycle mutation services, artifact ingest, reconciliation workers, migrations, schema ownership, or additional source APIs."
+proof_commands:
+  - "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+  - "ruff check app/proving_slice_queue_services.py app/api/proving_slice_queue_router.py app/main.py tests/api/test_proving_slice_queue_routes.py"
+  - ".venv/bin/python - <<'PY' direct route-handler proving-slice queue proof"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_pytest:
+    command: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    result: "204 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: "ruff check app/proving_slice_queue_services.py app/api/proving_slice_queue_router.py app/main.py tests/api/test_proving_slice_queue_routes.py"
+    result: "All checks passed"
+  source_proving_slice_queue_direct:
+    command: ".venv/bin/python - <<'PY' direct route-handler proving-slice queue proof"
+    result: "PASS: direct proving-slice queue route logic proof"
+  dataforge_pair_drift:
+    same: 8
+    intentional_app_support_adaptation: 33
+    source_local_hold: 125
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 231
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 83
+    source_local_hold: 640
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+  support_promotion_queue:
+    source_local_hold: 640
+    candidate_after_target_role: 291
+    default_hold: 349
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Support runtime exposes only GET /api/v1/proving-slice/queue and GET /api/v1/proving-slice/queue/{staged_promotion_id}; 404 for missing queue entries; 503 proving_slice_queue_read_failure on unreadable source tables."
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, write path, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded read-only proving-slice queue support adapter under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T16:44:14Z"
+rollback_source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+rollback_target_commit: "f581f2a681d50709678ddcd379e180cfee0f9c1b"
+rollback_command: "Revert the DF Local support commit 7d0e5479157f608e57507a0750a19cc2baf5fc0f, remove the proving-slice queue runtime resolution, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--dataforge-local-api-target-role"
