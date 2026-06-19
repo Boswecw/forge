@@ -1,0 +1,74 @@
+generated_at: "2026-06-19T09:38:14Z"
+scope: "Slice 00 source-local hold resolution"
+resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-source-local-holds.yaml
+decision:
+  classification: source_local_hold
+  shape: source_only
+  rule: "Reviewed source-only artifacts remain local-system proving material unless a bounded support promotion slice opens an explicit target role."
+  documentation_rule: "Documentation remains in /docs when active or condensed; /doc/system remains the canonical code mirror and is not bulk-promoted."
+inputs:
+  source_only_backlog_inventory: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+  cortex_neuronforge_review: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/cortex-neuronforge-source-candidate-review.yaml
+  dataforge_fa_review: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
+delta_from_initial_inventory:
+  initial_missing_from_target_snapshot: 648
+  proof_report_artifacts_created_after_snapshot: 3
+  current_source_local_hold_total: 651
+  added_after_snapshot:
+    dataforge-Local__df-local-foundation:
+      - reports/contract_core_gate_20260619_053018.json
+      - reports/local_tests_20260619_053018.xml
+    fa-local-operator__fa-local:
+      - reports/contract_core_gate_20260619_053018.json
+current_drift_result:
+  same: 2233
+  intentional_app_support_adaptation: 61
+  source_local_hold: 651
+  missing_from_target: 0
+  target_only_glue: 130
+  dangerous_drift: 0
+  unknown: 0
+  resolutions_applied: 842
+repo_breakdown:
+  cortex__cortex:
+    source_local_hold: 319
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+  dataforge-Local__df-local-foundation:
+    source_local_hold: 137
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+  fa-local-operator__fa-local:
+    source_local_hold: 21
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    source_local_hold: 1
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+  neuronforge-local-operator__neuronforge:
+    source_local_hold: 173
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+verification:
+  generator_compile:
+    command: python3 -m py_compile local-systems/promotion-ledger/scripts/generate_drift_inventory.py
+    result: passed
+  resolution_load:
+    command: python3 YAML load and resolution count check
+    result: passed
+    output: "5 resolution entries, 651 exact source-only paths"
+  drift_inventory:
+    command: python3 local-systems/promotion-ledger/scripts/generate_drift_inventory.py --overwrite
+    result: passed
+    generated_at: "2026-06-19T09:36:35+00:00"
+blocking_status:
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."

@@ -62,4 +62,8 @@ final_unknown_resolution:
   status: complete
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/final-unknown-resolution-proof.yaml
   unknown_after: 0
-next_gate: "Review source-only missing_from_target backlog for promotion candidates or explicit exclusions."
+source_local_hold_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml
+  missing_from_target_after: 0
+next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."

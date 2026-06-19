@@ -5,15 +5,16 @@ source_branch: master
 target_branch: main
 source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
 target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-generated_at: '2026-06-19T09:17:12+00:00'
+generated_at: '2026-06-19T09:37:37+00:00'
 classification_summary:
   same: 8
   intentional_app_support_adaptation: 11
-  missing_from_target: 135
+  source_local_hold: 137
+  missing_from_target: 0
   target_only_glue: 71
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 82
+resolutions_applied: 219
 items:
 - path: .gitignore
   classification: intentional_app_support_adaptation
@@ -57,221 +58,358 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: alembic.ini
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: &id001
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
 - path: alembic/README.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/env.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/script.py.mako
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_01_create_local_substrate_schemas.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_02_create_substrate_core_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_03_create_service_registry_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_04_create_service_status_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_05_create_runtime_governance_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_06_create_runtime_promotion_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_07_create_operator_control_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260402_08_create_bds_governance_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260404_09_create_proving_slice_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260606_01_create_healing_proposals.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260607_01_create_gnat_runtime_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260607_02_phase1_worker_remediation_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260607_03_phase1_worker_autonomy_truth_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260607_04_phase2_doppelcore_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260607_05_phase2_verification_results.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_01_phase2_scan_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_02_phase2_exceptions_centipede.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_03_phase2_compliance_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_04_phase2_events_table.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_05_phase2_core_registry_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260608_06_forge_lineage_tables.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260609_01_create_context_packs.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: alembic/versions/20260611_01_create_public_applications.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/__init__.py
   classification: intentional_app_support_adaptation
   justification: The support ASGI app files differ from source and are covered by
@@ -295,125 +433,200 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: app/analytics_config.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/analytics_models.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/analytics_services.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/analytics_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/context_pack_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/healing_proposal_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/lineage_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/proving_slice_queue_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/api/public_applications_router.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/database.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/evaluation_spine/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/evaluation_spine/lineage.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/evaluation_spine/lineage_cli.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/evaluation_spine/triple_variant_audit_store.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: app/main.py
   classification: intentional_app_support_adaptation
   justification: The support ASGI app files differ from source and are covered by
@@ -426,69 +639,109 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: ci_gate.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/public_applications.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/read_models.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/runtime_actions.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/schemas.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/services.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: constants/vocabularies.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: contracts/app-registration.schema.json
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
@@ -699,13 +952,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/DLOSYSTEM.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/SYSTEM.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -718,13 +976,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/plans/local-analytics/df_local_analytics_slice_01.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/00-overview.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -737,29 +1000,44 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/00_overview/01-overview-philosophy.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/00_overview/02-architecture.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/00_overview/03-project-structure.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/01-architecture.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -893,37 +1171,57 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/10_service-contract/04-design-system.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/10_service-contract/05-frontend.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/10_service-contract/06-api-layer.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/10_service-contract/07-proving-slice.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/11-database-schema.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -991,37 +1289,57 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/20_runtime/08-backend.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/20_runtime/09-database-schema.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/20_runtime/10-ai-integration.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/20_runtime/11-error-handling.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/30-governance.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -1034,21 +1352,31 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/30_dependencies/12-tech-stack.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/30_dependencies/13-ecosystem-integration.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40-change-control.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -1061,53 +1389,83 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/40_governance/14-scope.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40_governance/15-governance.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40_governance/16-change-control.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/50_operations/17-configuration.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/50_operations/18-testing-infrastructure.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/50_operations/19-handover-migration-notes.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/90-appendices.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -1120,13 +1478,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/99_appendices/20-appendices.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/BUILD.sh
   classification: intentional_app_support_adaptation
   justification: Both source and support DataForge mirrors build cleanly. The differing
@@ -1174,21 +1537,31 @@ items:
   resolution_evidence:
   - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/closeout-initial-governed-implementation.md
 - path: docs/dataforge-local_architecture_spec.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/dataforge-local_extended_roadmap.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/df-local-foundation_extended_roadmap.md
   classification: intentional_app_support_adaptation
   justification: This roadmap is a support-side, product-named adaptation of the source
@@ -1204,133 +1577,213 @@ items:
   - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/df-local-foundation_extended_roadmap.md
   - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/docs/dataforge-local_extended_roadmap.md
 - path: docs/evaluation-spine-phase-08-dataforge-local-lineage.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/migration_order.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/read_models.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/repo_structure.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/schema_inventory.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: docs/seed_strategy.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: gnat_runtime/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: gnat_runtime/persistence.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/models.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/artifact_ingest.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/promotion_admission.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/promotion_queue.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/promotion_reconciliation.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: proving_slice/services/read_models.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: pyproject.toml
   classification: intentional_app_support_adaptation
   justification: DF support scaffold differs from source and is covered by the support
@@ -1342,213 +1795,369 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: reports/contract_core_gate_20260404_093918.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260404_094503.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260614_002806.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260614_003357.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260614_004114.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260614_004902.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/contract_core_gate_20260614_004945.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
+- path: reports/contract_core_gate_20260619_053018.json
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260404_093918.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260404_094503.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260614_002806.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260614_003357.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260614_004114.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260614_004902.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: reports/local_tests_20260614_004945.xml
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
+- path: reports/local_tests_20260619_053018.xml
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/bootstrap_local_env.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/init_db.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/reset_db.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/run_local.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/run_migrations.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: scripts/seed_v1.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/governed_action_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/public_application_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/read_model_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/schema_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: seeds/service_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: sql/apps/authorforge/0001_authorforge_attach.sql
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
@@ -1561,13 +2170,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: sql/bootstrap.sql
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: sql/core/0001_core_foundation.sql
   classification: target_only_glue
   justification: DF target-only contracts and SQL are support foundation contract
@@ -1591,21 +2205,31 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: sql/dev_reset.sql
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: sql/manual_checks.sql
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/api/__init__.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.
@@ -1619,29 +2243,44 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/api/test_analytics_compute.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/api/test_analytics_routes.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/api/test_context_pack_routes.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/api/test_health_api.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.
@@ -1727,13 +2366,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/gnat_runtime/test_persistence.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/migration_status/__init__.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.
@@ -1771,53 +2415,83 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/proving_slice/__init__.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/proving_slice/conftest.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/proving_slice/test_admission.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/proving_slice/test_queue.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/proving_slice/test_read_models.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/proving_slice/test_reconciliation.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/registration/__init__.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.
@@ -1867,53 +2541,83 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/test_constants.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/test_evaluation_spine_phase08_lineage.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/test_schema_registry_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/test_service_seeds.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/test_triple_variant_audit_store.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/test_vocabularies.py
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-dataforge-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/visibility_boundary/__init__.py
   classification: target_only_glue
   justification: The target-only DF tests prove the support foundation implementation.

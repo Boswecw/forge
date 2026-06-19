@@ -78,7 +78,8 @@ sed -n '1,120p' \
 
 - The drift generator is intentionally conservative.
 - Same-file matches are counted but not listed as item rows.
-- Source-only files are classified as `missing_from_target`.
+- Source-only files are classified as `missing_from_target` by default and can
+  move to `source_local_hold` only through explicit resolution evidence.
 - Target-only files and modified files are classified as `unknown` by default.
 - Unknown and dangerous drift block promotion until human decision, backport, or
   explicit exception.

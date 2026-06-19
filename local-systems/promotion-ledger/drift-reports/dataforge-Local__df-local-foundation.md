@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T09:17:12+00:00`
+Generated: `2026-06-19T09:37:37+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -10,7 +10,7 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundat
 Target branch: `main`
 Target commit: `b2f44d46b1bc953503a0c31381fa4683c852b0dd`
 
-Resolutions applied: `82`
+Resolutions applied: `219`
 
 ## Classification Summary
 
@@ -18,7 +18,8 @@ Resolutions applied: `82`
 | --- | ---: |
 | same | 8 |
 | intentional_app_support_adaptation | 11 |
-| missing_from_target | 135 |
+| source_local_hold | 137 |
+| missing_from_target | 0 |
 | target_only_glue | 71 |
 | dangerous_drift | 0 |
 | unknown | 0 |
@@ -31,59 +32,59 @@ Resolutions applied: `82`
 | `CLAUDE.md` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `README.md` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `alembic.ini` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/README.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/env.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/script.py.mako` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_01_create_local_substrate_schemas.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_02_create_substrate_core_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_03_create_service_registry_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_04_create_service_status_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_05_create_runtime_governance_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_06_create_runtime_promotion_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_07_create_operator_control_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260402_08_create_bds_governance_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260404_09_create_proving_slice_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260606_01_create_healing_proposals.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260607_01_create_gnat_runtime_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260607_02_phase1_worker_remediation_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260607_03_phase1_worker_autonomy_truth_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260607_04_phase2_doppelcore_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260607_05_phase2_verification_results.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_01_phase2_scan_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_02_phase2_exceptions_centipede.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_03_phase2_compliance_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_04_phase2_events_table.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_05_phase2_core_registry_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260608_06_forge_lineage_tables.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260609_01_create_context_packs.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `alembic/versions/20260611_01_create_public_applications.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `alembic.ini` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/README.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/env.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/script.py.mako` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_01_create_local_substrate_schemas.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_02_create_substrate_core_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_03_create_service_registry_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_04_create_service_status_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_05_create_runtime_governance_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_06_create_runtime_promotion_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_07_create_operator_control_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260402_08_create_bds_governance_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260404_09_create_proving_slice_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260606_01_create_healing_proposals.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260607_01_create_gnat_runtime_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260607_02_phase1_worker_remediation_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260607_03_phase1_worker_autonomy_truth_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260607_04_phase2_doppelcore_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260607_05_phase2_verification_results.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_01_phase2_scan_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_02_phase2_exceptions_centipede.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_03_phase2_compliance_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_04_phase2_events_table.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_05_phase2_core_registry_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260608_06_forge_lineage_tables.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260609_01_create_context_packs.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `alembic/versions/20260611_01_create_public_applications.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `app/__init__.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
 | `app/__main__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
-| `app/analytics_config.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/analytics_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/analytics_services.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/analytics_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/context_pack_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/healing_proposal_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/lineage_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/proving_slice_queue_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/api/public_applications_router.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/database.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/evaluation_spine/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/evaluation_spine/lineage.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/evaluation_spine/lineage_cli.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `app/evaluation_spine/triple_variant_audit_store.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `app/analytics_config.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/analytics_models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/analytics_services.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/analytics_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/context_pack_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/healing_proposal_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/lineage_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/proving_slice_queue_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/api/public_applications_router.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/database.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/evaluation_spine/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/evaluation_spine/lineage.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/evaluation_spine/lineage_cli.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `app/evaluation_spine/triple_variant_audit_store.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `app/main.py` | intentional_app_support_adaptation | `slice-00-dataforge-runtime-modified` | Keep as support runtime adaptation. Promote only after matching source authority exists. |
-| `ci_gate.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/public_applications.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/read_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/runtime_actions.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/schemas.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/services.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `constants/vocabularies.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `ci_gate.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/public_applications.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/read_models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/runtime_actions.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/schemas.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/services.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `constants/vocabularies.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `contracts/app-registration.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `contracts/health.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `contracts/migration-status.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
@@ -103,13 +104,13 @@ Resolutions applied: `82`
 | `core/lifecycle/manager.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `core/lifecycle/migration_lock.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `doc/DFLSYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/DLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/DLOSYSTEM.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/plans/local-analytics/df_local_analytics_slice_01.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/plans/local-analytics/df_local_analytics_slice_01.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/00-overview.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/00_overview/01-overview-philosophy.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/00_overview/02-architecture.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/00_overview/03-project-structure.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/00_overview/01-overview-philosophy.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/00_overview/02-architecture.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/00_overview/03-project-structure.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/01-architecture.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/01-overview-philosophy.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/02-architecture.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
@@ -122,92 +123,94 @@ Resolutions applied: `82`
 | `doc/system/09-backend.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/10-ecosystem-integration.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/10-scope.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/10_service-contract/04-design-system.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/10_service-contract/05-frontend.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/10_service-contract/06-api-layer.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/10_service-contract/07-proving-slice.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/10_service-contract/04-design-system.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/10_service-contract/05-frontend.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/10_service-contract/06-api-layer.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/10_service-contract/07-proving-slice.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/11-database-schema.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/12-ai-integration.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/13-error-handling.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/14-testing-infrastructure.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/15-handover-migration-notes.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/20-structure.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/20_runtime/08-backend.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/20_runtime/09-database-schema.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/20_runtime/10-ai-integration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/20_runtime/11-error-handling.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/20_runtime/08-backend.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/20_runtime/09-database-schema.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/20_runtime/10-ai-integration.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/20_runtime/11-error-handling.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/30-governance.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/30_dependencies/12-tech-stack.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/30_dependencies/13-ecosystem-integration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/30_dependencies/12-tech-stack.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/30_dependencies/13-ecosystem-integration.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/40-change-control.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/40_governance/14-scope.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/40_governance/15-governance.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/40_governance/16-change-control.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/50_operations/17-configuration.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/50_operations/18-testing-infrastructure.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `doc/system/50_operations/19-handover-migration-notes.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/40_governance/14-scope.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/40_governance/15-governance.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/40_governance/16-change-control.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/50_operations/17-configuration.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/50_operations/18-testing-infrastructure.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `doc/system/50_operations/19-handover-migration-notes.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/90-appendices.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
-| `doc/system/99_appendices/20-appendices.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/system/99_appendices/20-appendices.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/system/BUILD.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/_index.md` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `doc/system/validate_snapshots.sh` | intentional_app_support_adaptation | `slice-00-dataforge-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after code or mirror-index changes. |
 | `docs/closeout-initial-governed-implementation.md` | intentional_app_support_adaptation | `slice-00-df-closeout-doc` | Keep as a support-side historical receipt. Do not promote upstream unless the proving repo opens a matching closeout evidence lane. |
-| `docs/dataforge-local_architecture_spec.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/dataforge-local_extended_roadmap.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `docs/dataforge-local_architecture_spec.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/dataforge-local_extended_roadmap.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `docs/df-local-foundation_extended_roadmap.md` | intentional_app_support_adaptation | `slice-00-df-roadmap-doc` | Keep in the support repo with the product-specific filename. Reconcile naming later only if roadmap authority moves upstream. |
-| `docs/evaluation-spine-phase-08-dataforge-local-lineage.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/migration_order.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/read_models.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/repo_structure.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/schema_inventory.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/seed_strategy.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `gnat_runtime/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `gnat_runtime/persistence.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/artifact_ingest.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/promotion_admission.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/promotion_queue.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/promotion_reconciliation.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `proving_slice/services/read_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `docs/evaluation-spine-phase-08-dataforge-local-lineage.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/migration_order.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/read_models.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/repo_structure.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/schema_inventory.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `docs/seed_strategy.md` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `gnat_runtime/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `gnat_runtime/persistence.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/artifact_ingest.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/promotion_admission.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/promotion_queue.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/promotion_reconciliation.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `proving_slice/services/read_models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `pyproject.toml` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
-| `reports/contract_core_gate_20260404_093918.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260404_094503.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260614_002806.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260614_003357.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260614_004114.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260614_004902.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/contract_core_gate_20260614_004945.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260404_093918.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260404_094503.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260614_002806.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260614_003357.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260614_004114.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260614_004902.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `reports/local_tests_20260614_004945.xml` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/bootstrap_local_env.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/init_db.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/reset_db.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/run_local.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/run_migrations.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/seed_v1.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/governed_action_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/public_application_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/read_model_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/schema_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `seeds/service_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `reports/contract_core_gate_20260404_093918.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260404_094503.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260614_002806.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260614_003357.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260614_004114.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260614_004902.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260614_004945.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/contract_core_gate_20260619_053018.json` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260404_093918.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260404_094503.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260614_002806.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260614_003357.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260614_004114.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260614_004902.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260614_004945.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `reports/local_tests_20260619_053018.xml` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/bootstrap_local_env.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/init_db.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/reset_db.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/run_local.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/run_migrations.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `scripts/seed_v1.sh` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/governed_action_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/public_application_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/read_model_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/schema_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `seeds/service_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `sql/apps/authorforge/0001_authorforge_attach.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
-| `sql/bootstrap.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `sql/bootstrap.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `sql/core/0001_core_foundation.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `sql/core/0002_core_metadata.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
-| `sql/dev_reset.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `sql/manual_checks.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `sql/dev_reset.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `sql/manual_checks.sql` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/api/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tests/api/test_analytics_compute.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/api/test_analytics_routes.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/api/test_context_pack_routes.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `tests/api/test_analytics_compute.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/api/test_analytics_routes.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/api/test_context_pack_routes.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/api/test_health_api.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/backup_restore/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/backup_restore/test_envelope_signing.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
@@ -215,26 +218,26 @@ Resolutions applied: `82`
 | `tests/backup_restore/test_restore_validation.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/first_integration/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/first_integration/test_authorforge_attachment.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tests/gnat_runtime/test_persistence.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `tests/gnat_runtime/test_persistence.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/migration_status/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/migration_status/test_migration_contract.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/migration_status/test_migration_lock.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tests/proving_slice/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/proving_slice/conftest.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/proving_slice/test_admission.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/proving_slice/test_queue.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/proving_slice/test_read_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/proving_slice/test_reconciliation.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `tests/proving_slice/__init__.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/proving_slice/conftest.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/proving_slice/test_admission.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/proving_slice/test_queue.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/proving_slice/test_read_models.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/proving_slice/test_reconciliation.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/registration/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/registration/test_app_registration.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/registration/test_compatibility_semantics.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/registration/test_config_bypass.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tests/test_constants.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test_evaluation_spine_phase08_lineage.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test_schema_registry_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test_service_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test_triple_variant_audit_store.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `tests/test_vocabularies.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `tests/test_constants.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/test_evaluation_spine_phase08_lineage.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/test_schema_registry_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/test_service_seeds.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/test_triple_variant_audit_store.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
+| `tests/test_vocabularies.py` | source_local_hold | `slice-00-dataforge-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/visibility_boundary/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/visibility_boundary/test_cli_authority.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/visibility_boundary/test_health_contract.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |

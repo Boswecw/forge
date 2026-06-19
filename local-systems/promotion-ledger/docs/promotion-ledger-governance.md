@@ -49,6 +49,7 @@ Use exactly these classifications:
 
 - `same`
 - `intentional_app_support_adaptation`
+- `source_local_hold`
 - `missing_from_target`
 - `target_only_glue`
 - `dangerous_drift`
@@ -56,6 +57,9 @@ Use exactly these classifications:
 
 Dangerous drift and unknown drift block promotion until resolved by human
 decision, backport, or explicit exception.
+`missing_from_target` means unresolved source-only drift. `source_local_hold`
+means reviewed source-only material that stays in the proving repo until an
+explicit support target role opens.
 
 ## Commands
 

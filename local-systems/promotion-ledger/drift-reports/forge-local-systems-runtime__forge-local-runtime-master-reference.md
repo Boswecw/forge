@@ -1,6 +1,6 @@
 # Drift Report: forge-local-systems-runtime__forge-local-runtime-master-reference
 
-Generated: `2026-06-19T09:17:12+00:00`
+Generated: `2026-06-19T09:37:37+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/forge-local-systems-runtime`
 Source branch: `main`
@@ -10,7 +10,7 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/forge-local-runt
 Target branch: `main`
 Target commit: `c68ae960eb0b609718c93a626f50ccd0a1226c93`
 
-Resolutions applied: `6`
+Resolutions applied: `7`
 
 ## Classification Summary
 
@@ -18,7 +18,8 @@ Resolutions applied: `6`
 | --- | ---: |
 | same | 115 |
 | intentional_app_support_adaptation | 5 |
-| missing_from_target | 1 |
+| source_local_hold | 1 |
+| missing_from_target | 0 |
 | target_only_glue | 1 |
 | dangerous_drift | 0 |
 | unknown | 0 |
@@ -27,7 +28,7 @@ Resolutions applied: `6`
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
-| `doc/FLSSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
+| `doc/FLSSYSTEM.md` | source_local_hold | `slice-00-forge-local-runtime-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `doc/FOLSYSTEM.md` | target_only_glue | `slice-00-runtime-reference-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same aggregate mirror filename. |
 | `doc/SYSTEM.md` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |
 | `doc/system/90-appendices.md` | intentional_app_support_adaptation | `slice-00-runtime-reference-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime-reference mirror changes. |

@@ -26,9 +26,13 @@ contracts/schema/sql, promotion evidence, and operator tooling/scripts.
 | NeuronForge support seam | `python3 scripts/verify_promotion_seam.py` passed. |
 | NeuronForge source seam | Same script passed with explicit PACT evidence env paths. |
 
-## Remaining Gate
+## Subsequent Source-Local Hold Gate
 
-Unknown and dangerous drift are zero. The remaining promotion work is the 648
-`missing_from_target` source-only artifacts. They are inventoried in
-`docs/slice-00/source-only-backlog-inventory.md`; the next candidate review is
-runtime/capability plus contract/schema surfaces, paired with tests.
+Unknown and dangerous drift are zero. The source-only backlog has since been
+resolved as `source_local_hold` in
+`docs/slice-00/source-local-hold-resolution-proof.md`.
+
+Current generated drift has `source_local_hold: 651`, `missing_from_target: 0`,
+`unknown: 0`, and `dangerous_drift: 0`. A held source-local artifact can move
+into app support only through a named promotion slice with an explicit support
+role, proof command, and regenerated drift report.

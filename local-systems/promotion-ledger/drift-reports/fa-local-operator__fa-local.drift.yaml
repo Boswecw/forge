@@ -5,15 +5,16 @@ source_branch: master
 target_branch: master
 source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
 target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-generated_at: '2026-06-19T09:17:12+00:00'
+generated_at: '2026-06-19T09:37:37+00:00'
 classification_summary:
   same: 131
   intentional_app_support_adaptation: 14
-  missing_from_target: 20
+  source_local_hold: 21
+  missing_from_target: 0
   target_only_glue: 14
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 28
+resolutions_applied: 49
 items:
 - path: .gitignore
   classification: intentional_app_support_adaptation
@@ -67,13 +68,20 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: ci_gate.sh
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: &id001
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
 - path: doc/FLLSYSTEM.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -86,13 +94,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/FLOSYSTEM.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/SYSTEM.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -127,13 +140,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/00_overview/01-overview-charter.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/01-architecture.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -201,13 +219,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/10_service-contract/02-contract-surface.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/20-structure.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -220,13 +243,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/20_runtime/03-execution-bridge-writeback.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/30-governance.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -239,13 +267,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/30_dependencies/04-dependencies.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40-change-control.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -258,45 +291,70 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/40_governance/05-scope.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40_governance/06-governance.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40_governance/07-change-control.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/40_governance/08-boundaries-and-doctrine.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/50_operations/09-validation-and-delivery.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/90-appendices.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
@@ -309,13 +367,18 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: doc/system/99_appendices/10-appendices.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: doc/system/BUILD.sh
   classification: intentional_app_support_adaptation
   justification: Both source and support FA Local mirrors build cleanly. The differing
@@ -350,21 +413,44 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-doc-system-mirror.yaml
 - path: reports/contract_core_gate_20260404_102436.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
+- path: reports/contract_core_gate_20260619_053018.json
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: schemas/gnat-dispatch-envelope.schema.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: src/app/intake_service.rs
   classification: intentional_app_support_adaptation
   justification: FA Local support runtime differs from source while the support Cargo
@@ -377,13 +463,18 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: src/bin/fa_local_run.rs
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: src/domain/shared/schema.rs
   classification: intentional_app_support_adaptation
   justification: FA Local support runtime differs from source while the support Cargo
@@ -429,37 +520,57 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001
 - path: tests/contracts_loading.rs
   classification: intentional_app_support_adaptation
   justification: The modified FA Local contract-loading test is part of the support
@@ -471,10 +582,15 @@ items:
   resolved_shape: modified_in_both
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tests/gnat_dispatch.rs
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-fa-local-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence: *id001

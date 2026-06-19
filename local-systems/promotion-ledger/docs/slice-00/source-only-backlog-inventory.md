@@ -2,9 +2,9 @@
 
 Generated: `2026-06-19T09:24:52Z`
 
-Unknown and dangerous drift are zero. The remaining backlog is 648
-`missing_from_target` items: artifacts present in the local-system proving repos
-but absent from app support.
+Unknown and dangerous drift were zero at this snapshot. The initial source-only
+inventory found 648 `missing_from_target` items: artifacts present in the
+local-system proving repos but absent from app support.
 
 ## Repo Breakdown
 
@@ -48,3 +48,15 @@ The DataForge/FA Local candidate review is recorded in
 `docs/slice-00/dataforge-fa-source-candidate-review.md`; reviewed surfaces are
 also held source-local. The next decision is whether to open a GNAT support
 promotion slice or keep the source-only backlog as explicit exclusions.
+
+## Resolution Update
+
+The source-only backlog is now classified as `source_local_hold` in
+`docs/slice-00/source-local-hold-resolution-proof.md`. Current generated drift
+has `missing_from_target: 0`, `unknown: 0`, and `dangerous_drift: 0`.
+
+The initial inventory counted 648 source-only paths. Three source proof report
+artifacts were produced after that snapshot and are included in the current
+651-path source-local hold. A held source-local artifact can move into app
+support only through a named promotion slice with an explicit support role,
+proof command, and regenerated drift report.

@@ -36,9 +36,10 @@ drift. It does not treat `/doc/system` as general documentation.
 - `target_only` mirror files are `target_only_glue`.
 - Both classifications require clean source and support mirror builds.
 
-## Remaining Gate
+## Later Gates
 
 Runtime and test drift is resolved in
-`docs/slice-00/runtime-test-resolution-proof.md`, leaving 38 unknowns:
-contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo
-scaffold.
+`docs/slice-00/runtime-test-resolution-proof.md`. Final unknown drift is
+resolved in `docs/slice-00/final-unknown-resolution-proof.md`, and the
+source-only backlog is resolved in
+`docs/slice-00/source-local-hold-resolution-proof.md`.

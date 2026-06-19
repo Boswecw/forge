@@ -145,3 +145,14 @@ dataforge_fa_candidate_review:
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
   posture: hold_source_local
   next_gate: "Decide whether to open a GNAT support promotion slice or keep the source-only backlog as explicit exclusions."
+source_local_hold_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-source-local-holds.yaml
+  classification: source_local_hold
+  current_source_local_hold: 651
+  current_missing_from_target: 0
+  current_unknown: 0
+  current_dangerous_drift: 0
+  note: "Initial inventory counted 648 source-only paths. Three proof report artifacts were created after that snapshot and are included in the current 651-path source-local hold."
+  next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."

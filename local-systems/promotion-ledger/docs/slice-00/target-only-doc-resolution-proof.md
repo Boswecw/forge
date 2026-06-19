@@ -45,7 +45,11 @@ unmatched drift remains conservative.
 | `python3 scripts/generate_drift_inventory.py --overwrite` | Passed. |
 | Aggregate drift count check | Passed; 8 resolutions applied and `/docs` unknowns are zero. |
 
-## Remaining Gate
+## Later Gates
 
 `unknown` is now 183 and all remaining unknowns are non-doc drift. They are
 typed in `docs/slice-00/non-doc-unknown-type-inventory.md`.
+
+Those downstream gates are complete. Current generated drift is recorded in
+`docs/slice-00/source-local-hold-resolution-proof.md` with `unknown: 0`,
+`dangerous_drift: 0`, and `missing_from_target: 0`.

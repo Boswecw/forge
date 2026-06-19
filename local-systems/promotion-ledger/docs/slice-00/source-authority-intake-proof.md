@@ -60,7 +60,7 @@ the source repos. They intentionally do not copy support claims wholesale:
 - NeuronForge docs mark the general AuthorForge task router and cloud assist as
   planned until source routes, schemas, tests, and receipts prove the behavior.
 
-## Remaining Gate
+## Later Gate
 
 Next pass: reconcile the 13 source-present `/docs` deltas. Prefer source code and
 source `doc/system` truth over support wording. After reconciliation, regenerate

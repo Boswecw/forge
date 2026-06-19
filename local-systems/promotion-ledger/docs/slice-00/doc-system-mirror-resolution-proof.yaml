@@ -82,4 +82,10 @@ runtime_test_resolution:
   status: complete
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/runtime-test-resolution-proof.yaml
   unknown_after: 38
-next_gate: "Resolve contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo scaffold."
+downstream_resolution:
+  final_unknown_resolution: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/final-unknown-resolution-proof.yaml
+  source_local_hold_resolution: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml
+  current_unknown: 0
+  current_dangerous_drift: 0
+  current_missing_from_target: 0
+next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."

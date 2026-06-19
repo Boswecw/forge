@@ -14,6 +14,7 @@ Target commit: `<target_commit>`
 | --- | ---: |
 | same | 0 |
 | intentional_app_support_adaptation | 0 |
+| source_local_hold | 0 |
 | missing_from_target | 0 |
 | target_only_glue | 0 |
 | dangerous_drift | 0 |

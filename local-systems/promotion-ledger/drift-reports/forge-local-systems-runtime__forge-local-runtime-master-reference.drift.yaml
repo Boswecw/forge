@@ -5,24 +5,31 @@ source_branch: main
 target_branch: main
 source_commit: df31e1a98d4789a488e800483a8442643e4036aa
 target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
-generated_at: '2026-06-19T09:17:12+00:00'
+generated_at: '2026-06-19T09:37:37+00:00'
 classification_summary:
   same: 115
   intentional_app_support_adaptation: 5
-  missing_from_target: 1
+  source_local_hold: 1
+  missing_from_target: 0
   target_only_glue: 1
   dangerous_drift: 0
   unknown: 0
-resolutions_applied: 6
+resolutions_applied: 7
 items:
 - path: doc/FLSSYSTEM.md
-  classification: missing_from_target
-  justification: Source artifact exists in the proving repo but is absent from the
-    app-support target.
+  classification: source_local_hold
+  justification: The current source-only backlog for this repo pair was inventoried,
+    reviewed, and kept as source-local proving material until a concrete app-support
+    target role is opened.
   source_commit: df31e1a98d4789a488e800483a8442643e4036aa
   target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
-  recommended_action: Review whether this source artifact should be promoted or intentionally
-    excluded.
+  recommended_action: Keep source-local. Do not copy into app support without a bounded
+    promotion slice, explicit support role, proof command, and regenerated drift report.
+  resolution_id: slice-00-forge-local-runtime-source-local-hold
+  resolved_shape: source_only
+  resolution_source: resolutions/slice-00-source-local-holds.yaml
+  resolution_evidence:
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
 - path: doc/FOLSYSTEM.md
   classification: target_only_glue
   justification: This support-side runtime-reference aggregate mirror is generated

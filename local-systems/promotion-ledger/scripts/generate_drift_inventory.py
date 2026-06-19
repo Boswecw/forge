@@ -27,6 +27,7 @@ RESOLUTION_DIR = LEDGER_ROOT / "resolutions"
 CLASSIFICATIONS = [
     "same",
     "intentional_app_support_adaptation",
+    "source_local_hold",
     "missing_from_target",
     "target_only_glue",
     "dangerous_drift",

@@ -30,9 +30,12 @@ declared dependencies were installed directly and repo code was loaded with
 | runtime/test unknown | 66 | 0 |
 | dangerous drift | 0 | 0 |
 
-## Remaining Gate
+## Later Gates
 
 The remaining 38 unknowns are resolved in
 `docs/slice-00/final-unknown-resolution-proof.md`. Unknown and dangerous drift
-are now zero; the remaining work is the 648 `missing_from_target` source-only
-artifacts.
+are now zero.
+
+The source-only backlog is resolved in
+`docs/slice-00/source-local-hold-resolution-proof.md`; current generated drift
+has `missing_from_target: 0`.

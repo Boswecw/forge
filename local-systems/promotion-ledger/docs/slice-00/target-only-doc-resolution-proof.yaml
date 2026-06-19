@@ -66,4 +66,10 @@ blocking_status:
   dangerous_drift: 0
   unresolved_non_doc_unknown: 183
 non_doc_unknown_inventory: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/non-doc-unknown-type-inventory.yaml
-next_gate: "Resolve /doc/system mirror drift first, then runtime plus tests, contracts, promotion evidence, scripts, and repo scaffold."
+downstream_resolution:
+  final_unknown_resolution: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/final-unknown-resolution-proof.yaml
+  source_local_hold_resolution: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml
+  current_unknown: 0
+  current_dangerous_drift: 0
+  current_missing_from_target: 0
+next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."

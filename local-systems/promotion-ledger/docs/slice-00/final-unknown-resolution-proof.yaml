@@ -58,4 +58,16 @@ blocking_status:
 source_only_backlog_inventory:
   status: complete
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
-next_gate: "Review source_runtime_or_capability plus source_contract_schema_migration for Cortex and NeuronForge, paired with tests."
+source_local_hold_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-local-hold-resolution-proof.yaml
+  current_drift_result:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    source_local_hold: 651
+    missing_from_target: 0
+    target_only_glue: 130
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 842
+next_gate: "Open a named support promotion slice only when a held source-local artifact has a concrete app-support target role, proof command, and post-promotion drift report."
