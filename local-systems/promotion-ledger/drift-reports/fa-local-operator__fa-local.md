@@ -1,6 +1,6 @@
 # Drift Report: fa-local-operator__fa-local
 
-Generated: `2026-06-19T07:56:54+00:00`
+Generated: `2026-06-19T08:18:09+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/fa-local-operator`
 Source branch: `master`
@@ -8,7 +8,7 @@ Source commit: `5f6a7dad737f7366403a09711bc3d57a48a725cd`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/fa-local`
 Target branch: `master`
-Target commit: `83d280d01b2c12494cda2a3130cd8bebe8b122d5`
+Target commit: `6608a60f40e47a5473cd85a1fbbf9e587e053509`
 
 ## Classification Summary
 

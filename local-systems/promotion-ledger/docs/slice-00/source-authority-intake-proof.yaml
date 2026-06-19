@@ -1,0 +1,59 @@
+generated_at: "2026-06-19T08:19:01Z"
+source_review: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/docs-condensed-authority-review.yaml
+source_commits:
+  dataforge-Local:
+    commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+    docs_added:
+      - docs/app-integration-contract.md
+      - docs/architecture.md
+      - docs/backup-export-restore.md
+      - docs/migration-doctrine.md
+      - docs/operational-visibility.md
+      - docs/privacy-doctrine.md
+  neuronforge-local-operator:
+    commit: 006ef57c9ece79b666581b303fce06e54debaa42
+    docs_added:
+      - docs/authorforge-task-envelope-contract.md
+      - docs/authorforge-task-router-plan.md
+      - docs/local-first-cloud-assist-boundary.md
+      - docs/model-routing-doctrine.md
+      - docs/registries/task-lanes.md
+verification:
+  dataforge_doc_system_build:
+    command: bash doc/system/BUILD.sh
+    result: passed
+    output: doc/DLOSYSTEM.md assembled with 20 parts and 966 lines
+  neuronforge_doc_system_build:
+    command: bash doc/system/BUILD.sh
+    result: passed
+    output: NLOSYSTEM.md assembled with 3556 lines
+  staged_whitespace_checks:
+    command: git diff --cached --check
+    result: passed in both source repos before commit
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+drift_after_intake:
+  total:
+    same: 2219
+    missing_from_target: 649
+    unknown: 204
+    dangerous_drift: 0
+  docs_unknown_present_in_both: 13
+  docs_unknown_target_only: 8
+  docs_missing_from_target: 65
+completed_source_intake:
+  - dataforge-Local__df-local-foundation docs/app-integration-contract.md
+  - dataforge-Local__df-local-foundation docs/architecture.md
+  - dataforge-Local__df-local-foundation docs/backup-export-restore.md
+  - dataforge-Local__df-local-foundation docs/migration-doctrine.md
+  - dataforge-Local__df-local-foundation docs/operational-visibility.md
+  - dataforge-Local__df-local-foundation docs/privacy-doctrine.md
+  - neuronforge-local-operator__neuronforge docs/authorforge-task-envelope-contract.md
+  - neuronforge-local-operator__neuronforge docs/authorforge-task-router-plan.md
+  - neuronforge-local-operator__neuronforge docs/local-first-cloud-assist-boundary.md
+  - neuronforge-local-operator__neuronforge docs/model-routing-doctrine.md
+  - neuronforge-local-operator__neuronforge docs/registries/task-lanes.md
+remaining_gate:
+  next_pass: reconcile the 13 source-present /docs deltas
+  rule: prefer source code and source doc/system truth over support wording

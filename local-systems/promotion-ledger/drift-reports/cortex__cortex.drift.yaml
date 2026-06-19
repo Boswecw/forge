@@ -4,8 +4,8 @@ target_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
 source_branch: master
 target_branch: master
 source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
-generated_at: '2026-06-19T07:56:54+00:00'
+target_commit: af2be69626dd26aec171dc2ea730bb4148373543
+generated_at: '2026-06-19T08:18:09+00:00'
 classification_summary:
   same: 1587
   intentional_app_support_adaptation: 0
@@ -19,7 +19,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: .gitignore
@@ -27,7 +27,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: DECISIONS/0017-cortex-local-system-identity-and-cor-plan-lineage.md
@@ -35,7 +35,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: DECISIONS/0018-gnat-bounded-parallel-worker-authorization.md
@@ -43,7 +43,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: DECISIONS/0019-fa-local-owns-gnat-execution-routing.md
@@ -51,7 +51,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: Makefile
@@ -59,7 +59,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: SYSTEM.md
@@ -67,7 +67,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: cortex_runtime/gnats/__init__.py
@@ -75,7 +75,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/fa_local_client.py
@@ -83,7 +83,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/models.py
@@ -91,7 +91,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/operator_status.py
@@ -99,7 +99,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/parallel_runner.py
@@ -107,7 +107,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/persistence.py
@@ -115,7 +115,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/persistent_runner.py
@@ -123,7 +123,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/planner.py
@@ -131,7 +131,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/receipt.py
@@ -139,7 +139,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/reconcile.py
@@ -147,7 +147,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/registry.py
@@ -155,7 +155,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/retrieval_prepare.py
@@ -163,7 +163,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/schema_validation.py
@@ -171,7 +171,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/semantic_handoff.py
@@ -179,7 +179,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/serial_runner.py
@@ -187,7 +187,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/status.py
@@ -195,7 +195,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/__init__.py
@@ -203,7 +203,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/docx_text.py
@@ -211,7 +211,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/epub_text.py
@@ -219,7 +219,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/markdown_text.py
@@ -227,7 +227,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/odt_text.py
@@ -235,7 +235,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/pdf_text.py
@@ -243,7 +243,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/plain_text.py
@@ -251,7 +251,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/rtf_text.py
@@ -259,7 +259,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/gnats/workers/text_common.py
@@ -267,7 +267,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/health_cli.py
@@ -275,7 +275,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: cortex_runtime/service_status.py
@@ -283,7 +283,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: cortex_runtime/source_lanes.py
@@ -291,14 +291,14 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/CRTSYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/SYSTEM.md
@@ -306,7 +306,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/cxSYSTEM.md
@@ -314,21 +314,21 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/00-overview.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/01-architecture.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/04-validation-and-delivery.md
@@ -336,42 +336,42 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/10-scope.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/20-structure.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/30-governance.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/40-change-control.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/90-appendices.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/BUILD.sh
@@ -379,7 +379,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/_index.md
@@ -387,14 +387,14 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/validate_snapshots.sh
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/Worm.md
@@ -402,7 +402,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/architecture/gnats-boundary-matrix.md
@@ -410,7 +410,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-docx-lane-proof.md
@@ -418,7 +418,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-epub-lane-proof.md
@@ -426,7 +426,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-odt-lane-proof.md
@@ -434,7 +434,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-pdf-lane-proof.md
@@ -442,7 +442,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-phase4-parallel-proof.md
@@ -450,7 +450,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/benchmarks/gnat-rtf-lane-proof.md
@@ -458,7 +458,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-cache-record.md
@@ -466,7 +466,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-core.md
@@ -474,7 +474,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-operator-run-status.md
@@ -482,7 +482,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-retrieval-prepare.md
@@ -490,7 +490,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-run-plan.md
@@ -498,7 +498,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-run-request.md
@@ -506,7 +506,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-run-summary.md
@@ -514,7 +514,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-semantic-handoff.md
@@ -522,7 +522,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-shard.md
@@ -530,7 +530,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/contracts/gnat-worker-receipt.md
@@ -538,7 +538,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/integration/df-local-gnat-persistence.md
@@ -546,7 +546,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/integration/fa-local-gnat-dispatch.md
@@ -554,7 +554,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/integration/operator-local-gnat-status.md
@@ -562,7 +562,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/00_README.md
@@ -570,7 +570,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/01_CURRENT_STATE_AUDIT.md
@@ -578,7 +578,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/02_GNATS_TARGET_ARCHITECTURE.md
@@ -586,7 +586,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/03_CONTRACT_AND_SCHEMA_PLAN.md
@@ -594,7 +594,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/04_IMPLEMENTATION_PHASES.md
@@ -602,7 +602,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/05_FILE_LEVEL_CHANGE_MAP.md
@@ -610,7 +610,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/06_TEST_VALIDATION_AND_BENCHMARK_PLAN.md
@@ -618,7 +618,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/07_FA_LOCAL_NEURONFORGE_DF_LOCAL_INTEGRATION.md
@@ -626,7 +626,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/08_EXTRACTION_TO_SHARED_GNAT_CORE.md
@@ -634,7 +634,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/09_RISKS_NON_GOALS_AND_ADRS.md
@@ -642,7 +642,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/10_CODEX_IMPLEMENTATION_PROMPTS.md
@@ -650,7 +650,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/11_MASTER_CHECKLIST.md
@@ -658,7 +658,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/planning/COR_Gnats_Plan_Set/12_PHASE_10_SHARED_CORE_EXTRACTION.md
@@ -666,7 +666,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/repo_crawler_parser_implementation_plan(1).md
@@ -674,14 +674,14 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/service/authorforge-service.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: gnat_core/__init__.py
@@ -689,7 +689,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_core/cache.py
@@ -697,7 +697,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_core/hashing.py
@@ -705,7 +705,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_core/interfaces.py
@@ -713,7 +713,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_core/lifecycle.py
@@ -721,7 +721,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_core/limits.py
@@ -729,7 +729,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/APPLY.md
@@ -737,7 +737,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/Cargo.lock
@@ -745,7 +745,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/Cargo.toml
@@ -753,7 +753,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/README.md
@@ -761,7 +761,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/VERIFY.md
@@ -769,7 +769,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/01_scope_and_authority.md
@@ -777,7 +777,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/02_edge_taxonomy_and_evidence_schema.md
@@ -785,7 +785,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/03_boundary_controls.md
@@ -793,7 +793,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/04_discovery_adapters.md
@@ -801,7 +801,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/05_target_identity_resolution.md
@@ -809,7 +809,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/06_issue_classes_catalog.md
@@ -817,7 +817,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/07_provenance_and_evidence_packaging.md
@@ -825,7 +825,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/08_centipede_handoff_contract.md
@@ -833,7 +833,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/09_contract_loader_scaffold.md
@@ -841,7 +841,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/10_reference_audit_bin.md
@@ -849,7 +849,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/11_target_normalizer_smoke.md
@@ -857,7 +857,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/12_adapter_extract_smoke.md
@@ -865,7 +865,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/13_resolution_pipeline_smoke.md
@@ -873,7 +873,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/14_bundle_builder_smoke.md
@@ -881,7 +881,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/15_centipede_handoff_builder_smoke.md
@@ -889,7 +889,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/16_end_to_end_smoke.md
@@ -897,7 +897,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/17_run_cli_smoke.md
@@ -905,7 +905,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/18_run_from_files_cli.md
@@ -913,7 +913,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/19_run_repo_surface_cli.md
@@ -921,7 +921,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/20_cargo_manifest_adapter.md
@@ -929,7 +929,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/21_pyproject_manifest_adapter.md
@@ -937,7 +937,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/22_library_wiring_warning_cleanup.md
@@ -945,7 +945,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/23_requirements_manifest_adapter.md
@@ -953,7 +953,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/24_github_workflows_adapter.md
@@ -961,7 +961,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/24b_github_workflow_parser_fix.md
@@ -969,7 +969,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/25_pyproject_uv_sources_adapter.md
@@ -977,7 +977,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/26_repo_surface_summary_evidence.md
@@ -985,7 +985,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/27_nested_requirements_follow.md
@@ -993,7 +993,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/adapter_emit_gitmodules.json
@@ -1001,7 +1001,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/adapter_emit_package_manifest.json
@@ -1009,7 +1009,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/boundary_policy_governed_external_reference.json
@@ -1017,7 +1017,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/boundary_policy_local_repo_only.json
@@ -1025,7 +1025,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/boundary_policy_same_org_governed.json
@@ -1033,7 +1033,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/centipede_handoff_ambiguous_target.json
@@ -1041,7 +1041,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/centipede_handoff_stale_submodule.json
@@ -1049,7 +1049,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/edge_dependency_repo_reference.json
@@ -1057,7 +1057,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/edge_git_submodule.json
@@ -1065,7 +1065,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/evidence_bundle_ambiguous_docs.json
@@ -1073,7 +1073,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/evidence_bundle_gitmodules.json
@@ -1081,7 +1081,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/finding_ambiguous_docs_repo_reference.json
@@ -1089,7 +1089,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/finding_catalog_ambiguous_target_identity.json
@@ -1097,7 +1097,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/finding_catalog_stale_submodule_pointer.json
@@ -1105,7 +1105,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/finding_stale_submodule_pointer.json
@@ -1113,7 +1113,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/issue_catalog_ambiguous_target_identity.json
@@ -1121,7 +1121,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/issue_catalog_stale_submodule_pointer.json
@@ -1129,7 +1129,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/target_resolution_ambiguous_relative.json
@@ -1137,7 +1137,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/target_resolution_resolved_https.json
@@ -1145,7 +1145,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/examples/target_resolution_resolved_ssh.json
@@ -1153,7 +1153,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-adapter-emission.schema.json
@@ -1161,7 +1161,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-centipede-handoff.schema.json
@@ -1169,7 +1169,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-edge.schema.json
@@ -1177,7 +1177,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-evidence-bundle.schema.json
@@ -1185,7 +1185,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-finding.schema.json
@@ -1193,7 +1193,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-reason-code-catalog.schema.json
@@ -1201,7 +1201,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-target-resolution.schema.json
@@ -1209,7 +1209,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/doc/system/worm/schema/worm-traversal-policy.schema.json
@@ -1217,7 +1217,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/ensure_toml_dependency.py
@@ -1225,7 +1225,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_boundary_policy.py
@@ -1233,7 +1233,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_centipede_handoff.py
@@ -1241,7 +1241,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_contract_examples.py
@@ -1249,7 +1249,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_discovery_adapters.py
@@ -1257,7 +1257,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_evidence_bundle.py
@@ -1265,7 +1265,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_issue_catalog.py
@@ -1273,7 +1273,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/scripts/validate_worm_target_resolution.py
@@ -1281,7 +1281,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_claim.rs
@@ -1289,7 +1289,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_claim_smoke.rs
@@ -1297,7 +1297,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_complete.rs
@@ -1305,7 +1305,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_complete_smoke.rs
@@ -1313,7 +1313,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_consumer_adversarial_smoke.rs
@@ -1321,7 +1321,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_consumer_stub.rs
@@ -1329,7 +1329,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_consumer_stub_smoke.rs
@@ -1337,7 +1337,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_enqueue.rs
@@ -1345,7 +1345,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_enqueue_smoke.rs
@@ -1353,7 +1353,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_export.rs
@@ -1361,7 +1361,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_export_smoke.rs
@@ -1369,7 +1369,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_export_validate_smoke.rs
@@ -1377,7 +1377,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_fail.rs
@@ -1385,7 +1385,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_fail_smoke.rs
@@ -1393,7 +1393,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_handoff_artifact.rs
@@ -1401,7 +1401,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_handoff_artifact_smoke.rs
@@ -1409,7 +1409,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_handoff_manifest.rs
@@ -1417,7 +1417,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_handoff_manifest_smoke.rs
@@ -1425,7 +1425,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_heartbeat.rs
@@ -1433,7 +1433,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_heartbeat_smoke.rs
@@ -1441,7 +1441,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_inbox_resolver.rs
@@ -1449,7 +1449,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_inbox_resolver_smoke.rs
@@ -1457,7 +1457,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_manifest_scan.rs
@@ -1465,7 +1465,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_manifest_scan_smoke.rs
@@ -1473,7 +1473,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_reclaim.rs
@@ -1481,7 +1481,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_reclaim_smoke.rs
@@ -1489,7 +1489,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_report.rs
@@ -1497,7 +1497,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/centipede_queue_report_smoke.rs
@@ -1505,7 +1505,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/svelte_probe_cli.rs
@@ -1513,7 +1513,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/svelte_probe_self_check.rs
@@ -1521,7 +1521,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_adapter_extract_smoke.rs
@@ -1529,7 +1529,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_bundle_builder_smoke.rs
@@ -1537,7 +1537,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_cargo_adapter_smoke.rs
@@ -1545,7 +1545,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_centipede_failure_handoff_smoke.rs
@@ -1553,7 +1553,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_centipede_handoff_builder_smoke.rs
@@ -1561,7 +1561,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_centipede_intake_consumer.rs
@@ -1569,7 +1569,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_centipede_intake_consumer_smoke.rs
@@ -1577,7 +1577,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_contract_smoke.rs
@@ -1585,7 +1585,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_end_to_end_smoke.rs
@@ -1593,7 +1593,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_github_workflow_adapter_smoke.rs
@@ -1601,7 +1601,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_nested_requirements_guardrails_smoke.rs
@@ -1609,7 +1609,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_nested_requirements_smoke.rs
@@ -1617,7 +1617,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_pyproject_adapter_smoke.rs
@@ -1625,7 +1625,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_pyproject_uv_sources_smoke.rs
@@ -1633,7 +1633,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_reference_audit.rs
@@ -1641,7 +1641,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_repo_surface_failure_evidence_smoke.rs
@@ -1649,7 +1649,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_repo_surface_summary_smoke.rs
@@ -1657,7 +1657,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_requirements_adapter_smoke.rs
@@ -1665,7 +1665,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_resolution_pipeline_smoke.rs
@@ -1673,7 +1673,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_run_from_files.rs
@@ -1681,7 +1681,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_run_repo_surface.rs
@@ -1689,7 +1689,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_run_smoke.rs
@@ -1697,7 +1697,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_symlink_containment_smoke.rs
@@ -1705,7 +1705,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/bin/worm_target_normalize_smoke.rs
@@ -1713,7 +1713,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_intake_normalizer.rs
@@ -1721,7 +1721,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_claim.rs
@@ -1729,7 +1729,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_complete.rs
@@ -1737,7 +1737,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_consumer_adversarial.rs
@@ -1745,7 +1745,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_consumer_stub.rs
@@ -1753,7 +1753,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_export.rs
@@ -1761,7 +1761,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_export_validate.rs
@@ -1769,7 +1769,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_fail.rs
@@ -1777,7 +1777,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_handoff_artifact.rs
@@ -1785,7 +1785,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_handoff_manifest.rs
@@ -1793,7 +1793,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_heartbeat.rs
@@ -1801,7 +1801,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_inbox_resolver.rs
@@ -1809,7 +1809,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_manifest_scan.rs
@@ -1817,7 +1817,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_reclaim.rs
@@ -1825,7 +1825,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_report.rs
@@ -1833,7 +1833,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/centipede_queue_writer.rs
@@ -1841,7 +1841,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/cli.rs
@@ -1849,7 +1849,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/config.rs
@@ -1857,7 +1857,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/discovery.rs
@@ -1865,7 +1865,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/error.rs
@@ -1873,7 +1873,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/extract.rs
@@ -1881,7 +1881,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/lang.rs
@@ -1889,7 +1889,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/lib.rs
@@ -1897,7 +1897,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/main.rs
@@ -1905,7 +1905,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/parser.rs
@@ -1913,7 +1913,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/policy.rs
@@ -1921,7 +1921,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/scanner.rs
@@ -1929,7 +1929,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/store.rs
@@ -1937,7 +1937,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/svelte_probe.rs
@@ -1945,7 +1945,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/watch.rs
@@ -1953,7 +1953,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_adapter_extractors.rs
@@ -1961,7 +1961,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_bundle_builder.rs
@@ -1969,7 +1969,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_centipede_handoff_builder.rs
@@ -1977,7 +1977,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_contract_audit.rs
@@ -1985,7 +1985,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_contracts.rs
@@ -1993,7 +1993,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_resolution_pipeline.rs
@@ -2001,7 +2001,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/src/worm_target_normalizer.rs
@@ -2009,7 +2009,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tests/repo_crawler_tests.rs
@@ -2017,7 +2017,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/centipede/capture_queue_working_set.sh
@@ -2025,7 +2025,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/centipede/queue_operator_surface_slice_40_plan.md
@@ -2033,7 +2033,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/bun.lock
@@ -2041,7 +2041,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/package.json
@@ -2049,7 +2049,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/src/bin/svelte_probe_cli.rs
@@ -2057,7 +2057,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/src/probe.ts
@@ -2065,7 +2065,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/tmp-smoke-test.svelte
@@ -2073,7 +2073,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/tools/svelte-provider/src/probe.ts
@@ -2081,7 +2081,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: repo-crawler/tools/svelte-provider/tsconfig.json
@@ -2089,14 +2089,14 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: requirements.txt
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: schemas/gnat-cache-record.schema.json
@@ -2104,7 +2104,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-dispatch-envelope.schema.json
@@ -2112,7 +2112,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-operator-run-status.schema.json
@@ -2120,7 +2120,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-run-plan.schema.json
@@ -2128,7 +2128,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-run-request.schema.json
@@ -2136,7 +2136,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-run-summary.schema.json
@@ -2144,7 +2144,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-semantic-handoff.schema.json
@@ -2152,7 +2152,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-shard.schema.json
@@ -2160,7 +2160,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/gnat-worker-receipt.schema.json
@@ -2168,7 +2168,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/service-status.schema.json
@@ -2176,7 +2176,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: scripts/benchmark_gnat_docx.py
@@ -2184,7 +2184,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/benchmark_gnat_epub.py
@@ -2192,7 +2192,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/benchmark_gnat_odt.py
@@ -2200,7 +2200,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/benchmark_gnat_pdf.py
@@ -2208,7 +2208,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/benchmark_gnat_rtf.py
@@ -2216,7 +2216,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/benchmark_gnats.py
@@ -2224,7 +2224,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/validate_schemas.py
@@ -2232,35 +2232,35 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: service/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/__main__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/authorforge_app.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/authorforge_translation.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/contracts/fixtures/invalid/gnat-cache-record-missing-version.json
@@ -2268,7 +2268,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
@@ -2276,7 +2276,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
@@ -2284,7 +2284,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
@@ -2292,7 +2292,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-operator-run-status-raw-preview.json
@@ -2300,7 +2300,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-plan-missing-plan-hash.json
@@ -2308,7 +2308,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-plan-orchestration-field.json
@@ -2316,7 +2316,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-plan-unsupported-worker.json
@@ -2324,7 +2324,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-request-missing-request-id.json
@@ -2332,7 +2332,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-request-raw-path.json
@@ -2340,7 +2340,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-request-unsupported-operation.json
@@ -2348,7 +2348,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-summary-details-unredacted.json
@@ -2356,7 +2356,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-summary-invalid-state.json
@@ -2364,7 +2364,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-run-summary-missing-counts.json
@@ -2372,7 +2372,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-semantic-handoff-missing-explicit-request.json
@@ -2380,7 +2380,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-semantic-handoff-missing-model-disclosure.json
@@ -2388,7 +2388,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-semantic-handoff-raw-content.json
@@ -2396,7 +2396,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-semantic-handoff-receipts-mutable.json
@@ -2404,7 +2404,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-shard-negative-ordinal.json
@@ -2412,7 +2412,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-shard-unscoped-path.json
@@ -2420,7 +2420,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-shard-unsupported-media.json
@@ -2428,7 +2428,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-worker-receipt-complete-missing-output.json
@@ -2436,7 +2436,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-worker-receipt-failed-missing-reason.json
@@ -2444,7 +2444,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/invalid/gnat-worker-receipt-raw-content-preview.json
@@ -2452,7 +2452,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-cache-record-basic.json
@@ -2460,7 +2460,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json
@@ -2468,7 +2468,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-operator-run-status-ready.json
@@ -2476,7 +2476,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-run-plan-two-text-files.json
@@ -2484,7 +2484,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-run-request-basic.json
@@ -2492,7 +2492,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-run-summary-ready.json
@@ -2500,7 +2500,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-semantic-handoff-basic.json
@@ -2508,7 +2508,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-shard-markdown.json
@@ -2516,7 +2516,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/contracts/fixtures/valid/gnat-worker-receipt-complete.json
@@ -2524,7 +2524,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/fixtures/gnats/text-batch-small/chapter-01.md
@@ -2532,7 +2532,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/fixtures/gnats/text-batch-small/note-plain.txt
@@ -2540,7 +2540,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_core_shared.py
@@ -2548,7 +2548,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_docx_lane.py
@@ -2556,7 +2556,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_epub_lane.py
@@ -2564,7 +2564,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_fa_local_client.py
@@ -2572,7 +2572,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_odt_lane.py
@@ -2580,7 +2580,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_operator_status.py
@@ -2588,7 +2588,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_parallel_runner.py
@@ -2596,7 +2596,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_pdf_lane.py
@@ -2604,7 +2604,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_persistence.py
@@ -2612,7 +2612,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_planner.py
@@ -2620,7 +2620,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_retrieval_prepare.py
@@ -2628,7 +2628,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_rtf_lane.py
@@ -2636,7 +2636,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_semantic_handoff.py
@@ -2644,7 +2644,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_serial_runner.py
@@ -2652,7 +2652,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_gnat_status.py
@@ -2660,7 +2660,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/runtime/test_service_status.py
@@ -2668,7 +2668,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: worm/Cargo.lock
@@ -2676,7 +2676,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/Cargo.toml
@@ -2684,7 +2684,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/adapter.rs
@@ -2692,7 +2692,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/cli.rs
@@ -2700,7 +2700,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/engine.rs
@@ -2708,7 +2708,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/error.rs
@@ -2716,7 +2716,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/governance.rs
@@ -2724,7 +2724,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/lib.rs
@@ -2732,7 +2732,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/main.rs
@@ -2740,7 +2740,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/model.rs
@@ -2748,7 +2748,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/profiles.rs
@@ -2756,7 +2756,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/src/store.rs
@@ -2764,7 +2764,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: worm/tests/worm_tests.rs
@@ -2772,6 +2772,6 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
-  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+  target_commit: af2be69626dd26aec171dc2ea730bb4148373543
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.

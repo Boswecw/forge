@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T07:56:54+00:00`
+Generated: `2026-06-19T08:18:09+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -8,7 +8,7 @@ Source commit: `98ac9ad521bb21c5956301ebfa410e520d331a70`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
-Target commit: `b974e7905b1a650204f2a9d84c2fdb3b5eb605c5`
+Target commit: `af2be69626dd26aec171dc2ea730bb4148373543`
 
 ## Classification Summary
 

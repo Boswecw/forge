@@ -3,9 +3,9 @@ source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
 target_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
 source_branch: master
 target_branch: main
-source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-generated_at: '2026-06-19T07:56:54+00:00'
+source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+generated_at: '2026-06-19T08:18:09+00:00'
 classification_summary:
   same: 2
   intentional_app_support_adaptation: 0
@@ -18,1704 +18,1710 @@ items:
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: CLAUDE.md
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: README.md
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: SYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: alembic.ini
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/README.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/env.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/script.py.mako
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_01_create_local_substrate_schemas.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_02_create_substrate_core_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_03_create_service_registry_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_04_create_service_status_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_05_create_runtime_governance_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_06_create_runtime_promotion_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_07_create_operator_control_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260402_08_create_bds_governance_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260404_09_create_proving_slice_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260606_01_create_healing_proposals.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260607_01_create_gnat_runtime_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260607_02_phase1_worker_remediation_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260607_03_phase1_worker_autonomy_truth_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260607_04_phase2_doppelcore_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260607_05_phase2_verification_results.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_01_phase2_scan_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_02_phase2_exceptions_centipede.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_03_phase2_compliance_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_04_phase2_events_table.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_05_phase2_core_registry_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260608_06_forge_lineage_tables.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260609_01_create_context_packs.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: alembic/versions/20260611_01_create_public_applications.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/__init__.py
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: app/__main__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: app/analytics_config.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/analytics_models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/analytics_services.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/analytics_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/context_pack_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/healing_proposal_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/lineage_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/proving_slice_queue_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/api/public_applications_router.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/database.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/evaluation_spine/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/evaluation_spine/lineage.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/evaluation_spine/lineage_cli.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/evaluation_spine/triple_variant_audit_store.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: app/main.py
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: ci_gate.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/public_applications.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/read_models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/runtime_actions.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/schemas.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/services.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: constants/vocabularies.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: contracts/app-registration.schema.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: contracts/health.schema.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: contracts/migration-status.schema.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/backup/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/backup/manager.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/backup/signing.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/config/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/config/settings.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/export/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/export/manager.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/health/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/health/reporter.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/lifecycle/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/lifecycle/compatibility.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/lifecycle/maintenance.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/lifecycle/manager.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: core/lifecycle/migration_lock.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/DFLSYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/DLOSYSTEM.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/SYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/plans/local-analytics/df_local_analytics_slice_01.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/00-overview.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/00_overview/01-overview-philosophy.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/00_overview/02-architecture.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/00_overview/03-project-structure.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/01-architecture.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/01-overview-philosophy.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/02-architecture.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/03-tech-stack.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/04-project-structure.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/05-configuration.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/06-design-system.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/07-frontend.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/08-api-layer.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/09-backend.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/10-ecosystem-integration.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/10-scope.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/10_service-contract/04-design-system.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/10_service-contract/05-frontend.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/10_service-contract/06-api-layer.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/10_service-contract/07-proving-slice.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/11-database-schema.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/12-ai-integration.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/13-error-handling.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/14-testing-infrastructure.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/15-handover-migration-notes.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/20-structure.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/20_runtime/08-backend.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/20_runtime/09-database-schema.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/20_runtime/10-ai-integration.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/20_runtime/11-error-handling.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/30-governance.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/30_dependencies/12-tech-stack.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/30_dependencies/13-ecosystem-integration.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/40-change-control.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/40_governance/14-scope.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/40_governance/15-governance.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/40_governance/16-change-control.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/50_operations/17-configuration.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/50_operations/18-testing-infrastructure.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/50_operations/19-handover-migration-notes.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/90-appendices.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/99_appendices/20-appendices.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/BUILD.sh
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/_index.md
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/validate_snapshots.sh
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: docs/app-integration-contract.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/architecture.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/backup-export-restore.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/closeout-initial-governed-implementation.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/dataforge-local_architecture_spec.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/dataforge-local_extended_roadmap.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/df-local-foundation_extended_roadmap.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/evaluation-spine-phase-08-dataforge-local-lineage.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/migration-doctrine.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/migration_order.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/operational-visibility.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/privacy-doctrine.md
   classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
 - path: docs/read_models.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/repo_structure.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/schema_inventory.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/seed_strategy.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_runtime/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: gnat_runtime/persistence.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/artifact_ingest.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/promotion_admission.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/promotion_queue.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/promotion_reconciliation.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: proving_slice/services/read_models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: pyproject.toml
   classification: unknown
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: reports/contract_core_gate_20260404_093918.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260404_094503.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260614_002806.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260614_003357.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260614_004114.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260614_004902.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/contract_core_gate_20260614_004945.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260404_093918.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260404_094503.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260614_002806.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260614_003357.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260614_004114.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260614_004902.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: reports/local_tests_20260614_004945.xml
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/bootstrap_local_env.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/init_db.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/reset_db.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/run_local.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/run_migrations.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/seed_v1.sh
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/governed_action_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/public_application_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/read_model_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/schema_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: seeds/service_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: sql/apps/authorforge/0001_authorforge_attach.sql
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: sql/bootstrap.sql
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: sql/core/0001_core_foundation.sql
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: sql/core/0002_core_metadata.sql
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: sql/dev_reset.sql
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: sql/manual_checks.sql
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/api/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/api/test_analytics_compute.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/api/test_analytics_routes.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/api/test_context_pack_routes.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/api/test_health_api.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/backup_restore/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/backup_restore/test_envelope_signing.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/backup_restore/test_restore_redteam.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/backup_restore/test_restore_validation.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/first_integration/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/first_integration/test_authorforge_attachment.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/gnat_runtime/test_persistence.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/migration_status/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/migration_status/test_migration_contract.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/migration_status/test_migration_lock.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/proving_slice/__init__.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/proving_slice/conftest.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/proving_slice/test_admission.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/proving_slice/test_queue.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/proving_slice/test_read_models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/proving_slice/test_reconciliation.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/registration/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/registration/test_app_registration.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/registration/test_compatibility_semantics.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/registration/test_config_bypass.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_constants.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test_evaluation_spine_phase08_lineage.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test_schema_registry_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test_service_seeds.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test_triple_variant_audit_store.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test_vocabularies.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/visibility_boundary/__init__.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/visibility_boundary/test_cli_authority.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/visibility_boundary/test_health_contract.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/visibility_boundary/test_health_event_discipline.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/visibility_boundary/test_status_redteam.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tools/db-backup
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tools/db-export
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tools/db-restore
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tools/db-status
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
-  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
-  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+  source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
+  target_commit: 07137267e448dd58dfe796c8e2c2c5d16c34ecb2
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.

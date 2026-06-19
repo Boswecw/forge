@@ -100,3 +100,5 @@ next_slice:
   - backport or re-author the 11 source-intake docs in local-system proving repos
   - reconcile the 3 source/target drift docs by preferring source-code-backed truth
   - regenerate drift reports and verify the docs_condensed_documentation lane shrinks to support-only receipts or source-backed deltas
+continuations:
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-authority-intake-proof.yaml

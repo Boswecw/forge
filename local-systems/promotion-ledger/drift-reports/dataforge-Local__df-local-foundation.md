@@ -1,14 +1,14 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T07:56:54+00:00`
+Generated: `2026-06-19T08:18:09+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
-Source commit: `0a804aa43baf1c67316acd4758412557809f133b`
+Source commit: `536b700fa7f11bf92c75e5f8c540c4b571ebb17b`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `72b88cec66496cedf9dc77751505ec052b94207b`
+Target commit: `07137267e448dd58dfe796c8e2c2c5d16c34ecb2`
 
 ## Classification Summary
 
@@ -149,18 +149,18 @@ Target commit: `72b88cec66496cedf9dc77751505ec052b94207b`
 | `doc/system/BUILD.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `doc/system/_index.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `doc/system/validate_snapshots.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/app-integration-contract.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `docs/architecture.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `docs/backup-export-restore.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `docs/app-integration-contract.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `docs/architecture.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `docs/backup-export-restore.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/closeout-initial-governed-implementation.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/dataforge-local_architecture_spec.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/dataforge-local_extended_roadmap.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/df-local-foundation_extended_roadmap.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/evaluation-spine-phase-08-dataforge-local-lineage.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/migration-doctrine.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `docs/migration-doctrine.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/migration_order.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/operational-visibility.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `docs/privacy-doctrine.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `docs/operational-visibility.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `docs/privacy-doctrine.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/read_models.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/repo_structure.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/schema_inventory.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |

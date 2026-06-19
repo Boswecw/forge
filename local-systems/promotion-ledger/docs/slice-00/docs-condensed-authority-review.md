@@ -55,3 +55,6 @@ authority direction.
 3. Regenerate drift reports from the promotion ledger and verify the
    `docs_condensed_documentation` lane shrinks to support-only receipts or
    source-backed deltas.
+
+Continuation: `source-authority-intake-proof.md` records the completed
+source-intake pass and the refreshed drift shape.
