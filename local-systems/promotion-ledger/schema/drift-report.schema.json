@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Forge Promotion Drift Report",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "repo_pair",
+    "source_repo",
+    "target_repo",
+    "source_commit",
+    "target_commit",
+    "generated_at",
+    "classification_summary",
+    "items"
+  ],
+  "properties": {
+    "repo_pair": { "type": "string", "minLength": 1 },
+    "source_repo": { "type": "string", "minLength": 1 },
+    "target_repo": { "type": "string", "minLength": 1 },
+    "source_commit": { "type": "string" },
+    "target_commit": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "classification_summary": {
+      "type": "object",
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "classification",
+          "justification",
+          "source_commit",
+          "target_commit",
+          "recommended_action"
+        ],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "same",
+              "intentional_app_support_adaptation",
+              "missing_from_target",
+              "target_only_glue",
+              "dangerous_drift",
+              "unknown"
+            ]
+          },
+          "justification": { "type": "string" },
+          "source_commit": { "type": "string" },
+          "target_commit": { "type": "string" },
+          "recommended_action": { "type": "string" }
+        }
+      }
+    }
+  }
+}

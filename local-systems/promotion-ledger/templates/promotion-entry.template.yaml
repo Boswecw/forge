@@ -1,0 +1,25 @@
+promotion_id: ""
+slice_name: ""
+source_repo: ""
+source_branch: ""
+source_commit: ""
+target_repo: ""
+target_branch: ""
+target_commit: ""
+promoted_files: []
+excluded_files: []
+promotion_manifest: []
+proof_commands: []
+proof_results: {}
+evidence_path: ""
+runtime_status_proof: ""
+authorforge_impact: ""
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: ""
+created_at: ""
+rollback_source_commit: ""
+rollback_target_commit: ""
+rollback_command: ""
+rollback_evidence_path: ""
+supersedes_promotion_id: null

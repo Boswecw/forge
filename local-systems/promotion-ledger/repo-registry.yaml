@@ -1,0 +1,31 @@
+version: 1
+created_for_slice: slice-00-promotion-governance-bootstrap
+created_at: "2026-06-19T07:04:12Z"
+proving_authority_root: /home/charlie/Forge/ecosystem/local-systems
+promotion_target_root: /home/charlie/Forge/apps/public-app-local-support
+repo_pairs:
+  - repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+    source_repo: /home/charlie/Forge/ecosystem/local-systems/forge-local-systems-runtime
+    target_repo: /home/charlie/Forge/apps/public-app-local-support/forge-local-runtime-master-reference
+    source_role: shared local runtime doctrine, contracts, readiness, degraded and denial posture
+    target_role: app-support runtime reference copy
+  - repo_pair: dataforge-Local__df-local-foundation
+    source_repo: /home/charlie/Forge/ecosystem/local-systems/dataforge-Local
+    target_repo: /home/charlie/Forge/apps/public-app-local-support/df-local-foundation
+    source_role: local data and control substrate proving repo
+    target_role: app-support DataForge local foundation copy
+  - repo_pair: cortex__cortex
+    source_repo: /home/charlie/Forge/ecosystem/local-systems/cortex
+    target_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
+    source_role: local file intelligence, extraction, and retrieval-preparation proving repo
+    target_role: app-support Cortex copy
+  - repo_pair: neuronforge-local-operator__neuronforge
+    source_repo: /home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator
+    target_repo: /home/charlie/Forge/apps/public-app-local-support/neuronforge
+    source_role: local candidate generation, evaluation, and reviewed promotion proving repo
+    target_role: app-support NeuronForge copy
+  - repo_pair: fa-local-operator__fa-local
+    source_repo: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator
+    target_repo: /home/charlie/Forge/apps/public-app-local-support/fa-local
+    source_role: governed local execution boundary proving repo
+    target_role: app-support FA Local copy

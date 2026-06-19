@@ -1,0 +1,71 @@
+repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+source_repo: /home/charlie/Forge/ecosystem/local-systems/forge-local-systems-runtime
+target_repo: /home/charlie/Forge/apps/public-app-local-support/forge-local-runtime-master-reference
+source_branch: main
+target_branch: main
+source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+generated_at: '2026-06-19T07:56:54+00:00'
+classification_summary:
+  same: 115
+  intentional_app_support_adaptation: 0
+  missing_from_target: 1
+  target_only_glue: 0
+  dangerous_drift: 0
+  unknown: 6
+items:
+- path: doc/FLSSYSTEM.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/FOLSYSTEM.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/SYSTEM.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/90-appendices.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/BUILD.sh
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/_index.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/validate_snapshots.sh
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.

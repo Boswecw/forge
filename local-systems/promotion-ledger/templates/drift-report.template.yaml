@@ -1,0 +1,20 @@
+repo_pair: ""
+source_repo: ""
+target_repo: ""
+source_commit: ""
+target_commit: ""
+generated_at: ""
+classification_summary:
+  same: 0
+  intentional_app_support_adaptation: 0
+  missing_from_target: 0
+  target_only_glue: 0
+  dangerous_drift: 0
+  unknown: 0
+items:
+  - path: ""
+    classification: "unknown"
+    justification: ""
+    source_commit: ""
+    target_commit: ""
+    recommended_action: ""

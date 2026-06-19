@@ -1,0 +1,1529 @@
+generated_at: '2026-06-19T07:57:42+00:00'
+source: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
+unknown_total: 204
+review_types:
+  generated_system_documentation: Generated or assembled system documentation and
+    doc/system snapshots that need lineage review before being treated as authoritative.
+  service_runtime_and_glue_code: Executable service, adapter, translation, promotion,
+    or runtime code that may be app-support glue or behavior drift.
+  target_tests_and_validation_cases: Target-side tests and validation fixtures that
+    prove target behavior but may not exist in the proving repo.
+  data_foundation_runtime_core: DF Local Foundation target-only core runtime modules
+    for backup, export, health, lifecycle, or config.
+  policy_architecture_integration_docs: Non-generated architecture, policy, integration,
+    ADR, model-routing, or local-first documentation.
+  repo_metadata_build_and_closeout: Root metadata, dependency, build, closeout, and
+    assistant instruction files.
+  data_sql_cli_tools: Target-only SQL migrations or local CLI database tools.
+  evidence_outputs_and_run_records: Run outputs, evidence records, promotion examples,
+    and registries.
+  shared_contract_schema_validation: Schemas, contract files, validation scripts,
+    or shared schema code.
+  private_local_config: Local private/editor configuration that should not be promoted
+    as authority.
+  other_review_required: Fallback bucket for paths that need manual review before
+    categorization.
+summary:
+  private_local_config:
+    total: 1
+    target_only: 1
+    modified_in_both: 0
+  repo_metadata_build_and_closeout:
+    total: 14
+    target_only: 1
+    modified_in_both: 13
+  generated_system_documentation:
+    total: 79
+    target_only: 59
+    modified_in_both: 20
+  policy_architecture_integration_docs:
+    total: 17
+    target_only: 15
+    modified_in_both: 2
+  shared_contract_schema_validation:
+    total: 7
+    target_only: 4
+    modified_in_both: 3
+  service_runtime_and_glue_code:
+    total: 28
+    target_only: 14
+    modified_in_both: 14
+  data_foundation_runtime_core:
+    total: 15
+    target_only: 15
+    modified_in_both: 0
+  data_sql_cli_tools:
+    total: 7
+    target_only: 7
+    modified_in_both: 0
+  target_tests_and_validation_cases:
+    total: 29
+    target_only: 26
+    modified_in_both: 3
+  evidence_outputs_and_run_records:
+    total: 7
+    target_only: 6
+    modified_in_both: 1
+per_repo:
+  cortex__cortex:
+    repo_metadata_build_and_closeout: 3
+    generated_system_documentation: 15
+    policy_architecture_integration_docs: 1
+    shared_contract_schema_validation: 2
+    service_runtime_and_glue_code: 6
+    target_tests_and_validation_cases: 1
+  dataforge-Local__df-local-foundation:
+    repo_metadata_build_and_closeout: 4
+    generated_system_documentation: 28
+    policy_architecture_integration_docs: 8
+    shared_contract_schema_validation: 3
+    service_runtime_and_glue_code: 3
+    data_foundation_runtime_core: 15
+    data_sql_cli_tools: 7
+    target_tests_and_validation_cases: 20
+  fa-local-operator__fa-local:
+    repo_metadata_build_and_closeout: 4
+    generated_system_documentation: 18
+    shared_contract_schema_validation: 1
+    service_runtime_and_glue_code: 4
+    target_tests_and_validation_cases: 1
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    generated_system_documentation: 6
+  neuronforge-local-operator__neuronforge:
+    private_local_config: 1
+    repo_metadata_build_and_closeout: 3
+    generated_system_documentation: 12
+    policy_architecture_integration_docs: 8
+    shared_contract_schema_validation: 1
+    service_runtime_and_glue_code: 15
+    target_tests_and_validation_cases: 7
+    evidence_outputs_and_run_records: 7
+items:
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: .claude/settings.local.json
+  review_type: private_local_config
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: .gitignore
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: Makefile
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: requirements.txt
+  review_type: repo_metadata_build_and_closeout
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: .gitignore
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: CLAUDE.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: README.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: pyproject.toml
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: .gitignore
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: CLAUDE.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: Cargo.toml
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: README.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: .gitignore
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: CLAUDE.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: README.md
+  review_type: repo_metadata_build_and_closeout
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: SYSTEM.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/CRTSYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/SYSTEM.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/cxSYSTEM.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/00-overview.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/01-architecture.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/04-validation-and-delivery.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/10-scope.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/20-structure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/30-governance.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/40-change-control.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/90-appendices.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/BUILD.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/_index.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/validate_snapshots.sh
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: SYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/DFLSYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/SYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/00-overview.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/01-architecture.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/01-overview-philosophy.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/02-architecture.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/03-tech-stack.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/04-project-structure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/05-configuration.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/06-design-system.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/07-frontend.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/08-api-layer.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/09-backend.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/10-ecosystem-integration.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/10-scope.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/11-database-schema.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/12-ai-integration.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/13-error-handling.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/14-testing-infrastructure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/15-handover-migration-notes.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/20-structure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/30-governance.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/40-change-control.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/90-appendices.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/BUILD.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/_index.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/validate_snapshots.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: SYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/FLLSYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/SYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/faSYSTEM.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/00-overview.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/01-architecture.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/01-overview-charter.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/02-boundaries-and-doctrine.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/03-contract-surface.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/04-validation-and-delivery.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/10-scope.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/20-structure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/30-governance.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/40-change-control.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/90-appendices.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/BUILD.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/_index.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/validate_snapshots.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/FOLSYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/SYSTEM.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/90-appendices.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/BUILD.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/_index.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/validate_snapshots.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: SYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/NRNSYSTEM.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/00-overview.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/01-architecture.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/10-scope.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/20-structure.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/30-governance.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/40-change-control.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/90-appendices.md
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/BUILD.sh
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/_index.md
+  review_type: generated_system_documentation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/validate_snapshots.sh
+  review_type: generated_system_documentation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: docs/service/authorforge-service.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/app-integration-contract.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/architecture.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/backup-export-restore.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/closeout-initial-governed-implementation.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/df-local-foundation_extended_roadmap.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/migration-doctrine.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/operational-visibility.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/privacy-doctrine.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/authorforge-task-envelope-contract.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/authorforge-task-router-plan.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/local-first-cloud-assist-boundary.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/model-routing-doctrine.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/neuronforge_architecture_spec.md
+  review_type: policy_architecture_integration_docs
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/neuronforge_extended_roadmap.md
+  review_type: policy_architecture_integration_docs
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/registries/task-lanes.md
+  review_type: policy_architecture_integration_docs
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: schemas/service-status.schema.json
+  review_type: shared_contract_schema_validation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: scripts/validate_schemas.py
+  review_type: shared_contract_schema_validation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: contracts/app-registration.schema.json
+  review_type: shared_contract_schema_validation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: contracts/health.schema.json
+  review_type: shared_contract_schema_validation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: contracts/migration-status.schema.json
+  review_type: shared_contract_schema_validation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: src/domain/shared/schema.rs
+  review_type: shared_contract_schema_validation
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/mirror/wave1_promotion_envelope.schema.json
+  review_type: shared_contract_schema_validation
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: cortex_runtime/service_status.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: cortex_runtime/source_lanes.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: service/__init__.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: service/__main__.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: service/authorforge_app.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: service/authorforge_translation.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: app/__init__.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: app/__main__.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: app/main.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: src/app/intake_service.rs
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: src/errors/mod.rs
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: src/integrations/cortex/mod.rs
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: src/integrations/df_local/mod.rs
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/__init__.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/compatibility.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/envelope.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/mirror/wave1_promotion_envelope.mirror.json
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: promotion/run_log.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: scripts/style_analysis/models.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: scripts/verify_promotion_seam.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/authorforge_task_contract.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/authorforge_task_service.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/cloud_escalation.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/dogfood_telemetry.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/local_runtime.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/main.py
+  review_type: service_runtime_and_glue_code
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/proofread_lane.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: service/scene_lane.py
+  review_type: service_runtime_and_glue_code
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/backup/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/backup/manager.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/backup/signing.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/config/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/config/settings.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/export/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/export/manager.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/health/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/health/reporter.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/lifecycle/__init__.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/lifecycle/compatibility.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/lifecycle/maintenance.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/lifecycle/manager.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: core/lifecycle/migration_lock.py
+  review_type: data_foundation_runtime_core
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: sql/apps/authorforge/0001_authorforge_attach.sql
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: sql/core/0001_core_foundation.sql
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: sql/core/0002_core_metadata.sql
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tools/db-backup
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tools/db-export
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tools/db-restore
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tools/db-status
+  review_type: data_sql_cli_tools
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: cortex__cortex
+  path: tests/runtime/test_service_status.py
+  review_type: target_tests_and_validation_cases
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/api/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/api/test_health_api.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/backup_restore/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/backup_restore/test_envelope_signing.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/backup_restore/test_restore_redteam.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/backup_restore/test_restore_validation.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/first_integration/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/first_integration/test_authorforge_attachment.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/migration_status/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/migration_status/test_migration_contract.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/migration_status/test_migration_lock.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/registration/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/registration/test_app_registration.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/registration/test_compatibility_semantics.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/registration/test_config_bypass.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/visibility_boundary/__init__.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/visibility_boundary/test_cli_authority.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/visibility_boundary/test_health_contract.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/visibility_boundary/test_health_event_discipline.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: tests/visibility_boundary/test_status_redteam.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: tests/contracts_loading.rs
+  review_type: target_tests_and_validation_cases
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test-style-analysis.py
+  review_type: target_tests_and_validation_cases
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_authorforge_task_contract.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_authorforge_task_service.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_cloud_escalation.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_dogfood_telemetry.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_proofread_lane.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: tests/test_scene_lane.py
+  review_type: target_tests_and_validation_cases
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/dogfood-cloud-quota-log.md
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_runs_demo.md
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_seam_example.md
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_seam_report.json
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md
+  review_type: evidence_outputs_and_run_records
+  shape: target_only
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: registry/runs.md
+  review_type: evidence_outputs_and_run_records
+  shape: modified_in_both
+  recommended_first_pass: manual review required; do not reclassify automatically
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa

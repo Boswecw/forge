@@ -1,0 +1,386 @@
+repo_pair: fa-local-operator__fa-local
+source_repo: /home/charlie/Forge/ecosystem/local-systems/fa-local-operator
+target_repo: /home/charlie/Forge/apps/public-app-local-support/fa-local
+source_branch: master
+target_branch: master
+source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+generated_at: '2026-06-19T07:56:54+00:00'
+classification_summary:
+  same: 131
+  intentional_app_support_adaptation: 0
+  missing_from_target: 20
+  target_only_glue: 0
+  dangerous_drift: 0
+  unknown: 28
+items:
+- path: .gitignore
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: CLAUDE.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: Cargo.toml
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: README.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: SYSTEM.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: ci_gate.sh
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/FLLSYSTEM.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/FLOSYSTEM.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/SYSTEM.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/faSYSTEM.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/00-overview.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/00_overview/01-overview-charter.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/01-architecture.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/01-overview-charter.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/02-boundaries-and-doctrine.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/03-contract-surface.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/04-validation-and-delivery.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/10-scope.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/10_service-contract/02-contract-surface.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/20-structure.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/20_runtime/03-execution-bridge-writeback.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/30-governance.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/30_dependencies/04-dependencies.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/40-change-control.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/40_governance/05-scope.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/40_governance/06-governance.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/40_governance/07-change-control.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/40_governance/08-boundaries-and-doctrine.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/50_operations/09-validation-and-delivery.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/90-appendices.md
+  classification: unknown
+  justification: Target-only artifact requires human classification before promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
+    dangerous_drift, or backport to the proving repo.
+- path: doc/system/99_appendices/10-appendices.md
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: doc/system/BUILD.sh
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/_index.md
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: doc/system/validate_snapshots.sh
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: reports/contract_core_gate_20260404_102436.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: schemas/gnat-dispatch-envelope.schema.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: src/app/intake_service.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: src/bin/fa_local_run.rs
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: src/domain/shared/schema.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: src/errors/mod.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: src/integrations/cortex/mod.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: src/integrations/df_local/mod.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.
+- path: tests/contracts_loading.rs
+  classification: unknown
+  justification: Artifact exists in both repos but content differs. Slice 00 does
+    not infer intent.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Compare source and target intent; resolve by human decision,
+    backport, or explicit exception.
+- path: tests/gnat_dispatch.rs
+  classification: missing_from_target
+  justification: Source artifact exists in the proving repo but is absent from the
+    app-support target.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+  recommended_action: Review whether this source artifact should be promoted or intentionally
+    excluded.

@@ -1,0 +1,1067 @@
+generated_at: '2026-06-19T07:58:24+00:00'
+rule:
+  docs_home: /docs
+  code_mirror_home: /doc/system
+  inactive_plan_policy: condense inactive plans to status, decision, evidence, and
+    next action
+documentation_unknown_total: 109
+placement_cleanup:
+  misplaced_documentation_remaining: 0
+  moved_to_docs:
+  - from: cortex/service/README.md
+    to: cortex/docs/service/authorforge-service.md
+  - from: neuronforge/doc/adr/ADR-2026-04-18-promotion-truth-upstream.md
+    to: neuronforge/docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+  - from: neuronforge/registry/task-lanes.md
+    to: neuronforge/docs/registries/task-lanes.md
+root_doc_condensation:
+  result: completed
+  condensed_root_readmes:
+  - df-local-foundation/README.md
+  - neuronforge/README.md
+  - fa-local/README.md
+  moved_to_docs:
+  - from: df-local-foundation/CLOSEOUT.md
+    to: df-local-foundation/docs/closeout-initial-governed-implementation.md
+  agent_metadata_left_in_place:
+  - df-local-foundation/CLAUDE.md
+  - neuronforge/CLAUDE.md
+  - fa-local/CLAUDE.md
+doc_system_mirror_proof:
+  result: passed
+  targets_checked: 5
+  evidence: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/doc-system-mirror-proof.md
+lanes:
+  doc_system_code_mirror:
+    definition: /doc/system and generated system outputs. Review as code mirror, not
+      general documentation.
+    default_action: Verify against live code and repo-local build/validation before
+      accepting; do not treat as documentation promotion.
+  docs_condensed_documentation:
+    definition: Material already under /docs. Keep only if condensed or actively driving
+      implementation.
+    default_action: Condense if inactive; if it contains foundational authority, backport
+      to the proving repo before promotion.
+  misplaced_documentation_needs_docs_home:
+    definition: Documentation-like material outside /docs and outside /doc/system.
+    default_action: Move or condense into /docs unless it is a generated receipt or
+      deliberately local-only.
+  root_pointer_or_agent_metadata:
+    definition: Root README, CLAUDE, and closeout files. Root README files should
+      be short pointers; CLAUDE files are repo-local agent metadata.
+    default_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+      it contains broad human documentation.
+  evidence_or_run_record:
+    definition: Evidence, output, run logs, and report records. These may remain outside
+      /docs but must not become doctrine.
+    default_action: Keep as evidence only; link from /docs summaries when needed.
+summary:
+  doc_system_code_mirror:
+    total: 79
+    target_only: 59
+    modified_in_both: 20
+  docs_condensed_documentation:
+    total: 17
+    target_only: 15
+    modified_in_both: 2
+  root_pointer_or_agent_metadata:
+    total: 6
+    target_only: 0
+    modified_in_both: 6
+  evidence_or_run_record:
+    total: 7
+    target_only: 6
+    modified_in_both: 1
+per_repo:
+  cortex__cortex:
+    doc_system_code_mirror: 15
+    docs_condensed_documentation: 1
+  dataforge-Local__df-local-foundation:
+    doc_system_code_mirror: 28
+    docs_condensed_documentation: 8
+    root_pointer_or_agent_metadata: 2
+  fa-local-operator__fa-local:
+    doc_system_code_mirror: 18
+    root_pointer_or_agent_metadata: 2
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    doc_system_code_mirror: 6
+  neuronforge-local-operator__neuronforge:
+    doc_system_code_mirror: 12
+    docs_condensed_documentation: 8
+    root_pointer_or_agent_metadata: 2
+    evidence_or_run_record: 7
+items:
+- repo_pair: cortex__cortex
+  path: SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/CRTSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/cxSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/00-overview.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/01-architecture.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/04-validation-and-delivery.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/10-scope.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/20-structure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/30-governance.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/40-change-control.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/90-appendices.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/BUILD.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/_index.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: cortex__cortex
+  path: doc/system/validate_snapshots.sh
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/DFLSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/00-overview.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/01-architecture.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/01-overview-philosophy.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/02-architecture.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/03-tech-stack.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/04-project-structure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/05-configuration.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/06-design-system.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/07-frontend.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/08-api-layer.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/09-backend.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/10-ecosystem-integration.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/10-scope.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/11-database-schema.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/12-ai-integration.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/13-error-handling.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/14-testing-infrastructure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/15-handover-migration-notes.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/20-structure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/30-governance.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/40-change-control.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/90-appendices.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/BUILD.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/_index.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: doc/system/validate_snapshots.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/FLLSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/faSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/00-overview.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/01-architecture.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/01-overview-charter.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/02-boundaries-and-doctrine.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/03-contract-surface.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/04-validation-and-delivery.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/10-scope.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/20-structure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/30-governance.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/40-change-control.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/90-appendices.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/BUILD.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/_index.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: doc/system/validate_snapshots.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/FOLSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/90-appendices.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/BUILD.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/_index.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: forge-local-systems-runtime__forge-local-runtime-master-reference
+  path: doc/system/validate_snapshots.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: df31e1a98d4789a488e800483a8442643e4036aa
+  target_commit: c68ae960eb0b609718c93a626f50ccd0a1226c93
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: SYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/NRNSYSTEM.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/00-overview.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/01-architecture.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/10-scope.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/20-structure.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/30-governance.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/40-change-control.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/90-appendices.md
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/BUILD.sh
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/_index.md
+  documentation_lane: doc_system_code_mirror
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: doc/system/validate_snapshots.sh
+  documentation_lane: doc_system_code_mirror
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Verify against live code and repo-local build/validation before
+    accepting; do not treat as documentation promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: cortex__cortex
+  path: docs/service/authorforge-service.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+  target_commit: b974e7905b1a650204f2a9d84c2fdb3b5eb605c5
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/app-integration-contract.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/architecture.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/backup-export-restore.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/closeout-initial-governed-implementation.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/df-local-foundation_extended_roadmap.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/migration-doctrine.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/operational-visibility.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: docs/privacy-doctrine.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/authorforge-task-envelope-contract.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/authorforge-task-router-plan.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/local-first-cloud-assist-boundary.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/model-routing-doctrine.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/neuronforge_architecture_spec.md
+  documentation_lane: docs_condensed_documentation
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/neuronforge_extended_roadmap.md
+  documentation_lane: docs_condensed_documentation
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/registries/task-lanes.md
+  documentation_lane: docs_condensed_documentation
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Condense if inactive; if it contains foundational authority,
+    backport to the proving repo before promotion.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/dogfood-cloud-quota-log.md
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_runs_demo.md
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_seam_example.md
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: docs/evidence/promotion_seam_report.json
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md
+  documentation_lane: evidence_or_run_record
+  shape: target_only
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: registry/runs.md
+  documentation_lane: evidence_or_run_record
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Keep as evidence only; link from /docs summaries when needed.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: dataforge-Local__df-local-foundation
+  path: CLAUDE.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: dataforge-Local__df-local-foundation
+  path: README.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 0a804aa43baf1c67316acd4758412557809f133b
+  target_commit: 72b88cec66496cedf9dc77751505ec052b94207b
+- repo_pair: fa-local-operator__fa-local
+  path: CLAUDE.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: fa-local-operator__fa-local
+  path: README.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
+  target_commit: 83d280d01b2c12494cda2a3130cd8bebe8b122d5
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: CLAUDE.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
+- repo_pair: neuronforge-local-operator__neuronforge
+  path: README.md
+  documentation_lane: root_pointer_or_agent_metadata
+  shape: modified_in_both
+  current_classification: unknown
+  recommended_action: Condense root docs to pointers; leave CLAUDE as metadata unless
+    it contains broad human documentation.
+  source_commit: 03893e339ba3a8bba5ad1c25282e060da02788ec
+  target_commit: b9c9bd999d2860469b8af063f0cc23372a971faa
