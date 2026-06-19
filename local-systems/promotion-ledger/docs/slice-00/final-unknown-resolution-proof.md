@@ -29,5 +29,6 @@ contracts/schema/sql, promotion evidence, and operator tooling/scripts.
 ## Remaining Gate
 
 Unknown and dangerous drift are zero. The remaining promotion work is the 648
-`missing_from_target` source-only artifacts, which need promotion-candidate
-review or explicit exclusion.
+`missing_from_target` source-only artifacts. They are inventoried in
+`docs/slice-00/source-only-backlog-inventory.md`; the next candidate review is
+runtime/capability plus contract/schema surfaces, paired with tests.

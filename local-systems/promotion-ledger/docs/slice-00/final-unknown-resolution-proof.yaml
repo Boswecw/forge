@@ -55,4 +55,7 @@ blocking_status:
   unknown: 0
   dangerous_drift: 0
   missing_from_target: 648
-next_gate: "Review source-only missing_from_target backlog for promotion candidates or explicit exclusions."
+source_only_backlog_inventory:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+next_gate: "Review source_runtime_or_capability plus source_contract_schema_migration for Cortex and NeuronForge, paired with tests."

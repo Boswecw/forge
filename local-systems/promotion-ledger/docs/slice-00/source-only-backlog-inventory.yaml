@@ -1,0 +1,137 @@
+generated_at: "2026-06-19T09:24:52Z"
+scope: "Slice 00 source-only missing_from_target backlog inventory"
+input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
+method: "Read generated drift reports and select classification=missing_from_target. Group paths by repo pair and source path family."
+summary:
+  missing_from_target: 648
+  unknown: 0
+  dangerous_drift: 0
+repo_breakdown:
+  cortex__cortex: 319
+  neuronforge-local-operator__neuronforge: 173
+  dataforge-Local__df-local-foundation: 135
+  fa-local-operator__fa-local: 20
+  forge-local-systems-runtime__forge-local-runtime-master-reference: 1
+category_summary:
+  source_local_subproject:
+    count: 183
+    path_rules:
+      - repo-crawler/**
+      - worm/**
+    promotion_posture: "Exclude by default from app-support promotion. These are source-local subprojects unless an explicit app-support dependency is opened."
+  source_proof_tests:
+    count: 120
+    path_rules:
+      - tests/**
+    promotion_posture: "Do not promote alone. Pair with the runtime or contract surface they prove."
+  source_runtime_or_capability:
+    count: 107
+    path_rules:
+      - cortex_runtime/**
+      - gnat_core/**
+      - gnat_runtime/**
+      - app/**
+      - constants/**
+      - src/**
+      - runtime/**
+      - service/**
+      - prompt_assembly/**
+    promotion_posture: "Promotion candidate class. Requires support target decision and proof gate before copying into app support."
+  source_docs_or_doc_mirror:
+    count: 102
+    path_rules:
+      - docs/**
+      - doc/**
+      - NLOSYSTEM.md
+      - GEMINI.md
+    promotion_posture: "Do not bulk-promote. /docs promotion must stay condensed, and /doc/system remains a code mirror."
+  source_contract_schema_migration:
+    count: 53
+    path_rules:
+      - schemas/**
+      - sql/**
+      - alembic/**
+      - alembic.ini
+    promotion_posture: "Promotion candidate class. Requires contract/migration compatibility check before support promotion."
+  source_evidence_reports_prompts:
+    count: 52
+    path_rules:
+      - reports/**
+      - outputs/**
+      - evidence/**
+      - inputs/**
+      - seeds/**
+      - proving_slice/**
+      - evals/**
+      - promotion/**
+      - promotions/**
+      - registry/**
+      - prompts/**
+      - DECISIONS/**
+    promotion_posture: "Exclude by default from app-support promotion. Promote only as a named evidence receipt."
+  source_scripts_ci:
+    count: 24
+    path_rules:
+      - scripts/**
+      - ci_gate.sh
+    promotion_posture: "Promotion candidate only when tied to a support proof command."
+  source_scaffold_config:
+    count: 7
+    path_rules:
+      - .codex
+      - .env.graphiti
+      - .env.graphiti.example
+      - docker-compose.graphiti-pilot.yml
+      - requirements.txt
+      - requirements-dev.txt
+      - requirements-graphiti.txt
+    promotion_posture: "Exclude by default. Promote only if the support target adopts the corresponding runtime dependency."
+repo_category_breakdown:
+  cortex__cortex:
+    source_local_subproject: 183
+    source_proof_tests: 50
+    source_docs_or_doc_mirror: 35
+    source_runtime_or_capability: 32
+    source_contract_schema_migration: 9
+    source_scripts_ci: 6
+    source_evidence_reports_prompts: 3
+    source_scaffold_config: 1
+  dataforge-Local__df-local-foundation:
+    source_contract_schema_migration: 30
+    source_docs_or_doc_mirror: 30
+    source_evidence_reports_prompts: 28
+    source_runtime_or_capability: 24
+    source_proof_tests: 16
+    source_scripts_ci: 7
+  fa-local-operator__fa-local:
+    source_docs_or_doc_mirror: 11
+    source_proof_tests: 5
+    source_scripts_ci: 1
+    source_evidence_reports_prompts: 1
+    source_contract_schema_migration: 1
+    source_runtime_or_capability: 1
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    source_docs_or_doc_mirror: 1
+  neuronforge-local-operator__neuronforge:
+    source_runtime_or_capability: 50
+    source_proof_tests: 49
+    source_docs_or_doc_mirror: 25
+    source_evidence_reports_prompts: 20
+    source_contract_schema_migration: 13
+    source_scripts_ci: 10
+    source_scaffold_config: 6
+promotion_queue:
+  immediate_candidate_classes:
+    - source_runtime_or_capability
+    - source_contract_schema_migration
+    - source_scripts_ci
+  paired_candidate_classes:
+    - source_proof_tests
+  default_exclusion_classes:
+    - source_local_subproject
+    - source_docs_or_doc_mirror
+    - source_evidence_reports_prompts
+    - source_scaffold_config
+next_gate:
+  first_slice: "Review source_runtime_or_capability plus source_contract_schema_migration for Cortex and NeuronForge, paired with their tests."
+  rule: "No source-only artifact should be copied into app support without an explicit target role, proof command, and post-promotion drift report."
