@@ -11,7 +11,7 @@ support_commits:
       - docs/operational-visibility.md
       - docs/privacy-doctrine.md
   neuronforge:
-    commit: 81340ee0
+    commit: dc67b04
     docs_aligned:
       - docs/authorforge-task-envelope-contract.md
       - docs/authorforge-task-router-plan.md
@@ -43,7 +43,7 @@ drift_result:
     docs_unknown_target_only: 8
     dangerous_drift: 0
   after:
-    same: 2232
+    same: 2233
     unknown: 191
     docs_unknown_present_in_both: 0
     docs_unknown_target_only: 8

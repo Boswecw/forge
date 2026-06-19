@@ -12,7 +12,7 @@ committed local-system source baselines.
 | Repo | Commit | Scope |
 | --- | --- | --- |
 | `df-local-foundation` | `6760634a` | Aligned six DF Local support docs to source authority. |
-| `neuronforge` | `81340ee0` | Aligned seven NeuronForge support docs to source authority. |
+| `neuronforge` | `dc67b04` | Aligned seven NeuronForge support docs to source authority after rebasing over the remote promotion PR. |
 
 ## Verification
 
@@ -27,7 +27,7 @@ committed local-system source baselines.
 
 | Metric | Before reconciliation | After reconciliation |
 | --- | ---: | ---: |
-| `same` | 2219 | 2232 |
+| `same` | 2219 | 2233 |
 | `unknown` | 204 | 191 |
 | `/docs` unknown present in both source and target | 13 | 0 |
 | `/docs` unknown target-only | 8 | 8 |

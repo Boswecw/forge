@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T08:22:16+00:00`
+Generated: `2026-06-19T08:30:33+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -8,15 +8,15 @@ Source commit: `006ef57c9ece79b666581b303fce06e54debaa42`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
-Target commit: `81340eedbc3f29729ff074ce5640332526c9c1f1`
+Target commit: `dc67b04863e313f3116565ddf1e7e369d6349a67`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 391 |
+| same | 392 |
 | intentional_app_support_adaptation | 0 |
-| missing_from_target | 174 |
+| missing_from_target | 173 |
 | target_only_glue | 0 |
 | dangerous_drift | 0 |
 | unknown | 47 |
@@ -75,7 +75,6 @@ Target commit: `81340eedbc3f29729ff074ce5640332526c9c1f1`
 | `docs/plans/graphiti/README.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/plans/graphiti/REVIEW.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evals/beat_candidate_bakeoff/beat_candidate_bakeoff_status.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `evals/forge-command-promotion-validation-2026-05-29.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evidence/promotion_seam/operator_examples.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evidence/promotion_seam/promotion_runs.jsonl` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evidence/promotion_seam/seam_report.json` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
