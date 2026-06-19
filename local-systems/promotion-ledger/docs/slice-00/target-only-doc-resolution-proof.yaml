@@ -65,4 +65,5 @@ blocking_status:
   docs_unknown: 0
   dangerous_drift: 0
   unresolved_non_doc_unknown: 183
-next_gate: "Resolve remaining non-doc unknown drift or promote/backport missing source artifacts."
+non_doc_unknown_inventory: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/non-doc-unknown-type-inventory.yaml
+next_gate: "Resolve /doc/system mirror drift first, then runtime plus tests, contracts, promotion evidence, scripts, and repo scaffold."

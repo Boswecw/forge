@@ -47,6 +47,5 @@ unmatched drift remains conservative.
 
 ## Remaining Gate
 
-`unknown` is now 183 and all remaining unknowns are non-doc drift. The next
-promotion gate is to resolve those by source promotion, support adaptation,
-target-only glue classification, or explicit dangerous drift.
+`unknown` is now 183 and all remaining unknowns are non-doc drift. They are
+typed in `docs/slice-00/non-doc-unknown-type-inventory.md`.

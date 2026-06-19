@@ -1,0 +1,106 @@
+generated_at: "2026-06-19T08:58:00Z"
+scope: "Slice 00 remaining non-doc unknown drift type inventory"
+input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
+method: "Read generated drift reports, select classification=unknown, then derive drift shape by checking source/target file presence and sha256 digest."
+lineage:
+  original_unknown_count: 204
+  source_backed_docs_resolved: 13
+  target_only_docs_resolved: 8
+  remaining_unknown_count: 183
+shape_summary:
+  modified_in_both: 54
+  target_only: 129
+type_summary:
+  doc_system_mirror_or_root_system:
+    total: 79
+    shapes:
+      target_only: 59
+      modified_in_both: 20
+    rule: "doc/** and root SYSTEM.md"
+    next_action: "Treat as code mirror drift. Rebuild or compare /doc/system against live code before any promotion decision."
+  runtime_or_adapter_code:
+    total: 37
+    shapes:
+      target_only: 27
+      modified_in_both: 10
+    rule: "core/**, app/**, service/**, cortex_runtime/**, and src/**"
+    next_action: "Review as implementation drift. Classify as support adapter, source promotion candidate, or dangerous drift after tests."
+  test_surface:
+    total: 29
+    shapes:
+      target_only: 26
+      modified_in_both: 3
+    rule: "tests/**"
+    next_action: "Keep paired with the runtime or contract surface it proves. Do not promote tests without the authority they verify."
+  repo_scaffold_config:
+    total: 15
+    shapes:
+      modified_in_both: 13
+      target_only: 2
+    rule: "README.md, CLAUDE.md, .gitignore, Makefile, requirements.txt, pyproject.toml, Cargo.toml, and .claude/**"
+    next_action: "Classify as repo-local scaffold unless it changes runtime or operator contract behavior."
+  promotion_evidence_runtime:
+    total: 9
+    shapes:
+      target_only: 5
+      modified_in_both: 4
+    rule: "promotion/**, registry/**, and outputs/**"
+    next_action: "Resolve against promotion seam evidence. Treat mirror or registry drift as blocking until provenance is clear."
+  contract_schema_sql:
+    total: 7
+    shapes:
+      target_only: 6
+      modified_in_both: 1
+    rule: "contracts/**, schemas/**, and sql/**"
+    next_action: "Review with runtime tests. Promote source authority or classify support-only schema glue explicitly."
+  operator_tooling_scripts:
+    total: 7
+    shapes:
+      target_only: 4
+      modified_in_both: 3
+    rule: "tools/** and scripts/**"
+    next_action: "Tie each tool/script to a proof command before promotion or support-only classification."
+repo_breakdown:
+  cortex__cortex:
+    total: 27
+    types:
+      doc_system_mirror_or_root_system: 15
+      runtime_or_adapter_code: 6
+      repo_scaffold_config: 3
+      contract_schema_sql: 1
+      operator_tooling_scripts: 1
+      test_surface: 1
+  dataforge-Local__df-local-foundation:
+    total: 80
+    types:
+      doc_system_mirror_or_root_system: 28
+      test_surface: 20
+      runtime_or_adapter_code: 18
+      contract_schema_sql: 6
+      repo_scaffold_config: 4
+      operator_tooling_scripts: 4
+  fa-local-operator__fa-local:
+    total: 28
+    types:
+      doc_system_mirror_or_root_system: 18
+      runtime_or_adapter_code: 5
+      repo_scaffold_config: 4
+      test_surface: 1
+  forge-local-systems-runtime__forge-local-runtime-master-reference:
+    total: 6
+    types:
+      doc_system_mirror_or_root_system: 6
+  neuronforge-local-operator__neuronforge:
+    total: 42
+    types:
+      doc_system_mirror_or_root_system: 12
+      promotion_evidence_runtime: 9
+      runtime_or_adapter_code: 8
+      test_surface: 7
+      repo_scaffold_config: 4
+      operator_tooling_scripts: 2
+blocking_status:
+  docs_unknown: 0
+  non_doc_unknown: 183
+  dangerous_drift: 0
+next_gate: "Resolve doc/system mirror drift first, then runtime plus tests, then contracts, promotion evidence, scripts, and repo scaffold."
