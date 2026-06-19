@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T08:18:09+00:00`
+Generated: `2026-06-19T08:22:16+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -8,18 +8,18 @@ Source commit: `536b700fa7f11bf92c75e5f8c540c4b571ebb17b`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundation`
 Target branch: `main`
-Target commit: `07137267e448dd58dfe796c8e2c2c5d16c34ecb2`
+Target commit: `6760634671ff88eda50ec3d99dd9e524694be4d9`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 2 |
+| same | 8 |
 | intentional_app_support_adaptation | 0 |
 | missing_from_target | 135 |
 | target_only_glue | 0 |
 | dangerous_drift | 0 |
-| unknown | 88 |
+| unknown | 82 |
 
 ## Items
 
@@ -149,18 +149,12 @@ Target commit: `07137267e448dd58dfe796c8e2c2c5d16c34ecb2`
 | `doc/system/BUILD.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `doc/system/_index.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `doc/system/validate_snapshots.sh` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/app-integration-contract.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/architecture.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/backup-export-restore.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/closeout-initial-governed-implementation.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/dataforge-local_architecture_spec.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/dataforge-local_extended_roadmap.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/df-local-foundation_extended_roadmap.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/evaluation-spine-phase-08-dataforge-local-lineage.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/migration-doctrine.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/migration_order.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/operational-visibility.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/privacy-doctrine.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/read_models.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/repo_structure.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/schema_inventory.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |

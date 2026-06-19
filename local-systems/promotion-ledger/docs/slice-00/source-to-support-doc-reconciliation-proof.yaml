@@ -1,0 +1,60 @@
+generated_at: "2026-06-19T08:22:35Z"
+source_intake_proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-authority-intake-proof.yaml
+support_commits:
+  df-local-foundation:
+    commit: 6760634a
+    docs_aligned:
+      - docs/app-integration-contract.md
+      - docs/architecture.md
+      - docs/backup-export-restore.md
+      - docs/migration-doctrine.md
+      - docs/operational-visibility.md
+      - docs/privacy-doctrine.md
+  neuronforge:
+    commit: 81340ee0
+    docs_aligned:
+      - docs/authorforge-task-envelope-contract.md
+      - docs/authorforge-task-router-plan.md
+      - docs/local-first-cloud-assist-boundary.md
+      - docs/model-routing-doctrine.md
+      - docs/neuronforge_architecture_spec.md
+      - docs/neuronforge_extended_roadmap.md
+      - docs/registries/task-lanes.md
+verification:
+  df_local_support_doc_system_build:
+    command: bash doc/system/BUILD.sh
+    result: passed
+    output: doc/DFLSYSTEM.md assembled with 386 lines
+  neuronforge_support_doc_system_build:
+    command: bash doc/system/BUILD.sh
+    result: passed
+    output: doc/NRNSYSTEM.md assembled with 3586 lines
+  staged_whitespace_checks:
+    command: git diff --cached --check
+    result: passed in both support repos before commit
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+drift_result:
+  before:
+    same: 2219
+    unknown: 204
+    docs_unknown_present_in_both: 13
+    docs_unknown_target_only: 8
+    dangerous_drift: 0
+  after:
+    same: 2232
+    unknown: 191
+    docs_unknown_present_in_both: 0
+    docs_unknown_target_only: 8
+    dangerous_drift: 0
+remaining_target_only_docs:
+  - cortex__cortex docs/service/authorforge-service.md
+  - dataforge-Local__df-local-foundation docs/closeout-initial-governed-implementation.md
+  - dataforge-Local__df-local-foundation docs/df-local-foundation_extended_roadmap.md
+  - neuronforge-local-operator__neuronforge docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
+  - neuronforge-local-operator__neuronforge docs/dogfood-cloud-quota-log.md
+  - neuronforge-local-operator__neuronforge docs/evidence/promotion_runs_demo.md
+  - neuronforge-local-operator__neuronforge docs/evidence/promotion_seam_example.md
+  - neuronforge-local-operator__neuronforge docs/evidence/promotion_seam_report.json
+next_gate: classify remaining target-only docs as support-only receipts, evidence, path-renamed equivalents, or source-backport candidates

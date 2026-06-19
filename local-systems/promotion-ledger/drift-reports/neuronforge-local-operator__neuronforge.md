@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T08:18:09+00:00`
+Generated: `2026-06-19T08:22:16+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -8,18 +8,18 @@ Source commit: `006ef57c9ece79b666581b303fce06e54debaa42`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
-Target commit: `4f99ce155f34cf5f8c1b729d3a46fd54f3946f26`
+Target commit: `81340eedbc3f29729ff074ce5640332526c9c1f1`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 384 |
+| same | 391 |
 | intentional_app_support_adaptation | 0 |
 | missing_from_target | 174 |
 | target_only_glue | 0 |
 | dangerous_drift | 0 |
-| unknown | 54 |
+| unknown | 47 |
 
 ## Items
 
@@ -49,18 +49,12 @@ Target commit: `4f99ce155f34cf5f8c1b729d3a46fd54f3946f26`
 | `docker-compose.graphiti-pilot.yml` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/adr/ADR-001-promotion-truth-upstream-of-pact.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/adr/ADR-2026-04-18-promotion-truth-upstream.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `docs/authorforge-task-envelope-contract.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/authorforge-task-router-plan.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/cor-gnat-semantic-handoff.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/dogfood-cloud-quota-log.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/evidence/promotion_runs_demo.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/evidence/promotion_seam_example.md` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/evidence/promotion_seam_report.json` | unknown | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
 | `docs/forge-command-integration-handoff.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/local-first-cloud-assist-boundary.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/model-routing-doctrine.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/neuronforge_architecture_spec.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `docs/neuronforge_extended_roadmap.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `docs/plans/graphiti/01-PILOT-ARCHITECTURE.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/plans/graphiti/02-EXPERIMENT-RECORD-AUTHORITY-MATRIX.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/plans/graphiti/03-GRAPH-IDENTITY-AND-FINGERPRINT-CONTRACT.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -80,7 +74,6 @@ Target commit: `4f99ce155f34cf5f8c1b729d3a46fd54f3946f26`
 | `docs/plans/graphiti/MAPPING-SPEC.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/plans/graphiti/README.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `docs/plans/graphiti/REVIEW.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
-| `docs/registries/task-lanes.md` | unknown | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
 | `evals/beat_candidate_bakeoff/beat_candidate_bakeoff_status.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evals/forge-command-promotion-validation-2026-05-29.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |
 | `evidence/promotion_seam/operator_examples.md` | missing_from_target | Review whether this source artifact should be promoted or intentionally excluded. |

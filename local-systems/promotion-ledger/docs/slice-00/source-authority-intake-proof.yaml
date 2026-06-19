@@ -57,3 +57,5 @@ completed_source_intake:
 remaining_gate:
   next_pass: reconcile the 13 source-present /docs deltas
   rule: prefer source code and source doc/system truth over support wording
+continuations:
+  - /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-to-support-doc-reconciliation-proof.yaml

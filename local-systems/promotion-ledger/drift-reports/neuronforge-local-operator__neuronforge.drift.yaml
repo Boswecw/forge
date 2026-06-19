@@ -4,21 +4,21 @@ target_repo: /home/charlie/Forge/apps/public-app-local-support/neuronforge
 source_branch: master
 target_branch: master
 source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-generated_at: '2026-06-19T08:18:09+00:00'
+target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
+generated_at: '2026-06-19T08:22:16+00:00'
 classification_summary:
-  same: 384
+  same: 391
   intentional_app_support_adaptation: 0
   missing_from_target: 174
   target_only_glue: 0
   dangerous_drift: 0
-  unknown: 54
+  unknown: 47
 items:
 - path: .claude/settings.local.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: .env.graphiti
@@ -26,7 +26,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: .env.graphiti.example
@@ -34,7 +34,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: .gitignore
@@ -42,7 +42,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: CLAUDE.md
@@ -50,7 +50,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: GEMINI.md
@@ -58,7 +58,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: NLOSYSTEM.md
@@ -66,7 +66,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: README.md
@@ -74,35 +74,35 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: SYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/NRNSYSTEM.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/00-overview.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/01-architecture.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/07-experiment-memory-graphiti-pilot.md
@@ -110,42 +110,42 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: doc/system/10-scope.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/20-structure.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/30-governance.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/40-change-control.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/90-appendices.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: doc/system/BUILD.sh
@@ -153,7 +153,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/_index.md
@@ -161,14 +161,14 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: doc/system/validate_snapshots.sh
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docker-compose.graphiti-pilot.yml
@@ -176,7 +176,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/adr/ADR-001-promotion-truth-upstream-of-pact.md
@@ -184,66 +184,50 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/adr/ADR-2026-04-18-promotion-truth-upstream.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
-- path: docs/authorforge-task-envelope-contract.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
-- path: docs/authorforge-task-router-plan.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
 - path: docs/cor-gnat-semantic-handoff.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/dogfood-cloud-quota-log.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/evidence/promotion_runs_demo.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/evidence/promotion_seam_example.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/evidence/promotion_seam_report.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: docs/forge-command-integration-handoff.md
@@ -251,47 +235,15 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
-- path: docs/local-first-cloud-assist-boundary.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
-- path: docs/model-routing-doctrine.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
-- path: docs/neuronforge_architecture_spec.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
-- path: docs/neuronforge_extended_roadmap.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
 - path: docs/plans/graphiti/01-PILOT-ARCHITECTURE.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/02-EXPERIMENT-RECORD-AUTHORITY-MATRIX.md
@@ -299,7 +251,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/03-GRAPH-IDENTITY-AND-FINGERPRINT-CONTRACT.md
@@ -307,7 +259,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/04-TEMPORAL-SEMANTICS.md
@@ -315,7 +267,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/05-DATA-SECURITY-AND-CLASSIFICATION.md
@@ -323,7 +275,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/06-SCHEMA-AND-CONTRACT-PLAN.md
@@ -331,7 +283,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/07-REPOSITORY-STRUCTURE.md
@@ -339,7 +291,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/08-OPERATOR-QUERY-CONTRACTS.md
@@ -347,7 +299,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/09-VERIFICATION-PLAN.md
@@ -355,7 +307,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/10-PLATFORM-AND-DEPLOYMENT-PLAN.md
@@ -363,7 +315,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/11-IMPLEMENTATION-SLICES.md
@@ -371,7 +323,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/12-GO-NO-GO-EVALUATION.md
@@ -379,7 +331,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/13-DECOMMISSION-PLAN.md
@@ -387,7 +339,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/14-RISKS-ANTI-PATTERNS-AND-DECISIONS.md
@@ -395,7 +347,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/G-09-COMPARATIVE-EVALUATION.md
@@ -403,7 +355,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/G-10-DECISION-RECORD.md
@@ -411,7 +363,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/MAPPING-SPEC.md
@@ -419,7 +371,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/README.md
@@ -427,7 +379,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: docs/plans/graphiti/REVIEW.md
@@ -435,23 +387,15 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
-- path: docs/registries/task-lanes.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
-  source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
 - path: evals/beat_candidate_bakeoff/beat_candidate_bakeoff_status.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: evals/forge-command-promotion-validation-2026-05-29.md
@@ -459,7 +403,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: evidence/promotion_seam/operator_examples.md
@@ -467,7 +411,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: evidence/promotion_seam/promotion_runs.jsonl
@@ -475,7 +419,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: evidence/promotion_seam/seam_report.json
@@ -483,7 +427,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: inputs/beat_candidate_bakeoff/scene_001.md
@@ -491,7 +435,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: inputs/beat_candidate_bakeoff/scene_002.md
@@ -499,7 +443,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_001/phi4_14b-20260404-144643.json
@@ -507,7 +451,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_001/phi4_14b-20260404-150014.json
@@ -515,7 +459,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_001/qwen2.5_14b-20260404-144509.json
@@ -523,7 +467,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_001/qwen2.5_14b-20260404-145805.json
@@ -531,7 +475,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_001/qwen2.5_14b-20260404-160612.json
@@ -539,7 +483,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_002/phi4_14b-20260404-145120.json
@@ -547,7 +491,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_002/phi4_14b-20260404-150443.json
@@ -555,7 +499,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-144839.json
@@ -563,7 +507,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-150145.json
@@ -571,7 +515,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-160832.json
@@ -579,21 +523,21 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: promotion/__init__.py
@@ -601,7 +545,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: promotion/compatibility.py
@@ -609,28 +553,28 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: promotion/envelope.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: promotion/mirror/wave1_promotion_envelope.mirror.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: promotion/mirror/wave1_promotion_envelope.schema.json
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: promotion/models.py
@@ -638,7 +582,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: promotion/run_log.py
@@ -646,7 +590,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: promotions/promotion-2026-05-29-001/manifest.json
@@ -654,7 +598,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/AGENTS.md
@@ -662,7 +606,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/README.md
@@ -670,7 +614,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/__init__.py
@@ -678,7 +622,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/config/defaults.yaml
@@ -686,7 +630,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/common_enums.schema.json
@@ -694,7 +638,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/compiled_bundle.schema.json
@@ -702,7 +646,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/constraint_surface.schema.json
@@ -710,7 +654,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/long_context.schema.json
@@ -718,7 +662,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/prompt_assembly_input.schema.json
@@ -726,7 +670,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/prompt_assembly_manifest.schema.json
@@ -734,7 +678,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/contracts/redaction_policy.schema.json
@@ -742,7 +686,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/runtime/__init__.py
@@ -750,7 +694,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/runtime/errors.py
@@ -758,7 +702,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/runtime/models.py
@@ -766,7 +710,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/__init__.py
@@ -774,7 +718,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/conftest.py
@@ -782,7 +726,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/fixtures/__init__.py
@@ -790,7 +734,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/fixtures/builders.py
@@ -798,7 +742,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/integration/__init__.py
@@ -806,7 +750,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/integration/test_validate_registry.py
@@ -814,7 +758,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/test_alignment.py
@@ -822,7 +766,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/test_errors.py
@@ -830,7 +774,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/test_models.py
@@ -838,7 +782,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tests/test_schemas.py
@@ -846,7 +790,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tools/__init__.py
@@ -854,7 +798,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompt_assembly/tools/validate_registry.py
@@ -862,7 +806,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: prompts/beat_candidate_bakeoff/beat_candidate_extraction_v1.md
@@ -870,7 +814,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: registry/pact_wave1_envelope_mirror.json
@@ -878,7 +822,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: registry/runs.md
@@ -886,7 +830,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: requirements-dev.txt
@@ -894,7 +838,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: requirements-graphiti.txt
@@ -902,7 +846,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: requirements.txt
@@ -910,7 +854,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: runtime/graph/export.json
@@ -918,7 +862,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: runtime/graph/report.json
@@ -926,7 +870,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-evaluation-record.v1.schema.json
@@ -934,7 +878,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-experiment-event.v1.schema.json
@@ -942,7 +886,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-failure-observation.v1.schema.json
@@ -950,7 +894,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-hardware-profile.v1.schema.json
@@ -958,7 +902,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-operator-decision.v1.schema.json
@@ -966,7 +910,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/nlo-run-record.v1.schema.json
@@ -974,7 +918,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/experiment-record-type.v1.json
@@ -982,7 +926,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/experiment-status.v1.json
@@ -990,7 +934,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/failure-taxonomy.v1.json
@@ -998,7 +942,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/graph-entity-type.v1.json
@@ -1006,7 +950,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/graph-health-status.v1.json
@@ -1014,7 +958,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/graph-relationship-type.v1.json
@@ -1022,7 +966,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/experiment_memory/registries/projection-status.v1.json
@@ -1030,7 +974,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/_compose.sh
@@ -1038,7 +982,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/capture-hardware-profile.sh
@@ -1046,7 +990,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/graph-doctor.sh
@@ -1054,7 +998,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/graph-down.sh
@@ -1062,7 +1006,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/graph-reset.sh
@@ -1070,7 +1014,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/graph-up.sh
@@ -1078,7 +1022,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/graph/nlo-graph
@@ -1086,7 +1030,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/run-tests.sh
@@ -1094,7 +1038,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/run_beat_candidate_bakeoff.sh
@@ -1102,7 +1046,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/style_analysis/models.py
@@ -1110,7 +1054,7 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: scripts/validate_beat_candidate_output.py
@@ -1118,7 +1062,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/verify_promotion_seam.py
@@ -1126,28 +1070,28 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: service/authorforge_task_contract.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/authorforge_task_service.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/cloud_escalation.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/cor_gnat_semantic_handoff.py
@@ -1155,21 +1099,21 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: service/dogfood_telemetry.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/local_runtime.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/main.py
@@ -1177,21 +1121,21 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: service/proofread_lane.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: service/scene_lane.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: src/nlo_experiment_memory/__init__.py
@@ -1199,7 +1143,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/cli/__init__.py
@@ -1207,7 +1151,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/cli/__main__.py
@@ -1215,7 +1159,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/contracts/__init__.py
@@ -1223,7 +1167,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/contracts/integrity.py
@@ -1231,7 +1175,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/contracts/loader.py
@@ -1239,7 +1183,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/enrichment/__init__.py
@@ -1247,7 +1191,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/identity/__init__.py
@@ -1255,7 +1199,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/identity/ids.py
@@ -1263,7 +1207,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/identity/normalize.py
@@ -1271,7 +1215,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/projection/__init__.py
@@ -1279,7 +1223,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/projection/backends.py
@@ -1287,7 +1231,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/projection/live_backend.py
@@ -1295,7 +1239,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/projection/mapping.py
@@ -1303,7 +1247,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/projection/projector.py
@@ -1311,7 +1255,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/queries/__init__.py
@@ -1319,7 +1263,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/queries/evidence.py
@@ -1327,7 +1271,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/queries/narrative.py
@@ -1335,7 +1279,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/stores/__init__.py
@@ -1343,7 +1287,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/stores/dataforge_local.py
@@ -1351,7 +1295,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: src/nlo_experiment_memory/stores/fixture_store.py
@@ -1359,7 +1303,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/conftest.py
@@ -1367,7 +1311,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_contracts.py
@@ -1375,7 +1319,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_fail_open.py
@@ -1383,7 +1327,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_hardware_capture.py
@@ -1391,7 +1335,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_identity.py
@@ -1399,7 +1343,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_live_backend.py
@@ -1407,7 +1351,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_projection.py
@@ -1415,7 +1359,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/experiment_memory/test_queries.py
@@ -1423,7 +1367,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/README.md
@@ -1431,7 +1375,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/baseline-history.json
@@ -1439,7 +1383,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/compare-runs.json
@@ -1447,7 +1391,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/current-baseline.json
@@ -1455,7 +1399,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/explain-candidate.json
@@ -1463,7 +1407,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/fingerprint.txt
@@ -1471,7 +1415,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/golden/recurring-failures.json
@@ -1479,7 +1423,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/decision-superseded-before-effective.json
@@ -1487,7 +1431,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/eval-bad-reference.json
@@ -1495,7 +1439,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/eval-temporal-invalid.json
@@ -1503,7 +1447,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/failure-prohibited-content.json
@@ -1511,7 +1455,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/failure-taxonomy-mismatch.json
@@ -1519,7 +1463,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/run-bad-enum.json
@@ -1527,7 +1471,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/run-bad-hash.json
@@ -1535,7 +1479,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/run-missing-required.json
@@ -1543,7 +1487,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/run-unknown-field.json
@@ -1551,7 +1495,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/invalid/run-unsupported-schema.json
@@ -1559,7 +1503,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/decision-2026-03-13-lore-safe-baseline-001.decision.json
@@ -1567,7 +1511,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/decision-2026-03-13-reject-016-01.decision.json
@@ -1575,7 +1519,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/eval-run-2026-03-13-002-review-01.evaluation.json
@@ -1583,7 +1527,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/eval-run-2026-03-13-005-review-01.evaluation.json
@@ -1591,7 +1535,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/eval-run-2026-03-13-016-review-01.evaluation.json
@@ -1599,7 +1543,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/exp-2026-03-13-002-review-01.event.json
@@ -1607,7 +1551,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/exp-2026-03-13-003-run-01.event.json
@@ -1615,7 +1559,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/exp-2026-03-13-005-review-01.event.json
@@ -1623,7 +1567,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/exp-2026-03-13-016-review-01.event.json
@@ -1631,7 +1575,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/exp-fixture-oom-001.event.json
@@ -1639,7 +1583,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-fixture-oom-001.failure.json
@@ -1647,7 +1591,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-002-meaning-drift-01.failure.json
@@ -1655,7 +1599,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-002-over-editing-01.failure.json
@@ -1663,7 +1607,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-002-schema-invalid-01.failure.json
@@ -1671,7 +1615,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-003-schema-invalid-01.failure.json
@@ -1679,7 +1623,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-016-false-negative-01.failure.json
@@ -1687,7 +1631,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/failure-run-2026-03-13-016-style-regression-01.failure.json
@@ -1695,7 +1639,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/hw-fixture-constrained-001.hardware.json
@@ -1703,7 +1647,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/run-2026-03-13-002.run.json
@@ -1711,7 +1655,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/run-2026-03-13-003.run.json
@@ -1719,7 +1663,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/run-2026-03-13-005.run.json
@@ -1727,7 +1671,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/run-2026-03-13-016.run.json
@@ -1735,7 +1679,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/fixtures/experiment_memory/records/run-fixture-oom-001.run.json
@@ -1743,7 +1687,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test-cor-gnat-semantic-handoff.py
@@ -1751,7 +1695,7 @@ items:
   justification: Source artifact exists in the proving repo but is absent from the
     app-support target.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: tests/test-style-analysis.py
@@ -1759,48 +1703,48 @@ items:
   justification: Artifact exists in both repos but content differs. Slice 00 does
     not infer intent.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Compare source and target intent; resolve by human decision,
     backport, or explicit exception.
 - path: tests/test_authorforge_task_contract.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_authorforge_task_service.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_cloud_escalation.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_dogfood_telemetry.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_proofread_lane.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.
 - path: tests/test_scene_lane.py
   classification: unknown
   justification: Target-only artifact requires human classification before promotion.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
-  target_commit: 4f99ce155f34cf5f8c1b729d3a46fd54f3946f26
+  target_commit: 81340eedbc3f29729ff074ce5640332526c9c1f1
   recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
     dangerous_drift, or backport to the proving repo.

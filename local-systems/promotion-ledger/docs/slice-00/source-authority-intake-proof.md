@@ -65,3 +65,6 @@ the source repos. They intentionally do not copy support claims wholesale:
 Next pass: reconcile the 13 source-present `/docs` deltas. Prefer source code and
 source `doc/system` truth over support wording. After reconciliation, regenerate
 drift reports and promote only source-backed, verified support docs.
+
+Continuation: `source-to-support-doc-reconciliation-proof.md` records the
+completed source-to-support reconciliation and the reduced `unknown` count.
