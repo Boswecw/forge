@@ -1,9 +1,9 @@
-generated_at: '2026-06-19T16:30:55+00:00'
+generated_at: '2026-06-19T16:37:18+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 642
-  candidate_after_target_role: 293
+  source_local_hold: 641
+  candidate_after_target_role: 292
   default_hold: 349
   missing_from_target: 0
   unknown: 0
@@ -28,7 +28,7 @@ category_summary:
     count: 117
     posture: pair_with_promoted_runtime_or_contract
   source_runtime_or_capability:
-    count: 99
+    count: 98
     posture: candidate_after_target_role
   source_scaffold_config:
     count: 7
@@ -39,7 +39,7 @@ category_summary:
 candidate_categories:
   source_contract_schema_migration: 53
   source_proof_tests: 117
-  source_runtime_or_capability: 99
+  source_runtime_or_capability: 98
   source_scripts_ci: 24
 default_hold_categories:
   source_docs_or_doc_mirror: 103
@@ -48,7 +48,7 @@ default_hold_categories:
   source_scaffold_config: 7
 repo_breakdown:
   cortex__cortex: 319
-  dataforge-Local__df-local-foundation: 127
+  dataforge-Local__df-local-foundation: 126
   fa-local-operator__fa-local: 22
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
   neuronforge-local-operator__neuronforge: 173
@@ -67,7 +67,7 @@ repo_category_breakdown:
     source_docs_or_doc_mirror: 31
     source_evidence_reports_prompts: 30
     source_proof_tests: 13
-    source_runtime_or_capability: 16
+    source_runtime_or_capability: 15
     source_scripts_ci: 7
   fa-local-operator__fa-local:
     source_contract_schema_migration: 1
@@ -156,11 +156,11 @@ samples:
     - tests/proving_slice/test_admission.py
     - tests/proving_slice/test_queue.py
     source_runtime_or_capability:
-    - app/api/lineage_router.py
     - app/api/proving_slice_queue_router.py
     - app/database.py
     - app/evaluation_spine/__init__.py
     - app/evaluation_spine/lineage.py
+    - app/evaluation_spine/lineage_cli.py
     source_scripts_ci:
     - ci_gate.sh
     - scripts/bootstrap_local_env.sh

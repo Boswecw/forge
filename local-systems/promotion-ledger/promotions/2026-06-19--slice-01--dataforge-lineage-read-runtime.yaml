@@ -1,0 +1,80 @@
+promotion_id: "2026-06-19--slice-01--dataforge-lineage-read-runtime"
+slice_name: "Slice 01 - DF Local Lineage Read Runtime Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local"
+source_branch: "master"
+source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation"
+target_branch: "main"
+target_commit: "f581f2a681d50709678ddcd379e180cfee0f9c1b"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/lineage_router.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/lineage_services.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/main.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_lineage_routes.py"
+  - "/home/charlie/Forge/apps/public-app-local-support/df-local-foundation/docs/contracts/local-api-target-roles.md"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py:POST /api/v1/lineage/nodes"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py:POST /api/v1/lineage/edges"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py:POST /api/v1/lineage/envelopes"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/alembic/versions/20260608_06_forge_lineage_tables.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/proving_slice_queue_router.py"
+promotion_manifest:
+  - "Promoted the DF Local lineage GET list/detail/downstream endpoints into app support as support-native read adapters."
+  - "Mounted only GET /api/v1/lineage/nodes, GET /api/v1/lineage/nodes/{node_id}, and GET /api/v1/lineage/nodes/{node_id}/downstream."
+  - "Preserved the source lineage response shapes: nodes list, node JSON detail, and downstream edges plus target nodes."
+  - "Adapted the source SQLAlchemy session boundary to the support app's FastAPI/asyncpg foundation boundary."
+  - "Did not promote lineage POST node/edge/envelope writes, migrations, schema ownership, or additional source APIs."
+proof_commands:
+  - "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+  - "ruff check app/lineage_services.py app/api/lineage_router.py app/main.py tests/api/test_lineage_routes.py"
+  - ".venv/bin/python - <<'PY' direct route-handler lineage proof"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_pytest:
+    command: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    result: "198 passed, 7 skipped, 1 warning"
+  support_touched_ruff:
+    command: "ruff check app/lineage_services.py app/api/lineage_router.py app/main.py tests/api/test_lineage_routes.py"
+    result: "All checks passed"
+  source_lineage_direct:
+    command: ".venv/bin/python - <<'PY' direct route-handler lineage proof"
+    result: "PASS: direct lineage route logic proof"
+  dataforge_pair_drift:
+    same: 8
+    intentional_app_support_adaptation: 30
+    source_local_hold: 126
+    missing_from_target: 0
+    target_only_glue: 73
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 229
+  drift_totals:
+    same: 2233
+    intentional_app_support_adaptation: 80
+    source_local_hold: 641
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+  support_promotion_queue:
+    source_local_hold: 641
+    candidate_after_target_role: 292
+    default_hold: 349
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Support runtime exposes only GET /api/v1/lineage/nodes, GET /api/v1/lineage/nodes/{node_id}, and GET /api/v1/lineage/nodes/{node_id}/downstream; 404 for missing nodes; 503 lineage_read_failure on unreadable source table."
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, write path, or public surface changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded read-only lineage support adapter under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T16:37:26Z"
+rollback_source_commit: "50512dbf569795ec3744805e83005e3b8888f24d"
+rollback_target_commit: "50a36e61974e80a855704ed431809f9e483f1d93"
+rollback_command: "Revert the DF Local support commit f581f2a681d50709678ddcd379e180cfee0f9c1b, remove the lineage runtime resolution, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--dataforge-local-api-target-role"

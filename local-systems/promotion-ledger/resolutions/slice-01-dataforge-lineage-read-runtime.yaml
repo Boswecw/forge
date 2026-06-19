@@ -1,0 +1,51 @@
+version: 1
+created_at: "2026-06-19T16:36:44Z"
+scope: "Classify DF Local lineage read runtime promoted into app support."
+evidence:
+  support_commit: f581f2a681d50709678ddcd379e180cfee0f9c1b
+  source_commit: 50512dbf569795ec3744805e83005e3b8888f24d
+  support_runtime:
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/api/lineage_router.py
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/lineage_services.py
+    - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_lineage_routes.py
+  source_authority:
+    - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py
+  proof_commands:
+    support_pytest: "env PYTHONPATH=. /tmp/df-local-support-venv/bin/python -m pytest tests -q"
+    support_touched_ruff: "ruff check app/lineage_services.py app/api/lineage_router.py app/main.py tests/api/test_lineage_routes.py"
+    source_lineage_direct: ".venv/bin/python - <<'PY' direct route-handler lineage proof"
+  proof_results:
+    support_pytest: "198 passed, 7 skipped, 1 warning"
+    support_touched_ruff: "All checks passed"
+    source_lineage_direct: "PASS: direct lineage route logic proof"
+resolutions:
+  - resolution_id: slice-01-dataforge-lineage-read-adapter
+    repo_pair: dataforge-Local__df-local-foundation
+    path: app/api/lineage_router.py
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "This target router preserves the source lineage GET list/detail/downstream read shapes while adapting route wiring to the app-support FastAPI foundation. The target exposes only GET /api/v1/lineage/nodes, GET /api/v1/lineage/nodes/{node_id}, and GET /api/v1/lineage/nodes/{node_id}/downstream; POST node, edge, and envelope writes remain source-local durable-truth behavior."
+    recommended_action: "Keep as promoted support-native read adapter. Do not add lineage write behavior, schema ownership, or migrations without a separate named slice."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_lineage_routes.py
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py
+  - resolution_id: slice-01-dataforge-lineage-support-service
+    repo_pair: dataforge-Local__df-local-foundation
+    path: app/lineage_services.py
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This target-only support service is the asyncpg adapter layer required by df-local-foundation. It does not exist in the SQLAlchemy-backed source repo because the source route reads through its own session boundary."
+    recommended_action: "Keep as support-native adapter glue for the read-only lineage routes."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/app/lineage_services.py
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_lineage_routes.py
+  - resolution_id: slice-01-dataforge-lineage-support-tests
+    repo_pair: dataforge-Local__df-local-foundation
+    path: tests/api/test_lineage_routes.py
+    shape: target_only
+    classification: intentional_app_support_adaptation
+    justification: "This target-only test proves the support adapter boundary: GET-only route registration, source-compatible list/detail/downstream response shapes, 404 for missing nodes, and explicit 503 on unreadable source table. Source route behavior was separately proved with a direct handler proof."
+    recommended_action: "Keep as support-native adapter proof for the read-only lineage routes."
+    evidence:
+      - /home/charlie/Forge/apps/public-app-local-support/df-local-foundation/tests/api/test_lineage_routes.py
+      - /home/charlie/Forge/ecosystem/local-systems/dataforge-Local/app/api/lineage_router.py
