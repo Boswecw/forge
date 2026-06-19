@@ -43,3 +43,8 @@ The Cortex/NeuronForge candidate review is recorded in
 `docs/slice-00/cortex-neuronforge-source-candidate-review.md`; reviewed
 surfaces are source-proved but held source-local until a support target role is
 opened.
+
+The DataForge/FA Local candidate review is recorded in
+`docs/slice-00/dataforge-fa-source-candidate-review.md`; reviewed surfaces are
+also held source-local. The next decision is whether to open a GNAT support
+promotion slice or keep the source-only backlog as explicit exclusions.

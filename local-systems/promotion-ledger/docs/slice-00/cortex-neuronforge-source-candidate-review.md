@@ -37,5 +37,7 @@ separately and passed.
 
 ## Next Gate
 
-Review DataForge source-only migration/runtime/contracts, then FA Local thin
-source-only surfaces.
+DataForge and FA Local source candidates are reviewed in
+`docs/slice-00/dataforge-fa-source-candidate-review.md`. The next decision is
+whether to open a GNAT support promotion slice or keep the source-only backlog
+as explicit exclusions.

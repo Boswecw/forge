@@ -83,4 +83,7 @@ decisions:
     promotion_requirements:
       - "Declare support route and caller."
       - "Run support service tests after promotion."
-next_gate: "Review DataForge source-only migration/runtime/contracts, then FA Local thin source-only surfaces."
+dataforge_fa_candidate_review:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
+next_gate: "Decide whether to open a GNAT support promotion slice or keep the source-only backlog as explicit exclusions."

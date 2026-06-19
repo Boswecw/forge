@@ -1,0 +1,63 @@
+generated_at: "2026-06-19T09:30:43Z"
+scope: "Slice 00 DataForge and FA Local source-only candidate review"
+input_inventory: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/source-only-backlog-inventory.yaml
+candidate_counts:
+  dataforge-Local__df-local-foundation:
+    source_contract_schema_migration: 30
+    source_runtime_or_capability: 24
+    source_scripts_ci: 7
+    source_proof_tests: 16
+    total: 77
+  fa-local-operator__fa-local:
+    source_contract_schema_migration: 1
+    source_runtime_or_capability: 1
+    source_scripts_ci: 1
+    source_proof_tests: 5
+    total: 8
+verification:
+  dataforge_source_ci:
+    command: bash ci_gate.sh
+    result: passed
+    output:
+      contract_core_gate: "PASS: schema, fixture_corpus, validator_correctness, compatibility, forbidden_patterns"
+      local_tests: "89 passed in 0.35s"
+      bytecode_compile: passed
+  fa_local_source_ci:
+    command: bash ci_gate.sh
+    result: passed
+    output:
+      contract_core_gate: "PASS: schema, fixture_corpus, validator_correctness, compatibility, forbidden_patterns"
+      cargo_tests: "Passed, including gnat_dispatch.rs with 12 tests"
+decisions:
+  dataforge_local_substrate:
+    posture: hold_source_local
+    applies_to:
+      - alembic/**
+      - alembic.ini
+      - app/**
+      - constants/**
+      - scripts/**
+      - sql/**
+      - tests/proving_slice/**
+      - tests/gnat_runtime/**
+      - tests/api/**
+      - tests/test_*.py
+    reason: "DataForge Local source contains a broader substrate: Alembic migrations, proving-slice queue, analytics, public applications, runtime governance, and lineage surfaces. The app-support df-local-foundation target is a narrower foundation support copy."
+    promotion_requirements:
+      - "Declare which source substrate surface the support target should own."
+      - "Promote migrations, runtime, constants, tests, and support docs as a bundle."
+      - "Run support tests and regenerate drift reports after promotion."
+  fa_local_gnat_dispatch:
+    posture: hold_source_local
+    applies_to:
+      - src/bin/fa_local_run.rs
+      - schemas/gnat-dispatch-envelope.schema.json
+      - tests/gnat_dispatch.rs
+      - tests/contracts/fixtures/**/gnat-dispatch-envelope-*.json
+      - ci_gate.sh
+    reason: "FA Local source has proved GNAT dispatch participation, but Cortex GNAT remains held source-local. Promoting this support-side dispatch surface should wait for an explicit GNAT support role."
+    promotion_requirements:
+      - "Open a GNAT support target role spanning Cortex and FA Local."
+      - "Promote schema, fixtures, runner, and tests together."
+      - "Run support Cargo tests and drift inventory after promotion."
+next_gate: "No source-only runtime/contract promotion is authorized yet. Decide whether to open a GNAT support promotion slice or keep the source-only backlog as explicit exclusions."

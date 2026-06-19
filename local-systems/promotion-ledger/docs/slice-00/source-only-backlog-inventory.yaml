@@ -140,3 +140,8 @@ cortex_neuronforge_candidate_review:
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/cortex-neuronforge-source-candidate-review.yaml
   posture: hold_source_local
   next_gate: "Review DataForge source-only migration/runtime/contracts, then FA Local thin source-only surfaces."
+dataforge_fa_candidate_review:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/dataforge-fa-source-candidate-review.yaml
+  posture: hold_source_local
+  next_gate: "Decide whether to open a GNAT support promotion slice or keep the source-only backlog as explicit exclusions."
