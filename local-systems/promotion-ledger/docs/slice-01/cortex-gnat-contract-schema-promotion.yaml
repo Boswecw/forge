@@ -1,0 +1,81 @@
+generated_at: "2026-06-19T17:24:14Z"
+scope: "Slice 01 Cortex GNAT contract schema promotion"
+support_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
+support_branch: master
+support_commit: a85a72bff50f9b9e7f0d2991926bc98e002a09e3
+source_repo: /home/charlie/Forge/ecosystem/local-systems/cortex
+source_branch: master
+source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
+decision:
+  status: contract_schemas_promoted_needs_review
+  contract_schemas_promoted: true
+  runtime_promoted: false
+  endpoints_promoted: false
+  authorforge_behavior_promoted: false
+  resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-01-cortex-gnat-target-role.yaml
+contract_boundary:
+  promoted_schemas:
+    - GnatRunRequest.v1
+    - GnatRunPlan.v1
+    - GnatShard.v1
+    - GnatWorkerReceipt.v1
+    - GnatRunSummary.v1
+    - GnatDispatchEnvelope.v1
+    - GnatSemanticHandoff.v1
+    - GnatCacheRecord.v1
+    - GnatOperatorRunStatus.v1
+  non_goals:
+    - "No GNAT runtime modules, workers, or gnat_core package promoted."
+    - "No service endpoints, queue, watcher, retry, scheduler, persistence, or execution routing promoted."
+    - "No AuthorForge behavior changed."
+source_authority:
+  schemas: /home/charlie/Forge/ecosystem/local-systems/cortex/schemas/gnat-*.schema.json
+  fixtures: /home/charlie/Forge/ecosystem/local-systems/cortex/tests/contracts/fixtures/*/gnat-*.json
+  runtime_tests: /home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_*.py
+support_artifacts:
+  schemas: /home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-*.schema.json
+  fixtures: /home/charlie/Forge/apps/public-app-local-support/cortex/tests/contracts/fixtures/*/gnat-*.json
+  target_role_doc: /home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md
+verification:
+  support_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  support_runtime:
+    command: make test-runtime
+    result: passed
+    output: "Ran 110 tests in 0.634s - OK"
+  source_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  source_gnat:
+    command: make test-gnats
+    result: passed
+    output: "Ran 87 tests in 0.406s - OK"
+drift_result_after_resolution:
+  cortex_pair:
+    same: 1629
+    intentional_app_support_adaptation: 13
+    source_local_hold: 277
+    missing_from_target: 0
+    target_only_glue: 16
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 306
+  all_pairs:
+    same: 2285
+    intentional_app_support_adaptation: 82
+    source_local_hold: 592
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+queue_after_resolution:
+  source_local_hold: 592
+  candidate_after_target_role: 241
+  default_hold: 351
+  missing_from_target: 0
+  unknown: 0
+  dangerous_drift: 0
+next_gate: "Promote Cortex GNAT runtime only through a separate named slice that identifies exact runtime modules and proof commands."

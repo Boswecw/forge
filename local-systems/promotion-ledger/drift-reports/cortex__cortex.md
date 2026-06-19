@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T17:15:46+00:00`
+Generated: `2026-06-19T17:23:10+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -8,17 +8,17 @@ Source commit: `98ac9ad521bb21c5956301ebfa410e520d331a70`
 
 Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
-Target commit: `f0275e42fc429434dd8a66c8283d5bad9ebf69e0`
+Target commit: `a85a72bff50f9b9e7f0d2991926bc98e002a09e3`
 
-Resolutions applied: `348`
+Resolutions applied: `306`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
-| same | 1587 |
+| same | 1629 |
 | intentional_app_support_adaptation | 13 |
-| source_local_hold | 319 |
+| source_local_hold | 277 |
 | missing_from_target | 0 |
 | target_only_glue | 16 |
 | dangerous_drift | 0 |
@@ -291,15 +291,6 @@ Resolutions applied: `348`
 | `repo-crawler/tools/svelte-provider/tools/svelte-provider/src/probe.ts` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `repo-crawler/tools/svelte-provider/tsconfig.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `requirements.txt` | target_only_glue | `slice-00-cortex-requirements-target-only` | Keep as support dependency glue. Backport only if the proving repo adopts the same package boundary. |
-| `schemas/gnat-cache-record.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-dispatch-envelope.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-operator-run-status.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-run-plan.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-run-request.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-run-summary.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-semantic-handoff.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-shard.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `schemas/gnat-worker-receipt.schema.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `schemas/service-status.schema.json` | intentional_app_support_adaptation | `slice-00-cortex-schema-tooling-modified` | Keep as support validation adaptation. Recompare before promoting schema changes upstream. |
 | `scripts/benchmark_gnat_docx.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `scripts/benchmark_gnat_epub.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
@@ -312,39 +303,6 @@ Resolutions applied: `348`
 | `service/__main__.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
 | `service/authorforge_app.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
 | `service/authorforge_translation.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
-| `tests/contracts/fixtures/invalid/gnat-cache-record-missing-version.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-operator-run-status-raw-preview.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-plan-missing-plan-hash.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-plan-orchestration-field.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-plan-unsupported-worker.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-request-missing-request-id.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-request-raw-path.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-request-unsupported-operation.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-summary-details-unredacted.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-summary-invalid-state.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-run-summary-missing-counts.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-semantic-handoff-missing-explicit-request.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-semantic-handoff-missing-model-disclosure.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-semantic-handoff-raw-content.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-semantic-handoff-receipts-mutable.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-shard-negative-ordinal.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-shard-unscoped-path.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-shard-unsupported-media.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-worker-receipt-complete-missing-output.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-worker-receipt-failed-missing-reason.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/invalid/gnat-worker-receipt-raw-content-preview.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-cache-record-basic.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-dispatch-envelope-basic.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-operator-run-status-ready.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-run-plan-two-text-files.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-run-request-basic.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-run-summary-ready.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-semantic-handoff-basic.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-shard-markdown.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
-| `tests/contracts/fixtures/valid/gnat-worker-receipt-complete.json` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/fixtures/gnats/text-batch-small/chapter-01.md` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/fixtures/gnats/text-batch-small/note-plain.txt` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |
 | `tests/runtime/test_gnat_core_shared.py` | source_local_hold | `slice-00-cortex-source-local-hold` | Keep source-local. Do not copy into app support without a bounded promotion slice, explicit support role, proof command, and regenerated drift report. |

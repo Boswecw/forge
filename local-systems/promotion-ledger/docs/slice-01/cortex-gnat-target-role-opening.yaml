@@ -1,5 +1,6 @@
 generated_at: "2026-06-19T09:51:48Z"
 scope: "Slice 01 Cortex GNAT support target-role opening"
+implemented_by_schema_promotion: "2026-06-19--slice-01--cortex-gnat-contract-schemas"
 support_repo: /home/charlie/Forge/apps/public-app-local-support/cortex
 support_branch: master
 support_commit: f0275e42fc429434dd8a66c8283d5bad9ebf69e0
@@ -46,4 +47,5 @@ drift_result_after_resolution:
   target_only_glue: 131
   dangerous_drift: 0
   unknown: 0
-next_gate: "Select exact GNAT files and support service contract for a later runtime promotion slice, or keep GNAT held source-local."
+next_gate: "GNAT schemas/fixtures are promoted. Select exact GNAT runtime files and support service contract for a later runtime promotion slice, or keep runtime held source-local."
+current_status_note: "Historical target-role opening. Contract schema promotion is now recorded in cortex-gnat-contract-schema-promotion.yaml."

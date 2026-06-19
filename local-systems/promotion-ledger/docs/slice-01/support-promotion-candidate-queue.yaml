@@ -1,9 +1,9 @@
-generated_at: '2026-06-19T17:16:07+00:00'
+generated_at: '2026-06-19T17:23:37+00:00'
 scope: Slice 01 support promotion candidate queue from reviewed source-local holds
 input_reports: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/drift-reports
 summary:
-  source_local_hold: 634
-  candidate_after_target_role: 283
+  source_local_hold: 592
+  candidate_after_target_role: 241
   default_hold: 351
   missing_from_target: 0
   unknown: 0
@@ -13,7 +13,7 @@ promotion_rule: A source-local hold may enter app support only after a named pro
   post-promotion drift report.
 category_summary:
   source_contract_schema_migration:
-    count: 52
+    count: 43
     posture: candidate_after_contract_compatibility
   source_docs_or_doc_mirror:
     count: 103
@@ -25,7 +25,7 @@ category_summary:
     count: 183
     posture: default_hold
   source_proof_tests:
-    count: 112
+    count: 79
     posture: pair_with_promoted_runtime_or_contract
   source_runtime_or_capability:
     count: 95
@@ -37,8 +37,8 @@ category_summary:
     count: 24
     posture: candidate_when_tied_to_support_proof_command
 candidate_categories:
-  source_contract_schema_migration: 52
-  source_proof_tests: 112
+  source_contract_schema_migration: 43
+  source_proof_tests: 79
   source_runtime_or_capability: 95
   source_scripts_ci: 24
 default_hold_categories:
@@ -47,18 +47,17 @@ default_hold_categories:
   source_local_subproject: 183
   source_scaffold_config: 7
 repo_breakdown:
-  cortex__cortex: 319
+  cortex__cortex: 277
   dataforge-Local__df-local-foundation: 127
   fa-local-operator__fa-local: 15
   forge-local-systems-runtime__forge-local-runtime-master-reference: 1
   neuronforge-local-operator__neuronforge: 172
 repo_category_breakdown:
   cortex__cortex:
-    source_contract_schema_migration: 9
     source_docs_or_doc_mirror: 35
     source_evidence_reports_prompts: 3
     source_local_subproject: 183
-    source_proof_tests: 50
+    source_proof_tests: 17
     source_runtime_or_capability: 32
     source_scaffold_config: 1
     source_scripts_ci: 6
@@ -85,12 +84,6 @@ repo_category_breakdown:
     source_scripts_ci: 10
 samples:
   cortex__cortex:
-    source_contract_schema_migration:
-    - schemas/gnat-cache-record.schema.json
-    - schemas/gnat-dispatch-envelope.schema.json
-    - schemas/gnat-operator-run-status.schema.json
-    - schemas/gnat-run-plan.schema.json
-    - schemas/gnat-run-request.schema.json
     source_docs_or_doc_mirror:
     - docs/Worm.md
     - docs/architecture/gnats-boundary-matrix.md
@@ -108,11 +101,11 @@ samples:
     - repo-crawler/README.md
     - repo-crawler/VERIFY.md
     source_proof_tests:
-    - tests/contracts/fixtures/invalid/gnat-cache-record-missing-version.json
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-cortex-routes.json
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-raw-content.json
-    - tests/contracts/fixtures/invalid/gnat-dispatch-envelope-unsupported-worker.json
-    - tests/contracts/fixtures/invalid/gnat-operator-run-status-raw-preview.json
+    - tests/runtime/fixtures/gnats/text-batch-small/chapter-01.md
+    - tests/runtime/fixtures/gnats/text-batch-small/note-plain.txt
+    - tests/runtime/test_gnat_core_shared.py
+    - tests/runtime/test_gnat_docx_lane.py
+    - tests/runtime/test_gnat_epub_lane.py
     source_runtime_or_capability:
     - cortex_runtime/gnats/__init__.py
     - cortex_runtime/gnats/fa_local_client.py

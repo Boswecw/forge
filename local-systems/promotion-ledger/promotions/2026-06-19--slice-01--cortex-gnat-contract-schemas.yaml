@@ -1,0 +1,88 @@
+promotion_id: "2026-06-19--slice-01--cortex-gnat-contract-schemas"
+slice_name: "Slice 01 - Cortex GNAT Contract Schema Promotion"
+source_repo: "/home/charlie/Forge/ecosystem/local-systems/cortex"
+source_branch: "master"
+source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+target_repo: "/home/charlie/Forge/apps/public-app-local-support/cortex"
+target_branch: "master"
+target_commit: "a85a72bff50f9b9e7f0d2991926bc98e002a09e3"
+promoted_files:
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/docs/source-lanes/gnat-target-role.md"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-cache-record.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-dispatch-envelope.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-operator-run-status.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-run-plan.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-run-request.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-run-summary.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-semantic-handoff.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-shard.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/schemas/gnat-worker-receipt.schema.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/tests/contracts/fixtures/valid/gnat-*.json"
+  - "/home/charlie/Forge/apps/public-app-local-support/cortex/tests/contracts/fixtures/invalid/gnat-*.json"
+excluded_files:
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/cortex_runtime/gnats/"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/gnat_core/"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/test_gnat_*.py"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/tests/runtime/fixtures/gnats/"
+  - "/home/charlie/Forge/ecosystem/local-systems/cortex/docs/contracts/gnat-*.md"
+promotion_manifest:
+  - "Promoted Cortex GNAT contract schemas and their valid/invalid contract fixtures into app support."
+  - "Updated the support target-role document to record schema promotion while runtime remains withheld."
+  - "Did not promote GNAT runtime modules, workers, gnat_core, execution tests, endpoints, queue, watcher, retry, scheduler, persistence, or AuthorForge behavior."
+proof_commands:
+  - "make validate"
+  - "make test-runtime"
+  - "make test-gnats"
+  - "python3 promotion-ledger/scripts/generate_drift_inventory.py --overwrite"
+  - "python3 promotion-ledger/scripts/generate_support_promotion_queue.py --overwrite"
+proof_results:
+  status: "passed"
+  support_validate:
+    command: "make validate"
+    result: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  support_runtime:
+    command: "make test-runtime"
+    result: "Ran 110 tests in 0.634s - OK"
+  source_validate:
+    command: "make validate"
+    result: "VALIDATION PASSED (28 valid fixtures, 44 invalid fixtures, 16 schemas)"
+  source_gnat:
+    command: "make test-gnats"
+    result: "Ran 87 tests in 0.406s - OK"
+  cortex_pair_drift:
+    same: 1629
+    intentional_app_support_adaptation: 13
+    source_local_hold: 277
+    missing_from_target: 0
+    target_only_glue: 16
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 306
+  drift_totals:
+    same: 2285
+    intentional_app_support_adaptation: 82
+    source_local_hold: 592
+    missing_from_target: 0
+    target_only_glue: 135
+    dangerous_drift: 0
+    unknown: 0
+  support_promotion_queue:
+    source_local_hold: 592
+    candidate_after_target_role: 241
+    default_hold: 351
+    missing_from_target: 0
+    unknown: 0
+    dangerous_drift: 0
+evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+runtime_status_proof: "Contract schema surface only: support validates GnatRunRequest, GnatRunPlan, GnatShard, GnatWorkerReceipt, GnatRunSummary, GnatDispatchEnvelope, GnatSemanticHandoff, GnatCacheRecord, and GnatOperatorRunStatus fixtures. No runtime execution path was promoted."
+authorforge_impact: "none; no AuthorForge behavior, UI, schema, write path, public surface, or canonical content behavior changed"
+reviewer: "Charlie Boswell"
+decision: "needs-followup"
+decision_reason: "AI promoted the bounded Cortex GNAT contract schema/fixture surface under user direction. Charlie Boswell must review and accept or rollback."
+created_at: "2026-06-19T17:24:14Z"
+rollback_source_commit: "98ac9ad521bb21c5956301ebfa410e520d331a70"
+rollback_target_commit: "f0275e42fc429434dd8a66c8283d5bad9ebf69e0"
+rollback_command: "Revert the Cortex support commit a85a72bff50f9b9e7f0d2991926bc98e002a09e3, restore the target-role document status to runtime not promoted, remove the Cortex GNAT schema promotion receipts, and regenerate promotion-ledger drift reports and support promotion queue."
+rollback_evidence_path: "/home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-01"
+supersedes_promotion_id: null
+implements_promotion_id: "2026-06-19--slice-01--cortex-gnat-target-role"

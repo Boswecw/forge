@@ -5,6 +5,11 @@ Generated: `2026-06-19T09:51:48Z`
 This slice opens a Cortex support target role for future GNAT promotion. It does
 not promote GNAT runtime code, add endpoints, or change AuthorForge behavior.
 
+Status update: this target-role opening is now partially implemented by
+`2026-06-19--slice-01--cortex-gnat-contract-schemas`. The contract schema
+promotion receipt is `cortex-gnat-contract-schema-promotion.md`; GNAT runtime
+remains source-local.
+
 ## Decision
 
 | Field | Value |
