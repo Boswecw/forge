@@ -1,0 +1,58 @@
+generated_at: "2026-06-19T09:17:42Z"
+scope: "Slice 00 final unknown drift resolution"
+resolution_file: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/resolutions/slice-00-final-support-surfaces.yaml
+verification:
+  cortex_validate:
+    command: make validate
+    result: passed
+    output: "VALIDATION PASSED (19 valid fixtures, 20 invalid fixtures, 7 schemas)"
+  cortex_runtime:
+    command: make test-runtime
+    result: passed
+    output: "Ran 110 tests in 1.407s - OK"
+  df_local_foundation:
+    command: env PYTHONPATH=. /tmp/df-local-support-verify-venv/bin/python -m pytest tests -q
+    result: passed
+    output: "169 passed, 7 skipped, 1 warning in 6.07s"
+  fa_local:
+    command: cargo test
+    result: passed
+    output: "119 tests passed across integration test binaries"
+  neuronforge_support_promotion_seam:
+    command: python3 scripts/verify_promotion_seam.py
+    result: passed
+    output: "verify_promotion_seam: PASS"
+  neuronforge_source_promotion_seam:
+    command: env NF_PACT_ENVELOPE=/home/charlie/Forge/ecosystem/pact/docs/evidence/wave1_promotion_envelope.json NF_PACT_MANIFEST=/home/charlie/Forge/ecosystem/pact/docs/evidence/toon_wave1_manifest.json python3 scripts/verify_promotion_seam.py
+    result: passed
+    output: "verify_promotion_seam: PASS"
+  drift_inventory:
+    command: python3 scripts/generate_drift_inventory.py --overwrite
+    result: passed
+    generated_at: "2026-06-19T09:17:12+00:00"
+drift_result:
+  before:
+    same: 2233
+    intentional_app_support_adaptation: 40
+    missing_from_target: 648
+    target_only_glue: 113
+    dangerous_drift: 0
+    unknown: 38
+  after:
+    same: 2233
+    intentional_app_support_adaptation: 61
+    missing_from_target: 648
+    target_only_glue: 130
+    dangerous_drift: 0
+    unknown: 0
+    resolutions_applied: 191
+resolved_final_unknowns:
+  repo_scaffold_config: 15
+  promotion_evidence_runtime: 9
+  contract_schema_sql: 7
+  operator_tooling_scripts: 7
+blocking_status:
+  unknown: 0
+  dangerous_drift: 0
+  missing_from_target: 648
+next_gate: "Review source-only missing_from_target backlog for promotion candidates or explicit exclusions."

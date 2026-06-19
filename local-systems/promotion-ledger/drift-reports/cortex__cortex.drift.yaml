@@ -5,15 +5,15 @@ source_branch: master
 target_branch: master
 source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
 target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-generated_at: '2026-06-19T09:13:04+00:00'
+generated_at: '2026-06-19T09:17:12+00:00'
 classification_summary:
   same: 1587
-  intentional_app_support_adaptation: 9
+  intentional_app_support_adaptation: 13
   missing_from_target: 319
-  target_only_glue: 14
+  target_only_glue: 15
   dangerous_drift: 0
-  unknown: 5
-resolutions_applied: 23
+  unknown: 0
+resolutions_applied: 28
 items:
 - path: .codex
   classification: missing_from_target
@@ -24,13 +24,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: .gitignore
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Cortex support scaffold differs from source and is covered by support
+    validation and runtime tests.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation. Reconcile only with an
+    explicit repo-scaffold promotion slice.
+  resolution_id: slice-00-cortex-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: DECISIONS/0017-cortex-local-system-identity-and-cor-plan-lineage.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -56,13 +59,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: Makefile
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Cortex support scaffold differs from source and is covered by support
+    validation and runtime tests.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation. Reconcile only with an
+    explicit repo-scaffold promotion slice.
+  resolution_id: slice-00-cortex-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: SYSTEM.md
   classification: intentional_app_support_adaptation
   justification: Both source and support Cortex mirrors build cleanly. These files
@@ -2161,12 +2167,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: requirements.txt
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The support requirements file is target-only dependency glue for
+    the support Cortex runtime.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support dependency glue. Backport only if the proving
+    repo adopts the same package boundary.
+  resolution_id: slice-00-cortex-requirements-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: schemas/gnat-cache-record.schema.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -2240,13 +2250,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: schemas/service-status.schema.json
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Cortex schema and schema-validation tooling differ from source and
+    passed the support validation gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support validation adaptation. Recompare before promoting
+    schema changes upstream.
+  resolution_id: slice-00-cortex-schema-tooling-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: scripts/benchmark_gnat_docx.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -2296,13 +2309,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/validate_schemas.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Cortex schema and schema-validation tooling differ from source and
+    passed the support validation gate.
   source_commit: 98ac9ad521bb21c5956301ebfa410e520d331a70
   target_commit: af2be69626dd26aec171dc2ea730bb4148373543
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support validation adaptation. Recompare before promoting
+    schema changes upstream.
+  resolution_id: slice-00-cortex-schema-tooling-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: service/__init__.py
   classification: target_only_glue
   justification: The service package is target-only app-support glue over Cortex runtime

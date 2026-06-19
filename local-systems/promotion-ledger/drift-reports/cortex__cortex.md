@@ -1,6 +1,6 @@
 # Drift Report: cortex__cortex
 
-Generated: `2026-06-19T09:13:04+00:00`
+Generated: `2026-06-19T09:17:12+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/cortex`
 Source branch: `master`
@@ -10,29 +10,29 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/cortex`
 Target branch: `master`
 Target commit: `af2be69626dd26aec171dc2ea730bb4148373543`
 
-Resolutions applied: `23`
+Resolutions applied: `28`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 1587 |
-| intentional_app_support_adaptation | 9 |
+| intentional_app_support_adaptation | 13 |
 | missing_from_target | 319 |
-| target_only_glue | 14 |
+| target_only_glue | 15 |
 | dangerous_drift | 0 |
-| unknown | 5 |
+| unknown | 0 |
 
 ## Items
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
 | `.codex` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `.gitignore` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `.gitignore` | intentional_app_support_adaptation | `slice-00-cortex-scaffold-modified` | Keep as support scaffold adaptation. Reconcile only with an explicit repo-scaffold promotion slice. |
 | `DECISIONS/0017-cortex-local-system-identity-and-cor-plan-lineage.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `DECISIONS/0018-gnat-bounded-parallel-worker-authorization.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `DECISIONS/0019-fa-local-owns-gnat-execution-routing.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `Makefile` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `Makefile` | intentional_app_support_adaptation | `slice-00-cortex-scaffold-modified` | Keep as support scaffold adaptation. Reconcile only with an explicit repo-scaffold promotion slice. |
 | `SYSTEM.md` | intentional_app_support_adaptation | `slice-00-cortex-doc-system-modified` | Keep as support mirror adaptation. Rebuild /doc/system after runtime or service changes and compare before promotion. |
 | `cortex_runtime/gnats/__init__.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `cortex_runtime/gnats/fa_local_client.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -288,7 +288,7 @@ Resolutions applied: `23`
 | `repo-crawler/tools/svelte-provider/tmp-smoke-test.svelte` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `repo-crawler/tools/svelte-provider/tools/svelte-provider/src/probe.ts` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `repo-crawler/tools/svelte-provider/tsconfig.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `requirements.txt` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `requirements.txt` | target_only_glue | `slice-00-cortex-requirements-target-only` | Keep as support dependency glue. Backport only if the proving repo adopts the same package boundary. |
 | `schemas/gnat-cache-record.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-dispatch-envelope.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-operator-run-status.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -298,14 +298,14 @@ Resolutions applied: `23`
 | `schemas/gnat-semantic-handoff.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-shard.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `schemas/gnat-worker-receipt.schema.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `schemas/service-status.schema.json` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `schemas/service-status.schema.json` | intentional_app_support_adaptation | `slice-00-cortex-schema-tooling-modified` | Keep as support validation adaptation. Recompare before promoting schema changes upstream. |
 | `scripts/benchmark_gnat_docx.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnat_epub.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnat_odt.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnat_pdf.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnat_rtf.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/benchmark_gnats.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/validate_schemas.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `scripts/validate_schemas.py` | intentional_app_support_adaptation | `slice-00-cortex-schema-tooling-modified` | Keep as support validation adaptation. Recompare before promoting schema changes upstream. |
 | `service/__init__.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
 | `service/__main__.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |
 | `service/authorforge_app.py` | target_only_glue | `slice-00-cortex-service-target-only` | Keep as support adapter glue. Backport only if the local Cortex proving repo adopts the AuthorForge HTTP service boundary. |

@@ -1,6 +1,6 @@
 # Drift Report: neuronforge-local-operator__neuronforge
 
-Generated: `2026-06-19T09:13:04+00:00`
+Generated: `2026-06-19T09:17:12+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/neuronforge-local-operator`
 Source branch: `master`
@@ -10,31 +10,31 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/neuronforge`
 Target branch: `master`
 Target commit: `dc67b04863e313f3116565ddf1e7e369d6349a67`
 
-Resolutions applied: `32`
+Resolutions applied: `47`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 392 |
-| intentional_app_support_adaptation | 9 |
+| intentional_app_support_adaptation | 18 |
 | missing_from_target | 173 |
-| target_only_glue | 23 |
+| target_only_glue | 29 |
 | dangerous_drift | 0 |
-| unknown | 15 |
+| unknown | 0 |
 
 ## Items
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
-| `.claude/settings.local.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `.claude/settings.local.json` | target_only_glue | `slice-00-neuronforge-local-settings-target-only` | Keep local to the support target and do not promote upstream. |
 | `.env.graphiti` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `.env.graphiti.example` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `.gitignore` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `CLAUDE.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `.gitignore` | intentional_app_support_adaptation | `slice-00-neuronforge-scaffold-modified` | Keep as support scaffold adaptation. |
+| `CLAUDE.md` | intentional_app_support_adaptation | `slice-00-neuronforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `GEMINI.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `NLOSYSTEM.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `README.md` | intentional_app_support_adaptation | `slice-00-neuronforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `SYSTEM.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/NRNSYSTEM.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `doc/system/00-overview.md` | target_only_glue | `slice-00-neuronforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
@@ -92,15 +92,15 @@ Resolutions applied: `32`
 | `outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-144839.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-150145.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `outputs/beat_candidate_bakeoff/scene_002/qwen2.5_14b-20260404-160832.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `promotion/__init__.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `promotion/compatibility.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `promotion/envelope.py` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `promotion/mirror/wave1_promotion_envelope.mirror.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `promotion/mirror/wave1_promotion_envelope.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md` | target_only_glue | `slice-00-neuronforge-promotion-target-only` | Keep as support promotion evidence. Refresh only from proved PACT/source evidence. |
+| `outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md` | target_only_glue | `slice-00-neuronforge-promotion-target-only` | Keep as support promotion evidence. Refresh only from proved PACT/source evidence. |
+| `promotion/__init__.py` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-modified` | Keep as support promotion adaptation. Reconcile only through a bounded promotion evidence refresh. |
+| `promotion/compatibility.py` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-modified` | Keep as support promotion adaptation. Reconcile only through a bounded promotion evidence refresh. |
+| `promotion/envelope.py` | target_only_glue | `slice-00-neuronforge-promotion-target-only` | Keep as support promotion evidence. Refresh only from proved PACT/source evidence. |
+| `promotion/mirror/wave1_promotion_envelope.mirror.json` | target_only_glue | `slice-00-neuronforge-promotion-target-only` | Keep as support promotion evidence. Refresh only from proved PACT/source evidence. |
+| `promotion/mirror/wave1_promotion_envelope.schema.json` | target_only_glue | `slice-00-neuronforge-promotion-target-only` | Keep as support promotion evidence. Refresh only from proved PACT/source evidence. |
 | `promotion/models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `promotion/run_log.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `promotion/run_log.py` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-modified` | Keep as support promotion adaptation. Reconcile only through a bounded promotion evidence refresh. |
 | `promotions/promotion-2026-05-29-001/manifest.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `prompt_assembly/AGENTS.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `prompt_assembly/README.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -130,7 +130,7 @@ Resolutions applied: `32`
 | `prompt_assembly/tools/validate_registry.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `prompts/beat_candidate_bakeoff/beat_candidate_extraction_v1.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `registry/pact_wave1_envelope_mirror.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `registry/runs.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `registry/runs.md` | intentional_app_support_adaptation | `slice-00-neuronforge-promotion-modified` | Keep as support promotion adaptation. Reconcile only through a bounded promotion evidence refresh. |
 | `requirements-dev.txt` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `requirements-graphiti.txt` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `requirements.txt` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -158,9 +158,9 @@ Resolutions applied: `32`
 | `scripts/graph/nlo-graph` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/run-tests.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `scripts/run_beat_candidate_bakeoff.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/style_analysis/models.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `scripts/style_analysis/models.py` | intentional_app_support_adaptation | `slice-00-neuronforge-scripts-modified` | Keep as support script adaptation. Recompare before upstream promotion. |
 | `scripts/validate_beat_candidate_output.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `scripts/verify_promotion_seam.py` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `scripts/verify_promotion_seam.py` | intentional_app_support_adaptation | `slice-00-neuronforge-scripts-modified` | Keep as support script adaptation. Recompare before upstream promotion. |
 | `service/authorforge_task_contract.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/authorforge_task_service.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |
 | `service/cloud_escalation.py` | target_only_glue | `slice-00-neuronforge-service-target-only` | Keep as support service glue. Backport only if the proving repo adopts these AuthorForge service lanes. |

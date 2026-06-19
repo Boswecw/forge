@@ -5,23 +5,26 @@ source_branch: master
 target_branch: master
 source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
 target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-generated_at: '2026-06-19T09:13:04+00:00'
+generated_at: '2026-06-19T09:17:12+00:00'
 classification_summary:
   same: 392
-  intentional_app_support_adaptation: 9
+  intentional_app_support_adaptation: 18
   missing_from_target: 173
-  target_only_glue: 23
+  target_only_glue: 29
   dangerous_drift: 0
-  unknown: 15
-resolutions_applied: 32
+  unknown: 0
+resolutions_applied: 47
 items:
 - path: .claude/settings.local.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: The target-only local settings file is support checkout glue, not
+    source authority.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep local to the support target and do not promote upstream.
+  resolution_id: slice-00-neuronforge-local-settings-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: .env.graphiti
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -39,21 +42,25 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: .gitignore
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: NeuronForge support scaffold differs from source and is covered by
+    support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-neuronforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: CLAUDE.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: NeuronForge support scaffold differs from source and is covered by
+    support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-neuronforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: GEMINI.md
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -71,13 +78,15 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: README.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: NeuronForge support scaffold differs from source and is covered by
+    support tests and promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-neuronforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: SYSTEM.md
   classification: target_only_glue
   justification: These support-side NeuronForge mirror files document the app-support
@@ -603,56 +612,87 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: Target-only NeuronForge promotion outputs, envelope, and mirror files
+    are support promotion evidence glue. Support and source promotion seam verification
+    passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support promotion evidence. Refresh only from proved
+    PACT/source evidence.
+  resolution_id: slice-00-neuronforge-promotion-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: Target-only NeuronForge promotion outputs, envelope, and mirror files
+    are support promotion evidence glue. Support and source promotion seam verification
+    passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support promotion evidence. Refresh only from proved
+    PACT/source evidence.
+  resolution_id: slice-00-neuronforge-promotion-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/__init__.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge promotion runtime and registry files differ
+    between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support promotion adaptation. Reconcile only through
+    a bounded promotion evidence refresh.
+  resolution_id: slice-00-neuronforge-promotion-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/compatibility.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge promotion runtime and registry files differ
+    between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support promotion adaptation. Reconcile only through
+    a bounded promotion evidence refresh.
+  resolution_id: slice-00-neuronforge-promotion-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/envelope.py
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: Target-only NeuronForge promotion outputs, envelope, and mirror files
+    are support promotion evidence glue. Support and source promotion seam verification
+    passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support promotion evidence. Refresh only from proved
+    PACT/source evidence.
+  resolution_id: slice-00-neuronforge-promotion-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/mirror/wave1_promotion_envelope.mirror.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: Target-only NeuronForge promotion outputs, envelope, and mirror files
+    are support promotion evidence glue. Support and source promotion seam verification
+    passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support promotion evidence. Refresh only from proved
+    PACT/source evidence.
+  resolution_id: slice-00-neuronforge-promotion-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/mirror/wave1_promotion_envelope.schema.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: Target-only NeuronForge promotion outputs, envelope, and mirror files
+    are support promotion evidence glue. Support and source promotion seam verification
+    passed.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support promotion evidence. Refresh only from proved
+    PACT/source evidence.
+  resolution_id: slice-00-neuronforge-promotion-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotion/models.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -662,13 +702,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: promotion/run_log.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge promotion runtime and registry files differ
+    between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support promotion adaptation. Reconcile only through
+    a bounded promotion evidence refresh.
+  resolution_id: slice-00-neuronforge-promotion-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: promotions/promotion-2026-05-29-001/manifest.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -902,13 +945,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: registry/runs.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge promotion runtime and registry files differ
+    between source and support while both promotion seam proofs pass.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support promotion adaptation. Reconcile only through
+    a bounded promotion evidence refresh.
+  resolution_id: slice-00-neuronforge-promotion-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: requirements-dev.txt
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1126,13 +1172,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/style_analysis/models.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge scripts are covered by support tests and source/support
+    promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support script adaptation. Recompare before upstream
+    promotion.
+  resolution_id: slice-00-neuronforge-scripts-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: scripts/validate_beat_candidate_output.py
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1142,13 +1191,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: scripts/verify_promotion_seam.py
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: Modified NeuronForge scripts are covered by support tests and source/support
+    promotion seam proof.
   source_commit: 006ef57c9ece79b666581b303fce06e54debaa42
   target_commit: dc67b04863e313f3116565ddf1e7e369d6349a67
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support script adaptation. Recompare before upstream
+    promotion.
+  resolution_id: slice-00-neuronforge-scripts-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: service/authorforge_task_contract.py
   classification: target_only_glue
   justification: The target-only NeuronForge service modules are app-support glue

@@ -32,5 +32,7 @@ declared dependencies were installed directly and repo code was loaded with
 
 ## Remaining Gate
 
-The remaining 38 unknowns are contracts/schema/sql, promotion evidence,
-operator tooling/scripts, and repo scaffold.
+The remaining 38 unknowns are resolved in
+`docs/slice-00/final-unknown-resolution-proof.md`. Unknown and dangerous drift
+are now zero; the remaining work is the 648 `missing_from_target` source-only
+artifacts.

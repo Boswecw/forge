@@ -1,6 +1,6 @@
 # Drift Report: dataforge-Local__df-local-foundation
 
-Generated: `2026-06-19T09:13:04+00:00`
+Generated: `2026-06-19T09:17:12+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/dataforge-Local`
 Source branch: `master`
@@ -10,26 +10,26 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/df-local-foundat
 Target branch: `main`
 Target commit: `b2f44d46b1bc953503a0c31381fa4683c852b0dd`
 
-Resolutions applied: `68`
+Resolutions applied: `82`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 8 |
-| intentional_app_support_adaptation | 7 |
+| intentional_app_support_adaptation | 11 |
 | missing_from_target | 135 |
-| target_only_glue | 61 |
+| target_only_glue | 71 |
 | dangerous_drift | 0 |
-| unknown | 14 |
+| unknown | 0 |
 
 ## Items
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
-| `.gitignore` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `CLAUDE.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `.gitignore` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
+| `CLAUDE.md` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
+| `README.md` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `SYSTEM.md` | target_only_glue | `slice-00-dataforge-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `alembic.ini` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `alembic/README.md` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -84,9 +84,9 @@ Resolutions applied: `68`
 | `constants/schemas.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `constants/services.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `constants/vocabularies.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `contracts/app-registration.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `contracts/health.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `contracts/migration-status.schema.json` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `contracts/app-registration.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
+| `contracts/health.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
+| `contracts/migration-status.schema.json` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `core/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `core/backup/__init__.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
 | `core/backup/manager.py` | target_only_glue | `slice-00-dataforge-runtime-target-only` | Keep as support runtime glue. Backport only as explicit local-system source promotion. |
@@ -171,7 +171,7 @@ Resolutions applied: `68`
 | `proving_slice/services/promotion_queue.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `proving_slice/services/promotion_reconciliation.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `proving_slice/services/read_models.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `pyproject.toml` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `pyproject.toml` | intentional_app_support_adaptation | `slice-00-dataforge-scaffold-modified` | Keep as support scaffold adaptation. |
 | `reports/contract_core_gate_20260404_093918.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `reports/contract_core_gate_20260404_094503.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `reports/contract_core_gate_20260614_002806.json` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
@@ -198,10 +198,10 @@ Resolutions applied: `68`
 | `seeds/read_model_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `seeds/schema_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `seeds/service_seeds.py` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `sql/apps/authorforge/0001_authorforge_attach.sql` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `sql/apps/authorforge/0001_authorforge_attach.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `sql/bootstrap.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
-| `sql/core/0001_core_foundation.sql` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `sql/core/0002_core_metadata.sql` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `sql/core/0001_core_foundation.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
+| `sql/core/0002_core_metadata.sql` | target_only_glue | `slice-00-dataforge-contracts-sql-target-only` | Keep as support contract/schema glue. Promote upstream only through a source authority slice. |
 | `sql/dev_reset.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `sql/manual_checks.sql` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `tests/api/__init__.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
@@ -240,10 +240,10 @@ Resolutions applied: `68`
 | `tests/visibility_boundary/test_health_contract.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/visibility_boundary/test_health_event_discipline.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
 | `tests/visibility_boundary/test_status_redteam.py` | target_only_glue | `slice-00-dataforge-tests-target-only` | Keep as support proof glue. Run the integration-marked tests when DF_LOCAL database env is available. |
-| `tools/db-backup` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tools/db-export` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tools/db-restore` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
-| `tools/db-status` | unknown |  | Classify as target_only_glue, intentional_app_support_adaptation, dangerous_drift, or backport to the proving repo. |
+| `tools/db-backup` | target_only_glue | `slice-00-dataforge-tools-target-only` | Keep as support tooling glue. |
+| `tools/db-export` | target_only_glue | `slice-00-dataforge-tools-target-only` | Keep as support tooling glue. |
+| `tools/db-restore` | target_only_glue | `slice-00-dataforge-tools-target-only` | Keep as support tooling glue. |
+| `tools/db-status` | target_only_glue | `slice-00-dataforge-tools-target-only` | Keep as support tooling glue. |
 
 ## Blocking Rule
 

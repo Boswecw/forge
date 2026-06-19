@@ -1,6 +1,6 @@
 # Drift Report: fa-local-operator__fa-local
 
-Generated: `2026-06-19T09:13:04+00:00`
+Generated: `2026-06-19T09:17:12+00:00`
 
 Source repo: `/home/charlie/Forge/ecosystem/local-systems/fa-local-operator`
 Source branch: `master`
@@ -10,27 +10,27 @@ Target repo: `/home/charlie/Forge/apps/public-app-local-support/fa-local`
 Target branch: `master`
 Target commit: `6608a60f40e47a5473cd85a1fbbf9e587e053509`
 
-Resolutions applied: `24`
+Resolutions applied: `28`
 
 ## Classification Summary
 
 | Classification | Count |
 | --- | ---: |
 | same | 131 |
-| intentional_app_support_adaptation | 10 |
+| intentional_app_support_adaptation | 14 |
 | missing_from_target | 20 |
 | target_only_glue | 14 |
 | dangerous_drift | 0 |
-| unknown | 4 |
+| unknown | 0 |
 
 ## Items
 
 | Path | Classification | Resolution | Recommended action |
 | --- | --- | --- | --- |
-| `.gitignore` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `CLAUDE.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `Cargo.toml` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
-| `README.md` | unknown |  | Compare source and target intent; resolve by human decision, backport, or explicit exception. |
+| `.gitignore` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
+| `CLAUDE.md` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
+| `Cargo.toml` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
+| `README.md` | intentional_app_support_adaptation | `slice-00-fa-local-scaffold-modified` | Keep as support scaffold adaptation. |
 | `SYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |
 | `ci_gate.sh` | missing_from_target |  | Review whether this source artifact should be promoted or intentionally excluded. |
 | `doc/FLLSYSTEM.md` | target_only_glue | `slice-00-fa-local-doc-system-target-only` | Keep as target support mirror glue. Backport only if the proving repo adopts the same support mirror structure. |

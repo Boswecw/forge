@@ -111,4 +111,8 @@ runtime_test_resolution:
   status: complete
   proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/runtime-test-resolution-proof.yaml
   unknown_after: 38
-next_gate: "Resolve contracts/schema/sql, promotion evidence, operator tooling/scripts, and repo scaffold."
+final_unknown_resolution:
+  status: complete
+  proof: /home/charlie/Forge/ecosystem/local-systems/promotion-ledger/docs/slice-00/final-unknown-resolution-proof.yaml
+  unknown_after: 0
+next_gate: "Review source-only missing_from_target backlog for promotion candidates or explicit exclusions."

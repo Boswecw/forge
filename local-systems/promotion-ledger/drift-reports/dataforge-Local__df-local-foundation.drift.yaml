@@ -5,40 +5,46 @@ source_branch: master
 target_branch: main
 source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
 target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-generated_at: '2026-06-19T09:13:04+00:00'
+generated_at: '2026-06-19T09:17:12+00:00'
 classification_summary:
   same: 8
-  intentional_app_support_adaptation: 7
+  intentional_app_support_adaptation: 11
   missing_from_target: 135
-  target_only_glue: 61
+  target_only_glue: 71
   dangerous_drift: 0
-  unknown: 14
-resolutions_applied: 68
+  unknown: 0
+resolutions_applied: 82
 items:
 - path: .gitignore
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: DF support scaffold differs from source and is covered by the support
+    test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-dataforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: CLAUDE.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: DF support scaffold differs from source and is covered by the support
+    test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-dataforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: README.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: DF support scaffold differs from source and is covered by the support
+    test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-dataforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: SYSTEM.md
   classification: target_only_glue
   justification: These support-side DataForge mirror files document the app-support
@@ -484,26 +490,38 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: contracts/app-registration.schema.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: contracts/health.schema.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: contracts/migration-status.schema.json
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: core/__init__.py
   classification: target_only_glue
   justification: The target-only DF core/app runtime is the app-support foundation
@@ -1314,13 +1332,15 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: pyproject.toml
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: DF support scaffold differs from source and is covered by the support
+    test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-dataforge-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: reports/contract_core_gate_20260404_093918.json
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1530,12 +1550,16 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: sql/apps/authorforge/0001_authorforge_attach.sql
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: sql/bootstrap.sql
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1545,19 +1569,27 @@ items:
   recommended_action: Review whether this source artifact should be promoted or intentionally
     excluded.
 - path: sql/core/0001_core_foundation.sql
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: sql/core/0002_core_metadata.sql
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only contracts and SQL are support foundation contract
+    glue covered by the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support contract/schema glue. Promote upstream only
+    through a source authority slice.
+  resolution_id: slice-00-dataforge-contracts-sql-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: sql/dev_reset.sql
   classification: missing_from_target
   justification: Source artifact exists in the proving repo but is absent from the
@@ -1943,30 +1975,42 @@ items:
   resolved_shape: target_only
   resolution_source: resolutions/slice-00-runtime-test-surfaces.yaml
 - path: tools/db-backup
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only tools are support operator glue and are covered by
+    CLI authority tests in the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support tooling glue.
+  resolution_id: slice-00-dataforge-tools-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: tools/db-export
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only tools are support operator glue and are covered by
+    CLI authority tests in the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support tooling glue.
+  resolution_id: slice-00-dataforge-tools-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: tools/db-restore
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only tools are support operator glue and are covered by
+    CLI authority tests in the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support tooling glue.
+  resolution_id: slice-00-dataforge-tools-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: tools/db-status
-  classification: unknown
-  justification: Target-only artifact requires human classification before promotion.
+  classification: target_only_glue
+  justification: DF target-only tools are support operator glue and are covered by
+    CLI authority tests in the support test tree.
   source_commit: 536b700fa7f11bf92c75e5f8c540c4b571ebb17b
   target_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
-  recommended_action: Classify as target_only_glue, intentional_app_support_adaptation,
-    dangerous_drift, or backport to the proving repo.
+  recommended_action: Keep as support tooling glue.
+  resolution_id: slice-00-dataforge-tools-target-only
+  resolved_shape: target_only
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml

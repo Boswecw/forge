@@ -1,0 +1,150 @@
+version: 1
+created_at: "2026-06-19T09:16:33Z"
+scope: "Classify remaining Slice 00 scaffold, contract, tooling, and promotion evidence drift."
+evidence:
+  cortex:
+    validate: "make validate passed: 19 valid fixtures, 20 invalid fixtures, 7 schemas"
+    runtime: "make test-runtime passed: 110 tests"
+  df_local_foundation:
+    support_fix_commit: b2f44d46b1bc953503a0c31381fa4683c852b0dd
+    tests: "169 passed, 7 skipped, 1 warning"
+  fa_local:
+    tests: "cargo test passed: 119 tests across integration test binaries"
+  neuronforge:
+    support_tests: "45 passed, 3 warnings"
+    support_promotion_seam: "python3 scripts/verify_promotion_seam.py passed"
+    source_promotion_seam: "NF_PACT_ENVELOPE and NF_PACT_MANIFEST pointed at /home/charlie/Forge/ecosystem/pact evidence; verify_promotion_seam passed"
+resolutions:
+  - resolution_id: slice-00-cortex-scaffold-modified
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Cortex support scaffold differs from source and is covered by support validation and runtime tests."
+    recommended_action: "Keep as support scaffold adaptation. Reconcile only with an explicit repo-scaffold promotion slice."
+    paths:
+      - .gitignore
+      - Makefile
+
+  - resolution_id: slice-00-cortex-requirements-target-only
+    repo_pair: cortex__cortex
+    shape: target_only
+    classification: target_only_glue
+    justification: "The support requirements file is target-only dependency glue for the support Cortex runtime."
+    recommended_action: "Keep as support dependency glue. Backport only if the proving repo adopts the same package boundary."
+    paths:
+      - requirements.txt
+
+  - resolution_id: slice-00-cortex-schema-tooling-modified
+    repo_pair: cortex__cortex
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Cortex schema and schema-validation tooling differ from source and passed the support validation gate."
+    recommended_action: "Keep as support validation adaptation. Recompare before promoting schema changes upstream."
+    paths:
+      - schemas/service-status.schema.json
+      - scripts/validate_schemas.py
+
+  - resolution_id: slice-00-dataforge-scaffold-modified
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "DF support scaffold differs from source and is covered by the support test tree."
+    recommended_action: "Keep as support scaffold adaptation."
+    paths:
+      - .gitignore
+      - CLAUDE.md
+      - README.md
+      - pyproject.toml
+
+  - resolution_id: slice-00-dataforge-contracts-sql-target-only
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: target_only
+    classification: target_only_glue
+    justification: "DF target-only contracts and SQL are support foundation contract glue covered by the support test tree."
+    recommended_action: "Keep as support contract/schema glue. Promote upstream only through a source authority slice."
+    paths:
+      - contracts/app-registration.schema.json
+      - contracts/health.schema.json
+      - contracts/migration-status.schema.json
+      - sql/apps/authorforge/0001_authorforge_attach.sql
+      - sql/core/0001_core_foundation.sql
+      - sql/core/0002_core_metadata.sql
+
+  - resolution_id: slice-00-dataforge-tools-target-only
+    repo_pair: dataforge-Local__df-local-foundation
+    shape: target_only
+    classification: target_only_glue
+    justification: "DF target-only tools are support operator glue and are covered by CLI authority tests in the support test tree."
+    recommended_action: "Keep as support tooling glue."
+    paths:
+      - tools/db-backup
+      - tools/db-export
+      - tools/db-restore
+      - tools/db-status
+
+  - resolution_id: slice-00-fa-local-scaffold-modified
+    repo_pair: fa-local-operator__fa-local
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "FA Local support scaffold and Cargo manifest differ from source and are covered by the support Cargo test gate."
+    recommended_action: "Keep as support scaffold adaptation."
+    paths:
+      - .gitignore
+      - CLAUDE.md
+      - Cargo.toml
+      - README.md
+
+  - resolution_id: slice-00-neuronforge-scaffold-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "NeuronForge support scaffold differs from source and is covered by support tests and promotion seam proof."
+    recommended_action: "Keep as support scaffold adaptation."
+    paths:
+      - .gitignore
+      - CLAUDE.md
+      - README.md
+
+  - resolution_id: slice-00-neuronforge-local-settings-target-only
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: target_only
+    classification: target_only_glue
+    justification: "The target-only local settings file is support checkout glue, not source authority."
+    recommended_action: "Keep local to the support target and do not promote upstream."
+    paths:
+      - .claude/settings.local.json
+
+  - resolution_id: slice-00-neuronforge-promotion-target-only
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: target_only
+    classification: target_only_glue
+    justification: "Target-only NeuronForge promotion outputs, envelope, and mirror files are support promotion evidence glue. Support and source promotion seam verification passed."
+    recommended_action: "Keep as support promotion evidence. Refresh only from proved PACT/source evidence."
+    paths:
+      - outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-001.md
+      - outputs/qwen2.5-14b-lore-safe-test-001-run-2026-04-17-002.md
+      - promotion/envelope.py
+      - promotion/mirror/wave1_promotion_envelope.mirror.json
+      - promotion/mirror/wave1_promotion_envelope.schema.json
+
+  - resolution_id: slice-00-neuronforge-promotion-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Modified NeuronForge promotion runtime and registry files differ between source and support while both promotion seam proofs pass."
+    recommended_action: "Keep as support promotion adaptation. Reconcile only through a bounded promotion evidence refresh."
+    paths:
+      - promotion/__init__.py
+      - promotion/compatibility.py
+      - promotion/run_log.py
+      - registry/runs.md
+
+  - resolution_id: slice-00-neuronforge-scripts-modified
+    repo_pair: neuronforge-local-operator__neuronforge
+    shape: modified_in_both
+    classification: intentional_app_support_adaptation
+    justification: "Modified NeuronForge scripts are covered by support tests and source/support promotion seam proof."
+    recommended_action: "Keep as support script adaptation. Recompare before upstream promotion."
+    paths:
+      - scripts/style_analysis/models.py
+      - scripts/verify_promotion_seam.py

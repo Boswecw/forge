@@ -5,48 +5,56 @@ source_branch: master
 target_branch: master
 source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
 target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-generated_at: '2026-06-19T09:13:04+00:00'
+generated_at: '2026-06-19T09:17:12+00:00'
 classification_summary:
   same: 131
-  intentional_app_support_adaptation: 10
+  intentional_app_support_adaptation: 14
   missing_from_target: 20
   target_only_glue: 14
   dangerous_drift: 0
-  unknown: 4
-resolutions_applied: 24
+  unknown: 0
+resolutions_applied: 28
 items:
 - path: .gitignore
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: FA Local support scaffold and Cargo manifest differ from source and
+    are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-fa-local-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: CLAUDE.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: FA Local support scaffold and Cargo manifest differ from source and
+    are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-fa-local-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: Cargo.toml
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: FA Local support scaffold and Cargo manifest differ from source and
+    are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-fa-local-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: README.md
-  classification: unknown
-  justification: Artifact exists in both repos but content differs. Slice 00 does
-    not infer intent.
+  classification: intentional_app_support_adaptation
+  justification: FA Local support scaffold and Cargo manifest differ from source and
+    are covered by the support Cargo test gate.
   source_commit: 5f6a7dad737f7366403a09711bc3d57a48a725cd
   target_commit: 6608a60f40e47a5473cd85a1fbbf9e587e053509
-  recommended_action: Compare source and target intent; resolve by human decision,
-    backport, or explicit exception.
+  recommended_action: Keep as support scaffold adaptation.
+  resolution_id: slice-00-fa-local-scaffold-modified
+  resolved_shape: modified_in_both
+  resolution_source: resolutions/slice-00-final-support-surfaces.yaml
 - path: SYSTEM.md
   classification: target_only_glue
   justification: These support-side FA Local mirror files document the app-support
