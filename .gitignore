@@ -104,4 +104,7 @@ out/
 /tools/ecosystem-qc/node_modules/
 /tools/ecosystem-qc/out/
 
+# Canonical system docs mirror is generated/managed outside root tracking.
+/doc/system/
+
 context-bundle.md
