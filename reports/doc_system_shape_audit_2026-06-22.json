@@ -1,13 +1,13 @@
 {
   "exemplar": "cloud-systems/ForgeAgents",
   "exemplar_is_aligned": true,
-  "generated_at": "2026-06-22T16:55:34+00:00",
+  "generated_at": "2026-06-22T17:15:54+00:00",
   "repositories": [
     {
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.a2Iq4V3apt\nBUILD_OK designation=ECO output=doc/ECOSYSTEM.md parts=9 lines=1294"
+        "stdout": "snapshot validation passed: /tmp/tmp.z8HDscOvqE\nBUILD_OK designation=ECO output=doc/ECOSYSTEM.md parts=9 lines=1294"
       },
       "compiled_outputs": [
         "doc/ECOSYSTEM.md",
@@ -53,7 +53,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.d4yYRXCuLc\nBUILD_OK designation=DOP output=doc/DOPSYSTEM.md parts=7 lines=128"
+        "stdout": "snapshot validation passed: /tmp/tmp.1hRD0nc7nP\nBUILD_OK designation=DOP output=doc/DOPSYSTEM.md parts=7 lines=121"
       },
       "compiled_outputs": [
         "doc/DOPSYSTEM.md"
@@ -96,7 +96,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.KR2mBk3ZTk\nBUILD_OK designation=ERA output=doc/ERASYSTEM.md parts=7 lines=123"
+        "stdout": "snapshot validation passed: /tmp/tmp.nzrfShhc3i\nBUILD_OK designation=ERA output=doc/ERASYSTEM.md parts=7 lines=116"
       },
       "compiled_outputs": [
         "doc/ERASYSTEM.md"
@@ -139,7 +139,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.UHh7IrgWP8\nBUILD_OK designation=FCO output=doc/FCOSYSTEM.md parts=25 lines=6504"
+        "stdout": "snapshot validation passed: /tmp/tmp.0nXJSbpQ79\nBUILD_OK designation=FCO output=doc/FCOSYSTEM.md parts=25 lines=6504"
       },
       "compiled_outputs": [
         "doc/FCOSYSTEM.md"
@@ -200,7 +200,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.p9YMUBafMG\nBUILD_OK designation=CAN output=doc/CANSYSTEM.md parts=43 lines=9244"
+        "stdout": "snapshot validation passed: /tmp/tmp.H61jG6C8eN\nBUILD_OK designation=CAN output=doc/CANSYSTEM.md parts=43 lines=9244"
       },
       "compiled_outputs": [
         "doc/CANSYSTEM.md",
@@ -281,7 +281,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.tZFXgt0QNN\nBUILD_OK designation=CHE output=doc/CHESYSTEM.md parts=8 lines=133"
+        "stdout": "snapshot validation passed: /tmp/tmp.rAhoC8VNRn\nBUILD_OK designation=CHE output=doc/CHESYSTEM.md parts=8 lines=133"
       },
       "compiled_outputs": [
         "doc/CHESYSTEM.md"
@@ -325,7 +325,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.coC6ElIBoT\nBUILD_OK designation=DTF output=doc/DTFSYSTEM.md parts=17 lines=2828"
+        "stdout": "snapshot validation passed: /tmp/tmp.WXpQuYYVSv\nBUILD_OK designation=DTF output=doc/DTFSYSTEM.md parts=17 lines=2828"
       },
       "compiled_outputs": [
         "doc/DTFSYSTEM.md"
@@ -378,7 +378,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.8UpCLRrZ6s\nBUILD_OK designation=FOR output=doc/FORSYSTEM.md parts=15 lines=3681"
+        "stdout": "snapshot validation passed: /tmp/tmp.5qPtYOIIIs\nBUILD_OK designation=FOR output=doc/FORSYSTEM.md parts=15 lines=3681"
       },
       "compiled_outputs": [
         "doc/FORSYSTEM.md"
@@ -429,7 +429,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.V0gTmN2nre\nBUILD_OK designation=NEU output=doc/NEUSYSTEM.md parts=24 lines=3927"
+        "stdout": "snapshot validation passed: /tmp/tmp.lb06KHShvU\nBUILD_OK designation=NEU output=doc/NEUSYSTEM.md parts=24 lines=3927"
       },
       "compiled_outputs": [
         "doc/NEUSYSTEM.md"
@@ -489,7 +489,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.W5h7cYmWzv\nBUILD_OK designation=FOC output=doc/FOCSYSTEM.md parts=12 lines=1207"
+        "stdout": "snapshot validation passed: /tmp/tmp.3Piee5UQA4\nBUILD_OK designation=FOC output=doc/FOCSYSTEM.md parts=12 lines=1207"
       },
       "compiled_outputs": [
         "doc/FOCSYSTEM.md"
@@ -537,7 +537,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.DjpLtzuJDa\nBUILD_OK designation=SNT output=doc/SNTSYSTEM.md parts=7 lines=125"
+        "stdout": "snapshot validation passed: /tmp/tmp.rp8j5ym2Cl\nBUILD_OK designation=SNT output=doc/SNTSYSTEM.md parts=7 lines=118"
       },
       "compiled_outputs": [
         "doc/SNTSYSTEM.md"
@@ -580,7 +580,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.FjBEo5rJfC\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=20 lines=2862"
+        "stdout": "snapshot validation passed: /tmp/tmp.54s971Kp6g\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=20 lines=2862"
       },
       "compiled_outputs": [
         "doc/RAKSYSTEM.md"
@@ -636,7 +636,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.3OpeTN3lb3\nBUILD_OK designation=FCC output=doc/FCCSYSTEM.md parts=17 lines=780"
+        "stdout": "snapshot validation passed: /tmp/tmp.3PdK7mKx5t\nBUILD_OK designation=FCC output=doc/FCCSYSTEM.md parts=17 lines=780"
       },
       "compiled_outputs": [
         "doc/FCCSYSTEM.md"
@@ -689,7 +689,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.OeuODEumSv\nBUILD_OK designation=LIN output=doc/LINSYSTEM.md parts=7 lines=120"
+        "stdout": "snapshot validation passed: /tmp/tmp.yoLtxYHSOj\nBUILD_OK designation=LIN output=doc/LINSYSTEM.md parts=7 lines=113"
       },
       "compiled_outputs": [
         "doc/LINSYSTEM.md"
@@ -732,7 +732,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.CmVHoPIASn\nBUILD_OK designation=FFG output=doc/FFGSYSTEM.md parts=8 lines=217"
+        "stdout": "snapshot validation passed: /tmp/tmp.PS2neogcNG\nBUILD_OK designation=FFG output=doc/FFGSYSTEM.md parts=8 lines=217"
       },
       "compiled_outputs": [
         "doc/FFGSYSTEM.md"
@@ -776,7 +776,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.Jt15VXwTXv\nBUILD_OK designation=fs output=doc/fsSYSTEM.md compatibility=SYSTEM.md parts=25 lines=5424"
+        "stdout": "snapshot validation passed: /tmp/tmp.da3ymkaXIE\nBUILD_OK designation=fs output=doc/fsSYSTEM.md compatibility=SYSTEM.md parts=25 lines=5424"
       },
       "compiled_outputs": [
         "doc/fsSYSTEM.md"
@@ -837,7 +837,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.Wkgx5OIykH\nBUILD_OK designation=IMA output=doc/IMASYSTEM.md parts=18 lines=1705"
+        "stdout": "snapshot validation passed: /tmp/tmp.swQp7OlySE\nBUILD_OK designation=IMA output=doc/IMASYSTEM.md parts=18 lines=1705"
       },
       "compiled_outputs": [
         "doc/IMASYSTEM.md",
@@ -893,7 +893,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.8tZNtPYrDG\nBUILD_OK designation=MAT output=doc/MATSYSTEM.md parts=22 lines=776"
+        "stdout": "snapshot validation passed: /tmp/tmp.9bcsPoDrQ5\nBUILD_OK designation=MAT output=doc/MATSYSTEM.md parts=22 lines=776"
       },
       "compiled_outputs": [
         "doc/MATSYSTEM.md"
@@ -951,7 +951,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.yct7dgJGYF\nBUILD_OK designation=CTX output=doc/CTXSYSTEM.md parts=11 lines=481"
+        "stdout": "snapshot validation passed: /tmp/tmp.pA9QP1Z6lk\nBUILD_OK designation=CTX output=doc/CTXSYSTEM.md parts=11 lines=481"
       },
       "compiled_outputs": [
         "doc/CTXSYSTEM.md"
@@ -998,7 +998,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.XVhtJB83YY\nBUILD_OK designation=cx output=doc/cxSYSTEM.md parts=7 lines=689"
+        "stdout": "snapshot validation passed: /tmp/tmp.j79IfLe6Yl\nBUILD_OK designation=cx output=doc/cxSYSTEM.md parts=7 lines=689"
       },
       "compiled_outputs": [
         "doc/SYSTEM.md",
@@ -1042,7 +1042,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.BRmBqnjPwR\nBUILD_OK designation=DLO output=doc/DLOSYSTEM.md parts=20 lines=980"
+        "stdout": "snapshot validation passed: /tmp/tmp.fImSrzig0y\nBUILD_OK designation=DLO output=doc/DLOSYSTEM.md parts=20 lines=980"
       },
       "compiled_outputs": [
         "doc/DLOSYSTEM.md"
@@ -1098,7 +1098,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.zcFmuJTmgB\nBUILD_OK designation=ECN output=doc/ECNSYSTEM.md parts=8 lines=429"
+        "stdout": "snapshot validation passed: /tmp/tmp.IC5TuV5ER9\nBUILD_OK designation=ECN output=doc/ECNSYSTEM.md parts=8 lines=429"
       },
       "compiled_outputs": [
         "doc/ECNSYSTEM.md"
@@ -1142,7 +1142,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.d788UYyjQA\nBUILD_OK designation=FLO output=doc/FLOSYSTEM.md parts=10 lines=852"
+        "stdout": "snapshot validation passed: /tmp/tmp.DfcqOwh7Qj\nBUILD_OK designation=FLO output=doc/FLOSYSTEM.md parts=10 lines=852"
       },
       "compiled_outputs": [
         "doc/FLOSYSTEM.md",
@@ -1189,7 +1189,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.fyjGc5KxT6\nBUILD_OK designation=FEV output=doc/FEVSYSTEM.md parts=26 lines=1635"
+        "stdout": "snapshot validation passed: /tmp/tmp.Ln5gTT3ncW\nBUILD_OK designation=FEV output=doc/FEVSYSTEM.md parts=26 lines=1635"
       },
       "compiled_outputs": [
         "doc/FEVSYSTEM.md"
@@ -1251,7 +1251,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.WJ8U8hsu0j\nBUILD_OK designation=FLS output=doc/FLSSYSTEM.md parts=22 lines=366"
+        "stdout": "snapshot validation passed: /tmp/tmp.13CqwAa6dQ\nBUILD_OK designation=FLS output=doc/FLSSYSTEM.md parts=22 lines=366"
       },
       "compiled_outputs": [
         "doc/FLSSYSTEM.md",
@@ -1310,7 +1310,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.aYt2Mv2DxS\nBUILD_OK designation=fs output=doc/fsSYSTEM.md parts=18 lines=4942"
+        "stdout": "snapshot validation passed: /tmp/tmp.TRTQb0FF3w\nBUILD_OK designation=fs output=doc/fsSYSTEM.md parts=18 lines=4942"
       },
       "compiled_outputs": [
         "doc/fsSYSTEM.md"
@@ -1364,7 +1364,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.QvKx3V21vb\nBUILD_OK designation=FRG output=doc/FRGSYSTEM.md parts=24 lines=951"
+        "stdout": "snapshot validation passed: /tmp/tmp.P4ThmkvMAw\nBUILD_OK designation=FRG output=doc/FRGSYSTEM.md parts=24 lines=951"
       },
       "compiled_outputs": [
         "doc/FRGSYSTEM.md",
@@ -1425,7 +1425,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.UFuAdNoMBr\nBUILD_OK designation=NLO output=doc/NLOSYSTEM.md parts=13 lines=4156"
+        "stdout": "snapshot validation passed: /tmp/tmp.n3bBDCRxsW\nBUILD_OK designation=NLO output=doc/NLOSYSTEM.md parts=13 lines=4156"
       },
       "compiled_outputs": [
         "doc/NLOSYSTEM.md"
@@ -1474,7 +1474,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.n56PWrcS2k\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=124"
+        "stdout": "snapshot validation passed: /tmp/tmp.3iBN6GxDLi\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=117"
       },
       "compiled_outputs": [
         "doc/YJKSYSTEM.md"
@@ -1517,7 +1517,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.DSOoetPV54\nBUILD_OK designation=PAC output=doc/PACSYSTEM.md parts=20 lines=497"
+        "stdout": "snapshot validation passed: /tmp/tmp.jcyMmFB3x8\nBUILD_OK designation=PAC output=doc/PACSYSTEM.md parts=20 lines=497"
       },
       "compiled_outputs": [
         "doc/PACSYSTEM.md"
@@ -1573,7 +1573,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.b2fJNfS8hd\nBUILD_OK designation=PCC output=doc/PCCSYSTEM.md parts=9 lines=216"
+        "stdout": "snapshot validation passed: /tmp/tmp.ID4ZpgB8Kn\nBUILD_OK designation=PCC output=doc/PCCSYSTEM.md parts=9 lines=216"
       },
       "compiled_outputs": [
         "doc/PCCSYSTEM.md"
@@ -1618,7 +1618,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.rv0T6hL0U5\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=7 lines=120"
+        "stdout": "snapshot validation passed: /tmp/tmp.7EsEgBY21E\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=7 lines=113"
       },
       "compiled_outputs": [
         "doc/RAKSYSTEM.md"
@@ -1661,7 +1661,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.llwI7znHyq\nBUILD_OK designation=SMI output=doc/SMISYSTEM.md parts=18 lines=848"
+        "stdout": "snapshot validation passed: /tmp/tmp.nvGT7uH9G9\nBUILD_OK designation=SMI output=doc/SMISYSTEM.md parts=18 lines=848"
       },
       "compiled_outputs": [
         "doc/SMISYSTEM.md",
@@ -1717,7 +1717,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.NCkhWvGG4K\nBUILD_OK designation=TAR output=doc/TARSYSTEM.md parts=20 lines=990"
+        "stdout": "snapshot validation passed: /tmp/tmp.wv0DvVk25x\nBUILD_OK designation=TAR output=doc/TARSYSTEM.md parts=20 lines=990"
       },
       "compiled_outputs": [
         "doc/SYSTEM.md",
@@ -1775,7 +1775,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.h8Iw320UHo\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=121"
+        "stdout": "snapshot validation passed: /tmp/tmp.xeROAkLp7b\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=114"
       },
       "compiled_outputs": [
         "doc/YJKSYSTEM.md"
@@ -1818,7 +1818,7 @@
       "build_result": {
         "exit_code": "0",
         "stderr": "",
-        "stdout": "snapshot validation passed: /tmp/tmp.nz0raDQiDL\nBUILD_OK designation=ZFS output=doc/ZFSSYSTEM.md parts=20 lines=933"
+        "stdout": "snapshot validation passed: /tmp/tmp.XtDa9qhthX\nBUILD_OK designation=ZFS output=doc/ZFSSYSTEM.md parts=20 lines=933"
       },
       "compiled_outputs": [
         "doc/SYSTEM.md",

@@ -1,6 +1,6 @@
 # doc/system Shape Audit
 
-Generated: `2026-06-22T16:55:34+00:00`
+Generated: `2026-06-22T17:15:54+00:00`
 Root: `/home/charlie/Forge/ecosystem`
 Exemplar: `cloud-systems/ForgeAgents`
 Exemplar aligned: `true`
