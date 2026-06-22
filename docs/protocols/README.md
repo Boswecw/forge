@@ -8,6 +8,7 @@ referenced by plans, audits, and operator workflows.
 | File | Role |
 |------|------|
 | [BDS_DOCUMENTATION_PROTOCOL_v1.md](BDS_DOCUMENTATION_PROTOCOL_v1.md) | Original BDS documentation protocol reference used by older plans and audits |
+| [BDS_REPO_NAMING_v1.md](BDS_REPO_NAMING_v1.md) | Canonical repository naming convention and rename-policy gate |
 | [bds_ai_assisted_development_operations_protocol.md](bds_ai_assisted_development_operations_protocol.md) | BDS AI-assisted development operations protocol |
 
 ## Related Canonical Documentation

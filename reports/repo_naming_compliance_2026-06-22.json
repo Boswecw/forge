@@ -1,0 +1,1573 @@
+{
+  "generated_at": "2026-06-22T15:13:15+00:00",
+  "protocol_id": "BDS-REPO-NAMING-v1",
+  "repositories": [
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/forge",
+        "origin_url": "git@github.com:Boswecw/forge.git",
+        "status": "## main...origin/main [ahead 1]\n M yellowjacket"
+      },
+      "local_name_status": {
+        "name": "ecosystem",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem-root",
+      "name": "ecosystem",
+      "normalized_name": "ecosystem",
+      "origin_name_status": {
+        "name": "forge",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": ".",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/DoppelCore",
+        "origin_url": "git@github.com:Boswecw/DoppelCore.git",
+        "status": "## main"
+      },
+      "local_name_status": {
+        "name": "DoppelCore",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "ecosystem",
+      "name": "DoppelCore",
+      "normalized_name": "doppelcore",
+      "origin_name_status": {
+        "name": "DoppelCore",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "DoppelCore",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/ERA",
+        "origin_url": "git@github.com:Boswecw/ERA.git",
+        "status": "## master"
+      },
+      "local_name_status": {
+        "name": "ERA",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "ecosystem",
+      "name": "ERA",
+      "normalized_name": "era",
+      "origin_name_status": {
+        "name": "ERA",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "ERA",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "repo.manifest.yaml",
+        "system_md": ""
+      },
+      "authority": "Governance, registry, audit, orchestration authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/Forge_Command",
+        "origin_url": "git@github.com:Boswecw/Forge_Command.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "Forge_Command",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "ecosystem",
+      "name": "Forge_Command",
+      "normalized_name": "forge-command",
+      "origin_name_status": {
+        "name": "Forge_Command",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Control Plane",
+      "preferred_prefix": "forge-command",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "Forge_Command",
+      "rename_candidate": "forge-command-<role>",
+      "required_action": "Normalize casing/separators and add an approved role suffix.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/canebrake_press",
+        "origin_url": "git@github.com:Boswecw/canebrake_press.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "canebrake_press",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "ecosystem",
+      "name": "canebrake_press",
+      "normalized_name": "canebrake-press",
+      "origin_name_status": {
+        "name": "canebrake_press",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "canebrake_press",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "",
+        "origin_url": "",
+        "status": "## master"
+      },
+      "local_name_status": {
+        "name": "checkly",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "checkly",
+      "normalized_name": "checkly",
+      "origin_name_status": {
+        "name": "",
+        "reasons": [],
+        "status": ""
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "checkly",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Data, memory, persistence authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/DataForge",
+        "origin_url": "git@github.com:Boswecw/DataForge.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "DataForge",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "cloud-systems",
+      "name": "DataForge",
+      "normalized_name": "dataforge",
+      "origin_name_status": {
+        "name": "DataForge",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Data Plane",
+      "preferred_prefix": "dataforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "cloud-systems/DataForge",
+      "rename_candidate": "dataforge-<role>",
+      "required_action": "Normalize casing/separators and add an approved role suffix.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Governance, registry, audit, orchestration authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/Forge-Agents",
+        "origin_url": "git@github.com:Boswecw/Forge-Agents.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "ForgeAgents",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "cloud-systems",
+      "name": "ForgeAgents",
+      "normalized_name": "forgeagents",
+      "origin_name_status": {
+        "name": "Forge-Agents",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Control Plane",
+      "preferred_prefix": "forge-command",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "cloud-systems/ForgeAgents",
+      "rename_candidate": "forge-command-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Cloud AI/provider authority",
+      "git": {
+        "branch": "feat/provider-health-provisioning",
+        "github_full_name": "Boswecw/NeuroForge",
+        "origin_url": "git@github.com:Boswecw/NeuroForge.git",
+        "status": "## feat/provider-health-provisioning...origin/feat/provider-health-provisioning [gone]"
+      },
+      "local_name_status": {
+        "name": "NeuroForge",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "cloud-systems",
+      "name": "NeuroForge",
+      "normalized_name": "neuroforge",
+      "origin_name_status": {
+        "name": "NeuroForge",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Cloud Runtime Plane",
+      "preferred_prefix": "neuroforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "cloud-systems/NeuroForge",
+      "rename_candidate": "neuroforge-<role>",
+      "required_action": "Normalize casing/separators and add an approved role suffix.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "docs/SYSTEM.md"
+      },
+      "authority": "Customer, billing, entitlement authority",
+      "git": {
+        "branch": "feat/billing-portal-20260612-135819",
+        "github_full_name": "Boswecw/forgecustomer",
+        "origin_url": "git@github.com:Boswecw/forgecustomer.git",
+        "status": "## feat/billing-portal-20260612-135819...origin/feat/billing-portal-20260612-135819"
+      },
+      "local_name_status": {
+        "name": "forgecustomer",
+        "reasons": [
+          "uses a reserved canonical prefix without a role suffix"
+        ],
+        "status": "reserved"
+      },
+      "location_hint": "cloud-systems",
+      "name": "forgecustomer",
+      "normalized_name": "forgecustomer",
+      "origin_name_status": {
+        "name": "forgecustomer",
+        "reasons": [
+          "uses a reserved canonical prefix without a role suffix"
+        ],
+        "status": "reserved"
+      },
+      "plane": "Customer Plane",
+      "preferred_prefix": "forgecustomer",
+      "reasons": [
+        "local checkout: uses a reserved canonical prefix without a role suffix",
+        "origin repository: uses a reserved canonical prefix without a role suffix"
+      ],
+      "relative_path": "cloud-systems/forgecustomer",
+      "rename_candidate": "forgecustomer-<role>",
+      "required_action": "Add an explicit role suffix after human approval.",
+      "status": "reserved"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Cloud AI/provider authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/forgesentinel",
+        "origin_url": "git@github.com:Boswecw/forgesentinel.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "forgesentinel",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "cloud-systems",
+      "name": "forgesentinel",
+      "normalized_name": "forgesentinel",
+      "origin_name_status": {
+        "name": "forgesentinel",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Cloud Runtime Plane",
+      "preferred_prefix": "neuroforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "cloud-systems/forgesentinel",
+      "rename_candidate": "neuroforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Cloud AI/provider authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/rake",
+        "origin_url": "git@github.com:Boswecw/rake.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "rake",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "cloud-systems",
+      "name": "rake",
+      "normalized_name": "rake",
+      "origin_name_status": {
+        "name": "rake",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Cloud Runtime Plane",
+      "preferred_prefix": "neuroforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "cloud-systems/rake",
+      "rename_candidate": "neuroforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/forge_contract_core",
+        "origin_url": "git@github.com:Boswecw/forge_contract_core.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "forge-contract-core",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "contracts",
+      "name": "forge-contract-core",
+      "normalized_name": "forge-contract-core",
+      "origin_name_status": {
+        "name": "forge_contract_core",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "contracts/forge-contract-core",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/forge_lineage",
+        "origin_url": "git@github.com:Boswecw/forge_lineage.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "forge_lineage",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "contracts",
+      "name": "forge_lineage",
+      "normalized_name": "forge-lineage",
+      "origin_name_status": {
+        "name": "forge_lineage",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "contracts/forge_lineage",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "work/up042-strenum-migration",
+        "github_full_name": "Boswecw/failureforge",
+        "origin_url": "git@github.com:Boswecw/failureforge.git",
+        "status": "## work/up042-strenum-migration...origin/work/up042-strenum-migration"
+      },
+      "local_name_status": {
+        "name": "failureforge",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "failureforge",
+      "normalized_name": "failureforge",
+      "origin_name_status": {
+        "name": "failureforge",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "failureforge",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/forge-smithy",
+        "origin_url": "git@github.com:Boswecw/forge-smithy.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "forge-smithy",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "forge-smithy",
+      "normalized_name": "forge-smithy",
+      "origin_name_status": {
+        "name": "forge-smithy",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "forge-smithy",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/forgeimages",
+        "origin_url": "git@github.com:Boswecw/forgeimages.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "ForgeImages",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "local-systems",
+      "name": "ForgeImages",
+      "normalized_name": "forgeimages",
+      "origin_name_status": {
+        "name": "forgeimages",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/ForgeImages",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "fix/output-artifact-file-hash",
+        "github_full_name": "Boswecw/forgemath",
+        "origin_url": "git@github.com:Boswecw/forgemath.git",
+        "status": "## fix/output-artifact-file-hash...origin/fix/output-artifact-file-hash"
+      },
+      "local_name_status": {
+        "name": "ForgeMath",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "local-systems",
+      "name": "ForgeMath",
+      "normalized_name": "forgemath",
+      "origin_name_status": {
+        "name": "forgemath",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/ForgeMath",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/context-runtime",
+        "origin_url": "git@github.com:Boswecw/context-runtime.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "context-runtime",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "context-runtime",
+      "normalized_name": "context-runtime",
+      "origin_name_status": {
+        "name": "context-runtime",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/context-runtime",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/COR",
+        "origin_url": "git@github.com:Boswecw/COR.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "cortex",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "cortex",
+      "normalized_name": "cortex",
+      "origin_name_status": {
+        "name": "COR",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "local-systems/cortex",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Data, memory, persistence authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/dataforge-Local",
+        "origin_url": "git@github.com:Boswecw/dataforge-Local.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "dataforge-Local",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "local-systems",
+      "name": "dataforge-Local",
+      "normalized_name": "dataforge-local",
+      "origin_name_status": {
+        "name": "dataforge-Local",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Data Plane",
+      "preferred_prefix": "dataforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "local-systems/dataforge-Local",
+      "rename_candidate": "dataforge-local",
+      "required_action": "Mechanical local/GitHub rename may be enough, but still requires rename-policy approval.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "fix/validation-refs-vocabulary-match",
+        "github_full_name": "Boswecw/eval-cal-node",
+        "origin_url": "git@github.com:Boswecw/eval-cal-node.git",
+        "status": "## fix/validation-refs-vocabulary-match...origin/fix/validation-refs-vocabulary-match [gone]"
+      },
+      "local_name_status": {
+        "name": "eval-cal-node",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "eval-cal-node",
+      "normalized_name": "eval-cal-node",
+      "origin_name_status": {
+        "name": "eval-cal-node",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/eval-cal-node",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/fa-local-operator",
+        "origin_url": "git@github.com:Boswecw/fa-local-operator.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "fa-local-operator",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "fa-local-operator",
+      "normalized_name": "fa-local-operator",
+      "origin_name_status": {
+        "name": "fa-local-operator",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/fa-local-operator",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/forge-eval",
+        "origin_url": "git@github.com:Boswecw/forge-eval.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "repo",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "repo",
+      "normalized_name": "repo",
+      "origin_name_status": {
+        "name": "forge-eval",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/forge-eval/repo",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/forge-local-systems-runtime",
+        "origin_url": "git@github.com:Boswecw/forge-local-systems-runtime.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "forge-local-systems-runtime",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "forge-local-systems-runtime",
+      "normalized_name": "forge-local-systems-runtime",
+      "origin_name_status": {
+        "name": "forge-local-systems-runtime",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/forge-local-systems-runtime",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/forge-smithy",
+        "origin_url": "git@github.com:Boswecw/forge-smithy.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "forge-smithy",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "forge-smithy",
+      "normalized_name": "forge-smithy",
+      "origin_name_status": {
+        "name": "forge-smithy",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/forge-smithy",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "feat/route-hygiene-to-deterministic-generator",
+        "github_full_name": "Boswecw/forgeHQ",
+        "origin_url": "git@github.com:Boswecw/forgeHQ.git",
+        "status": "## feat/route-hygiene-to-deterministic-generator...origin/feat/route-hygiene-to-deterministic-generator [gone]"
+      },
+      "local_name_status": {
+        "name": "forgeHQ",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "location_hint": "local-systems",
+      "name": "forgeHQ",
+      "normalized_name": "forgehq",
+      "origin_name_status": {
+        "name": "forgeHQ",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: fails lowercase kebab-case validation regex",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "local-systems/forgeHQ",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/neuronforge-local-operator",
+        "origin_url": "git@github.com:Boswecw/neuronforge-local-operator.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "neuronforge-local-operator",
+        "reasons": [
+          "matches preferred BDS prefix and role pattern"
+        ],
+        "status": "compliant"
+      },
+      "location_hint": "local-systems",
+      "name": "neuronforge-local-operator",
+      "normalized_name": "neuronforge-local-operator",
+      "origin_name_status": {
+        "name": "neuronforge-local-operator",
+        "reasons": [
+          "matches preferred BDS prefix and role pattern"
+        ],
+        "status": "compliant"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: matches preferred BDS prefix and role pattern",
+        "origin repository: matches preferred BDS prefix and role pattern"
+      ],
+      "relative_path": "local-systems/neuronforge-local-operator",
+      "rename_candidate": "neuronforge-local-operator",
+      "required_action": "No rename needed.",
+      "status": "compliant"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Local AI/runtime authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/yellowjacket",
+        "origin_url": "git@github.com:Boswecw/yellowjacket.git",
+        "status": "## master"
+      },
+      "local_name_status": {
+        "name": "yellowjacket",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "local-systems",
+      "name": "yellowjacket",
+      "normalized_name": "yellowjacket",
+      "origin_name_status": {
+        "name": "yellowjacket",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Local Runtime Plane",
+      "preferred_prefix": "neuronforge",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "local-systems/yellowjacket",
+      "rename_candidate": "neuronforge-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/PACT",
+        "origin_url": "git@github.com:Boswecw/PACT.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "pact",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "pact",
+      "normalized_name": "pact",
+      "origin_name_status": {
+        "name": "PACT",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "pact",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/precomputed-context-core",
+        "origin_url": "git@github.com:Boswecw/precomputed-context-core.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "precomputed-context-core",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "precomputed-context-core",
+      "normalized_name": "precomputed-context-core",
+      "origin_name_status": {
+        "name": "precomputed-context-core",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "precomputed-context-core",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/rak-adatsik",
+        "origin_url": "git@github.com:Boswecw/rak-adatsik.git",
+        "status": "## master"
+      },
+      "local_name_status": {
+        "name": "rak-adatsik",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "rak-adatsik",
+      "normalized_name": "rak-adatsik",
+      "origin_name_status": {
+        "name": "rak-adatsik",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "rak-adatsik",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": ".github/workflows",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/Smithy",
+        "origin_url": "git@github.com:Boswecw/Smithy.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "smithy",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "smithy",
+      "normalized_name": "smithy",
+      "origin_name_status": {
+        "name": "Smithy",
+        "reasons": [
+          "fails lowercase kebab-case validation regex"
+        ],
+        "status": "invalid"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: fails lowercase kebab-case validation regex"
+      ],
+      "relative_path": "smithy",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "invalid"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "main",
+        "github_full_name": "Boswecw/tarcie",
+        "origin_url": "git@github.com:Boswecw/tarcie.git",
+        "status": "## main...origin/main"
+      },
+      "local_name_status": {
+        "name": "tarcie",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "tarcie",
+      "normalized_name": "tarcie",
+      "origin_name_status": {
+        "name": "tarcie",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "tarcie",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": ""
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/yellowjacket",
+        "origin_url": "git@github.com:Boswecw/yellowjacket.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "yellowjacket",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "yellowjacket",
+      "normalized_name": "yellowjacket",
+      "origin_name_status": {
+        "name": "yellowjacket",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "yellowjacket",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    },
+    {
+      "agent_rule_evidence": {
+        "ci_policy": "",
+        "doc_system": "doc/system",
+        "promotion_ledger": "",
+        "repo_manifest": "",
+        "system_md": "SYSTEM.md"
+      },
+      "authority": "Canonical protocol and doctrine authority",
+      "git": {
+        "branch": "master",
+        "github_full_name": "Boswecw/zfss",
+        "origin_url": "git@github.com:Boswecw/zfss.git",
+        "status": "## master...origin/master"
+      },
+      "local_name_status": {
+        "name": "zfss",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "location_hint": "ecosystem",
+      "name": "zfss",
+      "normalized_name": "zfss",
+      "origin_name_status": {
+        "name": "zfss",
+        "reasons": [
+          "valid lowercase kebab-case but not a preferred BDS pattern"
+        ],
+        "status": "legacy"
+      },
+      "plane": "Doctrine Plane",
+      "preferred_prefix": "bds",
+      "reasons": [
+        "local checkout: valid lowercase kebab-case but not a preferred BDS pattern",
+        "origin repository: valid lowercase kebab-case but not a preferred BDS pattern"
+      ],
+      "relative_path": "zfss",
+      "rename_candidate": "bds-<approved-role>",
+      "required_action": "Classify authority, approve a canonical BDS name, then update references.",
+      "status": "legacy"
+    }
+  ],
+  "root": "/home/charlie/Forge/ecosystem",
+  "summary": {
+    "levels": {
+      "compliant": 1,
+      "invalid": 16,
+      "legacy": 18,
+      "reserved": 1
+    },
+    "local_levels": {
+      "compliant": 1,
+      "invalid": 12,
+      "legacy": 22,
+      "reserved": 1
+    },
+    "origin_levels": {
+      "compliant": 1,
+      "invalid": 14,
+      "legacy": 19,
+      "reserved": 1
+    },
+    "total": 36
+  }
+}

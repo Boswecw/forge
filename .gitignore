@@ -108,3 +108,12 @@ out/
 /doc/system/
 
 context-bundle.md
+
+# Governed ecosystem naming protocol artifacts
+!/docs/protocols/
+!/docs/protocols/BDS_REPO_NAMING_v1.md
+!/scripts/
+!/scripts/audit_repo_naming.py
+!/reports/
+!/reports/repo_naming_compliance_*.md
+!/reports/repo_naming_compliance_*.json
