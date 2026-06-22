@@ -1,0 +1,1914 @@
+{
+  "exemplar": "cloud-systems/ForgeAgents",
+  "exemplar_is_aligned": true,
+  "generated_at": "2026-06-22T16:55:34+00:00",
+  "repositories": [
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.a2Iq4V3apt\nBUILD_OK designation=ECO output=doc/ECOSYSTEM.md parts=9 lines=1294"
+      },
+      "compiled_outputs": [
+        "doc/ECOSYSTEM.md",
+        "doc/SYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "ecosystem",
+      "relative_path": ".",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md"
+        ],
+        "10_service-contract": [
+          "10-product-surface.md"
+        ],
+        "20_runtime": [
+          "20-runtime.md",
+          "30-data.md"
+        ],
+        "30_dependencies": [
+          "40-integrations.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.d4yYRXCuLc\nBUILD_OK designation=DOP output=doc/DOPSYSTEM.md parts=7 lines=128"
+      },
+      "compiled_outputs": [
+        "doc/DOPSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "DoppelCore",
+      "relative_path": "DoppelCore",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.KR2mBk3ZTk\nBUILD_OK designation=ERA output=doc/ERASYSTEM.md parts=7 lines=123"
+      },
+      "compiled_outputs": [
+        "doc/ERASYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "ERA",
+      "relative_path": "ERA",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.UHh7IrgWP8\nBUILD_OK designation=FCO output=doc/FCOSYSTEM.md parts=25 lines=6504"
+      },
+      "compiled_outputs": [
+        "doc/FCOSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "Forge_Command",
+      "relative_path": "Forge_Command",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-design-system.md",
+          "05-frontend.md",
+          "06-tauri-command-interface.md",
+          "07-orchestrator.md",
+          "08-headless-mode.md",
+          "09-cli-specification.md",
+          "10-cli-implementation-plan.md"
+        ],
+        "20_runtime": [
+          "11-backend-internals.md",
+          "12-local-storage-schema.md",
+          "13-error-handling.md"
+        ],
+        "30_dependencies": [
+          "14-tech-stack.md",
+          "15-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "16-scope.md",
+          "17-governance.md",
+          "18-change-control.md",
+          "19-security-credentials.md",
+          "20-multi-user-support.md"
+        ],
+        "50_operations": [
+          "21-config-env.md",
+          "22-testing-handover.md"
+        ],
+        "99_appendices": [
+          "23-dictionary-compression.md",
+          "24-future-work-tally.md",
+          "25-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.p9YMUBafMG\nBUILD_OK designation=CAN output=doc/CANSYSTEM.md parts=43 lines=9244"
+      },
+      "compiled_outputs": [
+        "doc/CANSYSTEM.md",
+        "doc/SYSTEM.md",
+        "doc/cpSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "canebrake_press",
+      "relative_path": "canebrake_press",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md",
+          "30-architecture-spec-v4.md"
+        ],
+        "10_service-contract": [
+          "06-design-system.md",
+          "07-frontend-sveltekit.md",
+          "08-api-fastify.md",
+          "10-product-surface.md",
+          "13-export-pipeline.md",
+          "14-series-management.md",
+          "15-tauri-desktop.md",
+          "16-api-reference.md",
+          "23-cartographer-forge.md",
+          "24-help-system.md",
+          "25-forgehud.md",
+          "29-isbn-manager.md",
+          "31-story-reel.md",
+          "34-pressforge.md"
+        ],
+        "20_runtime": [
+          "09-python-backend.md",
+          "10-dataforge-crud.md",
+          "11-database-schema.md",
+          "12-ai-integration.md",
+          "17-realtime-collab.md",
+          "18-database-migrations.md",
+          "20-runtime.md",
+          "20-snapshot-durability.md",
+          "21-rag-recency-bias.md",
+          "22-error-handling.md",
+          "27-neuroforge-service.md",
+          "28-rake-research.md",
+          "30-data.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "32-forgeagents-integration.md",
+          "33-forgepulse-telemetry.md",
+          "40-integrations.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "05-config-environment.md",
+          "19-solo-collab-handover.md",
+          "26-testing.md",
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.tZFXgt0QNN\nBUILD_OK designation=CHE output=doc/CHESYSTEM.md parts=8 lines=133"
+      },
+      "compiled_outputs": [
+        "doc/CHESYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "checkly",
+      "relative_path": "checkly",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md"
+        ],
+        "10_service-contract": [
+          "10-service-contract.md"
+        ],
+        "20_runtime": [
+          "20-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "30-dependencies.md"
+        ],
+        "40_governance": [
+          "10-class-assignment-required.md"
+        ],
+        "50_operations": [
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.coC6ElIBoT\nBUILD_OK designation=DTF output=doc/DTFSYSTEM.md parts=17 lines=2828"
+      },
+      "compiled_outputs": [
+        "doc/DTFSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "DataForge",
+      "relative_path": "cloud-systems/DataForge",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-api-layer.md",
+          "05-proving-slice-schema.md",
+          "06-pressforge-automation-schema.md"
+        ],
+        "20_runtime": [
+          "07-backend-internals.md",
+          "08-error-handling.md"
+        ],
+        "30_dependencies": [
+          "09-tech-stack.md",
+          "10-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "11-scope.md",
+          "12-governance.md",
+          "13-change-control.md"
+        ],
+        "50_operations": [
+          "14-config-env.md",
+          "15-testing.md",
+          "16-handover.md"
+        ],
+        "99_appendices": [
+          "17-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.8UpCLRrZ6s\nBUILD_OK designation=FOR output=doc/FORSYSTEM.md parts=15 lines=3681"
+      },
+      "compiled_outputs": [
+        "doc/FORSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "ForgeAgents",
+      "relative_path": "cloud-systems/ForgeAgents",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-api-layer.md"
+        ],
+        "20_runtime": [
+          "05-backend-internals.md",
+          "06-error-handling.md"
+        ],
+        "30_dependencies": [
+          "07-tech-stack.md",
+          "08-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "09-scope.md",
+          "10-governance.md",
+          "11-change-control.md"
+        ],
+        "50_operations": [
+          "12-config-env.md",
+          "13-testing.md",
+          "14-handover.md"
+        ],
+        "99_appendices": [
+          "15-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.V0gTmN2nre\nBUILD_OK designation=NEU output=doc/NEUSYSTEM.md parts=24 lines=3927"
+      },
+      "compiled_outputs": [
+        "doc/NEUSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "NeuroForge",
+      "relative_path": "cloud-systems/NeuroForge",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-api-layer.md"
+        ],
+        "20_runtime": [
+          "05-backend-internals.md",
+          "06-error-handling.md",
+          "07-current-runtime-truth.md",
+          "08-router-governance-hardening.md",
+          "09-pressforge-eae.md",
+          "10-pressforge-automation.md",
+          "11-maid-coding-adjudication.md"
+        ],
+        "30_dependencies": [
+          "12-tech-stack.md",
+          "13-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "14-scope.md",
+          "15-governance.md",
+          "16-change-control.md",
+          "17-sustainment-controls.md",
+          "18-documentation-truth-controls.md"
+        ],
+        "50_operations": [
+          "19-config-env.md",
+          "20-testing.md",
+          "21-handover.md"
+        ],
+        "99_appendices": [
+          "22-audit-stabilization-record.md",
+          "23-future-work.md",
+          "24-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.W5h7cYmWzv\nBUILD_OK designation=FOC output=doc/FOCSYSTEM.md parts=12 lines=1207"
+      },
+      "compiled_outputs": [
+        "doc/FOCSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forgecustomer",
+      "relative_path": "cloud-systems/forgecustomer",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "02-architecture-runtime.md"
+        ],
+        "10_service-contract": [
+          "03-api-contract.md"
+        ],
+        "20_runtime": [
+          "04-data-model.md",
+          "05-domain-subsystems.md"
+        ],
+        "30_dependencies": [
+          "06-integrations-events.md"
+        ],
+        "40_governance": [
+          "01-authority-boundaries.md",
+          "07-security-privacy.md",
+          "90-governance-change-control.md"
+        ],
+        "50_operations": [
+          "08-configuration-operations.md",
+          "09-verification-status.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.DjpLtzuJDa\nBUILD_OK designation=SNT output=doc/SNTSYSTEM.md parts=7 lines=125"
+      },
+      "compiled_outputs": [
+        "doc/SNTSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forgesentinel",
+      "relative_path": "cloud-systems/forgesentinel",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.FjBEo5rJfC\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=20 lines=2862"
+      },
+      "compiled_outputs": [
+        "doc/RAKSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "rake",
+      "relative_path": "cloud-systems/rake",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-api-contract.md",
+          "05-api-layer.md"
+        ],
+        "20_runtime": [
+          "06-pipeline-system.md",
+          "07-backend-services.md",
+          "08-database-schema.md",
+          "09-ai-integration.md",
+          "10-research-missions.md",
+          "11-error-handling.md"
+        ],
+        "30_dependencies": [
+          "12-tech-stack.md",
+          "13-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "14-scope.md",
+          "15-governance.md",
+          "16-change-control.md"
+        ],
+        "50_operations": [
+          "17-configuration.md",
+          "18-testing.md",
+          "19-handover.md"
+        ],
+        "99_appendices": [
+          "20-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.3OpeTN3lb3\nBUILD_OK designation=FCC output=doc/FCCSYSTEM.md parts=17 lines=780"
+      },
+      "compiled_outputs": [
+        "doc/FCCSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forge-contract-core",
+      "relative_path": "contracts/forge-contract-core",
+      "required_dirs": {
+        "00_overview": [
+          "01-purpose-and-ownership.md",
+          "02-architecture.md"
+        ],
+        "10_service-contract": [
+          "02-admitted-families.md",
+          "03-schema-and-validator-posture.md",
+          "04-registries-and-role-matrix.md",
+          "05-triple-variant-audit.md"
+        ],
+        "20_runtime": [
+          "06-gate-runner-contract.md"
+        ],
+        "30_dependencies": [
+          "07-tech-stack.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "11-governance.md",
+          "12-change-workflow-and-rfc-rules.md",
+          "13-deprecation-and-versioning-rules.md",
+          "14-change-control.md"
+        ],
+        "50_operations": [
+          "15-verification-and-operations.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md",
+          "91-bootstrap-overview.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.OeuODEumSv\nBUILD_OK designation=LIN output=doc/LINSYSTEM.md parts=7 lines=120"
+      },
+      "compiled_outputs": [
+        "doc/LINSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forge_lineage",
+      "relative_path": "contracts/forge_lineage",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.CmVHoPIASn\nBUILD_OK designation=FFG output=doc/FFGSYSTEM.md parts=8 lines=217"
+      },
+      "compiled_outputs": [
+        "doc/FFGSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "failureforge",
+      "relative_path": "failureforge",
+      "required_dirs": {
+        "00_overview": [
+          "00-purpose.md",
+          "10-current-architecture.md"
+        ],
+        "10_service-contract": [
+          "20-contracts.md"
+        ],
+        "20_runtime": [
+          "30-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "30-integration-boundaries.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "40-verification-gates.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.Jt15VXwTXv\nBUILD_OK designation=fs output=doc/fsSYSTEM.md compatibility=SYSTEM.md parts=25 lines=5424"
+      },
+      "compiled_outputs": [
+        "doc/fsSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forge-smithy",
+      "relative_path": "forge-smithy",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-design-system.md",
+          "05-frontend.md",
+          "06-tauri-command-interface.md",
+          "07-ai-integration.md",
+          "08-governed-mutation-protocol.md",
+          "09-receipt-and-evidence-contract.md",
+          "10-operator-dashboard-protocol.md"
+        ],
+        "20_runtime": [
+          "11-backend-internals.md",
+          "12-local-storage-schema.md",
+          "13-error-handling.md"
+        ],
+        "30_dependencies": [
+          "14-tech-stack.md",
+          "15-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "16-scope.md",
+          "17-governance.md",
+          "18-change-control.md",
+          "19-security-credentials.md",
+          "20-bds-doc-system-protocol.md"
+        ],
+        "50_operations": [
+          "21-config-env.md",
+          "22-testing.md",
+          "23-handover.md"
+        ],
+        "99_appendices": [
+          "24-stateforge-crosswalk.md",
+          "25-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.Wkgx5OIykH\nBUILD_OK designation=IMA output=doc/IMASYSTEM.md parts=18 lines=1705"
+      },
+      "compiled_outputs": [
+        "doc/IMASYSTEM.md",
+        "doc/SYSTEM.md",
+        "doc/fiSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "ForgeImages",
+      "relative_path": "local-systems/ForgeImages",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "06-api-layer.md"
+        ],
+        "20_runtime": [
+          "07-backend-internals.md",
+          "09-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "08-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "05-config-env.md",
+          "10-testing.md",
+          "11-handover.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.8tZNtPYrDG\nBUILD_OK designation=MAT output=doc/MATSYSTEM.md parts=22 lines=776"
+      },
+      "compiled_outputs": [
+        "doc/MATSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "ForgeMath",
+      "relative_path": "local-systems/ForgeMath",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md",
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "08-api-layer.md",
+          "10-ecosystem-integration.md"
+        ],
+        "20_runtime": [
+          "07-frontend.md",
+          "09-backend.md",
+          "11-database-schema.md",
+          "12-ai-integration.md",
+          "13-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "06-design-system.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "05-configuration.md",
+          "14-testing-infrastructure.md",
+          "15-handover-migration-notes.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.yct7dgJGYF\nBUILD_OK designation=CTX output=doc/CTXSYSTEM.md parts=11 lines=481"
+      },
+      "compiled_outputs": [
+        "doc/CTXSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "context-runtime",
+      "relative_path": "local-systems/context-runtime",
+      "required_dirs": {
+        "00_overview": [
+          "01-identity-philosophy.md",
+          "02-purpose-and-scope.md",
+          "03-architecture.md"
+        ],
+        "10_service-contract": [
+          "04-contract-surface.md"
+        ],
+        "20_runtime": [
+          "05-versioning-slice-progression.md"
+        ],
+        "30_dependencies": [
+          "06-dependencies.md"
+        ],
+        "40_governance": [
+          "07-scope.md",
+          "08-governance.md",
+          "09-change-control.md"
+        ],
+        "50_operations": [
+          "10-validation-and-proof.md"
+        ],
+        "99_appendices": [
+          "11-glossary-and-paths.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.XVhtJB83YY\nBUILD_OK designation=cx output=doc/cxSYSTEM.md parts=7 lines=689"
+      },
+      "compiled_outputs": [
+        "doc/SYSTEM.md",
+        "doc/cxSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "cortex",
+      "relative_path": "local-systems/cortex",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-charter.md"
+        ],
+        "10_service-contract": [
+          "03-contract-surface.md"
+        ],
+        "20_runtime": [
+          "05-runtime-baseline.md"
+        ],
+        "30_dependencies": [
+          "06-dependencies.md"
+        ],
+        "40_governance": [
+          "02-boundaries-and-doctrine.md"
+        ],
+        "50_operations": [
+          "04-validation-and-delivery.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.BRmBqnjPwR\nBUILD_OK designation=DLO output=doc/DLOSYSTEM.md parts=20 lines=980"
+      },
+      "compiled_outputs": [
+        "doc/DLOSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "dataforge-Local",
+      "relative_path": "local-systems/dataforge-Local",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "03-project-structure.md"
+        ],
+        "10_service-contract": [
+          "04-design-system.md",
+          "05-frontend.md",
+          "06-api-layer.md",
+          "07-proving-slice.md"
+        ],
+        "20_runtime": [
+          "08-backend.md",
+          "09-database-schema.md",
+          "10-ai-integration.md",
+          "11-error-handling.md"
+        ],
+        "30_dependencies": [
+          "12-tech-stack.md",
+          "13-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "14-scope.md",
+          "15-governance.md",
+          "16-change-control.md"
+        ],
+        "50_operations": [
+          "17-configuration.md",
+          "18-testing-infrastructure.md",
+          "19-handover-migration-notes.md"
+        ],
+        "99_appendices": [
+          "20-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.zcFmuJTmgB\nBUILD_OK designation=ECN output=doc/ECNSYSTEM.md parts=8 lines=429"
+      },
+      "compiled_outputs": [
+        "doc/ECNSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "eval-cal-node",
+      "relative_path": "local-systems/eval-cal-node",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md"
+        ],
+        "10_service-contract": [
+          "10-service-contract.md"
+        ],
+        "20_runtime": [
+          "20-runtime.md"
+        ],
+        "30_dependencies": [
+          "30-dependencies.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.d788UYyjQA\nBUILD_OK designation=FLO output=doc/FLOSYSTEM.md parts=10 lines=852"
+      },
+      "compiled_outputs": [
+        "doc/FLOSYSTEM.md",
+        "doc/faSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "fa-local-operator",
+      "relative_path": "local-systems/fa-local-operator",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-charter.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-execution-bridge-writeback.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-scope.md",
+          "06-governance.md",
+          "07-change-control.md",
+          "08-boundaries-and-doctrine.md"
+        ],
+        "50_operations": [
+          "09-validation-and-delivery.md"
+        ],
+        "99_appendices": [
+          "10-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.fyjGc5KxT6\nBUILD_OK designation=FEV output=doc/FEVSYSTEM.md parts=26 lines=1635"
+      },
+      "compiled_outputs": [
+        "doc/FEVSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "repo",
+      "relative_path": "local-systems/forge-eval/repo",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "05-cli-config-artifacts.md"
+        ],
+        "20_runtime": [
+          "06-evidence-subsystem.md",
+          "07-risk-heatmap-stage.md",
+          "08-context-slices-stage.md",
+          "09-schemas-validation-errors.md",
+          "12-reviewer-execution-stage.md",
+          "13-telemetry-matrix-stage.md",
+          "14-occupancy-snapshot-stage.md",
+          "15-capture-estimate-stage.md",
+          "16-hazard-map-stage.md",
+          "17-merge-decision-stage.md",
+          "18-evidence-bundle-stage.md",
+          "19-localization-pack-stage.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "10-testing-determinism.md",
+          "11-handover-runbook.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.WJ8U8hsu0j\nBUILD_OK designation=FLS output=doc/FLSSYSTEM.md parts=22 lines=366"
+      },
+      "compiled_outputs": [
+        "doc/FLSSYSTEM.md",
+        "doc/SYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forge-local-systems-runtime",
+      "relative_path": "local-systems/forge-local-systems-runtime",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md",
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "08-api-layer.md",
+          "10-ecosystem-integration.md"
+        ],
+        "20_runtime": [
+          "07-frontend.md",
+          "09-backend.md",
+          "11-database-schema.md",
+          "12-ai-integration.md",
+          "13-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "06-design-system.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "05-configuration.md",
+          "14-testing-infrastructure.md",
+          "15-handover-migration-notes.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.aYt2Mv2DxS\nBUILD_OK designation=fs output=doc/fsSYSTEM.md parts=18 lines=4942"
+      },
+      "compiled_outputs": [
+        "doc/fsSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forge-smithy",
+      "relative_path": "local-systems/forge-smithy",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "08-tauri-command-interface.md",
+          "11-ecosystem-integration.md"
+        ],
+        "20_runtime": [
+          "07-frontend.md",
+          "09-backend-internals.md",
+          "12-local-storage-schema.md",
+          "13-ai-integration.md",
+          "14-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "06-design-system.md"
+        ],
+        "40_governance": [
+          "10-security-compliance.md",
+          "17-stateforge-crosswalk.md"
+        ],
+        "50_operations": [
+          "05-config-env.md",
+          "15-testing.md",
+          "16-handover.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.QvKx3V21vb\nBUILD_OK designation=FRG output=doc/FRGSYSTEM.md parts=24 lines=951"
+      },
+      "compiled_outputs": [
+        "doc/FRGSYSTEM.md",
+        "doc/SYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "forgeHQ",
+      "relative_path": "local-systems/forgeHQ",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md",
+          "01-architecture.md",
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "08-api-layer.md",
+          "10-ecosystem-integration.md",
+          "13-proposal-artifact-model.md",
+          "14-pipeline-reviewability.md"
+        ],
+        "20_runtime": [
+          "07-frontend.md",
+          "09-backend.md",
+          "11-database-schema.md",
+          "12-ai-integration.md",
+          "15-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "06-design-system.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "05-configuration.md",
+          "16-testing-infrastructure.md",
+          "17-handover-migration-notes.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.UFuAdNoMBr\nBUILD_OK designation=NLO output=doc/NLOSYSTEM.md parts=13 lines=4156"
+      },
+      "compiled_outputs": [
+        "doc/NLOSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "neuronforge-local-operator",
+      "relative_path": "local-systems/neuronforge-local-operator",
+      "required_dirs": {
+        "00_overview": [
+          "00-overview.md"
+        ],
+        "10_service-contract": [
+          "01-task-contract-taxonomy.md",
+          "04-anvil-bloom-reasoning-contracts.md",
+          "20-analyze-continuity-adjacent-scene-v1.md",
+          "21-analyze-style-scene-v1.md"
+        ],
+        "20_runtime": [
+          "02-routing-and-model-profile-plan.md",
+          "05-scene-beat-extraction-lane-plan.md",
+          "06-continuity-progression-reasoning-lane-plan.md",
+          "07-experiment-memory-graphiti-pilot.md"
+        ],
+        "30_dependencies": [
+          "30-dependencies.md"
+        ],
+        "40_governance": [
+          "03-candidate-artifact-doctrine.md"
+        ],
+        "50_operations": [
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.n56PWrcS2k\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=124"
+      },
+      "compiled_outputs": [
+        "doc/YJKSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "yellowjacket",
+      "relative_path": "local-systems/yellowjacket",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.DSOoetPV54\nBUILD_OK designation=PAC output=doc/PACSYSTEM.md parts=20 lines=497"
+      },
+      "compiled_outputs": [
+        "doc/PACSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "pact",
+      "relative_path": "pact",
+      "required_dirs": {
+        "00_overview": [
+          "00-repo-identity.md",
+          "01-scope-and-role.md"
+        ],
+        "10_service-contract": [
+          "00-service-contract.md",
+          "01-receipt-serialization-evidence-strategy.md"
+        ],
+        "20_runtime": [
+          "00-runtime-topology.md",
+          "01-runtime-serialization-boundary.md"
+        ],
+        "30_dependencies": [
+          "00-dependencies.md"
+        ],
+        "40_governance": [
+          "00-governance-and-controls.md",
+          "01-toon-wave1-rollout-and-feature-flag.md",
+          "02-toon-extension-admission-policy.md"
+        ],
+        "50_operations": [
+          "00-operations-and-verification.md",
+          "01-toon-wave1-proof-gate.md",
+          "03-toon-wave1-promotion-packet.md",
+          "04-toon-ci-gate.md",
+          "05-toon-replay-matrix.md",
+          "06-toon-golden-hash-lock.md",
+          "07-toon-non-strict-canonical-lock.md",
+          "08-toon-non-strict-digest-lock.md",
+          "09-toon-wave1-manifest.md"
+        ],
+        "99_appendices": [
+          "00-appendix-repo-layout.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.b2fJNfS8hd\nBUILD_OK designation=PCC output=doc/PCCSYSTEM.md parts=9 lines=216"
+      },
+      "compiled_outputs": [
+        "doc/PCCSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "precomputed-context-core",
+      "relative_path": "precomputed-context-core",
+      "required_dirs": {
+        "00_overview": [
+          "00-identity.md",
+          "01-purpose-and-scope.md",
+          "02-architecture-overview.md"
+        ],
+        "10_service-contract": [
+          "00-contract-surface.md"
+        ],
+        "20_runtime": [
+          "00-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "00-dependencies.md"
+        ],
+        "40_governance": [
+          "00-versioning-and-slice-progression.md"
+        ],
+        "50_operations": [
+          "00-validation-and-proof.md"
+        ],
+        "99_appendices": [
+          "00-glossary-and-paths.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.rv0T6hL0U5\nBUILD_OK designation=RAK output=doc/RAKSYSTEM.md parts=7 lines=120"
+      },
+      "compiled_outputs": [
+        "doc/RAKSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "rak-adatsik",
+      "relative_path": "rak-adatsik",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.llwI7znHyq\nBUILD_OK designation=SMI output=doc/SMISYSTEM.md parts=18 lines=848"
+      },
+      "compiled_outputs": [
+        "doc/SMISYSTEM.md",
+        "doc/SYSTEM.md",
+        "doc/spSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "smithy",
+      "relative_path": "smithy",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "06-library-api.md"
+        ],
+        "20_runtime": [
+          "07-internals.md",
+          "09-error-handling.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "08-ecosystem-integration.md"
+        ],
+        "40_governance": [
+          "10-scope.md",
+          "30-governance.md",
+          "40-change-control.md"
+        ],
+        "50_operations": [
+          "05-config-env.md",
+          "10-testing.md",
+          "11-handover.md"
+        ],
+        "99_appendices": [
+          "20-structure.md",
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.NCkhWvGG4K\nBUILD_OK designation=TAR output=doc/TARSYSTEM.md parts=20 lines=990"
+      },
+      "compiled_outputs": [
+        "doc/SYSTEM.md",
+        "doc/TARSYSTEM.md",
+        "doc/tcSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "tarcie",
+      "relative_path": "tarcie",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md",
+          "02-architecture.md"
+        ],
+        "10_service-contract": [
+          "03-command-reference.md",
+          "10-product-surface.md"
+        ],
+        "20_runtime": [
+          "04-data-model.md",
+          "05-queue-system.md",
+          "06-flush-pipeline.md",
+          "09-error-handling.md",
+          "20-runtime.md",
+          "30-data.md"
+        ],
+        "30_dependencies": [
+          "40-integrations.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "07-configuration.md",
+          "08-constraints.md",
+          "10-testing.md",
+          "11-handover.md",
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.h8Iw320UHo\nBUILD_OK designation=YJK output=doc/YJKSYSTEM.md parts=7 lines=121"
+      },
+      "compiled_outputs": [
+        "doc/YJKSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "yellowjacket",
+      "relative_path": "yellowjacket",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview.md"
+        ],
+        "10_service-contract": [
+          "02-contract-surface.md"
+        ],
+        "20_runtime": [
+          "03-runtime-boundary.md"
+        ],
+        "30_dependencies": [
+          "04-dependencies.md"
+        ],
+        "40_governance": [
+          "05-governance.md"
+        ],
+        "50_operations": [
+          "06-verification.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md"
+        ]
+      },
+      "status": "aligned"
+    },
+    {
+      "build_result": {
+        "exit_code": "0",
+        "stderr": "",
+        "stdout": "snapshot validation passed: /tmp/tmp.nz0raDQiDL\nBUILD_OK designation=ZFS output=doc/ZFSSYSTEM.md parts=20 lines=933"
+      },
+      "compiled_outputs": [
+        "doc/SYSTEM.md",
+        "doc/ZFSSYSTEM.md",
+        "doc/zsSYSTEM.md"
+      ],
+      "doc_system": "doc/system",
+      "findings": [],
+      "marker_gaps": {
+        "build": [],
+        "index": [],
+        "validator": []
+      },
+      "name": "zfss",
+      "relative_path": "zfss",
+      "required_dirs": {
+        "00_overview": [
+          "01-overview-philosophy.md",
+          "02-architecture.md",
+          "04-project-structure.md"
+        ],
+        "10_service-contract": [
+          "06-frontend.md",
+          "07-tauri-commands.md",
+          "10-product-surface.md"
+        ],
+        "20_runtime": [
+          "08-backend-internals.md",
+          "09-database-schema.md",
+          "20-runtime.md",
+          "30-data.md"
+        ],
+        "30_dependencies": [
+          "03-tech-stack.md",
+          "10-ecosystem-integration.md",
+          "40-integrations.md"
+        ],
+        "40_governance": [
+          "40-governance.md"
+        ],
+        "50_operations": [
+          "05-config-env.md",
+          "11-handover.md",
+          "50-operations.md"
+        ],
+        "99_appendices": [
+          "90-appendices.md",
+          "91-bootstrap-overview.md",
+          "92-bootstrap-architecture.md"
+        ]
+      },
+      "status": "aligned"
+    }
+  ],
+  "root": "/home/charlie/Forge/ecosystem",
+  "standard": {
+    "build_required_markers": [
+      "set -euo pipefail",
+      "DESIGNATION=",
+      "REQUIRED_DIRS=",
+      "validate_snapshots.sh",
+      "BUILD_OK"
+    ],
+    "index_required_markers": [
+      "**Designation:**",
+      "**Source:** `doc/system/`",
+      "**Build command:** `bash doc/system/BUILD.sh`",
+      "Generated artifact warning",
+      "Primary output: `doc/",
+      "truth classes"
+    ],
+    "required_dirs": [
+      "00_overview",
+      "10_service-contract",
+      "20_runtime",
+      "30_dependencies",
+      "40_governance",
+      "50_operations",
+      "99_appendices"
+    ],
+    "validator_required_markers": [
+      "set -euo pipefail",
+      "require_contains",
+      "snapshot validation"
+    ]
+  },
+  "summary": {
+    "statuses": {
+      "aligned": 36
+    },
+    "total": 36
+  }
+}

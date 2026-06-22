@@ -104,8 +104,13 @@ out/
 /tools/ecosystem-qc/node_modules/
 /tools/ecosystem-qc/out/
 
-# Canonical system docs mirror is generated/managed outside root tracking.
+# Canonical system docs mirror is tracked for the ecosystem parent repo.
 /doc/system/
+!/doc/
+!/doc/system/
+!/doc/system/**
+!/doc/ECOSYSTEM.md
+!/doc/SYSTEM.md
 
 context-bundle.md
 
@@ -114,6 +119,9 @@ context-bundle.md
 !/docs/protocols/BDS_REPO_NAMING_v1.md
 !/scripts/
 !/scripts/audit_repo_naming.py
+!/scripts/audit_doc_system_shape.py
 !/reports/
 !/reports/repo_naming_compliance_*.md
 !/reports/repo_naming_compliance_*.json
+!/reports/doc_system_shape_audit_*.md
+!/reports/doc_system_shape_audit_*.json
